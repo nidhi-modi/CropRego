@@ -2,9 +2,7 @@ platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 target 'rego' do
-rn_path = '../node_modules/react-native'# Pods for rego
-	
-
+  # Pods for rego
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -35,10 +33,6 @@ rn_path = '../node_modules/react-native'# Pods for rego
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-  
-  use_frameworks!
-  pod 'CocoaLumberjack/Swift'
-
 
   target 'regoTests' do
     inherit! :search_paths

@@ -1,11 +1,5 @@
 PODS:
   - boost-for-react-native (1.63.0)
-  - CocoaLumberjack (3.4.1):
-    - CocoaLumberjack/Default (= 3.4.1)
-    - CocoaLumberjack/Extensions (= 3.4.1)
-  - CocoaLumberjack/Default (3.4.1)
-  - CocoaLumberjack/Extensions (3.4.1):
-    - CocoaLumberjack/Default
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
   - DoubleConversion (1.1.6)
@@ -317,14 +311,13 @@ PODS:
     - React
   - RNReanimated (1.7.0):
     - React
-  - RNScreens (2.0.0-beta.13):
+  - RNScreens (2.1.0):
     - React
   - RNVectorIcons (6.6.0):
     - React
   - Yoga (1.14.0)
 
 DEPENDENCIES:
-  - CocoaLumberjack (from `../node_modules/cocoa-lumberjack/CocoaLumberjack`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
@@ -384,8 +377,6 @@ SPEC REPOS:
     - PromisesObjC
 
 EXTERNAL SOURCES:
-  CocoaLumberjack:
-    :path: "../node_modules/cocoa-lumberjack/CocoaLumberjack"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -461,7 +452,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  CocoaLumberjack: f848611df6de8023210a4e5811557aa5ba9fe778
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
@@ -491,9 +481,9 @@ SPEC CHECKSUMS:
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
   react-native-material-kit: fcd29a6ad901670f8073433d382df2abaadb831f
-  react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
+  react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
-  react-native-sqlite-storage: bb10beb2407e5fc21f3f1bcd86bacbfd6edcc818
+  react-native-sqlite-storage: f06bfba10f67f989c00b6a699b9c2b80a816edbe
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -504,15 +494,15 @@ SPEC CHECKSUMS:
   React-RCTText: 9ccc88273e9a3aacff5094d2175a605efa854dbe
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
-  RNBackgroundFetch: e05168cafe22d2f7252a0aedefb0a16b822bd3b1
-  RNCMaskedView: e5b99bc191945f157adeede68da9d424462de177
+  RNBackgroundFetch: 388cf1595934d22fed275b8db9b48a28bb4eb7b6
+  RNCMaskedView: a88953beefbd347a29072d9eba90e42945fe291e
   RNFirebase: 37daa9a346d070f9f6ee1f3b4aaf4c8e3b1d5d1c
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
-  RNScreens: ba539a5086136eb356e43699cb588a80369763ca
+  RNScreens: 2a9cd603bcebc34319c92e595283d760dd1f55f5
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: ca74dce5db4bf02cc1ae06590c124f7eb2c62631
+PODFILE CHECKSUM: 494528e189a26191e4d776412c8cca75a286e15c
 
 COCOAPODS: 1.9.1
