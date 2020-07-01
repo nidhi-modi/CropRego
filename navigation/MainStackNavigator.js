@@ -16,6 +16,11 @@ import Har3Flamentyno from '../screens/Har3Flamentyno'
 import FlamentynoPlant1 from '../screens/FlamentynoPlant1'
 import PlantList from '../screens/PlantList'
 import TrussDetails from '../screens/TrussDetails'
+import PlantDetails from '../screens/PlantDetails'
+import Har1YeloPlant1 from '../screens/Har1YeloPlant1'
+import Har1Yelo from '../screens/Har1Yelo'
+import Har1YeloTrussDetails from '../screens/Har1YeloTrussDetails'
+
 
 
 
@@ -73,14 +78,19 @@ function MainStackNavigator() {
         <Stack.Screen name='Har3Flamentyno' component={Har3Flamentyno} options={{ title: 'T&G Global' }} />
 
         <Stack.Screen name='PlantList' component={PlantList} options={{ title: 'T&G Global' }} />
-        
+
+        <Stack.Screen name='PlantDetails' component={PlantDetails} options={{ title: 'T&G Global' }} />
+
         <Stack.Screen name='TrussDetails' component={TrussDetails} options={{ title: 'T&G Global' }} />
 
+        <Stack.Screen name='Har1YeloPlant1' component={Har1YeloPlant1} options={{ title: 'T&G Global' }} />
 
-        <Stack.Screen name='FlamentynoPlant1' component={FlamentynoPlant1} options={{ 
+        <Stack.Screen name='Har1Yelo' component={Har1Yelo} options={{ title: 'T&G Global' }} />
 
-          title: 'T&G Global'}}/> 
+        <Stack.Screen name='FlamentynoPlant1' component={FlamentynoPlant1} options={{ title: 'T&G Global'}}/> 
           
+        <Stack.Screen name='Har1YeloTrussDetails' component={Har1YeloTrussDetails} options={{ title: 'T&G Global'}}/> 
+
          
 
       </Stack.Navigator>

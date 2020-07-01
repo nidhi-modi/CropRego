@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 
-
+var currentWeekNumber = require('current-week-number');
+var numberWeek;
 
 function Har3Flamentyno(props) {
 
     const { navigation } = props
+
+    numberWeek = 2000 + currentWeekNumber()-1;
 
     React.useLayoutEffect(() => {
         navigation.setOptions({
@@ -24,50 +27,74 @@ function Har3Flamentyno(props) {
         });
     }, [navigation]);
 
+
     return (
         <View style={styles.container}>
 
             <ImageBackground source={require('../assets/T&G_Tomatoes.jpg')} style={styles.backgroundImage}>
 
-                <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle} >
-
-                    <Image source={require('../assets/green_floating_button.png')}
-
-                        style={styles.FloatingButtonStyle} />
-
-                </TouchableOpacity>
 
                 <ScrollView>
 
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('FlamentynoPlant1')}>
-                        <Text style={styles.buttonText}>Plant 1 - week 2009</Text>
+                        onPress={() => navigation.navigate('FlamentynoPlant1',{plant1: 1})}>
+                        <Text style={styles.buttonText}>Plant 1 - week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har3Flamentyno')}>
-                        <Text style={styles.buttonText}>Plant 2 - Week 2009</Text>
+                        onPress={() => navigation.navigate('FlamentynoPlant1',{plant2: 2})}>
+                        <Text style={styles.buttonText}>Plant 2 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har3Flamentyno')}>
-                        <Text style={styles.buttonText}>Plant 3 - week 2009</Text>
+                        onPress={() => navigation.navigate('Har3Flamentyno',{plant3: 3})}>
+                        <Text style={styles.buttonText}>Plant 3 - week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har3Flamentyno')}>
-                        <Text style={styles.buttonText}>Plant 4 - Week 2009</Text>
+                        onPress={() => navigation.navigate('Har3Flamentyno',{plant4: 4})}>
+                        <Text style={styles.buttonText}>Plant 4 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har3Flamentyno')}>
-                        <Text style={styles.buttonText}>Plant 5 - Week 2009</Text>
+                        onPress={() => navigation.navigate('Har3Flamentyno',{plant5: 5})}>
+                        <Text style={styles.buttonText}>Plant 5 - Week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('FlamentynoPlant1',{plant6: 6})}>
+                        <Text style={styles.buttonText}>Plant 6 - week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har3Flamentyno',{plant7: 7})}>
+                        <Text style={styles.buttonText}>Plant 7 - Week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har3Flamentyno',{plant8: 8})}>
+                        <Text style={styles.buttonText}>Plant 8 - week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har3Flamentyno',{plant9: 9})}>
+                        <Text style={styles.buttonText}>Plant 9 - Week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har3Flamentyno',{plant10: 10})}>
+                        <Text style={styles.buttonText}>Plant 10 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
 

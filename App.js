@@ -23,6 +23,8 @@ import MainStackNavigator from './navigation/MainStackNavigator'
 import Home from './screens/Home'
 import Database from '../rego/screens/Database'
 import { fbDB } from '../rego/screens/config'
+import { Firebase } from 'react-native-firebase';
+
 
 const db = new Database();
 var firebase = require("firebase");
@@ -49,6 +51,12 @@ console.warn = message => {
     console.warn(message);
   }
 };
+
+YellowBox.ignoreWarnings([
+  'Warning: isMounted(...) is deprecated', // works
+  'Module RCTImageLoader', // works
+  'Require cycle:', // doesn't work
+])
 
 
 export default class App extends Component {
@@ -100,9 +108,11 @@ export default class App extends Component {
   componentDidMount() {
 
     SplashScreen.hide();
-    //this.getPlants();
+    this.getPlants();
     //this.getTruss();
     //this.renderItem();
+    console.disableYellowBox = true;
+
 
   }
 
@@ -115,6 +125,7 @@ export default class App extends Component {
       plants = data;
       console.log('details from App:', plants)
 
+        
       
         firebase.database().ref('croprego/').push(objify("PlantDetails", plants)
 
@@ -171,6 +182,7 @@ export default class App extends Component {
 
 
       <MainStackNavigator />
+
 
 
       /* <View style={styles.container}>

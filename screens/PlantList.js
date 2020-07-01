@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, FlatList, ActivityIndicator, ImageBackground, SafeAreaView } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, FlatList, ActivityIndicator, ImageBackground, SafeAreaView, RefreshControl } from 'react-native'
 import { ListItem, Button } from 'react-native-elements';
 import Database from '../screens/Database'
 import { ScrollView } from 'react-native-gesture-handler';
+
 
 
 
@@ -19,17 +20,42 @@ export default class PlantList extends Component {
     this.state = {
       isLoading: false,
       plants: [],
-      notFound: 'Plant Details not found.'
+      truss: [],
+      notFound: 'Plant Details not found.',
+      refreshing: false
     };
 
   }
 
 
   componentDidMount() {
-
-    this.getPlants();
+  
+      this.getPlants();
+    
 
   }
+
+  _onRefresh = () => {
+    this.setState({refreshing: true});
+    this.getPlants();
+    
+  }
+
+  getTruss = () => {
+
+    let truss = [];
+    db.listTruss().then((data) => {
+      console.log("Calling database")
+      truss = data;
+      this.setState({
+        truss,
+      });
+    }).catch((err) => {
+      console.log(err);
+      
+    })
+  }
+
 
   getPlants = () => {
 
@@ -59,13 +85,20 @@ export default class PlantList extends Component {
 
 
     <ListItem
+
+
       title={item.plantName}
+      subtitle={item.plantWeek}
+      //badge={{ value: 1, textStyle: { color: 'orange' }, containerStyle: { marginTop: -5 } }}
 
       onPress={() => {
-        this.props.navigation.navigate('OhaHome', {
+        this.props.navigation.navigate('PlantDetails', {
           plantId: `${item.plantId}`,
+
+
         });
       }}
+
       chevron
       bottomDivider
     />
@@ -79,6 +112,8 @@ export default class PlantList extends Component {
         </View>
       )
     }
+
+   
     if (this.state.plants.length === 0) {
       return (
         <SafeAreaView style={styles.safeContainer}>
@@ -90,7 +125,8 @@ export default class PlantList extends Component {
               <ScrollView style={styles.formContainer}
                 keyboardShouldPersistTaps='handled'>
 
-                <Text style={styles.message}>{this.state.notFound}</Text>
+                {this.state.plants.length === 0 ? (<Text style={styles.message}>{this.state.notFound}</Text>) : null}
+
 
               </ScrollView>
             </ImageBackground>
@@ -225,7 +261,7 @@ const styles = StyleSheet.create({
   safeContainer: {
     flex: 1,
   },
-  
+
   item: {
     padding: 10,
     fontSize: 18,
@@ -242,8 +278,11 @@ const styles = StyleSheet.create({
   },
   message: {
     padding: 16,
-    fontSize: 18,
-    color: 'red'
+    fontSize: 24,
+    color: 'black',
+    textAlign : 'center',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 })
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, TextInput, ActivityIndicator, ImageBackground, SafeAreaView, Alert, ToastAndroid, AlertIOS, Platform } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, TextInput, ActivityIndicator, ImageBackground, SafeAreaView, Alert, ToastAndroid, AlertIOS, Platform, AsyncStorage } from 'react-native'
 import { ListItem, Button } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputLayout } from 'rn-textinputlayout';
@@ -15,6 +15,11 @@ import Database from '../screens/Database'
 
 
 const db = new Database();
+let abc;
+let numberWeek;
+let no1;
+var currentWeekNumber = require('current-week-number');
+
 
 
 
@@ -26,7 +31,76 @@ export default class TrussDetails extends React.Component {
     constructor(props) {
         super(props)
 
+        if (this.props.route.params.num !== 'undefined') {
+            no1 = this.props.route.params.num1;
+            console.log(JSON.stringify(no1));
+        } else {
+
+        }
+
+        if (this.props.route.params.num2 !== 'undefined') {
+            const no2 = this.props.route.params.num2;
+            console.log(JSON.stringify(no2));
+        }else{
+
+        }
+
+        if (this.props.route.params.num3 !== 'undefined') {
+            const no3 = this.props.route.params.num3;
+            console.log(JSON.stringify(no3));
+        }else{
+            
+        }
+
+        if (this.props.route.params.num !== 'undefined') {
+            const no4 = this.props.route.params.num4;
+            console.log(JSON.stringify(no4));
+        } else {
+
+        }
+
+        if (this.props.route.params.num2 !== 'undefined') {
+            const no5 = this.props.route.params.num5;
+            console.log(JSON.stringify(no5));
+        }else{
+
+        }
+
+        if (this.props.route.params.num3 !== 'undefined') {
+            const no6 = this.props.route.params.num6;
+            console.log(JSON.stringify(no6));
+        }else{
+            
+        }
+
         
+        if (this.props.route.params.num3 !== 'undefined') {
+            const no7 = this.props.route.params.num7;
+            console.log(JSON.stringify(no7));
+        }else{
+            
+        }
+
+        if (this.props.route.params.num !== 'undefined') {
+            const no8 = this.props.route.params.num8;
+            console.log(JSON.stringify(no8));
+        } else {
+
+        }
+
+        if (this.props.route.params.num2 !== 'undefined') {
+            const no9 = this.props.route.params.num9;
+            console.log(JSON.stringify(no9));
+        }else{
+
+        }
+
+        if (this.props.route.params.num3 !== 'undefined') {
+            const no10 = this.props.route.params.num10;
+            console.log(JSON.stringify(no10));
+        }else{
+            
+        }
 
 
 
@@ -58,15 +132,223 @@ export default class TrussDetails extends React.Component {
             setFlowers: '',
             pruningNumber: '',
 
+            number: '',
+            lastNumber: '',
+            fruits: '',
+            flowers: '',
+            pruning: '',
 
-            isLoading: false
+
+            isLoading: false,
+            isDataSend: false,
+            show: false,
+            weekNumber: '',
+            truss: {},
 
         };
 
 
     }
 
+
+    setAsyncValues(text1, text2) {
+
+        try {
+            AsyncStorage.setItem('trussNumber', text1);
+            AsyncStorage.setItem('lastWeekNumber', text2);
+        } catch (error) {
+        }
+
+    }
+
+    getAsysncValues() {
+
+
+
+
+        try {
+            AsyncStorage.getItem('trussNumber').then((text1Value) => {
+                this.setState({ number: JSON.parse(text1Value) });
+                console.log(this.state.number)
+            }).done();
+        } catch (error) {
+        }
+        try {
+            AsyncStorage.getItem('lastWeekNumber').then((text2Value) => {
+                this.setState({ lastNumber: JSON.parse(text2Value) });
+                console.log(this.state.lastNumber)
+            }).done();
+        } catch (error) {
+        }
+        try {
+            AsyncStorage.getItem('setFruits').then((text3Value) => {
+                this.setState({ fruits: JSON.parse(text3Value) });
+                console.log(this.state.fruits)
+            }).done();
+        } catch (error) {
+        }
+        try {
+            AsyncStorage.getItem('setFlowers').then((text4Value) => {
+                this.setState({ flowers: JSON.parse(text4Value) });
+                console.log(this.state.flowers)
+            }).done();
+        } catch (error) {
+        } try {
+            AsyncStorage.getItem('pruningNumber').then((text5Value) => {
+                this.setState({ pruning: JSON.parse(text5Value) });
+                console.log(this.state.pruning)
+            }).done();
+        } catch (error) {
+        }
+
+
+    }
+
+
+    async setItem(myKey, value) {
+        try {
+            this.setState({
+                isDataSend: false,
+
+            });
+            abc = '0';
+
+            return await AsyncStorage.setItem(myKey, JSON.stringify(value));
+        } catch (error) {
+            // console.error('AsyncStorage#setItem error: ' + error.message);
+        }
+    }
+    async getItem(myKey) {
+        this.setState({
+            isDataSend: false,
+
+        });
+        abc = '0';
+        return await AsyncStorage.getItem(myKey)
+            .then((result) => {
+                if (result != null) {
+                    try {
+                        result = JSON.parse(result);
+
+                        this.setState({ myKey: result });
+                        this.setState({ leaves: result.leavesPerPlant });
+                        console.log("Getting data from Async Storage " + myKey, result);
+                        console.log("gfgfgfg", this.state.lea);
+
+
+                    } catch (e) {
+                        // console.error('AsyncStorage#getItem error deserializing JSON for key: ' + key, e.message);
+                    }
+                } else {
+
+                    //console.log("Async key is null");
+
+                }
+                return result;
+            });
+
+    }
+    async removeItem(myKey) {
+
+        return await AsyncStorage.removeItem(myKey);
+    }
+
+    componentDidMount() {
+
+        numberWeek = 2000 + currentWeekNumber()-2;
+
+
+        console.log("Count : ", abc);
+        console.log("show : ", this.state.show);
+        this.ShowHideComponent();
+        /*this.ShowHideFullySetComponent();
+        this.ShowHideTrussLengthComponent();
+        this.ShowHideGrowthComponent();
+        this.ShowHideTrussHeightComponent();
+        this.ShowHideWidthComponent();
+        this.ShowHideLengthComponent();
+        this.ShowHideStmDiaComponent();
+        this.ShowHideLastWeekStmDiaComponent();*/
+
+        if (abc === '0' || abc === null) {
+            this.getAsysncValues();
+            this.setState({
+                isDataSend: true,
+
+            });
+
+        } else if (abc === '1' && abc !== null) {
+
+            AsyncStorage.clear();
+            numberWeek = numberWeek+1;
+            this.setState({ weekNumber: numberWeek.toString()});
+            console.log("Week Number: ", numberWeek);
+            
+
+            this.setState({
+                isDataSend: false,
+
+            });
+
+
+
+        } else {
+
+            AsyncStorage.clear();
+            numberWeek = numberWeek+1;
+            console.log("Week Number: ", numberWeek);
+            this.setState({ weekNumber: numberWeek.toString()});
+            
+            this.setState({
+                isDataSend: false,
+
+            });
+
+
+        }
+
+        if(no1 !== 'undefined'){
+        db.trussById('HAR 3 - Flamentyno',numberWeek,no1).then((data) => {
+            console.log(data);
+            console.log("Calling database")
+            truss = data;
+            this.setState({
+                truss,
+            });
+            console.log("Truss Details", this.state.truss);
+        }).catch((err) => {
+            console.log(err);
+           
+        })
+    }else{
+
+
+    }
+
+
+    }
+
+    ShowHideComponent = () => {
+        if (abc === '1' && abc !== null) {
+            this.setState({ show: false });
+        } else if (abc === '0' || abc === null) {
+            this.setState({ show: true });
+        } else {
+            this.setState({ show: false });
+
+        }
+    };
+
+
+
+
     updateTextInput = (text, field) => {
+        this.setItem(field, text)
+        this.setState({
+            isDataSend: false,
+
+        });
+        abc = '0';
         const state = this.state
         state[field] = text;
         this.setState(state);
@@ -87,6 +369,7 @@ export default class TrussDetails extends React.Component {
             isLoading: true,
         });
 
+        abc = '0';
         var that = this;
 
         const { trussNumber } = this.state;
@@ -105,7 +388,7 @@ export default class TrussDetails extends React.Component {
             pruningNumber: this.state.pruningNumber,
             plantRow: '365',
             plantName: 'HAR 3 - Flamentyno',
-            plantWeek: '2009',
+            plantWeek: numberWeek,
 
 
         }
@@ -120,7 +403,10 @@ export default class TrussDetails extends React.Component {
                                 console.log(result);
                                 this.setState({
                                     isLoading: false,
+                                    isDataSend: true,
+
                                 });
+                                abc = '1';
                                 if (Platform.OS === 'android') {
                                     ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
 
@@ -129,12 +415,18 @@ export default class TrussDetails extends React.Component {
 
                                 }
                                 this.props.navigation.navigate('FlamentynoPlant1')
+                                this.setState({
+
+                                    isDataSend: true,
+                                });
+                                abc = '1';
 
                             }).catch((err) => {
                                 console.log(err);
                                 this.setState({
                                     isLoading: false,
                                 });
+                                abc = '0';
                             })
 
                         } else {
@@ -142,24 +434,28 @@ export default class TrussDetails extends React.Component {
                             this.setState({
                                 isLoading: false,
                             });
+                            abc = '0';
                         }
                     } else {
                         alert('Please fill Set Flowers');
                         this.setState({
                             isLoading: false,
                         });
+                        abc = '0';
                     }
                 } else {
                     alert('Please fill Set Fruits');
                     this.setState({
                         isLoading: false,
                     });
+                    abc = '0';
                 }
             } else {
                 alert('Please fill Last Week Number');
                 this.setState({
                     isLoading: false,
                 });
+                abc = '0';
             }
         } else {
 
@@ -167,6 +463,7 @@ export default class TrussDetails extends React.Component {
             this.setState({
                 isLoading: false,
             });
+            abc = '0';
         }
     }
 
@@ -227,7 +524,7 @@ export default class TrussDetails extends React.Component {
 
         const { navigate } = this.props.navigation
 
-      
+
         let { errors = {}, ...data } = this.state;
 
         let { LeavesPerPlant, FullySetTruss, TrussLength, WeeklyGrowth, FloweringTrussHeight, LeafLength, LeafWidth, StmDiameter, LastWeekStmDiameter, TrussNumber, LastWeekNumber, SetFruits, SetFlowers, PruningNumber } = data;
@@ -253,104 +550,156 @@ export default class TrussDetails extends React.Component {
 
                             <View style={styles.inputLayout}>
 
+                                <View style={styles.row}>
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Unsend Value  {this.state.number}</Text>) : null}
 
-                                <TextField
-                                    textColor='#000000'
-                                    fontSize={18}
-                                    labelHeight={60}
-                                    tintColor='#000000'
-                                    baseColor='#000000'
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Weeks Value  0</Text>) : null}
+
+                                </View>
+
+                                <TextInput style={styles.input}
+                                    underlineColorAndroid="transparent"
+                                    placeholder="Truss Number"
+                                    placeholderTextColor="#000000"
+                                    autoCapitalize="none"
                                     multiline={false}
-                                    label='Truss Number'
                                     keyboardType={'numeric'}
                                     multiline={false}
+                                    returnKeyType={"next"}
                                     ref={this.trussNumberRef}
                                     autoCorrect={false}
                                     enablesReturnKeyAutomatically={true}
                                     onFocus={this.onFocus}
                                     onChangeText={this.onChangeText}
-                                    onSubmitEditing={this.onSubmitTrussNumber}
+                                    onSubmitEditing={() => { this.lastWeekTextInput.focus(); }}
                                     onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
                                     error={errors.TrussNumber}
-                                    value={this.state.trussNumber} />
+                                    blurOnSubmit={false}
+                                    value={this.state.trussNumber}
 
-                                <TextField
-                                    textColor='#000000'
-                                    fontSize={18}
-                                    labelHeight={60}
-                                    tintColor='#000000'
-                                    baseColor='#000000'
+                                />
+
+                                <View style={styles.row}>
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Unsend Value  {this.state.lastNumber}</Text>) : null}
+
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Weeks Value  0</Text>) : null}
+
+                                </View>
+
+                                <TextInput style={styles.input}
+                                    underlineColorAndroid="transparent"
+                                    placeholder="Last Week"
+                                    placeholderTextColor="#000000"
+                                    autoCapitalize="none"
                                     multiline={false}
-                                    label='Last Week'
+                                    blurOnSubmit={false}
+                                    returnKeyType={"next"}
                                     keyboardType={'numeric'}
                                     multiline={false}
-                                    ref={this.lastWeekNumberRef}
+                                    ref={(input) => { this.lastWeekTextInput = input; }}
                                     autoCorrect={false}
                                     enablesReturnKeyAutomatically={true}
                                     onFocus={this.onFocus}
                                     onChangeText={this.onChangeText}
-                                    onSubmitEditing={this.onSubmitLastWeek}
+                                    onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
                                     onChangeText={(text) => this.updateTextInput(text, 'lastWeekNumber')}
                                     error={errors.LastWeekNumber}
-                                    value={this.state.lastWeekNumber} />
+                                    value={this.state.lastWeekNumber}
 
-                                <TextField
-                                    textColor='#000000'
-                                    fontSize={18}
-                                    labelHeight={60}
-                                    tintColor='#000000'
-                                    baseColor='#000000'
+                                />
+
+                                <View style={styles.row}>
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Unsend Value  {this.state.fruits}</Text>) : null}
+
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Weeks Value  0</Text>) : null}
+
+                                </View>
+
+                                <TextInput style={styles.input}
+                                    underlineColorAndroid="transparent"
+                                    placeholder="Set fruits"
+                                    placeholderTextColor="#000000"
+                                    autoCapitalize="none"
                                     multiline={false}
-                                    label='Set fruits'
+                                    returnKeyType={"next"}
                                     keyboardType={'numeric'}
-                                    ref={this.setFruitsRef}
+                                    ref={(input) => { this.setFruitsTextInput = input; }}
                                     autoCorrect={false}
                                     enablesReturnKeyAutomatically={true}
                                     onFocus={this.onFocus}
                                     onChangeText={this.onChangeText}
                                     onChangeText={(text) => this.updateTextInput(text, 'setFruits')}
-                                    onSubmitEditing={this.onSubmitSetFruits}
+                                    onSubmitEditing={() => { this.setFlowersTextInput.focus(); }}
+                                    blurOnSubmit={false}
                                     error={errors.SetFruits}
-                                    value={this.state.setFruits} />
+                                    value={this.state.setFruits}
 
+                                />
 
-                                <TextField
-                                    textColor='#000000'
-                                    fontSize={18}
-                                    labelHeight={60}
-                                    tintColor='#000000'
-                                    baseColor='#000000'
+                                <View style={styles.row}>
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Unsend Value  {this.state.flowers}</Text>) : null}
+
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Weeks Value  0</Text>) : null}
+
+                                </View>
+
+                                <TextInput style={styles.input}
+                                    underlineColorAndroid="transparent"
+                                    placeholder="Flowers"
+                                    placeholderTextColor="#000000"
+                                    autoCapitalize="none"
                                     multiline={false}
-                                    label='Flowers'
                                     keyboardType={'numeric'}
-                                    ref={this.setFlowersRef}
+                                    ref={(input) => { this.setFlowersTextInput = input; }}
                                     autoCorrect={false}
+                                    returnKeyType={"next"}
                                     enablesReturnKeyAutomatically={true}
                                     onFocus={this.onFocus}
                                     onChangeText={this.onChangeText}
-                                    onSubmitEditing={this.onSubmitFlowers}
+                                    onSubmitEditing={() => { this.pruningNumbersTextInput.focus(); }}
+                                    blurOnSubmit={false}
                                     onChangeText={(text) => this.updateTextInput(text, 'setFlowers')}
                                     error={errors.SetFlowers}
-                                    value={this.state.setFlowers} />
+                                    value={this.state.setFlowers}
 
-                                <TextField
-                                    textColor='#000000'
-                                    fontSize={18}
-                                    labelHeight={60}
-                                    tintColor='#000000'
-                                    baseColor='#000000'
+                                />
+
+                                <View style={styles.row}>
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Unsend Value  {this.state.pruning}</Text>) : null}
+
+                                    {this.state.show ? (
+                                        <Text style={styles.text2}>Last Weeks Value  0</Text>) : null}
+
+                                </View>
+
+                                <TextInput style={styles.input}
+                                    underlineColorAndroid="transparent"
+                                    placeholder="Pruning Number"
+                                    placeholderTextColor="#000000"
+                                    autoCapitalize="none"
                                     multiline={false}
-                                    label='Pruning Number'
                                     keyboardType={'numeric'}
-                                    ref={this.pruningNumberRef}
+                                    ref={(input) => { this.pruningNumbersTextInput = input; }}
                                     autoCorrect={false}
                                     enablesReturnKeyAutomatically={true}
                                     onFocus={this.onFocus}
+                                    returnKeyType={"done"}
                                     onChangeText={this.onChangeText}
-                                    onSubmitEditing={this.onSubmitPruningNumber}
                                     onChangeText={(text) => this.updateTextInput(text, 'pruningNumber')}
                                     error={errors.PruningNumber}
-                                    value={this.state.pruningNumber} />
+                                    value={this.state.pruningNumber}
+
+                                />
+
 
                             </View>
 
@@ -359,6 +708,7 @@ export default class TrussDetails extends React.Component {
                                 onPress={this.saveTrussToDb}>
                                 <Text style={styles.buttonText}>Submit</Text>
                             </TouchableOpacity>
+                            
 
                         </ScrollView>
                     </ImageBackground>
@@ -475,6 +825,29 @@ const styles = StyleSheet.create({
         bottom: 0,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+
+    input: {
+        marginBottom: 10,
+        height: 50,
+        fontSize: 18,
+        borderColor: '#000000',
+        borderWidth: 2,
+        marginTop: 10
+    },
+    text2: {
+        color: '#110A6A',
+        fontSize: 18,
+        textAlign: 'center',
+        fontWeight: 'bold'
+    },
+    row: {
+        flex: 2,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
     }
+
+
 })
 

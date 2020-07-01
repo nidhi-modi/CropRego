@@ -15,11 +15,10 @@ function Har123(props) {
 
         <ScrollView>
 
-
-     <TouchableOpacity
+        <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har3Flamentyno')}>
-       <Text style={styles.buttonText}>HAR 3 - Flamentyno</Text>
+       onPress={() => navigation.navigate('Har1Yelo')}>
+       <Text style={styles.buttonText}>HAR 1 - Yelo</Text>
      </TouchableOpacity>
 
      <TouchableOpacity
@@ -36,32 +35,8 @@ function Har123(props) {
 
      <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har456')}>
-       <Text style={styles.buttonText}>HAR 1 - Yelo</Text>
-     </TouchableOpacity>
-
-     <TouchableOpacity
-       style={styles.buttonContainer}
        onPress={() => navigation.navigate('Har123')}>
        <Text style={styles.buttonText}>HAR 2 - Angelle </Text>
-     </TouchableOpacity>
-
-     <TouchableOpacity
-       style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har456')}>
-       <Text style={styles.buttonText}>HAR 3 - 7269</Text> 
-     </TouchableOpacity>
-
-     <TouchableOpacity
-       style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har123')}>
-       <Text style={styles.buttonText}>HAR 123 Registration </Text>
-     </TouchableOpacity>
-
-     <TouchableOpacity
-       style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har456')}>
-       <Text style={styles.buttonText}>HAR 3 - Bambello</Text>
      </TouchableOpacity>
 
      <TouchableOpacity
@@ -70,6 +45,11 @@ function Har123(props) {
        <Text style={styles.buttonText}>HAR 3 - KM5512 </Text>
      </TouchableOpacity>
 
+     <TouchableOpacity
+       style={styles.buttonContainer}
+       onPress={() => navigation.navigate('Har3Flamentyno')}>
+       <Text style={styles.buttonText}>HAR 3 - Bambello</Text>
+     </TouchableOpacity>
 
         </ScrollView>
 
