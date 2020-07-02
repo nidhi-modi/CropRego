@@ -23,7 +23,7 @@ function Har123(props) {
 
      <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har3Flamentyno')}>
+       onPress={() => navigation.navigate('Har1Angelle')}>
        <Text style={styles.buttonText}>HAR 1 - Angelle</Text>
      </TouchableOpacity>
 

@@ -20,6 +20,7 @@ import PlantDetails from '../screens/PlantDetails'
 import Har1YeloPlant1 from '../screens/Har1YeloPlant1'
 import Har1Yelo from '../screens/Har1Yelo'
 import Har1YeloTrussDetails from '../screens/Har1YeloTrussDetails'
+import Har1Angelle from '../screens/Har1Angelle'
 
 
 
@@ -91,7 +92,8 @@ function MainStackNavigator() {
           
         <Stack.Screen name='Har1YeloTrussDetails' component={Har1YeloTrussDetails} options={{ title: 'T&G Global'}}/> 
 
-         
+        <Stack.Screen name='Har1Angelle' component={Har1Angelle} options={{ title: 'T&G Global' }} />
+
 
       </Stack.Navigator>
 

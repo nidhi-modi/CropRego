@@ -105,17 +105,34 @@ export default class App extends Component {
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
 
     SplashScreen.hide();
     this.getPlants();
-    //this.getTruss();
+    const data = await this.performTimeConsumingTask();
+
+    if (data !== null) {
+   // alert('Moved to next Screen here');
+
+    }
+
+  
+    
+    this.getTruss();
     //this.renderItem();
     console.disableYellowBox = true;
 
 
   }
 
+  performTimeConsumingTask = async() => {
+    return new Promise((resolve) =>
+      setTimeout(
+        () => { resolve('result') },
+        3000
+      )
+    );
+  }
 
 
   getPlants = () => {
