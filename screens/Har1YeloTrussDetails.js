@@ -226,7 +226,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             no9: '',
             no10: '',
 
-           
+
             tableHead: ['Truss', 'Set Fruit', 'Flowers', 'Pruning Number'],
             tableData: [
                 ['1', '2', '3', '4'],
@@ -463,11 +463,7 @@ export default class Har1YeloTrussDetails extends React.Component {
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
 
-        //this.getDataFromDB();
-
-
-
-        
+        //this.getDataFromDB();   
     }
 
     getDataFromDB = () => {
@@ -705,13 +701,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                    Alert.alert('Completed!')
 
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
                     this.props.navigation.navigate('Har1YeloPlant1')
 
                 }
@@ -790,13 +781,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                    Alert.alert('Completed!')
 
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
                     this.props.navigation.navigate('Har1YeloPlant1')
 
                 }
@@ -875,13 +861,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                    Alert.alert('Completed!')
 
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
                     this.props.navigation.navigate('Har1YeloPlant1')
 
                 }
@@ -961,13 +942,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
-
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
+                    Alert.alert('Completed!')
 
                     this.props.navigation.navigate('Har1YeloPlant1')
 
@@ -1048,13 +1023,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                    Alert.alert('Completed!')
 
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
                     this.props.navigation.navigate('Har1YeloPlant1')
 
                 }
@@ -1134,13 +1104,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                    Alert.alert('Completed!')
 
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
                     this.props.navigation.navigate('Har1YeloPlant1')
 
                 }
@@ -1221,13 +1186,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                    Alert.alert('Completed!')
 
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
                     this.props.navigation.navigate('Har1YeloPlant1')
 
                 }
@@ -1308,13 +1268,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                    Alert.alert('Completed!')
 
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
                     this.props.navigation.navigate('Har1YeloPlant1')
 
                 }
@@ -1395,13 +1350,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 } else {
 
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                    Alert.alert('Completed!')
 
-                    } else {
-                        AlertIOS.alert('Completed!!');
-
-                    }
                     this.props.navigation.navigate('Har1YeloPlant1')
 
                 }
@@ -1471,13 +1421,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 });
                 abc = '1';
-                if (Platform.OS === 'android') {
-                    ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
-
-                } else {
-                    AlertIOS.alert('Completed!!');
-
-                }
+                Alert.alert('Completed!')
 
                 this.props.navigation.navigate('Har1YeloPlant1')
 
@@ -1744,7 +1688,7 @@ export default class Har1YeloTrussDetails extends React.Component {
         this[name] = ref;
     }
 
-    
+
 
 
     render() {
@@ -1788,7 +1732,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                         <ScrollView style={styles.formContainer}
                             keyboardShouldPersistTaps='handled'>
 
-                           
+
 
 
                             <View
@@ -1887,6 +1831,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         placeholderTextColor="#000000"
@@ -2016,6 +1961,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -2085,7 +2031,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers1')}
                                         error={errors.SetFlowers1}
-                                        //value={this.state.truss1.setFlowers}
+                                    //value={this.state.truss1.setFlowers}
                                     />
 
                                     <View
@@ -2110,7 +2056,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1')}
                                         error={errors.PruningNumber1}
-                                        //value={this.state.truss1.pruningNumber}
+                                    //value={this.state.truss1.pruningNumber}
                                     />
 
                                     <View
@@ -2141,6 +2087,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -2265,6 +2212,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -2390,6 +2338,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -2516,6 +2465,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -2642,6 +2592,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -2768,6 +2719,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -2893,6 +2845,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -3021,6 +2974,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.textinputheight}
                                         underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
@@ -3334,6 +3288,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+    },
+    textinputheight: {
+
+        height: 70,
     }
 
 

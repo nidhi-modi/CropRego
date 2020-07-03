@@ -658,13 +658,8 @@ export default class Har1YeloPlant1 extends React.Component {
                                                     isDataSend: true,
                                                 });
                                                 abc = '1';
-                                                if (Platform.OS === 'android') {
-                                                    ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
-
-                                                } else {
-                                                    AlertIOS.alert('Completed!!');
-
-                                                }
+                                               
+                                                Alert.alert('Completed!')
                                                 this.props.navigation.navigate('Har1Yelo')
                                                 this.setState({
 
@@ -823,13 +818,8 @@ export default class Har1YeloPlant1 extends React.Component {
                                 this.setState({
                                     isLoading: false,
                                 });
-                                if (Platform.OS === 'android') {
-                                    ToastAndroid.show('Completed!!', ToastAndroid.SHORT)
+                                Alert.alert('Completed!')
 
-                                } else {
-                                    AlertIOS.alert('Completed!!');
-
-                                }
                                 this.props.navigation.navigate('Har1Yelo')
 
                             }).catch((err) => {

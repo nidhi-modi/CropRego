@@ -107,6 +107,8 @@ export default class App extends Component {
 
   async componentDidMount() {
 
+    console.disableYellowBox = true;
+
     SplashScreen.hide();
     this.getPlants();
     const data = await this.performTimeConsumingTask();
@@ -120,7 +122,6 @@ export default class App extends Component {
     
     this.getTruss();
     //this.renderItem();
-    console.disableYellowBox = true;
 
 
   }

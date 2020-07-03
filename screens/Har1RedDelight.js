@@ -8,7 +8,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 var currentWeekNumber = require('current-week-number');
 var numberWeek;
 
-function Har1Angelle(props) {
+function Har1RedDelight(props) {
     const { navigation } = props
 
     numberWeek = 2000 + currentWeekNumber();
@@ -68,6 +68,37 @@ function Har1Angelle(props) {
                         style={styles.buttonContainer}
                         onPress={() => navigation.navigate('Har1YeloPlant1', { plant5: 5 })}>
                         <Text style={styles.buttonText}>Plant 5 - Week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant6: 6 })}>
+                        <Text style={styles.buttonText}>Plant 6 - week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+            
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant7: 7 })}>
+                        <Text style={styles.buttonText}>Plant 7 - Week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant8: 8 })}>
+                        <Text style={styles.buttonText}>Plant 8 - week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant9: 9 })}>
+                        <Text style={styles.buttonText}>Plant 9 - Week {numberWeek}</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.buttonContainer}
+                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant10: 10 })}>
+                        <Text style={styles.buttonText}>Plant 10 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
 
@@ -201,4 +232,4 @@ const styles = StyleSheet.create({
 
     },
 })
-export default Har1Angelle
+export default Har1RedDelight

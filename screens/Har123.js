@@ -29,25 +29,25 @@ function Har123(props) {
 
      <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har123')}>
+       onPress={() => navigation.navigate('Har1RedDelight')}>
        <Text style={styles.buttonText}>HAR 1 - Red Delight </Text>
      </TouchableOpacity>
 
      <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har123')}>
+       onPress={() => navigation.navigate('Har2Angelle')}>
        <Text style={styles.buttonText}>HAR 2 - Angelle </Text>
      </TouchableOpacity>
 
      <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har123')}>
+       onPress={() => navigation.navigate('Har3Km')}>
        <Text style={styles.buttonText}>HAR 3 - KM5512 </Text>
      </TouchableOpacity>
 
      <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har3Flamentyno')}>
+       onPress={() => navigation.navigate('Har3Bambello')}>
        <Text style={styles.buttonText}>HAR 3 - Bambello</Text>
      </TouchableOpacity>
 
