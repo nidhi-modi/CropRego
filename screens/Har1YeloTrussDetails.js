@@ -463,7 +463,6 @@ export default class Har1YeloTrussDetails extends React.Component {
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
 
-        //this.getDataFromDB();   
     }
 
     getDataFromDB = () => {
@@ -3292,6 +3291,8 @@ const styles = StyleSheet.create({
     textinputheight: {
 
         height: 70,
+        borderBottomWidth: 1,
+        borderBottomColor: 'black',
     }
 
 

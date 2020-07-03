@@ -412,7 +412,7 @@ export default class Har1YeloPlant1 extends React.Component {
 
         }
 
-        if (no1 !== undefined && no1 !== null) {
+        /*if (no1 !== undefined && no1 !== null) {
 
             console.log("No1 Value:", no1);
             console.log("No2 Value:", no2);
@@ -544,7 +544,7 @@ export default class Har1YeloPlant1 extends React.Component {
                     }
                 }
             }
-        }
+        }*/
 
 
 
@@ -1593,7 +1593,9 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10,
         marginBottom: 10,
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
+        borderBottomWidth: 1,
+        borderBottomColor: 'gray',
 
 
     },
@@ -1614,6 +1616,11 @@ const styles = StyleSheet.create({
         marginRight: 10,
 
     },
+
+    inputBox: {
+        borderBottomWidth: 1,
+        borderBottomColor: 'gray',
+    }
 
 })
 
