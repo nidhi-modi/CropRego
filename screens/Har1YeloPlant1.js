@@ -316,9 +316,10 @@ export default class Har1YeloPlant1 extends React.Component {
 
     componentDidMount() {
 
-        numberWeek = 2000 + currentWeekNumber()-1;
+        numberWeek = 2000 + currentWeekNumber()-2;
         console.log("Current Week Number: ", numberWeek);
 
+        console.ignoredYellowBox = ['react-native BugReporting extraData'];
 
 
         console.log("Count : ", abc);
@@ -1595,7 +1596,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         backgroundColor: "transparent",
         borderBottomWidth: 1,
-        borderBottomColor: 'gray',
+        borderBottomColor: 'black',
 
 
     },

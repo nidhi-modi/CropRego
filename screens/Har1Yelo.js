@@ -11,7 +11,7 @@ var numberWeek;
 function Har1Yelo(props) {
     const { navigation } = props
 
-    numberWeek = 2000 + currentWeekNumber();
+    numberWeek = 2000 + currentWeekNumber()-2;
 
     React.useLayoutEffect(() => {
         navigation.setOptions({
