@@ -25,6 +25,9 @@ import Har1RedDelight from '../screens/Har1RedDelight'
 import Har2Angelle from '../screens/Har2Angelle'
 import Har3Km from '../screens/Har3Km'
 import Har3Bambello from '../screens/Har3Bambello'
+import Ger1Row from '../screens/Ger1Row'
+import Ger1Merlice from '../screens/Ger1Merlice'
+import Ger1Merlice2 from '../screens/Ger1Merlice2'
 
 
 
@@ -100,6 +103,12 @@ function MainStackNavigator() {
         <Stack.Screen name='Har3Km' component={Har3Km} options={{ title: 'T&G Global' }} />
 
         <Stack.Screen name='Har3Bambello' component={Har3Bambello} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger1Row' component={Ger1Row} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger1Merlice' component={Ger1Merlice} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger1Merlice2' component={Ger1Merlice2} options={{ title: 'T&G Global' }} />
 
 
       </Stack.Navigator>
