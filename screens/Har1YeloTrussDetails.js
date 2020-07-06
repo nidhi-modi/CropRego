@@ -371,8 +371,12 @@ export default class Har1YeloTrussDetails extends React.Component {
 
     componentDidMount() {
 
+        console.ignoredYellowBox = ['react-native BugReporting extraData'];
+
+
         numberWeek = 2000 + currentWeekNumber() - 2;
         console.log("Current Week Number:  ", 2000 + currentWeekNumber() - 1);
+
 
 
         console.log("Count : ", abc);
@@ -463,7 +467,6 @@ export default class Har1YeloTrussDetails extends React.Component {
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
 
-        //this.getDataFromDB();   
     }
 
     getDataFromDB = () => {
@@ -1860,6 +1863,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -1889,6 +1893,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -1916,6 +1921,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -1989,6 +1995,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2016,6 +2023,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2043,6 +2051,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2115,6 +2124,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2142,6 +2152,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2169,6 +2180,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2240,6 +2252,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2267,6 +2280,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2294,6 +2308,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2366,6 +2381,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2393,6 +2409,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2420,6 +2437,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2493,6 +2511,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2520,6 +2539,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2547,6 +2567,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2620,6 +2641,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2647,6 +2669,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2674,6 +2697,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2747,6 +2771,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2774,6 +2799,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2801,6 +2827,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2873,6 +2900,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2900,6 +2928,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -2927,6 +2956,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -3002,6 +3032,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -3029,6 +3060,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -3056,6 +3088,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                                     <TextInput
+                                        style={styles.bottonColor}
                                         underlineColorAndroid="black"
                                         placeholderTextColor="#000000"
                                         autoCapitalize="none"
@@ -3292,8 +3325,14 @@ const styles = StyleSheet.create({
     textinputheight: {
 
         height: 70,
-    }
+        borderBottomWidth: 1,
+        borderBottomColor: 'black',
+    },
 
+    bottonColor: {
+        borderBottomWidth: 1,
+        borderBottomColor: 'black',
+    }
 
 })
 
