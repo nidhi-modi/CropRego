@@ -28,6 +28,9 @@ import Har3Bambello from '../screens/Har3Bambello'
 import Ger1Row from '../screens/Ger1Row'
 import Ger1Merlice from '../screens/Ger1Merlice'
 import Ger1Merlice2 from '../screens/Ger1Merlice2'
+import Ger1MerlicePlant1 from '../screens/Ger1MerlicePlant1'
+import Ger1Merlice2Plant1 from '../screens/Ger1Merlice2Plant1'
+import Ger1MerliceTrussDetails from '../screens/Ger1MerliceTrussDetails'
 
 
 
@@ -109,6 +112,12 @@ function MainStackNavigator() {
         <Stack.Screen name='Ger1Merlice' component={Ger1Merlice} options={{ title: 'T&G Global' }} />
 
         <Stack.Screen name='Ger1Merlice2' component={Ger1Merlice2} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger1MerlicePlant1' component={Ger1MerlicePlant1} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger1Merlice2Plant1' component={Ger1Merlice2Plant1} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger1MerliceTrussDetails' component={Ger1MerliceTrussDetails} options={{ title: 'T&G Global' }} />
 
 
       </Stack.Navigator>

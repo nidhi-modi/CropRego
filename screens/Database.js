@@ -36,7 +36,7 @@ export default class Database {
                                 console.log("Database not yet ready ... populating data");
                                 db.transaction((tx) => {
                                     tx.executeSql('DROP TABLE IF EXISTS TrussDetails', []);
-                                    tx.executeSql('CREATE TABLE IF NOT EXISTS TrussDetails (trussID INTEGER PRIMARY KEY AUTOINCREMENT, trussNumber INT(20), lastWeekNumber INT(20), setFruits INT(20), setFlowers INT(20), pruningNumber INT(20), plantRow INT(20), plantName VARCHAR(30), plantWeek INT(20))');
+                                    tx.executeSql('CREATE TABLE IF NOT EXISTS TrussDetails (trussID INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber VARCHAR(30), trussNumber INT(20), lastWeekNumber INT(20), setFruits INT(20), setFlowers INT(20), pruningNumber INT(20), plantRow INT(20), plantName VARCHAR(30), plantWeek INT(20))');
                                 }).then(() => {
                                     console.log("Truss Details Table created successfully");
                                 }).catch(error => {
@@ -175,15 +175,16 @@ export default class Database {
                 db.transaction((tx) => {
 
 
-                    tx.executeSql('SELECT p.trussID, p.trussNumber, p.lastWeekNumber, p.setFruits, p.setFlowers, p.pruningNumber, p.plantRow, p.plantName, p.plantWeek FROM TrussDetails p', []).then(([tx, results]) => {
+                    tx.executeSql('SELECT p.trussID, p.plantNumber, p.trussNumber, p.lastWeekNumber, p.setFruits, p.setFlowers, p.pruningNumber, p.plantRow, p.plantName, p.plantWeek FROM TrussDetails p', []).then(([tx, results]) => {
                         console.log("Query completed");
                         var len = results.rows.length;
                         for (let i = 0; i < len; i++) {
                             let row = results.rows.item(i);
                             console.log(`Truss ID: ${row.trussID}, Plant Name: ${row.plantName}, Plant Row: ${row.plantRow}, Plant Week: ${row.plantWeek}`)
-                            const { trussID, trussNumber, lastWeekNumber, setFruits, setFlowers, pruningNumber, plantRow, plantName, plantWeek } = row;
+                            const { trussID, plantNumber, trussNumber, lastWeekNumber, setFruits, setFlowers, pruningNumber, plantRow, plantName, plantWeek } = row;
                             trussDetails.push({
                                 trussID,
+                                plantNumber,
                                 trussNumber,
                                 lastWeekNumber,
                                 setFruits,
@@ -319,6 +320,32 @@ export default class Database {
         });
     }
 
+    plantsByWeekRowAndName(number,week,name, row) {
+        return new Promise((resolve) => {
+            this.initDB().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('SELECT * FROM PlantDetails WHERE plantNumber = ? AND plantWeek = ? AND plantName = ? AND plantRow = ?', [number,week,name, row]).then(([tx, results]) => {
+                        console.log(results);
+                        if (results.rows.length > 0) {
+                            let row = results.rows.item(0);
+                            resolve(row);
+                        }
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+
+
     plantsByWeekNumberAndName(number,week,name) {
         return new Promise((resolve) => {
             this.initDB().then((db) => {
@@ -375,7 +402,7 @@ export default class Database {
             return new Promise((resolve) => {
                 this.initDB2().then((db) => {
                     db.transaction((tx) => {
-                        tx.executeSql('INSERT INTO TrussDetails VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', [pts.trussID, pts.trussNumber, pts.lastWeekNumber, pts.setFruits, pts.setFlowers, pts.pruningNumber, pts.plantRow, pts.plantName, pts.plantWeek]).then(([tx, results]) => {
+                        tx.executeSql('INSERT INTO TrussDetails VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [pts.trussID, pts.plantNumber, pts.trussNumber, pts.lastWeekNumber, pts.setFruits, pts.setFlowers, pts.pruningNumber, pts.plantRow, pts.plantName, pts.plantWeek]).then(([tx, results]) => {
                             resolve(results);
                             console.log('Details Added Successfully: ', results);
                         });

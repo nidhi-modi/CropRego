@@ -8,7 +8,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 var currentWeekNumber = require('current-week-number');
 var numberWeek;
 
-function Ger1Merlice(props) {
+function Ger1Merlice2(props) {
     const { navigation } = props
 
     numberWeek = 2000 + currentWeekNumber();
@@ -41,63 +41,63 @@ function Ger1Merlice(props) {
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant1: 1 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant1: 1 })}>
                         <Text style={styles.buttonText}>Plant 1 - week {numberWeek}</Text>
                     </TouchableOpacity>
 
             
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant2: 2 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant2: 2 })}>
                         <Text style={styles.buttonText}>Plant 2 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant3: 3 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant3: 3 })}>
                         <Text style={styles.buttonText}>Plant 3 - week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant4: 4 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant4: 4 })}>
                         <Text style={styles.buttonText}>Plant 4 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant5: 5 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant5: 5 })}>
                         <Text style={styles.buttonText}>Plant 5 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant6: 6 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant6: 6 })}>
                         <Text style={styles.buttonText}>Plant 6 - week {numberWeek}</Text>
                     </TouchableOpacity>
 
             
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant7: 7 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant7: 7 })}>
                         <Text style={styles.buttonText}>Plant 7 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant8: 8 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant8: 8 })}>
                         <Text style={styles.buttonText}>Plant 8 - week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant9: 9 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant9: 9 })}>
                         <Text style={styles.buttonText}>Plant 9 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         style={styles.buttonContainer}
-                        onPress={() => navigation.navigate('Har1YeloPlant1', { plant10: 10 })}>
+                        onPress={() => navigation.navigate('Ger1Merlice2Plant1', { plant10: 10 })}>
                         <Text style={styles.buttonText}>Plant 10 - Week {numberWeek}</Text>
                     </TouchableOpacity>
 
@@ -232,4 +232,4 @@ const styles = StyleSheet.create({
 
     },
 })
-export default Ger1Merlice
+export default Ger1Merlice2
