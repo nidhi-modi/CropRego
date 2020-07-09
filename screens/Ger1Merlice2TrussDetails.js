@@ -390,8 +390,8 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
         console.log("show : ", this.state.show);
         this.ShowHideComponent();
 
-        if (this.props.route.params.plant !== undefined) {
-            plantNo = this.props.route.params.plant;
+        if (this.props.route.params.plantno !== undefined) {
+            plantNo = this.props.route.params.plantno;
             console.log("Plant " +plantNo);
             this.setState({
               
@@ -680,7 +680,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -761,7 +761,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -842,7 +842,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -924,7 +924,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -1006,7 +1006,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -1088,7 +1088,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -1171,7 +1171,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -1254,7 +1254,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -1337,7 +1337,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
 
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Ger1Merlice2Plant1')
+                    this.props.navigation.navigate('Ger1MerlicePlant1')
 
                 }
                 this.setState({
@@ -1409,7 +1409,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
                 abc = '1';
                 Alert.alert('Completed!')
 
-                this.props.navigation.navigate('Ger1Merlice2Plant1')
+                this.props.navigation.navigate('Ger1MerlicePlant1')
 
 
                 this.setState({

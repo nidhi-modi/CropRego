@@ -13,6 +13,8 @@ import Database from '../screens/Database'
 import { Divider } from 'react-native-elements';
 import { fbDB } from '../screens/config';
 import AsyncStorage from '@react-native-community/async-storage';
+import Toast from 'react-native-tiny-toast'
+
 
 
 const db = new Database();
@@ -452,7 +454,7 @@ export default class Ger1MerlicePlant1 extends Component {
                 const NoWeek = this.state.week - 1
 
 
-                db.plantsByWeekRowAndName(no2, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                db.plantsByWeekRowAndName(no2, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -479,7 +481,7 @@ export default class Ger1MerlicePlant1 extends Component {
 
                     const NoWeek = this.state.week - 1
 
-                    db.plantsByWeekRowAndName(no3, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                    db.plantsByWeekRowAndName(no3, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -506,7 +508,7 @@ export default class Ger1MerlicePlant1 extends Component {
 
                         const NoWeek = this.state.week - 1
 
-                        db.plantsByWeekRowAndName(no4, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                        db.plantsByWeekRowAndName(no4, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -534,7 +536,7 @@ export default class Ger1MerlicePlant1 extends Component {
                             const NoWeek = this.state.week - 1
 
 
-                            db.plantsByWeekRowAndName(no5, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                            db.plantsByWeekRowAndName(no5, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -562,7 +564,7 @@ export default class Ger1MerlicePlant1 extends Component {
                                 const NoWeek = this.state.week - 1
 
 
-                                db.plantsByWeekRowAndName(no6, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                                db.plantsByWeekRowAndName(no6, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                                     console.log(data);
                                     console.log("Calling database")
                                     plant = data;
@@ -588,7 +590,7 @@ export default class Ger1MerlicePlant1 extends Component {
                                     const NoWeek = this.state.week - 1
 
 
-                                    db.plantsByWeekRowAndName(no7, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                                    db.plantsByWeekRowAndName(no7, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                                         console.log(data);
                                         console.log("Calling database")
                                         plant = data;
@@ -613,7 +615,7 @@ export default class Ger1MerlicePlant1 extends Component {
 
                                         const NoWeek = this.state.week - 1
 
-                                        db.plantsByWeekRowAndName(no8, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                                        db.plantsByWeekRowAndName(no8, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                                             console.log(data);
                                             console.log("Calling database")
                                             plant = data;
@@ -638,7 +640,7 @@ export default class Ger1MerlicePlant1 extends Component {
 
                                             const NoWeek = this.state.week - 1
 
-                                            db.plantsByWeekRowAndName(no9, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                                            db.plantsByWeekRowAndName(no9, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                                                 console.log(data);
                                                 console.log("Calling database")
                                                 plant = data;
@@ -664,7 +666,7 @@ export default class Ger1MerlicePlant1 extends Component {
                                                 const NoWeek = this.state.week - 1
 
 
-                                                db.plantsByWeekRowAndName(no10, NoWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                                                db.plantsByWeekRowAndName(no10, numberWeek-1, 'GER 1 - Merlice', '45/46').then((data) => {
                                                     console.log(data);
                                                     console.log("Calling database")
                                                     plant = data;
@@ -805,7 +807,9 @@ export default class Ger1MerlicePlant1 extends Component {
                                                 });
                                                 abc = '1';
 
-                                                Alert.alert('Completed!')
+                                                //Alert.alert('Completed!')
+                                                Toast.showSuccess('Completed')
+                                                alert('Completed')
                                                 this.props.navigation.navigate('Ger1Merlice')
                                                 this.setState({
 
@@ -964,7 +968,7 @@ export default class Ger1MerlicePlant1 extends Component {
                                 this.setState({
                                     isLoading: false,
                                 });
-                                Alert.alert('Completed!')
+                                Toast.showSuccess('Completed')
 
                                 this.props.navigation.navigate('Ger1Merlice')
 
