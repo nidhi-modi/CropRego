@@ -1556,7 +1556,7 @@ export default class Ger1Merlice2Plant1 extends Component {
 
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har1YeloTrussDetails')}>
+                                onPress={() => this.props.navigation.navigate('Ger1Merlice2TrussDetails', { plantno: no})}>
                                 <Text style={styles.buttonText}>Truss Details</Text>
                             </TouchableOpacity>
 
@@ -1758,8 +1758,8 @@ const styles = StyleSheet.create({
     },
 
     inputBox: {
-        borderBottomWidth: 1,
-        borderBottomColor: 'gray',
+        borderBottomWidth: 1.2,
+        borderBottomColor: 'black',
     }
 
 })
