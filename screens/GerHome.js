@@ -33,7 +33,7 @@ return (
 
    <TouchableOpacity
      style={styles.buttonContainer}
-     onPress={() => navigation.navigate('Har2Angelle')}>
+     onPress={() => navigation.navigate('Ger4Row')}>
      <Text style={styles.buttonText}>GER 4 - Provine </Text>
    </TouchableOpacity>
 

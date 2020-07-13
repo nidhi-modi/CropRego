@@ -31,7 +31,14 @@ import Ger1Merlice2 from '../screens/Ger1Merlice2'
 import Ger1MerlicePlant1 from '../screens/Ger1MerlicePlant1'
 import Ger1Merlice2Plant1 from '../screens/Ger1Merlice2Plant1'
 import Ger1MerliceTrussDetails from '../screens/Ger1MerliceTrussDetails'
-
+import Ger1Merlice2TrussDetails from '../screens/Ger1Merlice2TrussDetails'
+import Ger4Row from '../screens/Ger4Row'
+import Ger4Provine from '../screens/Ger4Provine'
+import Ger4Provine2 from '../screens/Ger4Provine2'
+import Ger4ProvinePlant1 from '../screens/Ger4ProvinePlant1'
+import Ger4Provine2Plant1 from '../screens/Ger4Provine2Plant1'
+import Ger4ProvineTrussDetails from '../screens/Ger4ProvineTrussDetails'
+import Ger4Provine2TrussDetails from '../screens/Ger4Provine2TrussDetails'
 
 
 const Stack = createStackNavigator()
@@ -118,6 +125,22 @@ function MainStackNavigator() {
         <Stack.Screen name='Ger1Merlice2Plant1' component={Ger1Merlice2Plant1} options={{ title: 'T&G Global' }} />
 
         <Stack.Screen name='Ger1MerliceTrussDetails' component={Ger1MerliceTrussDetails} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger1Merlice2TrussDetails' component={Ger1Merlice2TrussDetails} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger4Row' component={Ger4Row} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger4Provine' component={Ger4Provine} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger4Provine2' component={Ger4Provine2} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger4ProvinePlant1' component={Ger4ProvinePlant1} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger4Provine2Plant1' component={Ger4Provine2Plant1} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger4ProvineTrussDetails' component={Ger4ProvineTrussDetails} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Ger4Provine2TrussDetails' component={Ger4Provine2TrussDetails} options={{ title: 'T&G Global' }} />
 
 
       </Stack.Navigator>
