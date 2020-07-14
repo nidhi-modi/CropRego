@@ -439,6 +439,7 @@ export default class Ger4ProvineTrussDetails extends Component {
         this.setState({ trussNumber8: parseInt(this.state.trussNumber) + 8 })
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
+        this.getDataFromDB();
 
     }
 
@@ -453,7 +454,7 @@ export default class Ger4ProvineTrussDetails extends Component {
 
         if (this.state.trussNumber != null) {
 
-            db.trussById(this.state.trussNumber, this.state.week - 1, 'GER 4 - Provine').then((data) => {
+            db.trussById(this.state.trussNumber, '29', 'GER 4 - Provine').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 truss = data;
