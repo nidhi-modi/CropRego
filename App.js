@@ -26,6 +26,7 @@ import { fbDB } from '../rego/screens/config'
 import { Firebase } from 'react-native-firebase';
 
 
+
 const db = new Database();
 var firebase = require("firebase");
 
@@ -105,11 +106,17 @@ export default class App extends Component {
     };
   }
 
+  
+
   async componentDidMount() {
 
     console.disableYellowBox = true;
 
+    module.hot.accept(() => { });
+
     SplashScreen.hide();
+
+  
     this.getPlants();
     const data = await this.performTimeConsumingTask();
 
@@ -118,10 +125,7 @@ export default class App extends Component {
 
     }
 
-  
-    
     this.getTruss();
-    //this.renderItem();
 
 
   }

@@ -1,15 +1,46 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity,ImageBackground, TouchableHighlight,ScrollView } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity,ImageBackground, TouchableHighlight,ScrollView,  BackHandler,Alert } from 'react-native'
 import AwesomeButton from 'react-native-really-awesome-button';
 import AwesomeButtonRick from 'react-native-really-awesome-button/src/themes/rick';
 
 
-function GerHome(props) {
-  const { navigation } = props
+export default class GerHome extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+
+
+
+  }
+
+  handleBackButton = () => {
+   
+   BackHandler.exitApp();
+     
+  }
+
+  onButtonPress = () => {
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+    // then navigate
+    navigate('NewScreen');
+  }
+
+
+
+  componentDidMount() {
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+  }
+
+  render() {
 return (
   <View style={styles.container}>
 
-<ImageBackground source={require('../assets/T&G_Tomatoes.jpg')} style={styles.backgroundImage}>
+<ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
       <ScrollView>
 
@@ -52,6 +83,7 @@ return (
 )
 
 }
+}
 
 
 const styles = StyleSheet.create({
@@ -92,7 +124,7 @@ buttonContainer1: {
 },
 
 buttonContainer: {
-  backgroundColor: 'rgba(0,128,0,0.65)',
+  backgroundColor: '#D3D3D3',
   borderRadius: 5,
   padding: 10,
   margin: 20,
@@ -102,10 +134,9 @@ buttonContainer: {
 
 },
 buttonText: {
-  fontSize: 23,
-  color: '#ffffff',
+  fontSize: 19,
+  color: '#000000',
   fontWeight: 'bold',
-  fontStyle: 'italic'
 
 },
 backgroundImage: {
@@ -115,5 +146,3 @@ backgroundImage: {
     resizeMode:'cover'
 }
 })
-
-export default GerHome

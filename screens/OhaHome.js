@@ -1,12 +1,46 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, BackHandler,Alert } from 'react-native'
 
-function OhaHome() {
+export default class OhaHome extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+
+
+
+  }
+
+  handleBackButton = () => {
+   
+   BackHandler.exitApp();
+     
+  }
+
+  onButtonPress = () => {
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+    // then navigate
+    navigate('NewScreen');
+  }
+
+
+
+  componentDidMount() {
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+  }
+
+  render() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>OHA Home Screen</Text>
     </View>
   )
+}
+
 }
 
 const styles = StyleSheet.create({
@@ -23,4 +57,3 @@ const styles = StyleSheet.create({
   }
 })
 
-export default OhaHome

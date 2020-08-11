@@ -36,7 +36,7 @@ export default class Database {
                                 console.log("Database not yet ready ... populating data");
                                 db.transaction((tx) => {
                                     tx.executeSql('DROP TABLE IF EXISTS TrussDetails', []);
-                                    tx.executeSql('CREATE TABLE IF NOT EXISTS TrussDetails (trussID INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber VARCHAR(30), trussNumber INT(20), lastWeekNumber INT(20), setFruits INT(20), setFlowers INT(20), pruningNumber INT(20), plantRow INT(20), plantName VARCHAR(30), plantWeek INT(20))');
+                                    tx.executeSql('CREATE TABLE IF NOT EXISTS TrussDetails (trussID INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber VARCHAR(30), trussNumber INT(20), fruitDiameter INT(20), setFruits INT(20), setFlowers INT(20), pruningNumber INT(20), plantRow INT(20), plantName VARCHAR(30), plantWeek INT(20), fruitLoad INT(20), pruningFlower INT(20), floweringTruss INT(20), pruningSet INT(20), settingTruss INT(20), pruningHarvest INT(20), harvestTruss INT(20))');
                                 }).then(() => {
                                     console.log("Truss Details Table created successfully");
                                 }).catch(error => {
@@ -167,6 +167,109 @@ export default class Database {
         });
     }
 
+    plantByWeekInList(name,week) {
+        try {
+        return new Promise((resolve) => {
+            const plantDetails = [];
+            this.initDB().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('SELECT p.plantId, p.plantNumber, p.plantRow, p.plantName, p.plantWeek, p.leavesPerPlant, p.fullySetTruss, p.setTrussLength, p.weeklyGrowth, p.floweringTrussHeight, p.leafLength, p.leafWidth, p.stmDiameter, p.lastWeekStmDiameter FROM PlantDetails p WHERE plantName = ? AND plantWeek = ?', [name,week]).then(([tx, results]) => {
+                        console.log("Query completed");
+                        var len = results.rows.length;
+                        for (let i = 0; i < len; i++) {
+                            let row = results.rows.item(i);
+                            console.log(`Plant ID: ${row.plantId}, Plant Name: ${row.plantName}, Plant Row: ${row.plantRow}, Plant Week: ${row.plantWeek}`)
+                            const { plantId, plantNumber, plantRow, plantName, plantWeek, leavesPerPlant, fullySetTruss, setTrussLength, weeklyGrowth, floweringTrussHeight, leafLength, leafWidth, stmDiameter, lastWeekStmDiameter } = row;
+                            plantDetails.push({
+                                plantId,
+                                plantNumber,
+                                plantRow,
+                                plantName,
+                                plantWeek,
+                                leavesPerPlant,
+                                fullySetTruss,
+                                setTrussLength,
+                                weeklyGrowth,
+                                floweringTrussHeight,
+                                leafLength,
+                                leafWidth,
+                                stmDiameter,
+                                lastWeekStmDiameter
+                            });
+                        }
+                        console.log(plantDetails);
+                        resolve(plantDetails);
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+    catch (err_1) {
+        console.log(err_1);
+    }
+    }
+
+    plantByWeekInList2(name,week) {
+        try {
+        return new Promise((resolve) => {
+            const plantDetails = [];
+            this.initDB().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('SELECT p.plantId, p.plantNumber, p.plantRow, p.plantName, p.plantWeek, p.leavesPerPlant, p.fullySetTruss, p.setTrussLength, p.weeklyGrowth, p.floweringTrussHeight, p.leafLength, p.leafWidth, p.stmDiameter, p.lastWeekStmDiameter FROM PlantDetails p WHERE plantName = ? AND plantWeek = ?', [name,week]).then(([tx, results]) => {
+                        console.log("Query completed");
+                        var len = results.rows.length;
+                        for (let i = 0; i < len; i++) {
+                            let row = results.rows.item(i);
+                            console.log(`Plant ID: ${row.plantId}, Plant Name: ${row.plantName}, Plant Row: ${row.plantRow}, Plant Week: ${row.plantWeek}`)
+                            const { plantId, plantNumber, plantRow, plantName, plantWeek, leavesPerPlant, fullySetTruss, setTrussLength, weeklyGrowth, floweringTrussHeight, leafLength, leafWidth, stmDiameter, lastWeekStmDiameter } = row;
+                            plantDetails.push({
+                                plantId,
+                                plantNumber,
+                                plantRow,
+                                plantName,
+                                plantWeek,
+                                leavesPerPlant,
+                                fullySetTruss,
+                                setTrussLength,
+                                weeklyGrowth,
+                                floweringTrussHeight,
+                                leafLength,
+                                leafWidth,
+                                stmDiameter,
+                                lastWeekStmDiameter
+                            });
+                        }
+                        console.log(plantDetails);
+                        resolve(plantDetails);
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+    catch (err_1) {
+        console.log(err_1);
+    }
+    }
+
+
     //Add a function to get the list of plants.
     listTruss() {
         return new Promise((resolve) => {
@@ -175,24 +278,32 @@ export default class Database {
                 db.transaction((tx) => {
 
 
-                    tx.executeSql('SELECT p.trussID, p.plantNumber, p.trussNumber, p.lastWeekNumber, p.setFruits, p.setFlowers, p.pruningNumber, p.plantRow, p.plantName, p.plantWeek FROM TrussDetails p', []).then(([tx, results]) => {
+                    tx.executeSql('SELECT p.trussID, p.plantNumber, p.trussNumber, p.fruitDiameter, p.setFruits, p.setFlowers, p.pruningNumber, p.plantRow, p.plantName, p.plantWeek, p.fruitLoad, p.pruningFlower, p.floweringTruss, p.pruningSet, p.settingTruss, p.pruningHarvest, p.harvestTruss FROM TrussDetails p', []).then(([tx, results]) => {
                         console.log("Query completed");
                         var len = results.rows.length;
                         for (let i = 0; i < len; i++) {
                             let row = results.rows.item(i);
                             console.log(`Truss ID: ${row.trussID}, Plant Name: ${row.plantName}, Plant Row: ${row.plantRow}, Plant Week: ${row.plantWeek}`)
-                            const { trussID, plantNumber, trussNumber, lastWeekNumber, setFruits, setFlowers, pruningNumber, plantRow, plantName, plantWeek } = row;
+                            const { trussID, plantNumber, trussNumber, fruitDiameter, setFruits, setFlowers, pruningNumber, plantRow, plantName, plantWeek, fruitLoad, pruningFlower, floweringTruss, pruningSet, settingTruss, pruningHarvest, harvestTruss} = row;
                             trussDetails.push({
                                 trussID,
                                 plantNumber,
                                 trussNumber,
-                                lastWeekNumber,
+                                fruitDiameter,
                                 setFruits,
                                 setFlowers,
                                 pruningNumber,
                                 plantRow,
                                 plantName,
-                                plantWeek
+                                plantWeek,
+                                fruitLoad,
+                                pruningFlower,
+                                floweringTruss, 
+                                pruningSet, 
+                                settingTruss, 
+                                pruningHarvest, 
+                                harvestTruss
+                                
 
                             });
                         }
@@ -212,6 +323,7 @@ export default class Database {
         });
     }
 
+    
     //Add a function to get Plants by ID.
     plantsById(id) {
         console.log(id);
@@ -349,10 +461,13 @@ export default class Database {
     plantsByWeekNumberAndName(number,week,name) {
         return new Promise((resolve) => {
             this.initDB().then((db) => {
+                const plant = {};
                 db.transaction((tx) => {
                     //need to add plant name, plant row and plant week 
                     tx.executeSql('SELECT * FROM PlantDetails WHERE plantNumber = ? AND plantWeek = ? AND plantName = ?', [number,week,name]).then(([tx, results]) => {
                         console.log(results);
+
+
                         if (results.rows.length > 0) {
                             let row = results.rows.item(0);
                             resolve(row);
@@ -402,7 +517,7 @@ export default class Database {
             return new Promise((resolve) => {
                 this.initDB2().then((db) => {
                     db.transaction((tx) => {
-                        tx.executeSql('INSERT INTO TrussDetails VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [pts.trussID, pts.plantNumber, pts.trussNumber, pts.lastWeekNumber, pts.setFruits, pts.setFlowers, pts.pruningNumber, pts.plantRow, pts.plantName, pts.plantWeek]).then(([tx, results]) => {
+                        tx.executeSql('INSERT INTO TrussDetails VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [pts.trussID, pts.plantNumber, pts.trussNumber, pts.fruitDiameter, pts.setFruits, pts.setFlowers, pts.pruningNumber, pts.plantRow, pts.plantName, pts.plantWeek, pts.fruitLoad, pts.pruningFlower, pts.floweringTruss, pts.pruningSet, pts.settingTruss, pts.pruningHarvest, pts.harvestTruss]).then(([tx, results]) => {
                             resolve(results);
                             console.log('Details Added Successfully: ', results);
                         });
@@ -426,13 +541,43 @@ export default class Database {
 
 
  //Add a function to get Plants by ID.
- trussById(name,week,number) {
+ trussById2(name,week,number,plantNum) {
     try {
     return new Promise((resolve) => {
         this.initDB2().then((db) => {
             db.transaction((tx) => {
                 //need to add plant name, plant row and plant week 
-                tx.executeSql('SELECT * FROM TrussDetails WHERE plantName = ? AND plantWeek = ? AND trussNumber = ?', [number,week,name]).then(([tx, results]) => {
+                tx.executeSql('SELECT * FROM TrussDetails WHERE plantName = ? AND plantWeek = ? AND trussNumber = ? AND plantNumber = ?', [number,week,name,plantNum]).then(([tx, results]) => {
+                    console.log(results);
+                    if (results.rows.length > 0) {
+                        let row = results.rows.item(0);
+                        resolve(row);
+                    }
+                });
+            }).then((result) => {
+                this.closeDatabase(db);
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }).catch((err) => {
+        console.log(err);
+    });
+}
+catch (err_1) {
+    console.log(err_1);
+}
+}
+
+trussById(name,week,number,plantNum) {
+    try {
+    return new Promise((resolve) => {
+        this.initDB2().then((db) => {
+            db.transaction((tx) => {
+                //need to add plant name, plant row and plant week 
+                tx.executeSql('SELECT * FROM TrussDetails WHERE plantName = ? AND plantWeek = ? AND trussNumber = ? AND plantNumber = ?', [number,week,name,plantNum]).then(([tx, results]) => {
                     console.log(results);
                     if (results.rows.length > 0) {
                         let row = results.rows.item(0);
@@ -493,7 +638,7 @@ catch (err_1) {
         var parameters = [],
             bigqery = "";
 
-        var sqlQuery = 'trussID, trussNumber, lastWeekNumber, setFruits, setFlowers, pruningNumber, plantRow, plantName, plantWeek'
+        var sqlQuery = 'trussID, trussNumber, fruitDiameter, setFruits, setFlowers, pruningNumber, plantRow, plantName, plantWeek'
 
 
         return new Promise((resolve) => {
@@ -505,7 +650,7 @@ catch (err_1) {
                     _.each(raw_data, i => {
 
                         bigqery += "(?,?,?, ?,?,?, ?,?,? )";
-                        parameters.push(i, raw_data[i].trussNumber, raw_data[i].lastWeekNumber, raw_data[i].setFruits, raw_data[i].setFlowers, raw_data[i].pruningNumber, raw_data[i].plantRow, raw_data[i].plantName, raw_data[i].plantWeek);
+                        parameters.push(i, raw_data[i].trussNumber, raw_data[i].fruitDiameter, raw_data[i].setFruits, raw_data[i].setFlowers, raw_data[i].pruningNumber, raw_data[i].plantRow, raw_data[i].plantName, raw_data[i].plantWeek);
 
                         tx.executeSql("INSERT  INTO TrussDetails  VALUES " + bigqery + ";", parameters);
                         // reset the varriables

@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
                     ignored.printStackTrace();
                 }
             }
-        }, 3000);  // Give a 3 seconds delay.
+        }, 4000);  // Give a 3 seconds delay.
     }
 
     @Override

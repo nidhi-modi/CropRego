@@ -1714,7 +1714,7 @@ export default class Ger4ProvineTrussDetails extends Component {
 
                 <View style={styles.container}>
 
-                    <ImageBackground source={require('../assets/T&G_Tomatoes.jpg')} style={styles.backgroundImage}>
+                    <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
                         <ScrollView style={styles.formContainer}
                             keyboardShouldPersistTaps='handled'>
@@ -3196,7 +3196,7 @@ const styles = StyleSheet.create({
 
     text222: {
         margin: 10,
-        color: '#110A6A',
+        color: '#2C903D',
         fontSize: 18,
         textAlign: 'center',
         fontWeight: 'bold'
@@ -3228,7 +3228,7 @@ const styles = StyleSheet.create({
     },
     formContainer: {
 
-        backgroundColor: 'rgba(192,192,192,0.55)',
+        //backgroundColor: 'rgba(192,192,192,0.55)',
         borderRadius: 5,
         padding: 10,
         margin: 20,

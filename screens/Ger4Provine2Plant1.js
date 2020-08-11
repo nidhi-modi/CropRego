@@ -426,7 +426,7 @@ export default class Ger4Provine2Plant1 extends Component {
             no = '1';
 
 
-            db.plantsByWeekRowAndName(no1, numberWeek-1 , 'GER 4 - Provine', '140/141').then((data) => {
+            db.plantsByWeekRowAndName(no1, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -453,7 +453,7 @@ export default class Ger4Provine2Plant1 extends Component {
                 const NoWeek = this.state.week - 1
 
 
-                db.plantsByWeekRowAndName(no2, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                db.plantsByWeekRowAndName(no2, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -480,7 +480,7 @@ export default class Ger4Provine2Plant1 extends Component {
 
                     const NoWeek = this.state.week - 1
 
-                    db.plantsByWeekRowAndName(no3, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                    db.plantsByWeekRowAndName(no3, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -507,7 +507,7 @@ export default class Ger4Provine2Plant1 extends Component {
 
                         const NoWeek = this.state.week - 1
 
-                        db.plantsByWeekRowAndName(no4, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                        db.plantsByWeekRowAndName(no4, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -535,7 +535,7 @@ export default class Ger4Provine2Plant1 extends Component {
                             const NoWeek = this.state.week - 1
 
 
-                            db.plantsByWeekRowAndName(no5, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                            db.plantsByWeekRowAndName(no5, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -563,7 +563,7 @@ export default class Ger4Provine2Plant1 extends Component {
                                 const NoWeek = this.state.week - 1
 
 
-                                db.plantsByWeekRowAndName(no6, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                                db.plantsByWeekRowAndName(no6, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                                     console.log(data);
                                     console.log("Calling database")
                                     plant = data;
@@ -589,7 +589,7 @@ export default class Ger4Provine2Plant1 extends Component {
                                     const NoWeek = this.state.week - 1
 
 
-                                    db.plantsByWeekRowAndName(no7, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                                    db.plantsByWeekRowAndName(no7, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                                         console.log(data);
                                         console.log("Calling database")
                                         plant = data;
@@ -614,7 +614,7 @@ export default class Ger4Provine2Plant1 extends Component {
 
                                         const NoWeek = this.state.week - 1
 
-                                        db.plantsByWeekRowAndName(no8, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                                        db.plantsByWeekRowAndName(no8, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                                             console.log(data);
                                             console.log("Calling database")
                                             plant = data;
@@ -639,7 +639,7 @@ export default class Ger4Provine2Plant1 extends Component {
 
                                             const NoWeek = this.state.week - 1
 
-                                            db.plantsByWeekRowAndName(no9, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                                            db.plantsByWeekRowAndName(no9, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                                                 console.log(data);
                                                 console.log("Calling database")
                                                 plant = data;
@@ -665,7 +665,7 @@ export default class Ger4Provine2Plant1 extends Component {
                                                 const NoWeek = this.state.week - 1
 
 
-                                                db.plantsByWeekRowAndName(no10, numberWeek-1, 'GER 4 - Provine', '140/141').then((data) => {
+                                                db.plantsByWeekRowAndName(no10, numberWeek - 1, 'GER 4 - Provine', '140/141').then((data) => {
                                                     console.log(data);
                                                     console.log("Calling database")
                                                     plant = data;
@@ -1199,7 +1199,7 @@ export default class Ger4Provine2Plant1 extends Component {
 
                 <View style={styles.container}>
 
-                    <ImageBackground source={require('../assets/T&G_Tomatoes.jpg')} style={styles.backgroundImage}>
+                    <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
                         <ScrollView style={styles.formContainer}
                             keyboardShouldPersistTaps='handled'>
@@ -1216,34 +1216,33 @@ export default class Ger4Provine2Plant1 extends Component {
                             />
 
 
-                            <Text style={styles.text22}>Week Number : {this.state.week}</Text>
-
-
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Leaves Per Plant</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leavesPerPlant}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Leaves Per Plant"
-                                    placeholderTextColor="transparent"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    onChangeText={(text) => this.updateTextInput(text, 'leavesPerPlant')}
-                                    value={this.state.leavesPerPlant}
-                                    editable={true}
-                                    returnKeyType={"next"}
-                                    error={errors.LeavesPerPlant}
-                                    keyboardType={'numeric'}
-                                    onFocus={this.onFocus}
-                                    onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
-                                    blurOnSubmit={false}
-                                />
 
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Leaves Per Plant"
+                                        placeholderTextColor="transparent"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'leavesPerPlant')}
+                                        value={this.state.leavesPerPlant}
+                                        editable={true}
+                                        returnKeyType={"next"}
+                                        error={errors.LeavesPerPlant}
+                                        keyboardType={'numeric'}
+                                        onFocus={this.onFocus}
+                                        onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
+                                        blurOnSubmit={false}
+                                    />
+
+                                </View>
                             </View>
 
 
@@ -1255,31 +1254,34 @@ export default class Ger4Provine2Plant1 extends Component {
 
 
 
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Fully Set Truss</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.fullySetTruss}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Fully Set Truss"
-                                    placeholderTextColor="transparent"
-                                    autoCapitalize="none"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    returnKeyType={"next"}
-                                    error={errors.FullysetTruss}
-                                    keyboardType={'numeric'}
-                                    editable={true}
-                                    onChangeText={(text) => this.updateTextInput(text, 'fullySetTruss')}
-                                    value={this.state.fullySetTruss}
-                                    ref={(input) => { this.fullySetTrussTextInput = input; }}
-                                    onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
-                                    blurOnSubmit={false}
-                                />
+
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Fully Set Truss"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.FullysetTruss}
+                                        keyboardType={'numeric'}
+                                        editable={true}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fullySetTruss')}
+                                        value={this.state.fullySetTruss}
+                                        ref={(input) => { this.fullySetTrussTextInput = input; }}
+                                        onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
+                                        blurOnSubmit={false}
+                                    />
+
+                                </View>
 
                             </View>
 
@@ -1293,31 +1295,34 @@ export default class Ger4Provine2Plant1 extends Component {
 
 
 
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Fully Set Truss Length</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.setTrussLength}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Fully Set Truss Length"
-                                    placeholderTextColor="transparent"
-                                    autoCapitalize="none"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    returnKeyType={"next"}
-                                    error={errors.TrussLength}
-                                    keyboardType={'numeric'}
-                                    onChangeText={(text) => this.updateTextInput(text, 'setTrussLength')}
-                                    value={this.state.setTrussLength}
-                                    ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
-                                    onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
-                                    blurOnSubmit={false}
 
-                                />
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Fully Set Truss Length"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.TrussLength}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'setTrussLength')}
+                                        value={this.state.setTrussLength}
+                                        ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
+                                        onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+
+                                </View>
 
                             </View>
 
@@ -1333,31 +1338,34 @@ export default class Ger4Provine2Plant1 extends Component {
 
 
 
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Weekly Growth</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.weeklyGrowth}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Weekly Growth"
-                                    placeholderTextColor="transparent"
-                                    autoCapitalize="none"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    returnKeyType={"next"}
-                                    error={errors.WeeklyGrowth}
-                                    keyboardType={'numeric'}
-                                    onChangeText={(text) => this.updateTextInput(text, 'weeklyGrowth')}
-                                    value={this.state.weeklyGrowth}
-                                    ref={(input) => { this.weeklyGrowthTextInput = input; }}
-                                    onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
-                                    blurOnSubmit={false}
 
-                                />
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Weekly Growth"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.WeeklyGrowth}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'weeklyGrowth')}
+                                        value={this.state.weeklyGrowth}
+                                        ref={(input) => { this.weeklyGrowthTextInput = input; }}
+                                        onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+
+                                </View>
 
                             </View>
 
@@ -1371,34 +1379,36 @@ export default class Ger4Provine2Plant1 extends Component {
 
 
 
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Flower Truss Height</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.floweringTrussHeight}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Weekly Growth"
-                                    placeholderTextColor="transparent"
-                                    autoCapitalize="none"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    returnKeyType={"next"}
-                                    error={errors.FlowerTrussHeight}
-                                    keyboardType={'numeric'}
-                                    onChangeText={(text) => this.updateTextInput(text, 'floweringTrussHeight')}
-                                    value={this.state.floweringTrussHeight}
-                                    ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
-                                    onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
-                                    blurOnSubmit={false}
 
-                                />
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Weekly Growth"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.FlowerTrussHeight}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'floweringTrussHeight')}
+                                        value={this.state.floweringTrussHeight}
+                                        ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
+                                        onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+
+                                </View>
 
                             </View>
-
 
                             <View
                                 style={{
@@ -1408,32 +1418,35 @@ export default class Ger4Provine2Plant1 extends Component {
 
 
 
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Leaf Length</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leafLength}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Leaf Length"
-                                    placeholderTextColor="transparent"
-                                    autoCapitalize="none"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    returnKeyType={"next"}
-                                    label='Leaf Length'
-                                    error={errors.LeafLength}
-                                    keyboardType={'numeric'}
-                                    onChangeText={(text) => this.updateTextInput(text, 'leafLength')}
-                                    value={this.state.leafLength}
-                                    ref={(input) => { this.leafLengthTextInput = input; }}
-                                    onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
-                                    blurOnSubmit={false}
 
-                                />
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Leaf Length"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        label='Leaf Length'
+                                        error={errors.LeafLength}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'leafLength')}
+                                        value={this.state.leafLength}
+                                        ref={(input) => { this.leafLengthTextInput = input; }}
+                                        onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+
+                                </View>
 
                             </View>
 
@@ -1447,31 +1460,34 @@ export default class Ger4Provine2Plant1 extends Component {
 
 
 
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Leaf Width</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leafWidth}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Leaf Width"
-                                    placeholderTextColor="transparent"
-                                    autoCapitalize="none"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    returnKeyType={"next"}
-                                    error={errors.LeafWidth}
-                                    keyboardType={'numeric'}
-                                    onChangeText={(text) => this.updateTextInput(text, 'leafWidth')}
-                                    value={this.state.leafWidth}
-                                    ref={(input) => { this.leafWidthTextInput = input; }}
-                                    onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
-                                    blurOnSubmit={false}
 
-                                />
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Leaf Width"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.LeafWidth}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'leafWidth')}
+                                        value={this.state.leafWidth}
+                                        ref={(input) => { this.leafWidthTextInput = input; }}
+                                        onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+
+                                </View>
 
                             </View>
 
@@ -1485,31 +1501,34 @@ export default class Ger4Provine2Plant1 extends Component {
 
 
 
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Stem Diameter</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.stmDiameter}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Stem Diameter"
-                                    placeholderTextColor="transparent"
-                                    autoCapitalize="none"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    returnKeyType={"next"}
-                                    error={errors.StmDiameter}
-                                    keyboardType={'numeric'}
-                                    onChangeText={(text) => this.updateTextInput(text, 'stmDiameter')}
-                                    value={this.state.stmDiameter}
-                                    ref={(input) => { this.stmDiameterTextInput = input; }}
-                                    onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
-                                    blurOnSubmit={false}
 
-                                />
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Stem Diameter"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.StmDiameter}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'stmDiameter')}
+                                        value={this.state.stmDiameter}
+                                        ref={(input) => { this.stmDiameterTextInput = input; }}
+                                        onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+
+                                </View>
 
                             </View>
 
@@ -1523,29 +1542,32 @@ export default class Ger4Provine2Plant1 extends Component {
 
 
 
-                            <View style={styles.inputText}>
+                            <View style={styles.backgroundColor}>
 
                                 <View style={styles.row}>
                                     <Text style={styles.text4}>Last Week Stem Diameter</Text>
                                     {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.lastWeekStmDiameter}</Text>) : null}
                                 </View>
-                                <TextInput style={styles.textInputStyle}
-                                    underlineColorAndroid="#000000"
-                                    placeholder="Enter Last Week Stem Diameter"
-                                    placeholderTextColor="transparent"
-                                    autoCapitalize="none"
-                                    multiline={false}
-                                    autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
-                                    onChangeText={this.onChangeText}
-                                    returnKeyType={"done"}
-                                    error={errors.LastWeekStmDiameter}
-                                    keyboardType={'numeric'}
-                                    onChangeText={(text) => this.updateTextInput(text, 'lastWeekStmDiameter')}
-                                    value={this.state.lastWeekStmDiameter}
-                                    ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
 
-                                />
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Last Week Stem Diameter"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"done"}
+                                        error={errors.LastWeekStmDiameter}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'lastWeekStmDiameter')}
+                                        value={this.state.lastWeekStmDiameter}
+                                        ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
+
+                                    />
+
+                                </View>
 
                             </View>
 
@@ -1557,6 +1579,7 @@ export default class Ger4Provine2Plant1 extends Component {
                             />
 
 
+                            <Text style={styles.validationText}>Data Validation</Text>
                             <TouchableOpacity
                                 style={styles.buttonContainer}
                                 onPress={this.savePlantsToDb}>
@@ -1571,7 +1594,7 @@ export default class Ger4Provine2Plant1 extends Component {
 
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger1MerliceTrussDetails', { plant: no})}>
+                                onPress={() => this.props.navigation.navigate('Ger1MerliceTrussDetails', { plant: no })}>
                                 <Text style={styles.buttonText}>Truss Details</Text>
                             </TouchableOpacity>
 
@@ -1587,6 +1610,15 @@ export default class Ger4Provine2Plant1 extends Component {
 }
 
 const styles = StyleSheet.create({
+
+    validationText: {
+
+        textAlign: 'left',
+        fontSize: 18,
+        marginLeft: 18,
+        fontWeight: 'bold'
+
+    },
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -1657,19 +1689,13 @@ const styles = StyleSheet.create({
         marginTop: 5,
 
     },
-    text22: {
-        color: 'black',
-        fontSize: 14,
-        textAlign: 'center',
-
-    },
     container: {
         flex: 1,
         backgroundColor: '#ebebeb'
     },
     formContainer: {
 
-        backgroundColor: 'rgba(192,192,192,0.55)',
+        //backgroundColor: 'rgba(192,192,192,0.55)',
         borderRadius: 5,
         padding: 10,
         margin: 20,
@@ -1733,6 +1759,23 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         marginTop: 10
     },
+
+    backgroundColor: {
+
+        backgroundColor: 'rgba(237,237,237,0.65)',
+        padding: 10,
+
+
+
+    },
+
+    borderEdit: {
+
+        marginTop: 8,
+        borderColor: '#000000',
+        borderWidth: 1,
+    },
+
     inputText: {
         marginBottom: 10,
         height: 90,
@@ -1748,13 +1791,14 @@ const styles = StyleSheet.create({
         marginRight: 10,
         marginBottom: 10,
         backgroundColor: "transparent",
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
+        //borderBottomWidth: 1,
+        //borderBottomColor: 'black',
 
 
     },
     text4: {
-        color: '#110A6A',
+        //color: '#110A6A',
+        color: '#2C903D',
         fontSize: 18,
         fontWeight: 'bold',
         marginLeft: 12,
@@ -1763,7 +1807,7 @@ const styles = StyleSheet.create({
     },
 
     text5: {
-        color: '#110A6A',
+        color: '#2C903D',
         fontSize: 18,
         fontWeight: 'bold',
         marginLeft: 12,
@@ -1772,8 +1816,7 @@ const styles = StyleSheet.create({
     },
 
     inputBox: {
-        borderBottomWidth: 1.2,
-        borderBottomColor: 'black',
+        borderBottomWidth: 1,
+        borderBottomColor: 'gray',
     }
-
 })

@@ -11,7 +11,7 @@ function Har123(props) {
   return (
     <View style={styles.container}>
 
-<ImageBackground source={require('../assets/T&G_Tomatoes.jpg')} style={styles.backgroundImage}>
+<ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
         <ScrollView>
 
@@ -63,32 +63,14 @@ function Har123(props) {
 
 const styles = StyleSheet.create({
 
-    submit:{
-        marginRight:40,
-        marginLeft:40,
-        marginTop:10,
-        paddingTop:20,
-        paddingBottom:20,
-        backgroundColor:'#54B948',
-        borderRadius:10,
-        borderWidth: 1,
-        borderColor: '#fff'
-          },
-      submitText:{
-        color: '#ffffff',
-        fontWeight: 'bold',
-        fontStyle: 'italic',
-        fontSize: 20,
-        textAlign:'center'
-          
-      },
+   
   container: {
     flex: 1,
     backgroundColor: '#ebebeb'
   },
 
   buttonContainer1: {
-    backgroundColor: 'rgba(0,0,0,0.65)',
+    //backgroundColor: 'rgba(0,0,0,0.65)',
     borderRadius: 5,
     padding: 10,
     margin: 20,
@@ -96,25 +78,43 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   
+  },
+  submit:{
+    marginRight:40,
+    marginLeft:40,
+    marginTop:10,
+    paddingTop:20,
+    paddingBottom:20,
+    backgroundColor:'#54B948',
+    borderRadius:10,
+    borderWidth: 1,
+    borderColor: '#fff'
+      },
+  submitText:{
+    color: '#ffffff',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+    fontSize: 20,
+    textAlign:'center'
+      
   },
  
   buttonContainer: {
-    backgroundColor: 'rgba(0,128,0,0.65)',
+    backgroundColor: '#D3D3D3',
     borderRadius: 5,
     padding: 10,
     margin: 20,
     height: 55,
     justifyContent: 'center',
     alignItems: 'center'
-  
-  },
-  buttonText: {
-    fontSize: 23,
-    color: '#ffffff',
-    fontWeight: 'bold',
-    fontStyle: 'italic'
 
-  },
+},
+  buttonText: {
+    fontSize: 19,
+    color: '#000000',
+    fontWeight: 'bold',
+
+},
   backgroundImage: {
 
       width: '100%',

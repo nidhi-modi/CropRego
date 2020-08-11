@@ -120,7 +120,7 @@ export default class PlantList extends Component {
 
           <View style={styles.container}>
 
-            <ImageBackground source={require('../assets/T&G_Tomatoes.jpg')} style={styles.backgroundImage}>
+            <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
               <ScrollView style={styles.formContainer}
                 keyboardShouldPersistTaps='handled'>
@@ -214,7 +214,6 @@ const styles = StyleSheet.create({
   },
   formContainer: {
 
-    backgroundColor: 'rgba(192,192,192,0.55)',
     borderRadius: 5,
     padding: 10,
     margin: 20,
@@ -224,7 +223,7 @@ const styles = StyleSheet.create({
 
   },
   buttonContainer1: {
-    backgroundColor: 'rgba(0,0,0,0.65)',
+    //backgroundColor: 'rgba(0,0,0,0.65)',
     borderRadius: 5,
     padding: 10,
     margin: 10,
@@ -235,7 +234,7 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    backgroundColor: 'rgba(0,128,0,0.65)',
+    //backgroundColor: 'rgba(0,128,0,0.65)',
     borderRadius: 5,
     padding: 10,
     margin: 20,

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, Image, StyleSheet, Text, TouchableOpacity, Alert } from 'react-native'
+import { Button, Image, StyleSheet, Text, TouchableOpacity, Alert, Linking, View } from 'react-native'
 
 
 import { NavigationContainer } from '@react-navigation/native'
@@ -39,9 +39,11 @@ import Ger4ProvinePlant1 from '../screens/Ger4ProvinePlant1'
 import Ger4Provine2Plant1 from '../screens/Ger4Provine2Plant1'
 import Ger4ProvineTrussDetails from '../screens/Ger4ProvineTrussDetails'
 import Ger4Provine2TrussDetails from '../screens/Ger4Provine2TrussDetails'
+import SiteSelection from '../screens/SiteSelection'
+import Har1YeloDataChecker from '../screens/Har1YeloDataChecker'
 
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
 function MainStackNavigator() {
 
@@ -52,19 +54,19 @@ function MainStackNavigator() {
 
     <NavigationContainer>
 
-      
 
-      <Stack.Navigator initialRouteName='Home'
+
+      <Stack.Navigator initialRouteName='SiteSelection'
 
         screenOptions={{
           gestureEnabled: true,
           headerStyle: {
-            backgroundColor: '#FFB92B'
+            backgroundColor: '#2C903D'
           },
           headerTitleStyle: {
             fontWeight: 'bold'
           },
-          headerTintColor: 'black',
+          headerTintColor: 'white',
           headerBackTitleVisible: false
         }
 
@@ -74,19 +76,73 @@ function MainStackNavigator() {
 
         headerMode='float'>
 
-        <Stack.Screen name='Home' component={Home} options={{ title: 'T&G Global' }} />
+        <Stack.Screen name='Home' component={Home} options={{ headerLeft: () => null }} />
 
-        <Stack.Screen name='HarHome' component={HarHome} options={{ title: 'T&G Global' }} />
+        <Stack.Screen name='HarHome' component={HarHome} options={({ navigation }) => ({ headerLeft: () => null,  headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
 
-        <Stack.Screen name='GerHome' component={GerHome} options={{ title: 'T&G Global' }} />
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
 
-        <Stack.Screen name='FavHome' component={FavHome} options={{ title: 'T&G Global' }} />
+                <Image source={require('../assets/comments32.png')}
 
-        <Stack.Screen name='OhaHome' component={OhaHome} options={{ title: 'T&G Global' }} />
+                  style={styles.FloatingButtonStyle2} />
 
-        <Stack.Screen name='Har123' component={Har123} options={{ title: 'T&G Global' }} />
+              </TouchableOpacity>
 
-        <Stack.Screen name='Har456' component={Har456} options={{ title: 'T&G Global' }} />
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'T&G Global'})} /> 
+
+        <Stack.Screen name='GerHome' component={GerHome} options={{ headerLeft: () => null, title: 'T&G Global' }} />
+
+        <Stack.Screen name='FavHome' component={FavHome} options={{ headerLeft: () => null, title: 'T&G Global' }} />
+
+        <Stack.Screen name='OhaHome' component={OhaHome} options={{ headerLeft: () => null, title: 'T&G Global' }} />
+
+        <Stack.Screen name='Har123' component={Har123} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+            
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'T&G Global'
+        })} />
+
+
+        <Stack.Screen name='Har456' component={Har456} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+            
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'T&G Global'
+        })} 
+ />
 
         <Stack.Screen name='Har3Flamentyno' component={Har3Flamentyno} options={{ title: 'T&G Global' }} />
 
@@ -96,13 +152,82 @@ function MainStackNavigator() {
 
         <Stack.Screen name='TrussDetails' component={TrussDetails} options={{ title: 'T&G Global' }} />
 
-        <Stack.Screen name='Har1YeloPlant1' component={Har1YeloPlant1} options={{ title: 'T&G Global' }} />
+        <Stack.Screen name='Har1YeloPlant1' component={Har1YeloPlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+            
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
 
-        <Stack.Screen name='Har1Yelo' component={Har1Yelo} options={{ title: 'T&G Global' }} />
+                <Image source={require('../assets/comments32.png')}
 
-        <Stack.Screen name='FlamentynoPlant1' component={FlamentynoPlant1} options={{ title: 'T&G Global'}}/> 
-          
-        <Stack.Screen name='Har1YeloTrussDetails' component={Har1YeloTrussDetails} options={{ title: 'T&G Global'}}/> 
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'T&G Global'
+        })} />
+
+
+        <Stack.Screen name='Har1Yelo' component={Har1Yelo} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('PlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'T&G Global'
+        })} />
+
+
+        <Stack.Screen name='FlamentynoPlant1' component={FlamentynoPlant1} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Har1YeloTrussDetails' component={Har1YeloTrussDetails} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+            
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'T&G Global'
+        })} />
+
 
         <Stack.Screen name='Har1Angelle' component={Har1Angelle} options={{ title: 'T&G Global' }} />
 
@@ -142,6 +267,29 @@ function MainStackNavigator() {
 
         <Stack.Screen name='Ger4Provine2TrussDetails' component={Ger4Provine2TrussDetails} options={{ title: 'T&G Global' }} />
 
+        <Stack.Screen name='SiteSelection' component={SiteSelection} options={{ title: 'T&G Global' }} />
+
+        <Stack.Screen name='Har1YeloDataChecker' component={Har1YeloDataChecker} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+            
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'T&G Global'
+        })} />
+
+
 
       </Stack.Navigator>
 
@@ -163,6 +311,17 @@ const styles = StyleSheet.create({
     marginRight: 10
   },
 
+  TouchableOpacityStyle11: {
+    position: 'absolute',
+    width: 50,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    right: 30,
+    bottom: 30,
+  },
+
+
   TouchableOpacityStyle: {
 
 
@@ -172,11 +331,22 @@ const styles = StyleSheet.create({
 
   },
 
-  FloatingButtonStyle: {
+  FloatingButtonStyle2: {
 
     resizeMode: 'contain',
-    width: 40,
-    height: 40,
+    width: 28,
+    height: 28,
+  },
+
+
+
+  TouchableOpacityStyle2: {
+
+
+    alignItems: 'center',
+    justifyContent: 'center',
+    right: 5,
+
   },
 
 

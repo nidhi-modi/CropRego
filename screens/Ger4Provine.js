@@ -22,7 +22,7 @@ function Ger4Provine(props) {
                     style={styles.TouchableOpacityStyle2}
                     onPress={() => navigation.navigate('PlantList')}>
 
-                    <Image source={require('../assets/icon1.png')} style={styles.FloatingButtonStyle2} />
+                    <Image source={require('../assets/icon2.png')} style={styles.FloatingButtonStyle2} />
 
                 </TouchableOpacity>
             ),
@@ -33,7 +33,7 @@ function Ger4Provine(props) {
     return (
         <View style={styles.container}>
 
-            <ImageBackground source={require('../assets/T&G_Tomatoes.jpg')} style={styles.backgroundImage}>
+            <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
 
                 <ScrollView>
@@ -151,21 +151,20 @@ const styles = StyleSheet.create({
     },
 
     buttonContainer: {
-        backgroundColor: 'rgba(0,128,0,0.65)',
+        backgroundColor: '#D3D3D3',
         borderRadius: 5,
         padding: 10,
         margin: 20,
         height: 55,
         justifyContent: 'center',
         alignItems: 'center'
-
+    
     },
-    buttonText: {
-        fontSize: 23,
-        color: '#ffffff',
+      buttonText: {
+        fontSize: 19,
+        color: '#000000',
         fontWeight: 'bold',
-        fontStyle: 'italic'
-
+    
     },
 
     backgroundImage: {

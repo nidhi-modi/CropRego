@@ -27,6 +27,8 @@ let numberWeek;
 let no1, no2, no3, no4, no5, no6, no7, no8, no9, no10;
 let count = 0;
 var currentWeekNumber = require('current-week-number');
+var number, data;
+
 
 
 
@@ -56,74 +58,83 @@ export default class Har1YeloTrussDetails extends React.Component {
         this.onSubmitSetFruits = this.onSubmitSetFruits.bind(this);
         this.onSubmitFlowers = this.onSubmitFlowers.bind(this);
         this.onSubmitPruningNumber = this.onSubmitPruningNumber.bind(this);
-
+        this.onSubmitFruitDiameter = this.onSubmitFruitDiameter.bind(this);
 
         this.onSubmitTrussNumber1 = this.onSubmitTrussNumber1.bind(this);
         this.onSubmitLastWeek1 = this.onSubmitLastWeek1.bind(this);
         this.onSubmitSetFruits1 = this.onSubmitSetFruits1.bind(this);
         this.onSubmitFlowers1 = this.onSubmitFlowers1.bind(this);
         this.onSubmitPruningNumber1 = this.onSubmitPruningNumber1.bind(this);
-
+        this.onSubmitFruitDiameter1 = this.onSubmitFruitDiameter1.bind(this);
 
         this.trussNumberRef = this.updateRef.bind(this, 'TrussNumber');
-        this.lastWeekNumberRef = this.updateRef.bind(this, 'LastWeekNumber');
         this.setFruitsRef = this.updateRef.bind(this, 'SetFruits');
         this.setFlowersRef = this.updateRef.bind(this, 'SetFlowers');
         this.pruningNumberRef = this.updateRef.bind(this, 'PruningNumber');
+        this.fruitDiameterRef = this.updateRef.bind(this, 'FruitDiameter');
 
         this.trussNumberRef1 = this.updateRef.bind(this, 'TrussNumber1');
-        this.lastWeekNumberRef1 = this.updateRef.bind(this, 'LastWeekNumber1');
         this.setFruitsRef1 = this.updateRef.bind(this, 'SetFruits1');
         this.setFlowersRef1 = this.updateRef.bind(this, 'SetFlowers1');
         this.pruningNumberRef1 = this.updateRef.bind(this, 'PruningNumber1');
+        this.fruitDiameterRef1 = this.updateRef.bind(this, 'FruitDiameter1');
+
 
         this.trussNumberRef2 = this.updateRef.bind(this, 'TrussNumber2');
-        this.lastWeekNumberRef2 = this.updateRef.bind(this, 'LastWeekNumber2');
         this.setFruitsRef2 = this.updateRef.bind(this, 'SetFruits2');
         this.setFlowersRef2 = this.updateRef.bind(this, 'SetFlowers2');
         this.pruningNumberRef2 = this.updateRef.bind(this, 'PruningNumber2');
+        this.fruitDiameterRef2 = this.updateRef.bind(this, 'FruitDiameter2');
+
 
         this.trussNumberRef3 = this.updateRef.bind(this, 'TrussNumber3');
-        this.lastWeekNumberRef3 = this.updateRef.bind(this, 'LastWeekNumber3');
         this.setFruitsRef3 = this.updateRef.bind(this, 'SetFruits3');
         this.setFlowersRef3 = this.updateRef.bind(this, 'SetFlowers3');
         this.pruningNumberRef3 = this.updateRef.bind(this, 'PruningNumber3');
+        this.fruitDiameterRef3 = this.updateRef.bind(this, 'FruitDiameter3');
+
 
         this.trussNumberRef4 = this.updateRef.bind(this, 'TrussNumber4');
-        this.lastWeekNumberRef4 = this.updateRef.bind(this, 'LastWeekNumber4');
         this.setFruitsRef4 = this.updateRef.bind(this, 'SetFruits4');
         this.setFlowersRef4 = this.updateRef.bind(this, 'SetFlowers4');
         this.pruningNumberRef4 = this.updateRef.bind(this, 'PruningNumber4');
+        this.fruitDiameterRef4 = this.updateRef.bind(this, 'FruitDiameter4');
+
 
         this.trussNumberRef5 = this.updateRef.bind(this, 'TrussNumber5');
-        this.lastWeekNumberRef5 = this.updateRef.bind(this, 'LastWeekNumber5');
         this.setFruitsRef5 = this.updateRef.bind(this, 'SetFruits5');
         this.setFlowersRef5 = this.updateRef.bind(this, 'SetFlowers5');
         this.pruningNumberRef5 = this.updateRef.bind(this, 'PruningNumber5');
+        this.fruitDiameterRef5 = this.updateRef.bind(this, 'FruitDiameter5');
+
 
         this.trussNumberRef6 = this.updateRef.bind(this, 'TrussNumber6');
-        this.lastWeekNumberRef6 = this.updateRef.bind(this, 'LastWeekNumber6');
         this.setFruitsRef6 = this.updateRef.bind(this, 'SetFruits6');
         this.setFlowersRef6 = this.updateRef.bind(this, 'SetFlowers6');
         this.pruningNumberRef6 = this.updateRef.bind(this, 'PruningNumber6');
+        this.fruitDiameterRef6 = this.updateRef.bind(this, 'FruitDiameter6');
+
 
         this.trussNumberRef7 = this.updateRef.bind(this, 'TrussNumber7');
-        this.lastWeekNumberRef7 = this.updateRef.bind(this, 'LastWeekNumber7');
         this.setFruitsRef7 = this.updateRef.bind(this, 'SetFruits7');
         this.setFlowersRef7 = this.updateRef.bind(this, 'SetFlowers7');
         this.pruningNumberRef7 = this.updateRef.bind(this, 'PruningNumber7');
+        this.fruitDiameterRef7 = this.updateRef.bind(this, 'FruitDiameter7');
+
 
         this.trussNumberRef8 = this.updateRef.bind(this, 'TrussNumber8');
-        this.lastWeekNumberRef8 = this.updateRef.bind(this, 'LastWeekNumber8');
         this.setFruitsRef8 = this.updateRef.bind(this, 'SetFruits8');
         this.setFlowersRef8 = this.updateRef.bind(this, 'SetFlowers8');
         this.pruningNumberRef8 = this.updateRef.bind(this, 'PruningNumber8');
+        this.fruitDiameterRef8 = this.updateRef.bind(this, 'FruitDiameter8');
+
 
         this.trussNumberRef9 = this.updateRef.bind(this, 'TrussNumber9');
-        this.lastWeekNumberRef9 = this.updateRef.bind(this, 'LastWeekNumber9');
         this.setFruitsRef9 = this.updateRef.bind(this, 'SetFruits9');
         this.setFlowersRef9 = this.updateRef.bind(this, 'SetFlowers9');
         this.pruningNumberRef9 = this.updateRef.bind(this, 'PruningNumber9');
+        this.fruitDiameterRef9 = this.updateRef.bind(this, 'FruitDiameter9');
+
 
 
         this.state = {
@@ -133,64 +144,64 @@ export default class Har1YeloTrussDetails extends React.Component {
             plantName: '',
             plantWeek: '',
             trussNumber: '',
-            lastWeekNumber: '',
             setFruits: '',
             setFlowers: '',
             pruningNumber: '',
+            fruitDiameter: '',
 
             trussNumber1: '',
-            lastWeekNumber1: '',
             setFruits1: '',
             setFlowers1: '',
             pruningNumber1: '',
+            fruitDiameter1: '',
 
             trussNumber2: '',
-            lastWeekNumber2: '',
             setFruits2: '',
             setFlowers2: '',
             pruningNumber2: '',
+            fruitDiameter2: '',
 
             trussNumber3: '',
-            lastWeekNumber3: '',
             setFruits3: '',
             setFlowers3: '',
             pruningNumber3: '',
+            fruitDiameter3: '',
 
             trussNumber4: '',
-            lastWeekNumber4: '',
             setFruits4: '',
             setFlowers4: '',
             pruningNumber4: '',
+            fruitDiameter4: '',
 
             trussNumber5: '',
-            lastWeekNumber5: '',
             setFruits5: '',
             setFlowers5: '',
             pruningNumber5: '',
+            fruitDiameter5: '',
 
             trussNumber6: '',
-            lastWeekNumber6: '',
             setFruits6: '',
             setFlowers6: '',
             pruningNumber6: '',
+            fruitDiameter6: '',
 
             trussNumber7: '',
-            lastWeekNumber7: '',
             setFruits7: '',
             setFlowers7: '',
             pruningNumber7: '',
+            fruitDiameter7: '',
 
             trussNumber8: '',
-            lastWeekNumber8: '',
             setFruits8: '',
             setFlowers8: '',
             pruningNumber8: '',
+            fruitDiameter8: '',
 
             trussNumber9: '',
-            lastWeekNumber9: '',
             setFruits9: '',
             setFlowers9: '',
             pruningNumber9: '',
+            fruitDiameter9: '',
 
             number: '',
             lastNumber: '',
@@ -226,6 +237,18 @@ export default class Har1YeloTrussDetails extends React.Component {
             no9: '',
             no10: '',
 
+            fruitLoad: '',
+            harvestTruss: '',
+            pruningHar: '',
+            settingTrussNumber: '',
+            prunSetting: '',
+            pruneFlowering: '',
+
+            floweringTrussNumber: '',
+            settingTruss: '',
+            settingTruss2: '',
+            floweringTrussss: '',
+
 
             tableHead: ['Truss', 'Set Fruit', 'Flowers', 'Pruning Number'],
             tableData: [
@@ -260,7 +283,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
         try {
             AsyncStorage.setItem('trussNumber', text1);
-            AsyncStorage.setItem('lastWeekNumber', text2);
+            AsyncStorage.setItem('fruitDiameter', text2);
         } catch (error) {
         }
 
@@ -282,7 +305,7 @@ export default class Har1YeloTrussDetails extends React.Component {
         } catch (error) {
         }
         try {
-            AsyncStorage.getItem('lastWeekNumber').then((text2Value) => {
+            AsyncStorage.getItem('fruitDiameter').then((text2Value) => {
                 this.setState({ lastNumber: JSON.parse(text2Value) });
                 console.log(this.state.lastNumber)
 
@@ -373,9 +396,18 @@ export default class Har1YeloTrussDetails extends React.Component {
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
 
+        if (this.props.route.params.plantNum !== undefined) {
+            number = this.props.route.params.plantNum;
+            console.log("Plant No00000000 " + number);
+        } else {
 
-        numberWeek = 2000 + currentWeekNumber() - 2;
-        console.log("Current Week Number:  ", 2000 + currentWeekNumber() - 1);
+        }
+
+
+        numberWeek = 2000 + currentWeekNumber() - 1;
+        console.log("Current Week Number:  ", numberWeek);
+        this.setState({ weekNumber: numberWeek.toString() });
+
 
 
 
@@ -390,7 +422,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             });
 
-            numberWeek = 2000 + currentWeekNumber();
+            numberWeek = 2000 + currentWeekNumber() - 1;
 
 
         } else if (abc === '1' && abc !== null) {
@@ -429,6 +461,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
 
+
     }
 
     ShowHideComponent = () => {
@@ -456,6 +489,25 @@ export default class Har1YeloTrussDetails extends React.Component {
         state[field] = text;
         this.setState(state)
 
+        this.calculateFruitLoad();
+        this.calculateHarvestTruss();
+        this.calculateSettingTruss();
+        this.calculateFloweringTruss();
+
+
+    }
+
+    updateTextInput22 = (text, field) => {
+        this.setItem(field, text)
+        this.setState({
+            isDataSend: false,
+
+        });
+        abc = '0';
+        const state = this.state
+        state[field] = text;
+        this.setState(state)
+
         this.setState({ trussNumber1: parseInt(this.state.trussNumber) + 1 })
         this.setState({ trussNumber2: parseInt(this.state.trussNumber) + 2 })
         this.setState({ trussNumber3: parseInt(this.state.trussNumber) + 3 })
@@ -467,35 +519,660 @@ export default class Har1YeloTrussDetails extends React.Component {
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
 
+        this.getTrussData();
+        //For testing I have changed the numberweek - 2 to numberWeek in the below method
+
     }
 
-    getDataFromDB = () => {
+    calculateFruitLoad = () => {
 
-        /*trussNumber: '',
-            lastWeekNumber: '',
-            setFruits: '',
-            setFlowers: '',
-            pruningNumber: '',*/
+        var sum = 0;
+        sum = ((parseInt(this.state.setFruits) ? parseInt(this.state.setFruits) : 0) + (parseInt(this.state.setFruits1) ? parseInt(this.state.setFruits1) : 0) + (parseInt(this.state.setFruits2) ? parseInt(this.state.setFruits2) : 0) + (parseInt(this.state.setFruits3) ? parseInt(this.state.setFruits3) : 0) + (parseInt(this.state.setFruits4) ? parseInt(this.state.setFruits4) : 0) + (parseInt(this.state.setFruits5) ? parseInt(this.state.setFruits5) : 0) + (parseInt(this.state.setFruits6) ? parseInt(this.state.setFruits6) : 0) + (parseInt(this.state.setFruits7) ? parseInt(this.state.setFruits7) : 0) + (parseInt(this.state.setFruits8) ? parseInt(this.state.setFruits8) : 0) + (parseInt(this.state.setFruits9) ? parseInt(this.state.setFruits9) : 0));
+        this.setState({
+            fruitLoad: sum,
+        });
+
+        console.log("Fruit Load : " + sum);
+
+    }
+
+    calculateHarvestTruss = () => {
+
+        var div = 0;
+        var sub = 0;
+        var add = 0;
+        var prunNum = 0;
+
+        prunNum = parseInt(this.state.pruningNumber)
+
+        div = (parseInt((this.state.setFruits) ? (this.state.setFruits) : 0) / parseFloat((this.state.pruningNumber) ? (this.state.pruningNumber) : 0))
+        sub = (1 - div);
+        add = (((parseInt(this.state.trussNumber) ? parseInt(this.state.trussNumber) : 0) + sub).toFixed(2))
+        this.setState({
+            harvestTruss: add,
+            pruningHar: prunNum,
+        });
+
+        console.log("Harvest Truss : " + add);
+
+    }
+
+    calculateSettingTruss = () => {
+
+        var div = 0;
+        var sub = 0;
+        var add = 0;
+        var pruningSet = 0;
+        var settingTruss = 0;
+        var settingFruit = 0;
+        var trussNum = 0;
+
+
+        if (this.state.setFlowers === "") {
+
+            if (this.state.setFlowers1 === "") {
+
+                if (this.state.setFlowers2 === "") {
+
+                    if (this.state.setFlowers3 === "") {
+
+                        if (this.state.setFlowers4 === "") {
+
+                            if (this.state.setFlowers5 === "") {
+
+                                if (this.state.setFlowers6 === "") {
+
+                                    if (this.state.setFlowers7 === "") {
+
+                                        if (this.state.setFlowers8 === "") {
+
+                                            if (this.state.setFlowers9 === "") {
+
+
+                                            } else {
+
+                                            
+                                                    pruningSet = parseInt(this.state.pruningNumber9);
+                                                    trussNum = parseInt(this.state.trussNumber9);
+                                                    settingFruit = parseInt(this.state.setFruits9);
+                                                    settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                                    console.log("Setting Truss Number 9 : " + settingTruss);
+                                                    this.setState({
+                                                        settingTrussNumber: settingTruss,
+                                                        settingTruss2: trussNum,
+                                                        prunSetting: pruningSet,
+                                                    });
+
+
+
+
+                                            }
+
+
+
+                                        } else {
+
+                                            if (this.state.setFruits9 !== "") {
+
+                                                pruningSet = parseInt(this.state.pruningNumber9);
+                                                trussNum = parseInt(this.state.trussNumber9);
+                                                settingFruit = parseInt(this.state.setFruits9);
+                                                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                                console.log("Setting Truss Number 9 : " + settingTruss);
+                                                this.setState({
+                                                    settingTrussNumber: settingTruss,
+                                                    settingTruss2: trussNum,
+                                                    prunSetting: pruningSet,
+                                                });
+
+
+                                            } else {
+
+                                                pruningSet = parseInt(this.state.pruningNumber8);
+                                                trussNum = parseInt(this.state.trussNumber8);
+                                                settingFruit = parseInt(this.state.setFruits8);
+                                                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                                console.log("Setting Truss Number 8 : " + settingTruss);
+                                                this.setState({
+                                                    settingTrussNumber: settingTruss,
+                                                    settingTruss: trussNum,
+                                                    prunSetting: pruningSet,
+
+                                                });
+
+                                            }
+
+
+                                        }
+
+
+
+                                    } else {
+
+                                        if (this.state.setFruits8 !== "") {
+
+                                            pruningSet = parseInt(this.state.pruningNumber8);
+                                            trussNum = parseInt(this.state.trussNumber8);
+                                            settingFruit = parseInt(this.state.setFruits8);
+                                            settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                            console.log("Setting Truss Number 8 : " + settingTruss);
+                                            this.setState({
+                                                settingTrussNumber: settingTruss,
+                                                settingTruss2: trussNum,
+                                                prunSetting: pruningSet,
+
+                                            });
+
+                                        } else {
+
+                                            pruningSet = parseInt(this.state.pruningNumber7);
+                                            trussNum = parseInt(this.state.trussNumber7);
+                                            settingFruit = parseInt(this.state.setFruits7);
+                                            settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                            console.log("Setting Truss Number 7 : " + settingTruss);
+                                            this.setState({
+                                                settingTrussNumber: settingTruss,
+                                                settingTruss: trussNum,
+                                                prunSetting: pruningSet,
+
+                                            });
+
+
+                                        }
+
+
+
+                                    }
+
+
+                                } else {
+
+                                    if (this.state.setFruits7 !== "") {
+
+                                        pruningSet = parseInt(this.state.pruningNumber7);
+                                        trussNum = parseInt(this.state.trussNumber7);
+                                        settingFruit = parseInt(this.state.setFruits7);
+                                        settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                        console.log("Setting Truss Number 7 : " + settingTruss);
+                                        this.setState({
+                                            settingTrussNumber: settingTruss,
+                                            settingTruss2: trussNum,
+                                            prunSetting: pruningSet,
+
+                                        });
+
+                                    } else {
+
+                                        pruningSet = parseInt(this.state.pruningNumber6);
+                                        trussNum = parseInt(this.state.trussNumber6);
+                                        settingFruit = parseInt(this.state.setFruits6);
+                                        settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                        console.log("Setting Truss Number 6 : " + settingTruss);
+                                        this.setState({
+                                            settingTrussNumber: settingTruss,
+                                            settingTruss: trussNum,
+                                            prunSetting: pruningSet,
+
+                                        });
+
+                                    }
+
+                                }
+
+
+                            } else {
+
+                                if (this.state.setFruits6 !== "") {
+                                    pruningSet = parseInt(this.state.pruningNumber6);
+                                    trussNum = parseInt(this.state.trussNumber6);
+                                    settingFruit = parseInt(this.state.setFruits6);
+                                    settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                    console.log("Setting Truss Number 6 : " + settingTruss);
+                                    this.setState({
+                                        settingTrussNumber: settingTruss,
+                                        settingTruss2: trussNum,
+                                        prunSetting: pruningSet,
+
+                                    });
+
+                                }else{
+
+                                    pruningSet = parseInt(this.state.pruningNumber5);
+                                    trussNum = parseInt(this.state.trussNumber5);
+                                    settingFruit = parseInt(this.state.setFruits5);
+                                    settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                    console.log("Setting Truss Number 5 : " + settingTruss);
+                                    this.setState({
+                                        settingTrussNumber: settingTruss,
+                                        settingTruss: trussNum,
+                                        prunSetting: pruningSet,
+    
+                                    });
+    
+
+                                }
+
+                                
+
+
+                            }
+
+
+
+                        } else {
+
+                            if (this.state.setFruits5 !== "") {
+
+                                pruningSet = parseInt(this.state.pruningNumber5);
+                                trussNum = parseInt(this.state.trussNumber5);
+                                settingFruit = parseInt(this.state.setFruits5);
+                                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                console.log("Setting Truss Number 5 : " + settingTruss);
+                                this.setState({
+                                    settingTrussNumber: settingTruss,
+                                    settingTruss: trussNum,
+                                    prunSetting: pruningSet,
+
+                                });
+
+                            } else {
+
+
+                                pruningSet = parseInt(this.state.pruningNumber4);
+                                trussNum = parseInt(this.state.trussNumber4);
+                                settingFruit = parseInt(this.state.setFruits4);
+                                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                console.log("Setting Truss Number 4 : " + settingTruss);
+                                this.setState({
+                                    settingTrussNumber: settingTruss,
+                                    settingTruss: trussNum,
+                                    prunSetting: pruningSet,
+
+                                });
+
+                            }
+
+
+                        }
+
+
+
+                    } else {
+
+                        if (this.state.setFruits4 !== "") {
+
+                            pruningSet = parseInt(this.state.pruningNumber4);
+                            trussNum = parseInt(this.state.trussNumber4);
+                            settingFruit = parseInt(this.state.setFruits4);
+                            settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                            console.log("Setting Truss Number 4 : " + settingTruss);
+                            this.setState({
+                                settingTrussNumber: settingTruss,
+                                settingTruss2: trussNum,
+                                prunSetting: pruningSet,
+
+                            });
+
+                        } else {
+
+                            pruningSet = parseInt(this.state.pruningNumber3);
+                            trussNum = parseInt(this.state.trussNumber3);
+                            settingFruit = parseInt(this.state.setFruits3);
+                            settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                            console.log("Setting Truss Number 3 : " + settingTruss);
+                            this.setState({
+                                settingTrussNumber: settingTruss,
+                                settingTruss: trussNum,
+                                prunSetting: pruningSet,
+
+                            });
+
+                        }
+
+
+
+                    }
+
+
+
+                } else {
+
+                    if (this.state.setFruits3 !== "") {
+
+                        pruningSet = parseInt(this.state.pruningNumber3);
+                        trussNum = parseInt(this.state.trussNumber3);
+                        settingFruit = parseInt(this.state.setFruits3);
+                        settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                        console.log("Setting Truss Number 3 : " + settingTruss);
+                        this.setState({
+                            settingTrussNumber: settingTruss,
+                            settingTruss2: trussNum,
+                            prunSetting: pruningSet,
+
+                        });
+
+                    } else {
+
+
+                        pruningSet = parseInt(this.state.pruningNumber2);
+                        trussNum = parseInt(this.state.trussNumber2);
+                        settingFruit = parseInt(this.state.setFruits2);
+                        settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                        console.log("Setting Truss Number 2 : " + settingTruss);
+                        this.setState({
+                            settingTrussNumber: settingTruss,
+                            settingTruss: trussNum,
+                            prunSetting: pruningSet,
+
+                        });
+
+                    }
+
+
+
+
+                }
+
+
+            } else {
+
+                if (this.state.setFruits2 !== "") {
+
+                    pruningSet = parseInt(this.state.pruningNumber2);
+                    trussNum = parseInt(this.state.trussNumber2);
+                    settingFruit = parseInt(this.state.setFruits2);
+                    settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                    console.log("Setting Truss Number 2 : " + settingTruss);
+                    this.setState({
+                        settingTrussNumber: settingTruss,
+                        settingTruss2: trussNum,
+                        prunSetting: pruningSet,
+
+                    });
+
+                } else {
+
+                    pruningSet = parseInt(this.state.pruningNumber1);
+                    trussNum = parseInt(this.state.trussNumber1);
+                    settingFruit = parseInt(this.state.setFruits1);
+                    settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                    console.log("Setting Truss Number 1 : " + settingTruss);
+                    this.setState({
+                        settingTrussNumber: settingTruss,
+                        settingTruss: trussNum,
+                        prunSetting: pruningSet,
+
+                    });
+                }
+
+
+            }
+
+
+        } else {
+
+            if (this.state.setFruits1 !== "") {
+
+                pruningSet = parseInt(this.state.pruningNumber1);
+                trussNum = parseInt(this.state.trussNumber1);
+                settingFruit = parseInt(this.state.setFruits1);
+                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                console.log("Setting Truss Number 1 : " + settingTruss);
+                this.setState({
+                    settingTrussNumber: settingTruss,
+                    settingTruss2: trussNum,
+                    prunSetting: pruningSet,
+
+                });
+
+            } else {
+
+                pruningSet = parseInt(this.state.pruningNumber);
+                trussNum = parseInt(this.state.trussNumber);
+                settingFruit = parseInt(this.state.setFruits);
+                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                console.log("Setting Truss Number : " + settingTruss);
+                this.setState({
+                    settingTrussNumber: settingTruss,
+                    settingTruss: trussNum,
+                    prunSetting: pruningSet,
+
+                });
+
+
+            }
+
+
+
+        }
+
+    }
+
+    calculateFloweringTruss = () => {
+
+        var floweringTrussNum = 0;
+        var flowerPruningNumner = 0;
+        var flowering = 0;
+        var flowerSetFruits = 0;
+        var summ = 0;
+        var floweringTruss = 0;
+
+
+        if (this.state.settingTruss !== "") {
+
+            floweringTrussNum = this.state.settingTruss + 1;
+
+
+        } else {
+
+            floweringTrussNum = this.state.settingTruss2;
+
+
+        }
+        if (this.state.trussNumber === floweringTrussNum) {
+
+            flowerPruningNumner = parseInt(this.state.pruningNumber);
+            flowering = parseInt(this.state.setFlowers);
+            flowerSetFruits = parseInt(this.state.setFruits);
+            summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+            floweringTruss = ((parseInt(this.state.trussNumber) + (summ / flowerPruningNumner)).toFixed(2));
+            console.log("Flowering Truss Value : " + floweringTruss);
+            this.setState({
+                floweringTrussss: floweringTruss,
+                pruneFlowering: flowerPruningNumner,
+            });
+
+        } else {
+
+
+            if (this.state.trussNumber1 === floweringTrussNum) {
+
+
+
+                flowerPruningNumner = parseInt(this.state.pruningNumber1);
+                flowering = parseInt(this.state.setFlowers1);
+                flowerSetFruits = parseInt(this.state.setFruits1);
+                summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                floweringTruss = ((parseInt(this.state.trussNumber1) + (summ / flowerPruningNumner)).toFixed(2));
+                console.log("Flowering Truss Value : " + floweringTruss);
+                this.setState({
+                    floweringTrussss: floweringTruss,
+                    pruneFlowering: flowerPruningNumner,
+
+                });
+
+            } else {
+
+                if (this.state.trussNumber2 === floweringTrussNum) {
+
+                    flowerPruningNumner = parseInt(this.state.pruningNumber2);
+                    flowering = parseInt(this.state.setFlowers2);
+                    flowerSetFruits = parseInt(this.state.setFruits2);
+                    summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                    floweringTruss = ((parseInt(this.state.trussNumber2) + (summ / flowerPruningNumner)).toFixed(2));
+                    console.log("Flowering Truss Value : " + floweringTruss);
+                    this.setState({
+                        floweringTrussss: floweringTruss,
+                        pruneFlowering: flowerPruningNumner,
+
+                    });
+
+                } else {
+
+
+                    if (this.state.trussNumber3 === floweringTrussNum) {
+
+                        flowerPruningNumner = parseInt(this.state.pruningNumber3);
+                        flowering = parseInt(this.state.setFlowers3);
+                        flowerSetFruits = parseInt(this.state.setFruits3);
+                        summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                        floweringTruss = ((parseInt(this.state.trussNumber3) + (summ / flowerPruningNumner)).toFixed(2));
+                        console.log("Flowering Truss Value : " + floweringTruss);
+                        this.setState({
+                            floweringTrussss: floweringTruss,
+                            pruneFlowering: flowerPruningNumner,
+
+                        });
+
+                    } else {
+
+                        if (this.state.trussNumber4 === floweringTrussNum) {
+
+                            flowerPruningNumner = parseInt(this.state.pruningNumber4);
+                            flowering = parseInt(this.state.setFlowers4);
+                            flowerSetFruits = parseInt(this.state.setFruits4);
+                            summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                            floweringTruss = ((parseInt(this.state.trussNumber4) + (summ / flowerPruningNumner)).toFixed(2));
+                            console.log("Flowering Truss Value : " + floweringTruss);
+                            this.setState({
+                                floweringTrussss: floweringTruss,
+                                pruneFlowering: flowerPruningNumner,
+
+                            });
+
+                        } else {
+
+                            if (this.state.trussNumber5 === floweringTrussNum) {
+
+                                flowerPruningNumner = parseInt(this.state.pruningNumber5);
+                                flowering = parseInt(this.state.setFlowers5);
+                                flowerSetFruits = parseInt(this.state.setFruits5);
+                                summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                floweringTruss = ((parseInt(this.state.trussNumber5) + (summ / flowerPruningNumner)).toFixed(2));
+                                console.log("Flowering Truss Value : " + floweringTruss);
+                                this.setState({
+                                    floweringTrussss: floweringTruss,
+                                    pruneFlowering: flowerPruningNumner,
+
+                                });
+
+                            } else {
+
+
+                                if (this.state.trussNumber6 === floweringTrussNum) {
+
+                                    flowerPruningNumner = parseInt(this.state.pruningNumber6);
+                                    flowering = parseInt(this.state.setFlowers6);
+                                    flowerSetFruits = parseInt(this.state.setFruits6);
+                                    summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                    floweringTruss = ((parseInt(this.state.trussNumber6) + (summ / flowerPruningNumner)).toFixed(2));
+                                    console.log("Flowering Truss Value : " + floweringTruss);
+                                    this.setState({
+                                        floweringTrussss: floweringTruss,
+                                        pruneFlowering: flowerPruningNumner,
+
+                                    });
+
+                                } else {
+
+                                    if (this.state.trussNumber7 === floweringTrussNum) {
+                                        flowerPruningNumner = parseInt(this.state.pruningNumber7);
+                                        flowering = parseInt(this.state.setFlowers7);
+                                        flowerSetFruits = parseInt(this.state.setFruits7);
+                                        summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                        floweringTruss = ((parseInt(this.state.trussNumber7) + (summ / flowerPruningNumner)).toFixed(2));
+                                        console.log("Flowering Truss Value : " + floweringTruss);
+                                        this.setState({
+                                            floweringTrussss: floweringTruss,
+                                            pruneFlowering: flowerPruningNumner,
+
+                                        });
+
+
+
+
+
+                                    } else {
+
+                                        if (this.state.trussNumber8 === floweringTrussNum) {
+                                            flowerPruningNumner = parseInt(this.state.pruningNumber8);
+                                            flowering = parseInt(this.state.setFlowers8);
+                                            flowerSetFruits = parseInt(this.state.setFruits8);
+                                            summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                            floweringTruss = ((parseInt(this.state.trussNumber8) + (summ / flowerPruningNumner)).toFixed(2));
+                                            console.log("Flowering Truss Value : " + floweringTruss);
+                                            this.setState({
+                                                floweringTrussss: floweringTruss,
+                                                pruneFlowering: flowerPruningNumner,
+
+                                            });
+
+                                        } else {
+
+                                            if (this.state.trussNumber9 === floweringTrussNum) {
+
+                                                flowerPruningNumner = parseInt(this.state.pruningNumber9);
+                                                flowering = parseInt(this.state.setFlowers9);
+                                                flowerSetFruits = parseInt(this.state.setFruits9);
+                                                summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                                floweringTruss = ((parseInt(this.state.trussNumber9) + (summ / flowerPruningNumner)).toFixed(2));
+                                                console.log("Flowering Truss Value : " + floweringTruss);
+                                                this.setState({
+                                                    floweringTrussss: floweringTruss,
+                                                    pruneFlowering: flowerPruningNumner,
+
+                                                });
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+
+    }
+
+
+
+    getTrussData = () => {
 
 
         if (this.state.trussNumber != null) {
 
-            db.trussById(this.state.trussNumber, numberWeek, 'HAR 1 - Yelo').then((data) => {
+            db.trussById(this.state.trussNumber, numberWeek - 1, 'HAR 1 - Yelo', number).then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 truss = data;
                 this.setState({
                     truss,
-                    setFruits: truss.setFruits,
+                    setFruits: data.setFruits,
+                    setFlowers: data.setFlowers,
+                    pruningNumber: data.pruningNumber,
                 });
                 console.log("Truss Details", this.state.truss);
 
-                if ((parseInt(this.state.trussNumber) + 1) != null) {
-
-                    this.getDataFromDB1();
-
-
-                }
+                this.calculateFruitLoad();
+                this.calculateHarvestTruss();
+                this.calculateSettingTruss();
+                this.calculateFloweringTruss();
 
 
             }).catch((err) => {
@@ -507,146 +1184,319 @@ export default class Har1YeloTrussDetails extends React.Component {
 
         }
 
+
+
+
+
+        setTimeout(() => {
+
+            if ((parseInt(this.state.trussNumber) + 1) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 1), numberWeek - 1, 'HAR 1 - Yelo', number).then((data1) => {
+                    console.log(data1);
+                    console.log("Calling database")
+                    truss1 = data1;
+                    this.setState({
+                        truss1,
+                        setFruits1: data1.setFruits,
+                        setFlowers1: data1.setFlowers,
+                        pruningNumber1: data1.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss1);
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+
+        }, 1000);
+
+
+
+        setTimeout(() => {
+            if ((parseInt(this.state.trussNumber) + 2) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 2), numberWeek - 1, 'HAR 1 - Yelo', number).then((data2) => {
+                    console.log(data2);
+                    console.log("Calling database")
+                    truss2 = data2;
+                    this.setState({
+                        truss2,
+                        setFruits2: data2.setFruits,
+                        setFlowers2: data2.setFlowers,
+                        pruningNumber2: data2.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss2);
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+        }, 2000);
+
+
+        setTimeout(() => {
+            if ((parseInt(this.state.trussNumber) + 3) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 3), numberWeek - 1, 'HAR 1 - Yelo', number).then((data3) => {
+                    console.log(data3);
+                    console.log("Calling database")
+                    truss3 = data3;
+                    this.setState({
+                        truss3,
+                        setFruits3: data3.setFruits,
+                        setFlowers3: data3.setFlowers,
+                        pruningNumber3: data3.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss3);
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+        }, 3000);
+
+
+
+        setTimeout(() => {
+            if ((parseInt(this.state.trussNumber) + 4) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 4), numberWeek - 1, 'HAR 1 - Yelo', number).then((data4) => {
+                    console.log(data4);
+                    console.log("Calling database")
+                    truss4 = data4;
+                    this.setState({
+                        truss4,
+                        setFruits4: data4.setFruits,
+                        setFlowers4: data4.setFlowers,
+                        pruningNumber4: data4.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss4);
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+        }, 4000);
+
+
+        setTimeout(() => {
+
+            if ((parseInt(this.state.trussNumber) + 5) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 5), numberWeek - 1, 'HAR 1 - Yelo', number).then((data5) => {
+                    console.log(data5);
+                    console.log("Calling database")
+                    truss5 = data5;
+                    this.setState({
+                        truss5,
+                        setFruits5: data5.setFruits,
+                        setFlowers5: data5.setFlowers,
+                        pruningNumber5: data5.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss5);
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+        }, 5000);
+
+
+        setTimeout(() => {
+
+            if ((parseInt(this.state.trussNumber) + 6) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 6), numberWeek - 1, 'HAR 1 - Yelo', number).then((data6) => {
+                    console.log(data6);
+                    console.log("Calling database")
+                    truss6 = data6;
+                    this.setState({
+                        truss6,
+                        setFruits6: data6.setFruits,
+                        setFlowers6: data6.setFlowers,
+                        pruningNumber6: data6.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss6);
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+        }, 6000);
+
+
+        setTimeout(() => {
+
+            if ((parseInt(this.state.trussNumber) + 7) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 7), numberWeek - 1, 'HAR 1 - Yelo', number).then((data7) => {
+                    console.log(data7);
+                    console.log("Calling database")
+                    truss7 = data7;
+                    this.setState({
+                        truss7,
+                        setFruits7: data7.setFruits,
+                        setFlowers7: data7.setFlowers,
+                        pruningNumber7: data7.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss7);
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+        }, 7000);
+
+
+        setTimeout(() => {
+
+            if ((parseInt(this.state.trussNumber) + 8) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 8), numberWeek - 1, 'HAR 1 - Yelo', number).then((data8) => {
+                    console.log(data8);
+                    console.log("Calling database")
+                    truss8 = data8;
+                    this.setState({
+                        truss8,
+                        setFruits8: data8.setFruits,
+                        setFlowers8: data8.setFlowers,
+                        pruningNumber8: data8.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss8);
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+        }, 8000);
+
+
+        setTimeout(() => {
+
+            if ((parseInt(this.state.trussNumber) + 9) != null) {
+
+                db.trussById((parseInt(this.state.trussNumber) + 9), numberWeek - 1, 'HAR 1 - Yelo', number).then((data9) => {
+                    console.log(data9);
+                    console.log("Calling database")
+                    truss9 = data9;
+                    this.setState({
+                        truss9,
+                        setFruits9: data9.setFruits,
+                        setFlowers9: data9.setFlowers,
+                        pruningNumber9: data9.pruningNumber,
+                    });
+                    console.log("Truss Details", this.state.truss9);
+
+
+                    this.calculateFruitLoad();
+                    this.calculateHarvestTruss();
+                    this.calculateSettingTruss();
+                    this.calculateFloweringTruss();
+
+                }).catch((err) => {
+                    console.log(err);
+
+                })
+            } else {
+
+
+            }
+
+        }, 9000);
+
+
     }
 
-    getDataFromDB1 = () => {
-
-
-        if ((parseInt(this.state.trussNumber) + 1) != null) {
-
-            db.trussById((parseInt(this.state.trussNumber) + 1), numberWeek, 'HAR 1 - Yelo').then((data) => {
-                console.log(data);
-                console.log("Calling database")
-                truss1 = data;
-                this.setState({
-                    truss1,
-                });
-                console.log("Truss Details", this.state.truss1);
-
-                if ((parseInt(this.state.trussNumber) + 2) != null) {
-
-                    this.getDataFromDB2();
-
-
-                }
-
-
-            }).catch((err) => {
-                console.log(err);
-
-            })
-        } else {
-
-
-        }
-
-    }
-
-    getDataFromDB2 = () => {
-
-
-        if ((parseInt(this.state.trussNumber) + 2) != null) {
-
-            db.trussById((parseInt(this.state.trussNumber) + 2), numberWeek, 'HAR 1 - Yelo').then((data) => {
-                console.log(data);
-                console.log("Calling database")
-                truss2 = data;
-                this.setState({
-                    truss2,
-                });
-                console.log("Truss Details", this.state.truss2);
-
-                if ((parseInt(this.state.trussNumber) + 3) != null) {
-
-                    this.getDataFromDB3();
-
-
-                }
-
-
-            }).catch((err) => {
-                console.log(err);
-
-            })
-        } else {
-
-
-        }
-
-    }
-
-    getDataFromDB3 = () => {
-
-
-        if ((parseInt(this.state.trussNumber) + 3) != null) {
-
-            db.trussById((parseInt(this.state.trussNumber) + 3), numberWeek, 'HAR 1 - Yelo').then((data) => {
-                console.log(data);
-                console.log("Calling database")
-                truss3 = data;
-                this.setState({
-                    truss3,
-                });
-                console.log("Truss Details", this.state.truss3);
-
-                if ((parseInt(this.state.trussNumber) + 4) != null) {
-
-                    this.getDataFromDB4();
-
-
-                }
-
-
-            }).catch((err) => {
-                console.log(err);
-
-            })
-        } else {
-
-
-        }
-
-    }
-
-    getDataFromDB4 = () => {
-
-
-        if ((parseInt(this.state.trussNumber) + 4) != null) {
-
-            db.trussById((parseInt(this.state.trussNumber) + 4), numberWeek, 'HAR 1 - Yelo').then((data) => {
-                console.log(data);
-                console.log("Calling database")
-                truss4 = data;
-                this.setState({
-                    truss4,
-                });
-                console.log("Truss Details", this.state.truss4);
-
-                if ((parseInt(this.state.trussNumber) + 5) != null) {
-
-                    //this.getDataFromDB5();
-
-
-                }
-
-
-            }).catch((err) => {
-                console.log(err);
-
-            })
-        } else {
-
-
-        }
-
-    }
 
 
     onChangeText(text) {
-        ['TrussNumber', 'LastWeekNumber', 'SetFruits', 'SetFlowers', 'PruningNumber', 'TrussNumber1', 'LastWeekNumber1', 'SetFruits1', 'SetFlowers1', 'PruningNumber1', 'TrussNumber2', 'LastWeekNumber2', 'SetFruits2', 'SetFlowers2', 'PruningNumber2',
-            'TrussNumber3', 'LastWeekNumber3', 'SetFruits3', 'SetFlowers3', 'PruningNumber3', 'TrussNumber4', 'LastWeekNumber4', 'SetFruits4', 'SetFlowers4', 'PruningNumber4', 'TrussNumber5', 'LastWeekNumber5', 'SetFruits5', 'SetFlowers5', 'PruningNumber5',
-            'TrussNumber6', 'LastWeekNumber6', 'SetFruits6', 'SetFlowers6', 'PruningNumber6', 'TrussNumber7', 'LastWeekNumber7', 'SetFruits7', 'SetFlowers7', 'PruningNumber7',
-            'TrussNumber8', 'LastWeekNumber8', 'SetFruits8', 'SetFlowers8', 'PruningNumber8', 'TrussNumber9', 'LastWeekNumber9', 'SetFruits9', 'SetFlowers9', 'PruningNumber9',]
+        ['TrussNumber', 'FruitDiameter', 'SetFruits', 'SetFlowers', 'PruningNumber', 'TrussNumber1', 'FruitDiameter1', 'SetFruits1', 'SetFlowers1', 'PruningNumber1', 'TrussNumber2', 'FruitDiameter2', 'SetFruits2', 'SetFlowers2', 'PruningNumber2',
+            'TrussNumber3', 'FruitDiameter3', 'SetFruits3', 'SetFlowers3', 'PruningNumber3', 'TrussNumber4', 'FruitDiameter4', 'SetFruits4', 'SetFlowers4', 'PruningNumber4', 'TrussNumber5', 'FruitDiameter5', 'SetFruits5', 'SetFlowers5', 'PruningNumber5',
+            'TrussNumber6', 'FruitDiameter6', 'SetFruits6', 'SetFlowers6', 'PruningNumber6', 'TrussNumber7', 'FruitDiameter7', 'SetFruits7', 'SetFlowers7', 'PruningNumber7',
+            'TrussNumber8', 'FruitDiameter8', 'SetFruits8', 'SetFlowers8', 'PruningNumber8', 'TrussNumber9', 'FruitDiameter9', 'SetFruits9', 'SetFlowers9', 'PruningNumber9',]
             .map((name) => ({ name, ref: this[name] }))
             .forEach(({ name, ref }) => {
                 if (ref.isFocused()) {
@@ -654,6 +1504,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                 }
             });
     }
+
+
     saveTrussToDb = () => {
 
         if (this.state.trussNumber !== null && this.state.setFlowers !== null) {
@@ -666,7 +1518,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber } = this.state;
-            const { lastWeekNumber } = this.state;
+            const { fruitDiameter } = this.state;
             const { setFruits } = this.state;
             const { setFlowers } = this.state;
             const { pruningNumber } = this.state;
@@ -675,14 +1527,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data = {
                 trussNumber: this.state.trussNumber,
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits,
                 setFlowers: this.state.setFlowers,
                 pruningNumber: this.state.pruningNumber,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
-
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
             }
 
@@ -746,7 +1605,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber1 } = this.state;
-            const { lastWeekNumber1 } = this.state;
+            const { fruitDiameter1 } = this.state;
             const { setFruits1 } = this.state;
             const { setFlowers1 } = this.state;
             const { pruningNumber1 } = this.state;
@@ -755,13 +1614,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data1 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 1),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits1,
                 setFlowers: this.state.setFlowers1,
                 pruningNumber: this.state.pruningNumber1,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -826,7 +1693,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber2 } = this.state;
-            const { lastWeekNumber2 } = this.state;
+            const { fruitDiameter2 } = this.state;
             const { setFruits2 } = this.state;
             const { setFlowers2 } = this.state;
             const { pruningNumber2 } = this.state;
@@ -835,13 +1702,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data2 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 2),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits2,
                 setFlowers: this.state.setFlowers2,
                 pruningNumber: this.state.pruningNumber2,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -907,7 +1782,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber3 } = this.state;
-            const { lastWeekNumber3 } = this.state;
+            const { fruitDiameter3 } = this.state;
             const { setFruits3 } = this.state;
             const { setFlowers3 } = this.state;
             const { pruningNumber3 } = this.state;
@@ -916,13 +1791,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data3 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 3),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits3,
                 setFlowers: this.state.setFlowers3,
                 pruningNumber: this.state.pruningNumber3,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -988,7 +1871,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber4 } = this.state;
-            const { lastWeekNumber4 } = this.state;
+            const { fruitDiameter4 } = this.state;
             const { setFruits4 } = this.state;
             const { setFlowers4 } = this.state;
             const { pruningNumber4 } = this.state;
@@ -997,13 +1880,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data4 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 4),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits4,
                 setFlowers: this.state.setFlowers4,
                 pruningNumber: this.state.pruningNumber4,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -1069,7 +1960,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber5 } = this.state;
-            const { lastWeekNumber5 } = this.state;
+            const { fruitDiameter5 } = this.state;
             const { setFruits5 } = this.state;
             const { setFlowers5 } = this.state;
             const { pruningNumber5 } = this.state;
@@ -1078,13 +1969,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data5 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 5),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits5,
                 setFlowers: this.state.setFlowers5,
                 pruningNumber: this.state.pruningNumber5,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -1151,7 +2050,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber6 } = this.state;
-            const { lastWeekNumber6 } = this.state;
+            const { fruitDiameter6 } = this.state;
             const { setFruits6 } = this.state;
             const { setFlowers6 } = this.state;
             const { pruningNumber6 } = this.state;
@@ -1160,13 +2059,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data6 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 6),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits6,
                 setFlowers: this.state.setFlowers6,
                 pruningNumber: this.state.pruningNumber6,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -1233,7 +2140,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber7 } = this.state;
-            const { lastWeekNumber7 } = this.state;
+            const { fruitDiameter7 } = this.state;
             const { setFruits7 } = this.state;
             const { setFlowers7 } = this.state;
             const { pruningNumber7 } = this.state;
@@ -1242,13 +2149,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data7 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 7),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits7,
                 setFlowers: this.state.setFlowers7,
                 pruningNumber: this.state.pruningNumber7,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -1315,7 +2230,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber8 } = this.state;
-            const { lastWeekNumber8 } = this.state;
+            const { fruitDiameter8 } = this.state;
             const { setFruits8 } = this.state;
             const { setFlowers8 } = this.state;
             const { pruningNumber8 } = this.state;
@@ -1324,13 +2239,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data8 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 8),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits8,
                 setFlowers: this.state.setFlowers8,
                 pruningNumber: this.state.pruningNumber8,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -1394,7 +2317,7 @@ export default class Har1YeloTrussDetails extends React.Component {
             var that = this;
 
             const { trussNumber9 } = this.state;
-            const { lastWeekNumber9 } = this.state;
+            const { fruitDiameter9 } = this.state;
             const { setFruits9 } = this.state;
             const { setFlowers9 } = this.state;
             const { pruningNumber9 } = this.state;
@@ -1403,13 +2326,21 @@ export default class Har1YeloTrussDetails extends React.Component {
 
             let data9 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 9),
-                lastWeekNumber: '22',
+                fruitDiameter: this.state.fruitDiameter,
                 setFruits: this.state.setFruits9,
                 setFlowers: this.state.setFlowers9,
                 pruningNumber: this.state.pruningNumber9,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek,
+                plantWeek: numberWeek - 1,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
 
 
             }
@@ -1461,7 +2392,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek() {
-        this.LastWeekNumber.focus();
+        this.FruitDiameter.focus();
     }
 
     onSubmitSetFruits() {
@@ -1481,7 +2412,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek1() {
-        this.LastWeekNumber1.focus();
+        this.FruitDiameter1.focus();
     }
 
     onSubmitSetFruits1() {
@@ -1501,7 +2432,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek2() {
-        this.LastWeekNumber2.focus();
+        this.FruitDiameter2.focus();
     }
 
     onSubmitSetFruits2() {
@@ -1521,7 +2452,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek3() {
-        this.LastWeekNumber3.focus();
+        this.FruitDiameter3.focus();
     }
 
     onSubmitSetFruits3() {
@@ -1541,7 +2472,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek4() {
-        this.LastWeekNumber4.focus();
+        this.FruitDiameter4.focus();
     }
 
     onSubmitSetFruits4() {
@@ -1561,7 +2492,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek5() {
-        this.LastWeekNumber5.focus();
+        this.FruitDiameter5.focus();
     }
 
     onSubmitSetFruits5() {
@@ -1581,7 +2512,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek6() {
-        this.LastWeekNumber6.focus();
+        this.FruitDiameter6.focus();
     }
 
     onSubmitSetFruits6() {
@@ -1601,7 +2532,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek7() {
-        this.LastWeekNumber7.focus();
+        this.FruitDiameter7.focus();
     }
 
     onSubmitSetFruits7() {
@@ -1621,7 +2552,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek8() {
-        this.LastWeekNumber8.focus();
+        this.FruitDiameter8.focus();
     }
 
     onSubmitSetFruits8() {
@@ -1641,7 +2572,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     }
 
     onSubmitLastWeek9() {
-        this.LastWeekNumber9.focus();
+        this.FruitDiameter9.focus();
     }
 
     onSubmitSetFruits9() {
@@ -1656,6 +2587,15 @@ export default class Har1YeloTrussDetails extends React.Component {
         this.PruningNumber9.focus();
     }
 
+    onSubmitFruitDiameter() {
+        this.FruitDiameter.focus();
+    }
+
+    onSubmitFruitDiameter1() {
+        this.FruitDiameter1.focus();
+    }
+
+
     _alertIndex(index) {
         Alert.alert(`This is row ${index + 1}`);
     }
@@ -1665,7 +2605,7 @@ export default class Har1YeloTrussDetails extends React.Component {
     onSubmit() {
         let errors = {};
 
-        ['TrussNumber', 'LastWeekNumber', 'SetFruits', 'SetFlowers', 'PruningNumber']
+        ['TrussNumber', 'FruitDiameter', 'SetFruits', 'SetFlowers', 'PruningNumber', 'FruitDiameter']
             .forEach((name) => {
                 let value = this[name].value();
 
@@ -1701,7 +2641,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
         let { errors = {}, ...data } = this.state;
 
-        let { LeavesPerPlant, FullySetTruss, TrussLength, WeeklyGrowth, FloweringTrussHeight, LeafLength, LeafWidth, StmDiameter, LastWeekStmDiameter, TrussNumber, LastWeekNumber, SetFruits, SetFlowers, PruningNumber } = data;
+        let { LeavesPerPlant, FullySetTruss, TrussLength, WeeklyGrowth, FloweringTrussHeight, LeafLength, LeafWidth, StmDiameter, LastWeekStmDiameter, TrussNumber, FruitDiameter, SetFruits, SetFlowers, PruningNumber } = data;
 
         if (this.state.isLoading) {
             return (
@@ -1730,12 +2670,10 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                 <View style={styles.container}>
 
-                    <ImageBackground source={require('../assets/T&G_Tomatoes.jpg')} style={styles.backgroundImage}>
+                    <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
                         <ScrollView style={styles.formContainer}
                             keyboardShouldPersistTaps='handled'>
-
-
 
 
                             <View
@@ -1797,6 +2735,15 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         }}
                                     />
 
+                                    <Text style={styles.text222}>Fruit Dia</Text>
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
                                 </View>
 
                                 <View
@@ -1848,7 +2795,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
                                         error={errors.TrussNumber}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber.toString()}
@@ -1879,7 +2827,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits}
-                                    //value={this.state.setFruits.toString()}
+                                        value={this.state.setFruits.toString()}
                                     />
 
 
@@ -1909,7 +2857,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers')}
                                         error={errors.SetFlowers}
-                                        value={this.state.truss.setFlowers}
+                                        value={this.state.setFlowers.toString()}
                                     />
 
                                     <View
@@ -1933,9 +2881,36 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber')}
                                         error={errors.PruningNumber}
-                                        value={this.state.pruningNumber}
+                                        value={this.state.pruningNumber.toString()}
+                                    />
+
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput1.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter')}
+                                        error={errors.FruitDiameter}
                                     />
 
                                     <View
@@ -1945,7 +2920,9 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         }}
                                     />
 
+
                                 </View>
+
 
 
                                 <View
@@ -1980,7 +2957,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.lastWeekTextInput1.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber1')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber1')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1')}
                                         error={errors.TrussNumber1}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber1.toString()}
@@ -2011,7 +2989,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput1.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits1}
-                                        value={this.state.setFruits1}
+                                        value={this.state.setFruits1.toString()}
                                     />
 
                                     <View
@@ -2039,7 +3017,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers1')}
                                         error={errors.SetFlowers1}
-                                    //value={this.state.truss1.setFlowers}
+                                        value={this.state.setFlowers1.toString()}
                                     />
 
                                     <View
@@ -2063,9 +3041,36 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput1.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1')}
                                         error={errors.PruningNumber1}
-                                    //value={this.state.truss1.pruningNumber}
+                                        value={this.state.pruningNumber1.toString()}
+                                    />
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput1 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput2.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1')}
+                                        error={errors.FruitDiameter1}
                                     />
 
                                     <View
@@ -2109,7 +3114,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.lastWeekTextInput2.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber2')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber2')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2')}
                                         error={errors.TrussNumber2}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber2.toString()}
@@ -2140,7 +3146,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput2.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits2}
-                                        value={this.state.setFruits2}
+                                        value={this.state.setFruits2.toString()}
                                     />
 
                                     <View
@@ -2168,7 +3174,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers2')}
                                         error={errors.SetFlowers2}
-                                        value={this.state.setFlowers2}
+                                        value={this.state.setFlowers2.toString()}
                                     />
 
                                     <View
@@ -2192,10 +3198,36 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput2.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2')}
                                         error={errors.PruningNumber2}
-                                        value={this.state.pruningNumber2}
+                                        value={this.state.pruningNumber2.toString()}
                                     />
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput2 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput3.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2')}
+                                        error={errors.FruitDiameter1}
+                                    />
+
                                     <View
                                         style={{
                                             borderRightColor: 'black',
@@ -2237,7 +3269,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput3.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber3')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber3')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3')}
                                         error={errors.TrussNumber3}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber3.toString()}
@@ -2268,8 +3301,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput3.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits3}
-                                        value={this.state.setFruits3}
-                                    />
+                                        value={this.state.setFruits3.toString()} />
 
                                     <View
                                         style={{
@@ -2296,8 +3328,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers3')}
                                         error={errors.SetFlowers3}
-                                        value={this.state.setFlowers3}
-                                    />
+                                        value={this.state.setFlowers3.toString()} />
 
                                     <View
                                         style={{
@@ -2320,9 +3351,35 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput3.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3')}
                                         error={errors.PruningNumber3}
-                                        value={this.state.pruningNumber3}
+                                        value={this.state.pruningNumber3.toString()} />
+
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput3 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput4.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3')}
+                                        error={errors.FruitDiameter1}
                                     />
 
                                     <View
@@ -2366,7 +3423,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.lastWeekTextInput4.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber4')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber4')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4')}
                                         error={errors.TrussNumber4}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber4.toString()}
@@ -2397,7 +3455,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput4.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits4}
-                                        value={this.state.setFruits4}
+                                        value={this.state.setFruits4.toString()}
                                     />
 
                                     <View
@@ -2425,7 +3483,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers4')}
                                         error={errors.SetFlowers4}
-                                        value={this.state.setFlowers4}
+                                        value={this.state.setFlowers4.toString()}
                                     />
 
                                     <View
@@ -2449,11 +3507,37 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput4.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4')}
                                         error={errors.PruningNumber4}
-                                        value={this.state.pruningNumber4}
+                                        value={this.state.pruningNumber4.toString()}
                                     />
 
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput4 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput5.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4')}
+                                        error={errors.FruitDiameter1}
+                                    />
 
                                     <View
                                         style={{
@@ -2496,7 +3580,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitTextInput5.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber5')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber5')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5')}
                                         error={errors.TrussNumber5}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber5.toString()}
@@ -2527,7 +3612,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput5.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits5}
-                                        value={this.state.setFruits5}
+                                        value={this.state.setFruits5.toString()}
                                     />
 
                                     <View
@@ -2555,7 +3640,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers5')}
                                         error={errors.SetFlowers5}
-                                        value={this.state.setFlowers5}
+                                        value={this.state.setFlowers5.toString()}
                                     />
 
                                     <View
@@ -2579,11 +3664,37 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput5.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5')}
                                         error={errors.PruningNumber5}
-                                        value={this.state.pruningNumber5}
+                                        value={this.state.pruningNumber5.toString()}
                                     />
 
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput5 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5')}
+                                        error={errors.FruitDiameter1}
+                                    />
 
                                     <View
                                         style={{
@@ -2626,7 +3737,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber6')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber6')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6')}
                                         error={errors.TrussNumber6}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber6.toString()}
@@ -2657,7 +3769,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput6.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits6}
-                                        value={this.state.setFruits6}
+                                        value={this.state.setFruits6.toString()}
                                     />
 
                                     <View
@@ -2685,7 +3797,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers6')}
                                         error={errors.SetFlowers6}
-                                        value={this.state.setFlowers6}
+                                        value={this.state.setFlowers6.toString()}
                                     />
 
                                     <View
@@ -2709,11 +3821,37 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput6.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6')}
                                         error={errors.PruningNumber6}
-                                        value={this.state.pruningNumber6}
+                                        value={this.state.pruningNumber6.toString()}
                                     />
 
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput6 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6')}
+                                        error={errors.FruitDiameter1}
+                                    />
 
                                     <View
                                         style={{
@@ -2756,7 +3894,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber7')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber7')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7')}
                                         error={errors.TrussNumber7}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber7.toString()}
@@ -2787,7 +3926,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput7.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits7}
-                                        value={this.state.setFruits7}
+                                        value={this.state.setFruits7.toString()}
                                     />
 
                                     <View
@@ -2815,7 +3954,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers7')}
                                         error={errors.SetFlowers7}
-                                        value={this.state.setFlowers7}
+                                        value={this.state.setFlowers7.toString()}
                                     />
 
                                     <View
@@ -2839,9 +3978,36 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput7.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7')}
                                         error={errors.PruningNumber7}
-                                        value={this.state.pruningNumber7}
+                                        value={this.state.pruningNumber7.toString()}
+
+                                    />
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput7 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7')}
+                                        error={errors.FruitDiameter1}
                                     />
 
                                     <View
@@ -2885,7 +4051,8 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber8')}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber8')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8')}
                                         error={errors.TrussNumber8}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber8.toString()}
@@ -2916,7 +4083,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput8.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits8}
-                                        value={this.state.setFruits8}
+                                        value={this.state.setFruits8.toString()}
                                     />
 
                                     <View
@@ -2944,7 +4111,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers8')}
                                         error={errors.SetFlowers8}
-                                        value={this.state.setFlowers8}
+                                        value={this.state.setFlowers8.toString()}
                                     />
 
                                     <View
@@ -2968,11 +4135,37 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput8.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8')}
                                         error={errors.PruningNumber8}
-                                        value={this.state.pruningNumber8}
+                                        value={this.state.pruningNumber8.toString()}
                                     />
 
+
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput8 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8')}
+                                        error={errors.FruitDiameter1}
+                                    />
 
                                     <View
                                         style={{
@@ -3017,6 +4210,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
                                         onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
                                         error={errors.TrussNumber9}
                                         blurOnSubmit={false}
@@ -3048,7 +4242,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onSubmitEditing={() => { this.setFlowersTextInput9.focus(); }}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits9}
-                                        value={this.state.setFruits9}
+                                        value={this.state.setFruits9.toString()}
                                     />
 
                                     <View
@@ -3076,7 +4270,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers9')}
                                         error={errors.SetFlowers9}
-                                        value={this.state.setFlowers9}
+                                        value={this.state.setFlowers9.toString()}
                                     />
 
                                     <View
@@ -3100,9 +4294,10 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.fruitDiamterTextInput9.focus(); }}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9')}
                                         error={errors.PruningNumber9}
-                                        value={this.state.pruningNumber9}
+                                        value={this.state.pruningNumber9.toString()}
                                     />
 
 
@@ -3113,7 +4308,29 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         }}
                                     />
 
+                                    <TextInput
+                                        style={styles.bottonColor}
+                                        underlineColorAndroid="black"
+                                        placeholderTextColor="#000000"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        ref={(input) => { this.fruitDiamterTextInput9 = input; }}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        returnKeyType={"done"}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9')}
+                                        error={errors.FruitDiameter1}
+                                    />
 
+                                    <View
+                                        style={{
+                                            borderRightColor: 'black',
+                                            borderRightWidth: 1,
+                                        }}
+                                    />
 
                                 </View>
 
@@ -3132,7 +4349,67 @@ export default class Har1YeloTrussDetails extends React.Component {
                                 }}
                             />
 
+                            <View style={styles.borderEdit}>
 
+                                <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
+
+                                    <View
+                                        style={{
+                                            marginTop: 1
+                                        }}
+                                    />
+
+                                    <View style={styles.row}>
+                                        <Text style={styles.text4}>Fruit Load</Text>
+                                        <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                                    </View>
+
+                                    <View
+                                        style={{
+                                            marginBottom: 5
+                                        }}
+                                    />
+
+                                </View>
+
+                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                    <View style={styles.row}>
+                                        <Text style={styles.text4}>Flowering Truss</Text>
+                                        <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                    </View>
+
+
+                                    <View
+                                        style={{
+                                            marginBottom: 5
+                                        }}
+                                    />
+                                </View>
+
+                                <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
+                                    <View style={styles.row}>
+                                        <Text style={styles.text4}>Setting Truss</Text>
+                                        <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                    </View>
+                                    <View
+                                        style={{
+                                            marginBottom: 5
+                                        }}
+                                    />
+                                </View>
+
+                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                    <View style={styles.row}>
+                                        <Text style={styles.text4}>Harvest Truss</Text>
+                                        <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                    </View>
+                                    <View
+                                        style={{
+                                            marginBottom: 5
+                                        }}
+                                    />
+                                </View>
+                            </View>
 
                             <TouchableOpacity
                                 style={styles.buttonContainer}
@@ -3151,7 +4428,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                     </ImageBackground>
                 </View>
 
-            </SafeAreaView>
+            </SafeAreaView >
 
         );
 
@@ -3165,6 +4442,43 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#ebebeb'
+    },
+    row: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    borderEdit: {
+        marginTop: 8,
+        marginLeft: 6,
+        marginRight: 6,
+        borderColor: '#000000',
+        borderWidth: 1,
+        backgroundColor: 'rgba(192,192,192,0.55)',
+    },
+
+    borderErrorColor: {
+
+        backgroundColor: 'rgba(255,0,0,0.3)',
+
+    },
+
+    text4: {
+        //color: '#110A6A',
+        color: 'black',
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginLeft: 12,
+        marginRight: 10,
+
+    },
+    text5: {
+        color: 'black',
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginLeft: 12,
+        marginRight: 10,
+
     },
 
     container22: { flex: 1, padding: 16, paddingTop: 30 },
@@ -3202,7 +4516,6 @@ const styles = StyleSheet.create({
     container222: {
         padding: 8,
         alignItems: "stretch"
-
     },
     rowContainer222: {
         flexDirection: 'row',
@@ -3213,7 +4526,7 @@ const styles = StyleSheet.create({
 
     text222: {
         margin: 10,
-        color: '#110A6A',
+        color: '#2C903D',
         fontSize: 18,
         textAlign: 'center',
         fontWeight: 'bold'
@@ -3245,7 +4558,7 @@ const styles = StyleSheet.create({
     },
     formContainer: {
 
-        backgroundColor: 'rgba(192,192,192,0.55)',
+        //backgroundColor: 'rgba(192,192,192,0.55)',
         borderRadius: 5,
         padding: 10,
         margin: 20,
@@ -3325,13 +4638,16 @@ const styles = StyleSheet.create({
     textinputheight: {
 
         height: 70,
-        borderBottomWidth: 1,
+        borderBottomWidth: 1.2,
         borderBottomColor: 'black',
+        marginBottom: 5
+
     },
 
     bottonColor: {
-        borderBottomWidth: 1,
+        borderBottomWidth: 1.2,
         borderBottomColor: 'black',
+        marginBottom: 5
     }
 
 })

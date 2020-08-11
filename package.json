@@ -21,7 +21,6 @@
     "react": "16.9.0",
     "react-db-google-sheets": "^2.0.0",
     "react-native": "0.61.5",
-    "react-native-background-fetch": "^3.0.4",
     "react-native-easy-grid": "^0.2.2",
     "react-native-editable-table": "^1.0.0",
     "react-native-elements": "^2.0.2",
