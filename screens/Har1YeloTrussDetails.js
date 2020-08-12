@@ -4642,7 +4642,9 @@ const styles = StyleSheet.create({
         width: 40,
         borderBottomWidth: 1.2,
         borderBottomColor: 'black',
-        marginBottom: 5
+        marginBottom: 5,
+        textAlign: 'center'
+
 
     },
 
@@ -4652,6 +4654,7 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         height: 60,
         width: 40,
+        textAlign: 'center'
     }
 
 })
