@@ -4525,12 +4525,12 @@ const styles = StyleSheet.create({
 
 
     text222: {
-        margin: 10,
         color: '#2C903D',
         fontSize: 12,
         textAlign: 'center',
         fontWeight: 'bold',
-        width: 40,
+        width: 60,
+        margin: 12
 
     },
     textInputStyle: {
@@ -4638,7 +4638,7 @@ const styles = StyleSheet.create({
     },
     textinputheight: {
 
-        height: 50,
+        height: 60,
         width: 40,
         borderBottomWidth: 1.2,
         borderBottomColor: 'black',
@@ -4650,7 +4650,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1.2,
         borderBottomColor: 'black',
         marginBottom: 5,
-        height: 50,
+        height: 60,
         width: 40,
     }
 
