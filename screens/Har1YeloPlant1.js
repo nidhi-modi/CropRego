@@ -2187,7 +2187,7 @@ const styles = StyleSheet.create({
         color: 'black',
         marginLeft: 10,
         marginRight: 10,
-        marginBottom: 10,
+        height: 70,
         backgroundColor: "transparent",
         //borderBottomWidth: 1,
         //borderBottomColor: 'black',
