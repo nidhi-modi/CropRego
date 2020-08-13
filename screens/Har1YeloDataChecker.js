@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, SafeAreaView, ImageBackground } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, SafeAreaView, ImageBackground, ActivityIndicator } from 'react-native'
 import { ScrollView, LongPressGestureHandler } from 'react-native-gesture-handler';
 import Database from '../screens/Database'
 import AsyncStorage from '@react-native-community/async-storage';
@@ -38,11 +38,17 @@ export default class Har1YeloDataChecker extends React.Component {
 
       plantNo4: {},
 
+      truss1: {},
+      truss2: {},
+      truss3: {},
+      truss4: {},
+
       weekNo: '',
       weekNo1: '',
       weekNo2: '',
       weekNo3: '',
       isCalled: false,
+      isLoading: false,
 
 
 
@@ -110,10 +116,10 @@ export default class Har1YeloDataChecker extends React.Component {
 
   componentDidMount() {
 
-    numberWeek = 2000 + currentWeekNumber()  - 1;
-    numberWeek1 = 2000 + currentWeekNumber() - 2;
-    numberWeek2 = 2000 + currentWeekNumber() - 3;
-    numberWeek3 = 2000 + currentWeekNumber() - 4;
+    numberWeek = 2000 + currentWeekNumber();
+    numberWeek1 = 2000 + currentWeekNumber() - 1;
+    numberWeek2 = 2000 + currentWeekNumber() - 2;
+    numberWeek3 = 2000 + currentWeekNumber() - 3;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
@@ -137,15 +143,112 @@ export default class Har1YeloDataChecker extends React.Component {
 
     }
 
+    this.setState({
+      isLoading: true,
+
+  });
+
+    setTimeout(() => {
+
+      db.trussByWeekNumberAndName(number, numberWeek, 'HAR 1 - Yelo').then((data) => {
+        console.log(data);
+        console.log("Calling database")
+        truss1 = data;
+        this.setState({
+          truss1,
+          isLoading: true
+
+        });
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+    }, 5000);
+
+
+    setTimeout(() => {
+
+      db.trussByWeekNumberAndName(number, numberWeek1, 'HAR 1 - Yelo').then((data) => {
+        console.log(data);
+        console.log("Calling database")
+        truss2 = data;
+        this.setState({
+          truss2,
+          isLoading: true
+
+
+        });
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+    }, 6000);
+
+
+    setTimeout(() => {
+
+      db.trussByWeekNumberAndName(number, numberWeek2, 'HAR 1 - Yelo').then((data) => {
+        console.log(data);
+        console.log("Calling database")
+        truss3 = data;
+        this.setState({
+          truss3,
+          isLoading: true
+
+        });
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+    }, 7000);
+
+
+    setTimeout(() => {
+
+      this.setState({
+        isLoading: false,
+      
+      });
+
+      db.trussByWeekNumberAndName(number, numberWeek3, 'HAR 1 - Yelo').then((data) => {
+        console.log(data);
+        console.log("Calling database")
+        truss4 = data;
+        this.setState({
+          truss4,
+         
+
+        });
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+    }, 8000);
+
+
 
     //Week1
     setTimeout(() => {
+
+      this.setState({
+        isLoading: true
+      
+      });
     db.plantsByWeekNumberAndName(number, numberWeek1, 'HAR 1 - Yelo').then((data) => {
       console.log(data);
       console.log("Calling database")
       plantNo1 = data;
       this.setState({
         plantNo1,
+        //isLoading: true
 
       });
     }).catch((err) => {
@@ -163,6 +266,8 @@ export default class Har1YeloDataChecker extends React.Component {
         plantNo2 = data;
         this.setState({
           plantNo2,
+          isLoading: true
+
 
         });
       }).catch((err) => {
@@ -181,6 +286,8 @@ export default class Har1YeloDataChecker extends React.Component {
         plantNo3 = data;
         this.setState({
           plantNo3,
+          isLoading: true
+
 
         });
       }).catch((err) => {
@@ -199,6 +306,8 @@ export default class Har1YeloDataChecker extends React.Component {
         plantNo4 = data;
         this.setState({
           plantNo4,
+          isLoading: true
+
 
         });
       }).catch((err) => {
@@ -209,7 +318,12 @@ export default class Har1YeloDataChecker extends React.Component {
 
     }, 4000);
 
+    
 
+    this.setState({
+      isLoading: false,
+
+  });
 
     try {
       AsyncStorage.getItem('leavesPerPlant').then((text1Value) => {
@@ -292,6 +406,8 @@ export default class Har1YeloDataChecker extends React.Component {
     } catch (error) {
     }
 
+
+    
 
     /*db.plantByWeekInList('HAR 1 - Yelo', numberWeek1).then((data) => {
       console.log(data);
@@ -647,6 +763,14 @@ export default class Har1YeloDataChecker extends React.Component {
 
   render() {
 
+    if (this.state.isLoading) {
+      return (
+          <View style={styles.activity}>
+              <ActivityIndicator size="large" color="#0000ff" />
+          </View>
+      )
+  }
+
 
     return (
 
@@ -794,10 +918,10 @@ export default class Har1YeloDataChecker extends React.Component {
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Fruit Load           </Text>
-                  <Text style={styles.text242}>30.2</Text>
-                  <Text style={styles.text24}>30.2</Text>
-                  <Text style={styles.text24}>30.2</Text>
-                  <Text style={styles.text24}>30.2 </Text>
+                  {this.state.truss4.fruitLoad ? (<Text style={styles.text24}>{this.state.truss4.fruitLoad} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss3.fruitLoad ? (<Text style={styles.text24}>{this.state.truss3.fruitLoad} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss2.fruitLoad ? (<Text style={styles.text24}>{this.state.truss2.fruitLoad} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss1.fruitLoad ? (<Text style={styles.text24}>{this.state.truss1.fruitLoad} </Text>) : <Text style={styles.text24}>---</Text>}
 
                 </View>
 
@@ -809,33 +933,34 @@ export default class Har1YeloDataChecker extends React.Component {
                 />
 
 
+
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Pruning Flower  </Text>
-                  <Text style={styles.text242}>4.0</Text>
-                  <Text style={styles.text24}>4.0</Text>
-                  <Text style={styles.text24}>4.0</Text>
-                  <Text style={styles.text24}>4.0 </Text>
+                  {this.state.truss4.pruningFlower ? (<Text style={styles.text24}>{this.state.truss4.pruningFlower} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss3.pruningFlower ? (<Text style={styles.text24}>{this.state.truss3.pruningFlower} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss2.pruningFlower ? (<Text style={styles.text24}>{this.state.truss2.pruningFlower} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss1.pruningFlower ? (<Text style={styles.text24}>{this.state.truss1.pruningFlower} </Text>) : <Text style={styles.text24}>---</Text>}
 
                 </View>
 
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Flowering Truss </Text>
-                  <Text style={styles.text242}>14.7</Text>
-                  <Text style={styles.text24}>14.4</Text>
-                  <Text style={styles.text24}>14.9</Text>
-                  <Text style={styles.text24}>11.2 </Text>
+                  {this.state.truss4.floweringTruss ? (<Text style={styles.text24}>{this.state.truss4.floweringTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss3.floweringTruss ? (<Text style={styles.text24}>{this.state.truss3.floweringTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss2.floweringTruss ? (<Text style={styles.text24}>{this.state.truss2.floweringTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss1.floweringTruss ? (<Text style={styles.text24}>{this.state.truss1.floweringTruss} </Text>) : <Text style={styles.text24}>---</Text>}
 
                 </View>
 
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Flowering Speed</Text>
-                  <Text style={styles.text242}>14.7</Text>
-                  <Text style={styles.text24}>14.4</Text>
-                  <Text style={styles.text24}>14.9</Text>
-                  <Text style={styles.text24}>11.2 </Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
 
                 </View>
 
@@ -849,30 +974,30 @@ export default class Har1YeloDataChecker extends React.Component {
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Pruning Set        </Text>
-                  <Text style={styles.text242}>14.7</Text>
-                  <Text style={styles.text24}>14.4</Text>
-                  <Text style={styles.text24}>14.9</Text>
-                  <Text style={styles.text24}>11.2 </Text>
+                  {this.state.truss4.pruningSet ? (<Text style={styles.text24}>{this.state.truss4.pruningSet} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss3.pruningSet ? (<Text style={styles.text24}>{this.state.truss3.pruningSet} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss2.pruningSet ? (<Text style={styles.text24}>{this.state.truss2.pruningSet} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss1.pruningSet ? (<Text style={styles.text24}>{this.state.truss1.pruningSet} </Text>) : <Text style={styles.text24}>---</Text>}
 
                 </View>
 
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Setting Truss      </Text>
-                  <Text style={styles.text242}>14.7</Text>
-                  <Text style={styles.text24}>14.4</Text>
-                  <Text style={styles.text24}>14.9</Text>
-                  <Text style={styles.text24}>11.2 </Text>
+                  {this.state.truss4.settingTruss ? (<Text style={styles.text24}>{this.state.truss4.settingTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss3.settingTruss ? (<Text style={styles.text24}>{this.state.truss3.settingTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss2.settingTruss ? (<Text style={styles.text24}>{this.state.truss2.settingTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss1.settingTruss ? (<Text style={styles.text24}>{this.state.truss1.settingTruss} </Text>) : <Text style={styles.text24}>---</Text>}
 
                 </View>
 
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Setting Speed     </Text>
-                  <Text style={styles.text242}>14.7</Text>
-                  <Text style={styles.text24}>14.4</Text>
-                  <Text style={styles.text24}>14.9</Text>
-                  <Text style={styles.text24}>11.2 </Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
 
                 </View>
 
@@ -887,30 +1012,30 @@ export default class Har1YeloDataChecker extends React.Component {
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Pruning Harvest </Text>
-                  <Text style={styles.text242}>14.7</Text>
-                  <Text style={styles.text24}>14.4</Text>
-                  <Text style={styles.text24}>14.9</Text>
-                  <Text style={styles.text24}>11.2 </Text>
+                  {this.state.truss4.pruningHarvest ? (<Text style={styles.text24}>{this.state.truss4.pruningHarvest} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss3.pruningHarvest ? (<Text style={styles.text24}>{this.state.truss3.pruningHarvest} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss2.pruningHarvest ? (<Text style={styles.text24}>{this.state.truss2.pruningHarvest} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss1.pruningHarvest ? (<Text style={styles.text24}>{this.state.truss1.pruningHarvest} </Text>) : <Text style={styles.text24}>---</Text>}
 
                 </View>
 
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Harvest Truss     </Text>
-                  <Text style={styles.text242}>14.7</Text>
-                  <Text style={styles.text24}>14.4</Text>
-                  <Text style={styles.text24}>14.9</Text>
-                  <Text style={styles.text24}>11.2 </Text>
+                  {this.state.truss4.harvestTruss ? (<Text style={styles.text24}>{this.state.truss4.harvestTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss3.harvestTruss ? (<Text style={styles.text24}>{this.state.truss3.harvestTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss2.harvestTruss ? (<Text style={styles.text24}>{this.state.truss2.harvestTruss} </Text>) : <Text style={styles.text24}>---</Text>}
+                  {this.state.truss1.harvestTruss ? (<Text style={styles.text24}>{this.state.truss1.harvestTruss} </Text>) : <Text style={styles.text24}>---</Text>}
 
                 </View>
 
                 <View style={styles.rowContainer222}>
 
                   <Text style={styles.text242}> Harvest Speed    </Text>
-                  <Text style={styles.text242}>14.7</Text>
-                  <Text style={styles.text24}>14.4</Text>
-                  <Text style={styles.text24}>14.9</Text>
-                  <Text style={styles.text24}>11.2 </Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
+                  <Text style={styles.text24}>---</Text>
 
                 </View>
 

@@ -404,7 +404,7 @@ export default class Har1YeloTrussDetails extends React.Component {
         }
 
 
-        numberWeek = 2000 + currentWeekNumber() - 1;
+        numberWeek = 2000 + currentWeekNumber();
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 
@@ -591,17 +591,17 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                             } else {
 
-                                            
-                                                    pruningSet = parseInt(this.state.pruningNumber9);
-                                                    trussNum = parseInt(this.state.trussNumber9);
-                                                    settingFruit = parseInt(this.state.setFruits9);
-                                                    settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
-                                                    console.log("Setting Truss Number 9 : " + settingTruss);
-                                                    this.setState({
-                                                        settingTrussNumber: settingTruss,
-                                                        settingTruss2: trussNum,
-                                                        prunSetting: pruningSet,
-                                                    });
+
+                                                pruningSet = parseInt(this.state.pruningNumber9);
+                                                trussNum = parseInt(this.state.trussNumber9);
+                                                settingFruit = parseInt(this.state.setFruits9);
+                                                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                                console.log("Setting Truss Number 9 : " + settingTruss);
+                                                this.setState({
+                                                    settingTrussNumber: settingTruss,
+                                                    settingTruss2: trussNum,
+                                                    prunSetting: pruningSet,
+                                                });
 
 
 
@@ -735,7 +735,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     });
 
-                                }else{
+                                } else {
 
                                     pruningSet = parseInt(this.state.pruningNumber5);
                                     trussNum = parseInt(this.state.trussNumber5);
@@ -746,13 +746,13 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         settingTrussNumber: settingTruss,
                                         settingTruss: trussNum,
                                         prunSetting: pruningSet,
-    
+
                                     });
-    
+
 
                                 }
 
-                                
+
 
 
                             }
@@ -2767,6 +2767,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         borderTopColor: 'black',
                                         borderTopWidth: 1,
 
+
                                     }}
                                 />
 
@@ -2776,35 +2777,44 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         style={{
                                             borderLeftColor: 'black',
                                             borderLeftWidth: 1,
+
                                         }}
                                     />
 
+                                    <View
+                                    style={{
+                                       backgroundColor: '#ffff00'
+                                    }}
+                                    >
 
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        placeholderTextColor="#000000"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
-                                        error={errors.TrussNumber}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber.toString()}
-                                    />
+                                        <TextInput
+                                            style={styles.textinputheight2}
+                                            underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            placeholderTextColor="#000000"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
+                                            error={errors.TrussNumber}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber.toString()}
+                                        />
+
+                                    </View>
                                     <View
                                         style={{
                                             borderRightColor: 'black',
                                             borderRightWidth: 1,
+
                                         }}
                                     />
 
@@ -4644,6 +4654,18 @@ const styles = StyleSheet.create({
         borderBottomColor: 'black',
         marginBottom: 5,
         textAlign: 'center'
+
+
+    },
+
+    textinputheight2: {
+
+        height: 60,
+        width: 40,
+        borderBottomWidth: 1.2,
+        borderBottomColor: 'black',
+        marginBottom: 5,
+        textAlign: 'center',
 
 
     },

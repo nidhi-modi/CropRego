@@ -39,7 +39,7 @@ export default class Har1Yelo extends Component {
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
             
-            //this.callQuery()
+            this.callQuery()
         });
 
         //this.callQuery()
