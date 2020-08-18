@@ -33,6 +33,7 @@ export default class Har1Yelo extends Component {
 
     componentDidMount() {
 
+
         numberWeek = 2000 + currentWeekNumber()-1;
 
         this.setState({ week : numberWeek});
@@ -44,6 +45,8 @@ export default class Har1Yelo extends Component {
 
         //this.callQuery()
     }
+
+    
 
     callQuery= () => {
 

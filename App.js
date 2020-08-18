@@ -14,7 +14,7 @@ import {
   View,
   Button,
   StatusBar,
-  YellowBox 
+  YellowBox
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen'
 import { NavigationContainer } from '@react-navigation/native';
@@ -24,6 +24,7 @@ import Home from './screens/Home'
 import Database from '../rego/screens/Database'
 import { fbDB } from '../rego/screens/config'
 import { Firebase } from 'react-native-firebase';
+import BackgroundTask from 'react-native-background-task'
 
 
 
@@ -46,6 +47,20 @@ var objify = function () {
   return rv;
 }
 
+BackgroundTask.define(() => {
+
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
+  const url = `${scriptUrl}?
+    callback=ctrlq&plantRow=${this.state.listPlants.plantRow}&plantName=${this.state.listPlants.plantName}&plantWeek=${this.state.listPlants.plantWeek}&plantNumber=${this.state.listPlants.plantNumber}&leaves=${this.state.listPlants.leavesPerPlant}&fullySetTruss=${this.state.listPlants.fullySetTruss}&setTrussLength=${this.state.listPlants.setTrussLength}&weeklyGrowth=${this.state.listPlants.weeklyGrowth}&flowerHeight=${this.state.listPlants.floweringTrussHeight}&leafLength=${this.state.listPlants.leafLength}&leafWidth=${this.state.listPlants.leafWidth}&stmDia=${this.state.listPlants.stmDiameter}&lastWkStmDia=${this.state.listPlants.lastWeekStmDiameter}`;
+
+  fetch(url, { mode: 'no-cors' }).then(
+    () => { this.setState({ sent: true }); },
+    () => { this.setState({ error: true }); }
+  );
+  BackgroundTask.finish()
+
+})
+
 YellowBox.ignoreWarnings(['Setting a timer']);
 console.warn = message => {
   if (message.indexOf('Setting a timer') <= -1) {
@@ -58,6 +73,8 @@ YellowBox.ignoreWarnings([
   'Module RCTImageLoader', // works
   'Require cycle:', // doesn't work
 ])
+
+
 
 
 export default class App extends Component {
@@ -101,12 +118,14 @@ export default class App extends Component {
       plants: [],
       truss: [],
 
+      listPlants: {},
+
 
 
     };
   }
 
-  
+
 
   async componentDidMount() {
 
@@ -114,23 +133,33 @@ export default class App extends Component {
 
     module.hot.accept(() => { });
 
+
+
+
     SplashScreen.hide();
 
-  
-    this.getPlants();
+    this.getPlantsByInfoStatus();
+
+    BackgroundTask.schedule();
+
+    this.checkStatus()
+
+
+    //this.getPlants();
     const data = await this.performTimeConsumingTask();
 
     if (data !== null) {
-   // alert('Moved to next Screen here');
+      // alert('Moved to next Screen here');
 
     }
 
-    this.getTruss();
-
+    //this.getTruss();
 
   }
 
-  performTimeConsumingTask = async() => {
+
+
+  performTimeConsumingTask = async () => {
     return new Promise((resolve) =>
       setTimeout(
         () => { resolve('result') },
@@ -140,6 +169,44 @@ export default class App extends Component {
   }
 
 
+  async checkStatus() {
+    const status = await BackgroundTask.statusAsync()
+
+    if (status.available) {
+      console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy");
+      return
+    }
+
+    const reason = status.unavailableReason
+    if (reason === BackgroundTask.UNAVAILABLE_DENIED) {
+      Alert.alert('Denied', 'Please enable background "Background App Refresh" for this app')
+    } else if (reason === BackgroundTask.UNAVAILABLE_RESTRICTED) {
+      Alert.alert('Restricted', 'Background tasks are restricted on your device')
+    }
+  }
+
+
+  getPlantsByInfoStatus = () => {
+
+    let plants = {};
+    db.plantsByStatus('no').then((data) => {
+      console.log("Calling database")
+      plants = data;
+      console.log('details from App:', plants)
+
+
+      this.setState({
+        listPlants,
+      });
+
+    }).catch((err) => {
+      console.log(err);
+
+    })
+
+
+  }
+
   getPlants = () => {
     let plants = [];
     db.listPlants().then((data) => {
@@ -147,20 +214,20 @@ export default class App extends Component {
       plants = data;
       console.log('details from App:', plants)
 
-        
-      
-        firebase.database().ref('croprego/').push(objify("PlantDetails", plants)
 
-        ).then((data) => {
-          //success callback
-          console.log('data ', data)
-        }).catch((error) => {
-          //error callback
-          console.log('error ', error)
-        })
-        this.setState({
-          plants,
-        });
+
+      firebase.database().ref('croprego/').push(objify("PlantDetails", plants)
+
+      ).then((data) => {
+        //success callback
+        console.log('data ', data)
+      }).catch((error) => {
+        //error callback
+        console.log('error ', error)
+      })
+      this.setState({
+        plants,
+      });
 
     }).catch((err) => {
       console.log(err);
@@ -175,19 +242,19 @@ export default class App extends Component {
       truss = data;
       console.log('details from App:', truss)
 
-      
-        firebase.database().ref('croprego/').push(objify("TrussDetails", truss)
 
-        ).then((data) => {
-          //success callback
-          console.log('data ', data)
-        }).catch((error) => {
-          //error callback
-          console.log('error ', error)
-        })
-        this.setState({
-          truss,
-        });
+      firebase.database().ref('croprego/').push(objify("TrussDetails", truss)
+
+      ).then((data) => {
+        //success callback
+        console.log('data ', data)
+      }).catch((error) => {
+        //error callback
+        console.log('error ', error)
+      })
+      this.setState({
+        truss,
+      });
 
     }).catch((err) => {
       console.log(err);

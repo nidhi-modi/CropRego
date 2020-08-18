@@ -1817,8 +1817,8 @@ export default class Ger1MerliceTrussDetails extends React.Component {
 
 
                                     <TextInput
-                                        style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //style={styles.textinputheight}
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         placeholderTextColor="#000000"
                                         multiline={false}
@@ -1950,8 +1950,8 @@ export default class Ger1MerliceTrussDetails extends React.Component {
 
 
                                     <TextInput
-                                        style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //style={styles.textinputheight}
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
                                         keyboardType={'numeric'}

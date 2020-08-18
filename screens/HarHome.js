@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, View, Text, TouchableOpacity, ImageBackground, BackHandler, Alert, Image,Linking } from 'react-native'
+import { AppRegistry, StyleSheet, View, Text, TouchableOpacity, ImageBackground, BackHandler, Alert, Image, Linking } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage';
+import NetInfo from "@react-native-community/netinfo";
+
+
+
+
+
 
 export default class HarHome extends React.Component {
 
@@ -29,8 +35,13 @@ export default class HarHome extends React.Component {
 
   componentDidMount() {
 
+  
+
     BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
   }
+
+  
+
 
   componentWillUnmount() {
     BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
@@ -55,8 +66,8 @@ export default class HarHome extends React.Component {
             <Text style={styles.buttonText}>HAR 456 Registration</Text>
           </TouchableOpacity>
 
-          
-          
+
+
         </ImageBackground>
 
       </View>
@@ -81,14 +92,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     right: 30,
     bottom: 30,
-},
+  },
 
-FloatingButtonStyle: {
+  FloatingButtonStyle: {
     resizeMode: 'contain',
     width: 60,
     height: 60,
     //backgroundColor:'black'
-},
+  },
 
   buttonContainer1: {
     borderRadius: 5,

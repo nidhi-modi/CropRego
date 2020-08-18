@@ -82,7 +82,7 @@ function MainStackNavigator() {
             <View style={{ flexDirection: "row" }}>
 
               <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
 
                 <Image source={require('../assets/comments32.png')}
 
@@ -107,7 +107,7 @@ function MainStackNavigator() {
             <View style={{ flexDirection: "row" }}>
             
               <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
 
                 <Image source={require('../assets/comments32.png')}
 
@@ -128,7 +128,7 @@ function MainStackNavigator() {
             <View style={{ flexDirection: "row" }}>
             
               <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
 
                 <Image source={require('../assets/comments32.png')}
 
@@ -157,7 +157,7 @@ function MainStackNavigator() {
             <View style={{ flexDirection: "row" }}>
             
               <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
 
                 <Image source={require('../assets/comments32.png')}
 
@@ -190,7 +190,7 @@ function MainStackNavigator() {
               }}></View>
 
               <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
 
                 <Image source={require('../assets/comments32.png')}
 
@@ -213,7 +213,7 @@ function MainStackNavigator() {
             <View style={{ flexDirection: "row" }}>
             
               <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
 
                 <Image source={require('../assets/comments32.png')}
 
@@ -274,7 +274,7 @@ function MainStackNavigator() {
             <View style={{ flexDirection: "row" }}>
             
               <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                onPress={() => { Linking.openURL('https://docs.google.com/spreadsheets/d/1bv3wagUSZMG3yIvypplhdGhACuKQsRk2cJ0dTqIwA28/edit#gid=0') }} >
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
 
                 <Image source={require('../assets/comments32.png')}
 

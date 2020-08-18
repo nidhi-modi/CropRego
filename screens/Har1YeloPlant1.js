@@ -13,6 +13,9 @@ import Database from '../screens/Database'
 import { Divider } from 'react-native-elements';
 import { fbDB } from '../screens/config';
 import AsyncStorage from '@react-native-community/async-storage';
+import axios from 'axios';
+import NetInfo from "@react-native-community/netinfo";
+
 
 
 
@@ -34,6 +37,13 @@ import AsyncStorage from '@react-native-community/async-storage';
     StmDiameter: '0',
     LastWeekStmDiameter: '0',
 };*/
+
+let data = {
+    method: 'POST',
+    credentials: 'same-origin',
+    mode: 'same-origin'
+};
+
 const db = new Database();
 let abc, plantNo;
 let weekNum = 2010;
@@ -154,6 +164,9 @@ export default class Har1YeloPlant1 extends React.Component {
             id: '',
             isError: false,
             isErrorAsync: false,
+            sent: false,
+            error: false,
+            isItConnected: '',
 
             saveLeavesPerPlant: '',
             saveFullySetTruss: '',
@@ -170,6 +183,8 @@ export default class Har1YeloPlant1 extends React.Component {
             AsyncStorage.setItem('leavesPerPlant', text1);
             AsyncStorage.setItem('fullySetTruss', text2);
         } catch (error) {
+
+
         }
 
     }
@@ -270,29 +285,29 @@ export default class Har1YeloPlant1 extends React.Component {
 
     }
 
-    checkAsyncValues(){
+    checkAsyncValues() {
 
         try {
             AsyncStorage.getItem('leavesPerPlant').then((text1Value) => {
                 this.setState({ leavesPerPlant: JSON.parse(text1Value) });
 
-                if(this.state.leavesPerPlant < 8 || this.state.leavesPerPlant > 16 ){
+                if (this.state.leavesPerPlant < 8 || this.state.leavesPerPlant > 16) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
 
@@ -302,23 +317,23 @@ export default class Har1YeloPlant1 extends React.Component {
         try {
             AsyncStorage.getItem('fullySetTruss').then((text2Value) => {
                 this.setState({ fullySetTruss: JSON.parse(text2Value) });
-                if(this.state.fullySetTruss < 1 || this.state.fullySetTruss > 45 ){
+                if (this.state.fullySetTruss < 1 || this.state.fullySetTruss > 45) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
             }).done();
@@ -327,23 +342,23 @@ export default class Har1YeloPlant1 extends React.Component {
         try {
             AsyncStorage.getItem('setTrussLength').then((text3Value) => {
                 this.setState({ setTrussLength: JSON.parse(text3Value) });
-                if(this.state.setTrussLength < 2 || this.state.setTrussLength > 6 ){
+                if (this.state.setTrussLength < 2 || this.state.setTrussLength > 6) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
             }).done();
@@ -352,23 +367,23 @@ export default class Har1YeloPlant1 extends React.Component {
         try {
             AsyncStorage.getItem('weeklyGrowth').then((text4Value) => {
                 this.setState({ weeklyGrowth: JSON.parse(text4Value) });
-                if(this.state.weeklyGrowth < 2 || this.state.weeklyGrowth > 6 ){
+                if (this.state.weeklyGrowth < 2 || this.state.weeklyGrowth > 6) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
             }).done();
@@ -376,23 +391,23 @@ export default class Har1YeloPlant1 extends React.Component {
         } try {
             AsyncStorage.getItem('floweringTrussHeight').then((text5Value) => {
                 this.setState({ floweringTrussHeight: JSON.parse(text5Value) });
-                if(this.state.floweringTrussHeight < 10 || this.state.floweringTrussHeight > 25 ){
+                if (this.state.floweringTrussHeight < 10 || this.state.floweringTrussHeight > 25) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
             }).done();
@@ -401,23 +416,23 @@ export default class Har1YeloPlant1 extends React.Component {
         try {
             AsyncStorage.getItem('leafLength').then((text6Value) => {
                 this.setState({ leafLength: JSON.parse(text6Value) });
-                if(this.state.leafLength < 35 || this.state.leafLength > 45 ){
+                if (this.state.leafLength < 35 || this.state.leafLength > 45) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
             }).done();
@@ -425,23 +440,23 @@ export default class Har1YeloPlant1 extends React.Component {
         } try {
             AsyncStorage.getItem('leafWidth').then((text7Value) => {
                 this.setState({ leafWidth: JSON.parse(text7Value) });
-                if(this.state.leafWidth < 35 || this.state.leafWidth > 45 ){
+                if (this.state.leafWidth < 35 || this.state.leafWidth > 45) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
             }).done();
@@ -450,23 +465,23 @@ export default class Har1YeloPlant1 extends React.Component {
         try {
             AsyncStorage.getItem('stmDiameter').then((text8Value) => {
                 this.setState({ stmDiameter: JSON.parse(text8Value) });
-                if(this.state.stmDiameter < 9 || this.state.stmDiameter > 12 ){
+                if (this.state.stmDiameter < 9 || this.state.stmDiameter > 12) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
             }).done();
@@ -474,23 +489,23 @@ export default class Har1YeloPlant1 extends React.Component {
         } try {
             AsyncStorage.getItem('lastWeekStmDiameter').then((text9Value) => {
                 this.setState({ lastWeekStmDiameter: JSON.parse(text9Value) });
-                if(this.state.lastWeekStmDiameter < 10 || this.state.lastWeekStmDiameter > 13 ){
+                if (this.state.lastWeekStmDiameter < 10 || this.state.lastWeekStmDiameter > 13) {
 
-                
+
                     this.setState({
                         isErrorAsync: true,
-        
+
                     });
-        
-                }else{
-        
+
+                } else {
+
                     this.setState({
                         isErrorAsync: false,
-        
+
                     });
 
 
-        
+
                 }
 
             }).done();
@@ -499,7 +514,7 @@ export default class Har1YeloPlant1 extends React.Component {
 
     }
 
-   
+
 
     async setItem(myKey, value) {
         try {
@@ -558,12 +573,12 @@ export default class Har1YeloPlant1 extends React.Component {
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
 
-        //this.checkAsyncValues();
+        NetInfo.addEventListener(this.handleConnectivityChange);
 
         try {
             AsyncStorage.getItem('leaves43').then((text43) => {
                 console.log(text43)
-                
+
             }).done();
         } catch (error) {
         }
@@ -634,9 +649,6 @@ export default class Har1YeloPlant1 extends React.Component {
         } else if (abc === '1' && abc !== null) {
 
             AsyncStorage.clear();
-            numberWeek = numberWeek + 1;
-            this.setState({ weekNumber: numberWeek.toString() });
-            console.log("Week Number: ", numberWeek);
 
 
             this.setState({
@@ -648,11 +660,8 @@ export default class Har1YeloPlant1 extends React.Component {
 
         } else {
 
-        
+
             AsyncStorage.clear();
-            numberWeek = numberWeek + 1;
-            console.log("Week Number: ", numberWeek);
-            this.setState({ weekNumber: numberWeek.toString() });
 
             this.setState({
                 isDataSend: false,
@@ -671,13 +680,13 @@ export default class Har1YeloPlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekNumberAndName(no1, numberWeek-2, 'HAR 1 - Yelo').then((data) => {
+            db.plantsByWeekNumberAndName(no1, numberWeek - 2, 'HAR 1 - Yelo').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
                 this.setState({
                     plant,
-                    dataPresent: true ,
+                    dataPresent: true,
 
                 });
             }).catch((err) => {
@@ -696,13 +705,13 @@ export default class Har1YeloPlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekNumberAndName(no2, numberWeek-2, 'HAR 1 - Yelo').then((data) => {
+                db.plantsByWeekNumberAndName(no2, numberWeek - 2, 'HAR 1 - Yelo').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
                     this.setState({
                         plant,
-                        dataPresent: true ,
+                        dataPresent: true,
 
                     });
                 }).catch((err) => {
@@ -722,13 +731,13 @@ export default class Har1YeloPlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekAndName(no3, numberWeek-2, 'HAR 1 - Yelo').then((data) => {
+                    db.plantsByWeekAndName(no3, numberWeek - 2, 'HAR 1 - Yelo').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
                         this.setState({
                             plant,
-                            dataPresent: true ,
+                            dataPresent: true,
 
                         });
                     }).catch((err) => {
@@ -748,13 +757,13 @@ export default class Har1YeloPlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekAndName(no4, numberWeek-2, 'HAR 1 - Yelo').then((data) => {
+                        db.plantsByWeekAndName(no4, numberWeek - 2, 'HAR 1 - Yelo').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
                             this.setState({
                                 plant,
-                                dataPresent: true ,
+                                dataPresent: true,
 
                             });
                         }).catch((err) => {
@@ -774,13 +783,13 @@ export default class Har1YeloPlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekAndName(no5, numberWeek-2, 'HAR 1 - Yelo').then((data) => {
+                            db.plantsByWeekAndName(no5, numberWeek - 2, 'HAR 1 - Yelo').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
                                 this.setState({
                                     plant,
-                                    dataPresent: true ,
+                                    dataPresent: true,
 
                                 });
                             }).catch((err) => {
@@ -798,7 +807,7 @@ export default class Har1YeloPlant1 extends React.Component {
         }
 
 
-       
+
     }
 
 
@@ -828,57 +837,57 @@ export default class Har1YeloPlant1 extends React.Component {
         this.setState(state);
 
 
-        this.checkData(field,text);
+        this.checkData(field, text);
         //this.setAsyncValues(text.leavesPerPlant,text.fullySetTruss);
 
 
     }
 
-    checkData = (field,text) => {
+    checkData = (field, text) => {
 
-        if(field === 'leavesPerPlant'){
+        if (field === 'leavesPerPlant') {
 
 
 
-            if(text < 8 || text > 16){
+            if (text < 8 || text > 16) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
             }
 
 
-        }else{
+        } else {
 
 
         }
 
-        if(field === 'fullySetTruss'){
+        if (field === 'fullySetTruss') {
 
-            if(text < 1 || text > 45){
+            if (text < 1 || text > 45) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
@@ -886,223 +895,272 @@ export default class Har1YeloPlant1 extends React.Component {
 
 
 
-        }else{
+        } else {
 
 
 
-            
+
         }
 
-        if(field === 'setTrussLength'){
+        if (field === 'setTrussLength') {
 
-            if(text < 2 || text > 6){
+            if (text < 2 || text > 6) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
             }
 
-        }else{
+        } else {
 
 
         }
 
-        if(field === 'weeklyGrowth'){
+        if (field === 'weeklyGrowth') {
 
-            if(text < 2 || text > 6){
+            if (text < 2 || text > 6) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
             }
 
-        }else{
+        } else {
 
-            
+
         }
 
-        if(field === 'floweringTrussHeight'){
+        if (field === 'floweringTrussHeight') {
 
-            if(text < 10 || text > 25){
+            if (text < 10 || text > 25) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
             }
 
-        }else{
+        } else {
 
-            
+
         }
 
-        if(field === 'leafLength'){
+        if (field === 'leafLength') {
 
-            if(text < 35 || text > 45){
+            if (text < 35 || text > 45) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
             }
 
-        }else{
+        } else {
 
-            
+
         }
 
-        if(field === 'leafWidth'){
+        if (field === 'leafWidth') {
 
-            if(text < 35 || text > 45){
+            if (text < 35 || text > 45) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
             }
 
-        }else{
+        } else {
 
 
         }
 
-        if(field === 'stmDiameter'){
+        if (field === 'stmDiameter') {
 
-            if(text < 9 || text > 12){
+            if (text < 9 || text > 12) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
             }
 
-        }else{
+        } else {
 
-            
+
         }
 
-        if(field === 'lastWeekStmDiameter'){
+        if (field === 'lastWeekStmDiameter') {
 
-            if(text < 10 || text > 13){
+            if (text < 10 || text > 13) {
 
                 this.setState({
                     isError: true,
-        
+
                 });
 
 
-            }else{
+            } else {
 
                 this.setState({
                     isError: false,
-        
+
                 });
 
 
             }
 
-        }else{
+        } else {
 
-            
+
         }
 
-       
+
     };
-    
+
 
     savePlantsToDbAlert = () => {
 
-        if(this.state.isError){
+        if (this.state.isError) {
 
             Alert.alert(
                 'Data Validation',
                 'There are some errors in the data validation tab, Are you sure you want to skip the validation error ?',
                 [
-                  { text: 'Yes', onPress: () => this.savePlantsToDb() },
-                  { text: 'No', onPress: () => console.log('No button clicked'), style: 'cancel' },
+                    { text: 'Yes', onPress: () => this.savePlantsToDb() },
+                    { text: 'No', onPress: () => console.log('No button clicked'), style: 'cancel' },
                 ],
                 {
-                  cancelable: false
+                    cancelable: false
                 }
-              );
-            
+            );
 
 
-        }else{
+
+        } else {
 
             this.savePlantsToDb()
 
-            
+
         }
 
     }
 
+    CheckConnectivity = () => {
+        // For Android devices
+        if (Platform.OS === "android") {
+            NetInfo.isConnected.fetch().then(isConnected => {
+                if (isConnected) {
+                    Alert.alert("You are online!");
+                } else {
+                    Alert.alert("You are offline!");
+                }
+            });
+        } else {
+            // For iOS devices
+            NetInfo.isConnected.addEventListener(
+                "connectionChange",
+                this.handleFirstConnectivityChange
+            );
+        }
+    };
+
+    handleFirstConnectivityChange = isConnected => {
+        NetInfo.isConnected.removeEventListener(
+            "connectionChange",
+            this.handleFirstConnectivityChange
+        );
+
+        if (isConnected === false) {
+            Alert.alert("You are offline!");
+        } else {
+            Alert.alert("You are online!");
+        }
+    };
+
+    submitFormToSS = () => {
+
+        
+
+    }
+
+    handleConnectivityChange = state => {
+        if (state.isConnected) {
+
+            this.setState({ isItConnected: 'Online' });
+
+        } else {
+
+            this.setState({ isItConnected: 'Offline' });
+        }
+    };
+
 
     savePlantsToDb = () => {
 
-       
+
 
         this.setState({
             isLoading: true,
@@ -1114,6 +1172,7 @@ export default class Har1YeloPlant1 extends React.Component {
 
 
         var that = this;
+        const { plantId } = this.state;
         const { plantRow } = this.state;
         const { plantName } = this.state;;
         const { plantWeek } = this.state;
@@ -1152,6 +1211,31 @@ export default class Har1YeloPlant1 extends React.Component {
             setFruits: this.state.setFruits,
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
+            dataSend: 'no'
+
+
+        }
+
+        let data1 = {
+            plantRow: '123',
+            plantName: 'HAR 1 - Yelo',
+            plantWeek: numberWeek,
+            plantNumber: no,
+            leavesPerPlant: this.state.leavesPerPlant,
+            fullySetTruss: this.state.fullySetTruss,
+            setTrussLength: this.state.setTrussLength,
+            weeklyGrowth: this.state.weeklyGrowth,
+            floweringTrussHeight: this.state.floweringTrussHeight,
+            leafLength: this.state.leafLength,
+            leafWidth: this.state.leafWidth,
+            stmDiameter: this.state.stmDiameter,
+            lastWeekStmDiameter: this.state.lastWeekStmDiameter,
+            trussNumber: this.state.trussNumber,
+            lastWeekNumber: this.state.lastWeekNumber,
+            setFruits: this.state.setFruits,
+            setFlowers: this.state.setFlowers,
+            pruningNumber: this.state.pruningNumber,
+            dataSend: 'yes'
 
 
         }
@@ -1167,32 +1251,77 @@ export default class Har1YeloPlant1 extends React.Component {
                                     if (stmDiameter) {
                                         if (lastWeekStmDiameter) {
 
-                                            db.addPlants(data).then((result) => {
-                                                console.log(result);
+                                            
+                            
 
+                                            if(this.state.isItConnected === 'Online') {
 
-                                                this.setState({
-                                                    isLoading: false,
-                                                    isDataSend: true,
-                                                });
-                                                abc = '1';
-
-                                                Alert.alert('Completed!')
-                                                this.props.navigation.navigate('Har1Yelo')
-                                                this.setState({
-
-                                                    isDataSend: true,
-                                                });
-                                                abc = '1';
-
-                                            }).catch((err) => {
-                                                console.log(err);
-                                                this.setState({
-                                                    isLoading: false,
-                                                    isDataSend: false,
-                                                });
-                                                abc = '0';
-                                            })
+                                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
+                                                const url = `${scriptUrl}?
+                                                callback=ctrlq&plantRow=${'123'}&plantName=${'HAR 1 - Yelo'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+                                    
+                                                fetch(url, { mode: 'no-cors' }).then(
+                                                    () => { this.setState({ sent: true }); },
+                                                    () => { this.setState({ error: true }); }
+                                                );
+                                    
+                                                db.addPlants(data1).then((result) => {
+                                                    console.log(result);
+    
+    
+                                                    this.setState({
+                                                        isLoading: false,
+                                                        isDataSend: true,
+                                                    });
+                                                    abc = '1';
+    
+                                                    Alert.alert('Completed!')
+                                                    this.props.navigation.navigate('Har1Yelo')
+                                                    this.setState({
+    
+                                                        isDataSend: true,
+                                                    });
+                                                    abc = '1';
+    
+                                                }).catch((err) => {
+                                                    console.log(err);
+                                                    this.setState({
+                                                        isLoading: false,
+                                                        isDataSend: false,
+                                                    });
+                                                    abc = '0';
+                                                })
+                                    
+                                            }else{
+                                    
+                                                db.addPlants(data).then((result) => {
+                                                    console.log(result);
+    
+    
+                                                    this.setState({
+                                                        isLoading: false,
+                                                        isDataSend: true,
+                                                    });
+                                                    abc = '1';
+    
+                                                    Alert.alert('Completed!')
+                                                    this.props.navigation.navigate('Har1Yelo')
+                                                    this.setState({
+    
+                                                        isDataSend: true,
+                                                    });
+                                                    abc = '1';
+    
+                                                }).catch((err) => {
+                                                    console.log(err);
+                                                    this.setState({
+                                                        isLoading: false,
+                                                        isDataSend: false,
+                                                    });
+                                                    abc = '0';
+                                                })
+                                    
+                                            }
 
 
 
@@ -1964,7 +2093,7 @@ export default class Har1YeloPlant1 extends React.Component {
 
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har1YeloTrussDetails',{plantNum : no})}>
+                                onPress={() => this.props.navigation.navigate('Har1YeloTrussDetails', { plantNum: no })}>
                                 <Text style={styles.buttonText}>Truss Details</Text>
                             </TouchableOpacity>
 
@@ -1974,9 +2103,9 @@ export default class Har1YeloPlant1 extends React.Component {
                                 }}
                             />
 
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har1YeloDataChecker',{plantNo : no})}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har1YeloDataChecker', { plantNo: no })}>
 
-                            {(this.state.isError) ? (<Text style={styles.validationTextError}>Data Validation</Text>) : <Text style={styles.validationText}>Data Validation</Text> }
+                                {(this.state.isError) ? (<Text style={styles.validationTextError}>Data Validation</Text>) : <Text style={styles.validationText}>Data Validation</Text>}
 
                             </TouchableOpacity>
 

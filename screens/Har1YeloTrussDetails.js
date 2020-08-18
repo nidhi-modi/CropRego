@@ -12,6 +12,8 @@ import { RaisedTextButton } from 'react-native-material-buttons';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { Table, TableWrapper, Row, Cell } from 'react-native-table-component';
 import AsyncStorage from '@react-native-community/async-storage';
+import NetInfo from "@react-native-community/netinfo";
+
 
 
 
@@ -19,6 +21,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 import Database from '../screens/Database'
 import { identity } from 'lodash';
+import { color } from 'react-native-reanimated';
 
 
 const db = new Database();
@@ -249,6 +252,8 @@ export default class Har1YeloTrussDetails extends React.Component {
             settingTruss2: '',
             floweringTrussss: '',
 
+            isItConnected: '',
+
 
             tableHead: ['Truss', 'Set Fruit', 'Flowers', 'Pruning Number'],
             tableData: [
@@ -396,6 +401,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
 
+
         if (this.props.route.params.plantNum !== undefined) {
             number = this.props.route.params.plantNum;
             console.log("Plant No00000000 " + number);
@@ -404,9 +410,12 @@ export default class Har1YeloTrussDetails extends React.Component {
         }
 
 
-        numberWeek = 2000 + currentWeekNumber();
+        numberWeek = 2000 + currentWeekNumber()-1;
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
+
+
+        NetInfo.addEventListener(this.handleConnectivityChange);
 
 
 
@@ -428,7 +437,7 @@ export default class Har1YeloTrussDetails extends React.Component {
         } else if (abc === '1' && abc !== null) {
 
             AsyncStorage.clear();
-            numberWeek = numberWeek + 1;
+            //numberWeek = numberWeek + 1;
             this.setState({ weekNumber: numberWeek.toString() });
             console.log("Week Number: ", numberWeek);
 
@@ -443,7 +452,7 @@ export default class Har1YeloTrussDetails extends React.Component {
         } else {
 
             AsyncStorage.clear();
-            numberWeek = numberWeek + 1;
+            //numberWeek = numberWeek + 1;
             console.log("Week Number: ", numberWeek);
             this.setState({ weekNumber: numberWeek.toString() });
 
@@ -463,6 +472,17 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
     }
+
+    handleConnectivityChange = state => {
+        if (state.isConnected) {
+
+            this.setState({ isItConnected: 'Online' });
+
+        } else {
+
+            this.setState({ isItConnected: 'Offline' });
+        }
+    };
 
     ShowHideComponent = () => {
         if (abc === '1' && abc !== null) {
@@ -1533,7 +1553,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -1542,11 +1562,14 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
             }
 
-
-            db.addTrussDetails(data).then((result) => {
+           
+            
+    
+                db.addTrussDetails(data).then((result) => {
                 console.log(result);
                 this.setState({
                     isLoading: false,
@@ -1581,8 +1604,9 @@ export default class Har1YeloTrussDetails extends React.Component {
                 });
                 abc = '0';
             })
+           
 
-
+    
         } else {
 
 
@@ -1620,7 +1644,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber1,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -1629,47 +1653,56 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
+           
 
 
-            db.addTrussDetails(data1).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
+         
+    
+                db.addTrussDetails(data1).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+    
+                    if ((parseInt(this.state.trussNumber) + 2) != null) {
+    
+                        this.saveTrussToDB2();
+    
+    
+                    } else {
+    
+                        Alert.alert('Completed!')
+    
+                        this.props.navigation.navigate('Har1YeloPlant1')
+    
+                    }
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
+    
+            
 
-                });
-                abc = '1';
-
-                if ((parseInt(this.state.trussNumber) + 2) != null) {
-
-                    this.saveTrussToDB2();
 
 
-                } else {
-
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har1YeloPlant1')
-
-                }
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
+           
 
 
         } else {
@@ -1708,7 +1741,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber2,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -1717,48 +1750,51 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
+            
 
 
-            db.addTrussDetails(data2).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
 
-                });
-                abc = '1';
-
-                if ((parseInt(this.state.trussNumber) + 3) != null) {
-
-                    this.saveTrussToDB3();
-
-
-                } else {
-
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har1YeloPlant1')
-
-                }
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
-
+            
+    
+                db.addTrussDetails(data2).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+    
+                    if ((parseInt(this.state.trussNumber) + 3) != null) {
+    
+                        this.saveTrussToDB3();
+    
+    
+                    } else {
+    
+                        Alert.alert('Completed!')
+    
+                        this.props.navigation.navigate('Har1YeloPlant1')
+    
+                    }
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
 
 
         } else {
@@ -1797,7 +1833,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber3,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -1806,47 +1842,47 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
-
-
-            db.addTrussDetails(data3).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
-
-                });
-                abc = '1';
-
-                if ((parseInt(this.state.trussNumber) + 4) != null) {
-
-                    this.saveTrussToDB4();
-
-
-                } else {
-
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har1YeloPlant1')
-
-                }
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
+           
+                db.addTrussDetails(data3).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+    
+                    if ((parseInt(this.state.trussNumber) + 4) != null) {
+    
+                        this.saveTrussToDB4();
+    
+    
+                    } else {
+    
+                        Alert.alert('Completed!')
+    
+                        this.props.navigation.navigate('Har1YeloPlant1')
+    
+                    }
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
+    
 
 
         } else {
@@ -1886,7 +1922,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber4,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -1895,49 +1931,47 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
-
-
-            db.addTrussDetails(data4).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
-
-                });
-                abc = '1';
-
-                if ((parseInt(this.state.trussNumber) + 5) != null) {
-
-                    this.saveTrussToDB5();
-
-
-                } else {
-
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har1YeloPlant1')
-
-                }
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
-
-
+            
+                db.addTrussDetails(data4).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+    
+                    if ((parseInt(this.state.trussNumber) + 5) != null) {
+    
+                        this.saveTrussToDB5();
+    
+    
+                    } else {
+    
+                        Alert.alert('Completed!')
+    
+                        this.props.navigation.navigate('Har1YeloPlant1')
+    
+                    }
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
+   
         } else {
 
 
@@ -1975,7 +2009,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber5,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -1984,49 +2018,48 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
-
-
-            db.addTrussDetails(data5).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
-
-                });
-                abc = '1';
-
-                if ((parseInt(this.state.trussNumber) + 6) != null) {
-
-                    this.saveTrussToDB6();
-
-
-                } else {
-
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har1YeloPlant1')
-
-                }
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
-
-
+         
+    
+                db.addTrussDetails(data5).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+    
+                    if ((parseInt(this.state.trussNumber) + 6) != null) {
+    
+                        this.saveTrussToDB6();
+    
+    
+                    } else {
+    
+                        Alert.alert('Completed!')
+    
+                        this.props.navigation.navigate('Har1YeloPlant1')
+    
+                    }
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
+    
 
         } else {
 
@@ -2065,7 +2098,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber6,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -2074,50 +2107,51 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
+            
+    
+                db.addTrussDetails(data6).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+    
+                    if ((parseInt(this.state.trussNumber) + 7) != null) {
+    
+                        this.saveTrussToDB7();
+    
+    
+                    } else {
+    
+                        Alert.alert('Completed!')
+    
+                        this.props.navigation.navigate('Har1YeloPlant1')
+    
+                    }
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
+    
+    
 
-
-            db.addTrussDetails(data6).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
-
-                });
-                abc = '1';
-
-                if ((parseInt(this.state.trussNumber) + 7) != null) {
-
-                    this.saveTrussToDB7();
-
-
-                } else {
-
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har1YeloPlant1')
-
-                }
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
-
-
-
+           
         } else {
 
 
@@ -2155,7 +2189,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber7,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -2164,49 +2198,49 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
-
-
-            db.addTrussDetails(data7).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
-
-                });
-                abc = '1';
-
-                if ((parseInt(this.state.trussNumber) + 8) != null) {
-
-                    this.saveTrussToDB8();
-
-
-                } else {
-
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har1YeloPlant1')
-
-                }
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
-
-
+            
+    
+                db.addTrussDetails(data7).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+    
+                    if ((parseInt(this.state.trussNumber) + 8) != null) {
+    
+                        this.saveTrussToDB8();
+    
+    
+                    } else {
+    
+                        Alert.alert('Completed!')
+    
+                        this.props.navigation.navigate('Har1YeloPlant1')
+    
+                    }
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
+    
+    
 
         } else {
 
@@ -2245,7 +2279,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber8,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -2254,49 +2288,50 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
-
-
-            db.addTrussDetails(data8).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
-
-                });
-                abc = '1';
-
-                if ((parseInt(this.state.trussNumber) + 9) != null) {
-
-                    this.saveTrussToDB9();
-
-
-                } else {
-
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har1YeloPlant1')
-
-                }
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
-
-
+           
+                db.addTrussDetails(data8).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+    
+                    if ((parseInt(this.state.trussNumber) + 9) != null) {
+    
+                        this.saveTrussToDB9();
+    
+    
+                    } else {
+    
+                        Alert.alert('Completed!')
+    
+                        this.props.navigation.navigate('Har1YeloPlant1')
+    
+                    }
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
+    
+    
+    
+            
 
         } else {
 
@@ -2332,7 +2367,7 @@ export default class Har1YeloTrussDetails extends React.Component {
                 pruningNumber: this.state.pruningNumber9,
                 plantRow: '123',
                 plantName: 'HAR 1 - Yelo',
-                plantWeek: numberWeek - 1,
+                plantWeek: numberWeek,
                 plantNumber: number,
                 fruitLoad: this.state.fruitLoad,
                 pruningFlower: this.state.pruneFlowering,
@@ -2341,40 +2376,41 @@ export default class Har1YeloTrussDetails extends React.Component {
                 settingTruss: this.state.settingTrussNumber,
                 pruningHarvest: this.state.pruningHar,
                 harvestTruss: this.state.harvestTruss,
+                dataSend: 'no'
 
 
             }
 
-
-
-            db.addTrussDetails(data9).then((result) => {
-                console.log(result);
-                this.setState({
-                    isLoading: false,
-                    isDataSend: true,
-
-                });
-                abc = '1';
-                Alert.alert('Completed!')
-
-                this.props.navigation.navigate('Har1YeloPlant1')
-
-
-                this.setState({
-
-                    isDataSend: true,
-                });
-                abc = '1';
-
-            }).catch((err) => {
-                console.log(err);
-                this.setState({
-                    isLoading: false,
-                });
-                abc = '0';
-            })
-
-
+      
+    
+                db.addTrussDetails(data9).then((result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoading: false,
+                        isDataSend: true,
+    
+                    });
+                    abc = '1';
+                    Alert.alert('Completed!')
+    
+                    this.props.navigation.navigate('Har1YeloPlant1')
+    
+    
+                    this.setState({
+    
+                        isDataSend: true,
+                    });
+                    abc = '1';
+    
+                }).catch((err) => {
+                    console.log(err);
+                    this.setState({
+                        isLoading: false,
+                    });
+                    abc = '0';
+                })
+    
+           
 
         } else {
 
@@ -2677,7 +2713,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
 
                             <View
-                                style={styles.container222}>
+                                style={styles.container2226}>
 
                                 <View
                                     style={{
@@ -2773,6 +2809,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                 <View style={styles.rowContainer222}>
 
+
+
                                     <View
                                         style={{
                                             borderLeftColor: 'black',
@@ -2781,15 +2819,12 @@ export default class Har1YeloTrussDetails extends React.Component {
                                         }}
                                     />
 
-                                    <View
-                                    style={{
-                                       backgroundColor: '#ffff00'
-                                    }}
-                                    >
+
+
 
                                         <TextInput
                                             style={styles.textinputheight2}
-                                            underlineColorAndroid="black"
+                                            //underlineColorAndroid="black"
                                             autoCapitalize="none"
                                             placeholderTextColor="#000000"
                                             multiline={false}
@@ -2809,7 +2844,6 @@ export default class Har1YeloTrussDetails extends React.Component {
                                             value={this.state.trussNumber.toString()}
                                         />
 
-                                    </View>
                                     <View
                                         style={{
                                             borderRightColor: 'black',
@@ -2817,6 +2851,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                         }}
                                     />
+
 
 
 
@@ -2955,9 +2990,11 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
                                         returnKeyType={"next"}
@@ -3112,9 +3149,11 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        // underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
                                         returnKeyType={"next"}
@@ -3267,8 +3306,10 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         multiline={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
@@ -3421,9 +3462,11 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
                                         returnKeyType={"next"}
@@ -3578,9 +3621,11 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
                                         returnKeyType={"next"}
@@ -3735,9 +3780,11 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
                                         returnKeyType={"next"}
@@ -3892,9 +3939,11 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
                                         returnKeyType={"next"}
@@ -4049,9 +4098,11 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
                                         returnKeyType={"next"}
@@ -4208,11 +4259,13 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     <TextInput
                                         style={styles.textinputheight}
-                                        underlineColorAndroid="black"
+                                        //underlineColorAndroid="black"
                                         autoCapitalize="none"
                                         multiline={false}
                                         keyboardType={'numeric'}
                                         multiline={false}
+                                        editable={false}
+                                        selectTextOnFocus={false}
                                         returnKeyType={"next"}
                                         ref={this.trussNumberRef9}
                                         autoCorrect={false}
@@ -4530,6 +4583,12 @@ const styles = StyleSheet.create({
     rowContainer222: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+
+    },
+
+    rowContainer2226: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
 
 
@@ -4650,10 +4709,10 @@ const styles = StyleSheet.create({
 
         height: 60,
         width: 40,
-        borderBottomWidth: 1.2,
-        borderBottomColor: 'black',
+        //borderBottomWidth: 1.2,
+        //borderBottomColor: 'black',
         marginBottom: 5,
-        textAlign: 'center'
+        textAlign: 'center',
 
 
     },
@@ -4662,11 +4721,17 @@ const styles = StyleSheet.create({
 
         height: 60,
         width: 40,
-        borderBottomWidth: 1.2,
-        borderBottomColor: 'black',
+        borderBottomWidth: 3.5,
+        borderBottomColor: '#ff0000',
         marginBottom: 5,
         textAlign: 'center',
 
+
+    },
+
+    yellowBackground: {
+
+        backgroundColor: '#ffff00'
 
     },
 
@@ -4676,7 +4741,7 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         height: 60,
         width: 40,
-        textAlign: 'center'
+        textAlign: 'center',
     }
 
 })
