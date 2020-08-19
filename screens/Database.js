@@ -429,6 +429,33 @@ export default class Database {
         });
     }
 
+
+    trussByStatus(status) {
+        console.log(status);
+        return new Promise((resolve) => {
+            this.initDB2().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('SELECT * FROM TrussDetails WHERE dataSend = ?', [status]).then(([tx, results]) => {
+                        console.log(results);
+                        if (results.rows.length > 0) {
+                            let row = results.rows.item(0);
+                            resolve(row);
+                        }
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+
     plantsByIdAndName(id,name) {
         console.log(id);
         return new Promise((resolve) => {

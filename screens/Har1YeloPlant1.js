@@ -1260,6 +1260,7 @@ export default class Har1YeloPlant1 extends React.Component {
                                                 const url = `${scriptUrl}?
                                                 callback=ctrlq&plantRow=${'123'}&plantName=${'HAR 1 - Yelo'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
                                     
+                                                console.log("URL : "+url);
                                                 fetch(url, { mode: 'no-cors' }).then(
                                                     () => { this.setState({ sent: true }); },
                                                     () => { this.setState({ error: true }); }

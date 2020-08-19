@@ -119,6 +119,7 @@ export default class App extends Component {
       truss: [],
 
       listPlants: {},
+      listTrusss: {},
 
 
 
@@ -139,21 +140,21 @@ export default class App extends Component {
     SplashScreen.hide();
 
     this.getPlantsByInfoStatus();
+     const data = await this.performTimeConsumingTask();
+
+     if (data !== null) {
+       // alert('Moved to next Screen here');
+ 
+     }
+ 
+     this.getTrussByInfoStatus();
 
     BackgroundTask.schedule();
 
     this.checkStatus()
 
 
-    //this.getPlants();
-    const data = await this.performTimeConsumingTask();
-
-    if (data !== null) {
-      // alert('Moved to next Screen here');
-
-    }
-
-    //this.getTruss();
+   
 
   }
 
@@ -197,6 +198,28 @@ export default class App extends Component {
 
       this.setState({
         listPlants,
+      });
+
+    }).catch((err) => {
+      console.log(err);
+
+    })
+
+
+  }
+
+
+  getTrussByInfoStatus = () => {
+
+    let truss = {};
+    db.trussByStatus('no').then((data) => {
+      console.log("Calling database")
+      truss = data;
+      console.log('details from App:', truss)
+
+
+      this.setState({
+        listTrusss,
       });
 
     }).catch((err) => {
