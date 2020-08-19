@@ -57,6 +57,17 @@ BackgroundTask.define(() => {
     () => { this.setState({ sent: true }); },
     () => { this.setState({ error: true }); }
   );
+
+
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+  const url = `${scriptUrl}?
+  callback=ctrlq&plantRow=${this.state.listTrusss.plantRow}&plantName=${this.state.listTrusss.plantName}&plantWeek=${this.state.listTrusss.plantWeek}&plantNumber=${this.state.listTrusss.plantNumber}&trussNumber=${this.state.listTrusss.trussNumber}&setFruits=${this.state.listTrusss.setFruits}&setFlowers=${this.state.listTrusss.setFlowers}&pruningNumber=${this.state.listTrusss.pruningNumber}&fruitLoad=${this.state.listTrusss.fruitLoad}&fruitDiameter=${this.state.listTrusss.fruitDiameter}&pruningFlower=${this.state.listTrusss.pruneFlowering}&floweringTruss=${this.state.listTrusss.floweringTrussss}&pruningSet=${this.state.listTrusss.prunSetting}&settingTruss=${this.state.listTrusss.settingTrussNumber}&pruningHarvest=${this.state.listTrusss.pruningHar}&harvestTruss=${this.state.listTrusss.harvestTruss}`;
+
+  console.log("URL : "+url);
+  fetch(url, { mode: 'no-cors' }).then(
+      () => { this.setState({ sent: true }); },
+      () => { this.setState({ error: true }); }
+  );
   BackgroundTask.finish()
 
 })
@@ -131,6 +142,9 @@ export default class App extends Component {
   async componentDidMount() {
 
     console.disableYellowBox = true;
+
+    console.ignoredYellowBox = ['react-native BugReporting extraData:'];
+
 
     module.hot.accept(() => { });
 
