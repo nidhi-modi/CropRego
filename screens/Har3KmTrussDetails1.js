@@ -1531,7 +1531,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDb = () => {
 
-        if (this.state.trussNumber !== null && this.state.setFlowers !== null) {
+        if (this.state.trussNumber !== null && this.state.pruningNumber !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1703,7 +1703,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB1 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.setFlowers1 !== null) {
+        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.pruningNumber1 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1877,7 +1877,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB2 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.setFlowers2 !== null) {
+        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.pruningNumber2 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2040,7 +2040,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB3 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.setFlowers3 !== null) {
+        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2208,7 +2208,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB4 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.setFlowers4 !== null) {
+        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.pruningNumber4 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2368,7 +2368,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB5 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.setFlowers5 !== null) {
+        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.pruningNumber5 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2531,7 +2531,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB6 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.setFlowers6 !== null) {
+        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.pruningNumber6 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2691,7 +2691,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB7 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.setFlowers7 !== null) {
+        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.pruningNumber7 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2855,7 +2855,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB8 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.setFlowers8 !== null) {
+        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.pruningNumber8 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -3014,7 +3014,7 @@ export default class Har3KmTrussDetails1 extends React.Component {
 
     saveTrussToDB9 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.setFlowers9 !== null) {
+        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.pruningNumber9 !== null) {
 
             this.setState({
                 isLoading: true,
