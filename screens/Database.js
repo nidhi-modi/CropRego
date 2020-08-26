@@ -591,12 +591,94 @@ export default class Database {
         });
     }
 
+    plantsByWeekRowNumberAndName(number,week,name,row) {
+        return new Promise((resolve) => {
+            this.initDB().then((db) => {
+                const plant = {};
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('SELECT * FROM PlantDetails WHERE plantNumber = ? AND plantWeek = ? AND plantName = ? AND plantRow = ?', [number,week,name,row]).then(([tx, results]) => {
+                        console.log(results);
+
+
+                        if (results.rows.length > 0) {
+                            let row = results.rows.item(0);
+                            resolve(row);
+                        }
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+
     trussByWeekNumberAndName(number,week,name) {
         return new Promise((resolve) => {
             this.initDB2().then((db) => {
                 db.transaction((tx) => {
                     //need to add plant name, plant row and plant week 
                     tx.executeSql('SELECT * FROM TrussDetails WHERE plantNumber = ? AND plantWeek = ? AND plantName = ?', [number,week,name]).then(([tx, results]) => {
+                        console.log(results);
+
+
+                        if (results.rows.length > 0) {
+                            let row = results.rows.item(0);
+                            resolve(row);
+                        }
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+
+    trussByWeekNumberRowAndName(number,week,name,row) {
+        return new Promise((resolve) => {
+            this.initDB2().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('SELECT * FROM TrussDetails WHERE plantNumber = ? AND plantWeek = ? AND plantName = ? AND plantRow = ?', [number,week,name,row]).then(([tx, results]) => {
+                        console.log(results);
+
+
+                        if (results.rows.length > 0) {
+                            let row = results.rows.item(0);
+                            resolve(row);
+                        }
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+
+    trussByWeekNumberRowAndName2(number,week,name,row) {
+        return new Promise((resolve) => {
+            this.initDB2().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('SELECT * FROM TrussDetails WHERE plantNumber = ? AND plantWeek = ? AND plantName = ? AND plantRow = ?', [number,week,name,row]).then(([tx, results]) => {
                         console.log(results);
 
 
@@ -710,6 +792,36 @@ trussById(name,week,number,plantNum) {
             db.transaction((tx) => {
                 //need to add plant name, plant row and plant week 
                 tx.executeSql('SELECT * FROM TrussDetails WHERE plantName = ? AND plantWeek = ? AND trussNumber = ? AND plantNumber = ?', [number,week,name,plantNum]).then(([tx, results]) => {
+                    console.log(results);
+                    if (results.rows.length > 0) {
+                        let row = results.rows.item(0);
+                        resolve(row);
+                    }
+                });
+            }).then((result) => {
+                this.closeDatabase(db);
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }).catch((err) => {
+        console.log(err);
+    });
+}
+catch (err_1) {
+    console.log(err_1);
+}
+}
+
+trussByIdRow(name,week,number,plantNum,row) {
+    try {
+    return new Promise((resolve) => {
+        this.initDB2().then((db) => {
+            db.transaction((tx) => {
+                //need to add plant name, plant row and plant week 
+                tx.executeSql('SELECT * FROM TrussDetails WHERE plantName = ? AND plantWeek = ? AND trussNumber = ? AND plantNumber = ? AND plantRow = ?', [number,week,name,plantNum,row]).then(([tx, results]) => {
                     console.log(results);
                     if (results.rows.length > 0) {
                         let row = results.rows.item(0);
