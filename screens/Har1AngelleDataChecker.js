@@ -805,7 +805,7 @@ export default class Har1AngelleDataChecker extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Leaves Per Plant</Text>
+                  <Text style={styles.text242}> Leaves Per Plant {"\n"} Min-8 Max-16</Text>
                   {this.state.plantNo2.leavesPerPlant ? (<Text style={styles.text242}>{this.state.plantNo2.leavesPerPlant}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.leavesPerPlant ? (<Text style={styles.text24}>{this.state.plantNo2.leavesPerPlant}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.leavesPerPlant ? (<Text style={styles.text24}>{this.state.plantNo1.leavesPerPlant}</Text>) : <Text style={styles.text24}>---</Text>}

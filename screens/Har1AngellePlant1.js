@@ -529,6 +529,8 @@ export default class Har1AngellePlant1 extends React.Component {
             // console.error('AsyncStorage#setItem error: ' + error.message);
         }
     }
+
+   
     async getItem(myKey) {
         this.setState({
             isDataSend: false,
@@ -643,8 +645,6 @@ export default class Har1AngellePlant1 extends React.Component {
                 isErrorAsync: false,
             });
 
-            numberWeek = 2000 + currentWeekNumber();
-
 
         } else if (abc === '1' && abc !== null) {
 
@@ -680,7 +680,7 @@ export default class Har1AngellePlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekNumberAndName(no1, numberWeek - 2, 'HAR 1 - Angelle').then((data) => {
+            db.plantsByWeekNumberAndName(no1, numberWeek - 1, 'HAR 1 - Angelle').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -705,7 +705,7 @@ export default class Har1AngellePlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekNumberAndName(no2, numberWeek - 2, 'HAR 1 - Angelle').then((data) => {
+                db.plantsByWeekNumberAndName(no2, numberWeek - 1, 'HAR 1 - Angelle').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -731,7 +731,7 @@ export default class Har1AngellePlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekAndName(no3, numberWeek - 2, 'HAR 1 - Angelle').then((data) => {
+                    db.plantsByWeekAndName(no3, numberWeek - 1, 'HAR 1 - Angelle').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -757,7 +757,7 @@ export default class Har1AngellePlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekAndName(no4, numberWeek - 2, 'HAR 1 - Angelle').then((data) => {
+                        db.plantsByWeekAndName(no4, numberWeek - 1, 'HAR 1 - Angelle').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -783,7 +783,7 @@ export default class Har1AngellePlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekAndName(no5, numberWeek - 2, 'HAR 1 - Angelle').then((data) => {
+                            db.plantsByWeekAndName(no5, numberWeek - 1, 'HAR 1 - Angelle').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -826,7 +826,8 @@ export default class Har1AngellePlant1 extends React.Component {
 
 
     updateTextInput = (text, field) => {
-        this.setItem(field, text)
+        this.setItem(field, text);
+
         this.setState({
             isDataSend: false,
 

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 import Database from '../screens/Database'
+import AsyncStorage from '@react-native-community/async-storage';
+
 
 
 const db = new Database();
@@ -46,6 +48,13 @@ export default class Har1Yelo extends Component {
         //this.callQuery()
     }
 
+
+    async setItem(myKey, value) {
+        try {
+            return await AsyncStorage.setItem(myKey, JSON.stringify(value));
+        } catch (error) {
+        }
+    }
     
 
     callQuery= () => {
@@ -58,6 +67,9 @@ export default class Har1Yelo extends Component {
                     dataSet1: 1,
 
                 });
+
+                this.setItem('har1Yelo1', 1 )
+
 
 
             }).catch((err) => {
@@ -76,8 +88,12 @@ export default class Har1Yelo extends Component {
                 console.log("Calling database")
                 this.setState({
                     dataSet2: 1,
+                    
 
                 });
+
+                this.setItem('har1Yelo2', 2 )
+
 
 
             }).catch((err) => {
@@ -99,6 +115,9 @@ export default class Har1Yelo extends Component {
 
                 });
 
+                this.setItem('har1Yelo3', 3 )
+
+
 
             }).catch((err) => {
                 console.log(err);
@@ -119,6 +138,8 @@ export default class Har1Yelo extends Component {
 
                 });
 
+                this.setItem('har1Yelo4', 4)
+
 
             }).catch((err) => {
                 console.log(err);
@@ -138,6 +159,8 @@ export default class Har1Yelo extends Component {
                     dataSet5: 1,
 
                 });
+
+                this.setItem('har1Yelo5', 5)
 
 
             }).catch((err) => {

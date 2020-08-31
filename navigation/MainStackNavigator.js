@@ -19,8 +19,10 @@ import TrussDetails from '../screens/TrussDetails'
 import PlantDetails from '../screens/PlantDetails'
 import Har1YeloPlant1 from '../screens/Har1YeloPlant1'
 import Har1Yelo from '../screens/Har1Yelo'
+import Har1YeloRow from '../screens/Har1YeloRow'
 import Har1YeloTrussDetails from '../screens/Har1YeloTrussDetails'
 import Har1Angelle from '../screens/Har1Angelle'
+import Har1AngelleRow from '../screens/Har1AngelleRow'
 import Har1RedDelight from '../screens/Har1RedDelight'
 import Har1RedDelight2 from '../screens/Har1RedDelight2'
 import Har1RedDelightRow from '../screens/Har1RedDelightRow'
@@ -286,7 +288,47 @@ function MainStackNavigator() {
           , title: 'HAR 1 Yelo'
         })} />
 
+        <Stack.Screen name='Har1YeloRow' component={Har1YeloRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 1 Yelo'
+        })} />
+
         <Stack.Screen name='Har1AngelleTrussDetails' component={Har1AngelleTrussDetails} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 1 Angelle'
+        })} />
+
+        <Stack.Screen name='Har1AngelleRow' component={Har1AngelleRow} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 

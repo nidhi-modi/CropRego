@@ -37,7 +37,7 @@ var number, data;
 
 
 
-export default class Har1RedDelightTrussDetails1 extends React.Component {
+export default class Har1RedDelightTrussDetails2 extends React.Component {
 
 
 
@@ -1180,7 +1180,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
         if (this.state.trussNumber != null) {
 
-            db.trussByIdRow(this.state.trussNumber, numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data) => {
+            db.trussByIdRow(this.state.trussNumber, numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 truss = data;
@@ -1215,7 +1215,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 1) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 1), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data1) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 1), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     truss1 = data1;
@@ -1250,7 +1250,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
         setTimeout(() => {
             if ((parseInt(this.state.trussNumber) + 2) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 2), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data2) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 2), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data2) => {
                     console.log(data2);
                     console.log("Calling database")
                     truss2 = data2;
@@ -1283,7 +1283,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
         setTimeout(() => {
             if ((parseInt(this.state.trussNumber) + 3) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 3), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data3) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 3), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data3) => {
                     console.log(data3);
                     console.log("Calling database")
                     truss3 = data3;
@@ -1316,7 +1316,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
         setTimeout(() => {
             if ((parseInt(this.state.trussNumber) + 4) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 4), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data4) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 4), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data4) => {
                     console.log(data4);
                     console.log("Calling database")
                     truss4 = data4;
@@ -1349,7 +1349,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 5) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 5), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data5) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 5), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data5) => {
                     console.log(data5);
                     console.log("Calling database")
                     truss5 = data5;
@@ -1382,7 +1382,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 6) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 6), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data6) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 6), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data6) => {
                     console.log(data6);
                     console.log("Calling database")
                     truss6 = data6;
@@ -1415,7 +1415,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 7) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 7), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data7) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 7), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data7) => {
                     console.log(data7);
                     console.log("Calling database")
                     truss7 = data7;
@@ -1448,7 +1448,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 8) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 8), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data8) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 8), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data8) => {
                     console.log(data8);
                     console.log("Calling database")
                     truss8 = data8;
@@ -1481,7 +1481,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 9) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 9), numberWeek - 1, 'HAR 1 - Red Delight', number, '128').then((data9) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 9), numberWeek - 1, 'HAR 1 - Red Delight', number, '148').then((data9) => {
                     console.log(data9);
                     console.log("Calling database")
                     truss9 = data9;
@@ -1531,7 +1531,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDb = () => {
 
-        if (this.state.trussNumber !== null && this.state.setFlowers !== null) {
+        if (this.state.trussNumber !== null && this.state.pruningNumber !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1554,7 +1554,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits,
                 setFlowers: this.state.setFlowers,
                 pruningNumber: this.state.pruningNumber,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1576,7 +1576,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits,
                 setFlowers: this.state.setFlowers,
                 pruningNumber: this.state.pruningNumber,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1597,7 +1597,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -1624,7 +1624,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -1665,7 +1665,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1Plant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -1703,7 +1703,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB1 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.setFlowers1 !== null) {
+        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.pruningNumber1 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1726,7 +1726,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits1,
                 setFlowers: this.state.setFlowers1,
                 pruningNumber: this.state.pruningNumber1,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1748,7 +1748,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits1,
                 setFlowers: this.state.setFlowers1,
                 pruningNumber: this.state.pruningNumber1,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1769,7 +1769,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -1795,7 +1795,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -1835,7 +1835,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -1877,7 +1877,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB2 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.setFlowers2 !== null) {
+        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.pruningNumber2 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1900,7 +1900,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits2,
                 setFlowers: this.state.setFlowers2,
                 pruningNumber: this.state.pruningNumber2,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1922,7 +1922,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits2,
                 setFlowers: this.state.setFlowers2,
                 pruningNumber: this.state.pruningNumber2,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1944,7 +1944,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -1970,7 +1970,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2007,7 +2007,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2040,7 +2040,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB3 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.setFlowers3 !== null) {
+        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2063,7 +2063,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits3,
                 setFlowers: this.state.setFlowers3,
                 pruningNumber: this.state.pruningNumber3,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2085,7 +2085,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits3,
                 setFlowers: this.state.setFlowers3,
                 pruningNumber: this.state.pruningNumber3,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2107,7 +2107,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -2133,7 +2133,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2172,7 +2172,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2208,7 +2208,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB4 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.setFlowers4 !== null) {
+        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.pruningNumber4 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2231,7 +2231,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits4,
                 setFlowers: this.state.setFlowers4,
                 pruningNumber: this.state.pruningNumber4,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2253,7 +2253,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits4,
                 setFlowers: this.state.setFlowers4,
                 pruningNumber: this.state.pruningNumber4,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2273,7 +2273,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -2299,7 +2299,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2337,7 +2337,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2368,7 +2368,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB5 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.setFlowers5 !== null) {
+        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.pruningNumber5 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2391,7 +2391,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits5,
                 setFlowers: this.state.setFlowers5,
                 pruningNumber: this.state.pruningNumber5,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2413,7 +2413,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits5,
                 setFlowers: this.state.setFlowers5,
                 pruningNumber: this.state.pruningNumber5,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2435,7 +2435,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -2461,7 +2461,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2499,7 +2499,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2531,7 +2531,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB6 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.setFlowers6 !== null) {
+        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.pruningNumber6 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2554,7 +2554,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits6,
                 setFlowers: this.state.setFlowers6,
                 pruningNumber: this.state.pruningNumber6,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2576,7 +2576,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits6,
                 setFlowers: this.state.setFlowers6,
                 pruningNumber: this.state.pruningNumber6,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2596,7 +2596,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -2622,7 +2622,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2659,7 +2659,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2691,7 +2691,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB7 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.setFlowers7 !== null) {
+        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.pruningNumber7 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2714,7 +2714,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits7,
                 setFlowers: this.state.setFlowers7,
                 pruningNumber: this.state.pruningNumber7,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2736,7 +2736,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits7,
                 setFlowers: this.state.setFlowers7,
                 pruningNumber: this.state.pruningNumber7,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2757,7 +2757,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -2783,7 +2783,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2822,7 +2822,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2855,7 +2855,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB8 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.setFlowers8 !== null) {
+        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.pruningNumber8 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2878,7 +2878,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits8,
                 setFlowers: this.state.setFlowers8,
                 pruningNumber: this.state.pruningNumber8,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2900,7 +2900,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits8,
                 setFlowers: this.state.setFlowers8,
                 pruningNumber: this.state.pruningNumber8,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2920,7 +2920,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -2946,7 +2946,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -2983,7 +2983,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har1RedDelightPlant1')
+                        this.props.navigation.navigate('Har1RedDelightPlant2')
 
                     }
                     this.setState({
@@ -3014,7 +3014,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
     saveTrussToDB9 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.setFlowers9 !== null) {
+        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.pruningNumber9 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -3037,7 +3037,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits9,
                 setFlowers: this.state.setFlowers9,
                 pruningNumber: this.state.pruningNumber9,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -3059,7 +3059,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                 setFruits: this.state.setFruits9,
                 setFlowers: this.state.setFlowers9,
                 pruningNumber: this.state.pruningNumber9,
-                plantRow: '128',
+                plantRow: '148',
                 plantName: 'HAR 1 - Red Delight',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -3079,7 +3079,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'128'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                callback=ctrlq&plantRow=${'148'}&plantName=${'HAR 1 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                 console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
@@ -3098,7 +3098,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                     abc = '1';
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Har1RedDelightPlant1')
+                    this.props.navigation.navigate('Har1RedDelightPlant2')
 
 
                     this.setState({
@@ -3128,7 +3128,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                     abc = '1';
                     Alert.alert('Completed!')
 
-                    this.props.navigation.navigate('Har1RedDelightPlant1')
+                    this.props.navigation.navigate('Har1RedDelightPlant2')
 
 
                     this.setState({
@@ -3444,105 +3444,106 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
 
                     <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
-                        <ScrollView style={styles.formContainer}
+                        <View style={styles.formContainer}
                             keyboardShouldPersistTaps='handled'>
 
 
+
+
                             <View
-                                style={styles.container2226}>
+                                style={{
+                                    borderTopColor: 'black',
+                                    borderTopWidth: 1,
+                                }}
+                            />
+
+                            <View style={styles.rowContainer222}>
 
                                 <View
                                     style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>TrussNo</Text>
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <Text style={styles.text222}>Set Fruit</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>Flowers</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>Pruning</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <Text style={styles.text222}>Fruit Dia</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderBottomColor: 'black',
-                                        borderBottomWidth: 1,
+                                        borderLeftColor: 'black',
+                                        borderLeftWidth: 1,
                                     }}
                                 />
 
 
+                                <Text style={styles.text222}>TrussNo</Text>
                                 <View
-
                                     style={{
-                                        margin: 8
-
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
                                     }}
                                 />
 
+
+
+                                <Text style={styles.text222}>Set Fruit</Text>
+
                                 <View
                                     style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
                                     }}
                                 />
 
+
+                                <Text style={styles.text222}>Flowers</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>Pruning</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                                <Text style={styles.text222}>Fruit Dia</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                            </View>
+
+
+
+                            <View
+                                style={{
+                                    borderBottomColor: 'black',
+                                    borderBottomWidth: 1,
+                                }}
+                            />
+
+
+                            <View
+
+                                style={{
+                                    margin: 8
+
+                                }}
+                            />
+
+                            <View
+                                style={{
+                                    borderTopColor: 'black',
+                                    borderTopWidth: 1,
+
+
+                                }}
+                            />
+                            <ScrollView>
                                 <View style={styles.rowContainer222}>
 
 
@@ -5140,90 +5141,85 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                                     }}
                                 />
 
-                            </View>
 
-                            <View
-                                style={{
-                                    marginBottom: 20
-                                }}
-                            />
 
-                            <View style={styles.borderEdit}>
+                                <View
+                                    style={{
+                                        marginBottom: 20
+                                    }}
+                                />
 
-                                <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
+                                <View style={styles.borderEdit}>
 
-                                    <View
-                                        style={{
-                                            marginTop: 1
-                                        }}
-                                    />
+                                    <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Fruit Load</Text>
-                                        <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                                        <View
+                                            style={{
+                                                marginTop: 1
+                                            }}
+                                        />
+
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Fruit Load</Text>
+                                            <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                                        </View>
+
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
+
                                     </View>
 
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
+                                    <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Flowering Truss</Text>
+                                            <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                        </View>
 
-                                </View>
 
-                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Flowering Truss</Text>
-                                        <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
 
-
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
-                                </View>
-
-                                <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Setting Truss</Text>
-                                        <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                    <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Setting Truss</Text>
+                                            <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
-                                </View>
 
-                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Harvest Truss</Text>
-                                        <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                    <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Harvest Truss</Text>
+                                            <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
                                 </View>
-                            </View>
 
-                            <TouchableOpacity
-                                style={styles.buttonContainer}
-                                onPress={this.saveTrussToDb}>
-                                <Text style={styles.buttonText}>Submit</Text>
-                            </TouchableOpacity>
-
+                                <TouchableOpacity
+                                    style={styles.buttonContainer}
+                                    onPress={this.saveTrussToDb}>
+                                    <Text style={styles.buttonText}>Submit</Text>
+                                </TouchableOpacity>
 
 
-
-
-
-
-
-                        </ScrollView>
+                            </ScrollView>
+                        </View>
                     </ImageBackground>
                 </View>
 

@@ -29,6 +29,11 @@ export default class PlantList extends Component {
 
 
   componentDidMount() {
+
+    this.focusListener = this.props.navigation.addListener('focus', () => {
+            
+      this.getPlants();
+  });
   
       this.getPlants();
     

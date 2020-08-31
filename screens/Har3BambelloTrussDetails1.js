@@ -1531,7 +1531,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDb = () => {
 
-        if (this.state.trussNumber !== null && this.state.setFlowers !== null) {
+        if (this.state.trussNumber !== null && this.state.pruningNumber !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1703,7 +1703,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB1 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.setFlowers1 !== null) {
+        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.pruningNumber1 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1877,7 +1877,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB2 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.setFlowers2 !== null) {
+        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.pruningNumber2 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2040,7 +2040,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB3 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.setFlowers3 !== null) {
+        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2208,7 +2208,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB4 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.setFlowers4 !== null) {
+        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.pruningNumber4 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2368,7 +2368,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB5 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.setFlowers5 !== null) {
+        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.pruningNumber5 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2531,7 +2531,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB6 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.setFlowers6 !== null) {
+        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.pruningNumber6 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2691,7 +2691,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB7 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.setFlowers7 !== null) {
+        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.pruningNumber7 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2855,7 +2855,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB8 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.setFlowers8 !== null) {
+        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.pruningNumber8 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -3014,7 +3014,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
     saveTrussToDB9 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.setFlowers9 !== null) {
+        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.pruningNumber9 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -3444,104 +3444,107 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
                     <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
-                        <ScrollView style={styles.formContainer}
+                        <View style={styles.formContainer}
                             keyboardShouldPersistTaps='handled'>
 
 
+
+
                             <View
-                                style={styles.container2226}>
+                                style={{
+                                    borderTopColor: 'black',
+                                    borderTopWidth: 1,
+                                }}
+                            />
+
+                            <View style={styles.rowContainer222}>
 
                                 <View
                                     style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>TrussNo</Text>
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <Text style={styles.text222}>Set Fruit</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>Flowers</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>Pruning</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <Text style={styles.text222}>Fruit Dia</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderBottomColor: 'black',
-                                        borderBottomWidth: 1,
+                                        borderLeftColor: 'black',
+                                        borderLeftWidth: 1,
                                     }}
                                 />
 
 
+                                <Text style={styles.text222}>TrussNo</Text>
                                 <View
-
                                     style={{
-                                        margin: 8
-
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
                                     }}
                                 />
 
+
+
+                                <Text style={styles.text222}>Set Fruit</Text>
+
                                 <View
                                     style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
                                     }}
                                 />
+
+
+                                <Text style={styles.text222}>Flowers</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>Pruning</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                                <Text style={styles.text222}>Fruit Dia</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                            </View>
+
+
+
+                            <View
+                                style={{
+                                    borderBottomColor: 'black',
+                                    borderBottomWidth: 1,
+                                }}
+                            />
+
+
+                            <View
+
+                                style={{
+                                    margin: 8
+
+                                }}
+                            />
+
+                            <View
+                                style={{
+                                    borderTopColor: 'black',
+                                    borderTopWidth: 1,
+
+
+                                }}
+                            />
+
+                            <ScrollView>
 
                                 <View style={styles.rowContainer222}>
 
@@ -5140,90 +5143,85 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
                                     }}
                                 />
 
-                            </View>
 
-                            <View
-                                style={{
-                                    marginBottom: 20
-                                }}
-                            />
 
-                            <View style={styles.borderEdit}>
+                                <View
+                                    style={{
+                                        marginBottom: 20
+                                    }}
+                                />
 
-                                <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
+                                <View style={styles.borderEdit}>
 
-                                    <View
-                                        style={{
-                                            marginTop: 1
-                                        }}
-                                    />
+                                    <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Fruit Load</Text>
-                                        <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                                        <View
+                                            style={{
+                                                marginTop: 1
+                                            }}
+                                        />
+
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Fruit Load</Text>
+                                            <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                                        </View>
+
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
+
                                     </View>
 
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
+                                    <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Flowering Truss</Text>
+                                            <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                        </View>
 
-                                </View>
 
-                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Flowering Truss</Text>
-                                        <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
 
-
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
-                                </View>
-
-                                <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Setting Truss</Text>
-                                        <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                    <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Setting Truss</Text>
+                                            <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
-                                </View>
 
-                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Harvest Truss</Text>
-                                        <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                    <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Harvest Truss</Text>
+                                            <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
                                 </View>
-                            </View>
 
-                            <TouchableOpacity
-                                style={styles.buttonContainer}
-                                onPress={this.saveTrussToDb}>
-                                <Text style={styles.buttonText}>Submit</Text>
-                            </TouchableOpacity>
-
+                                <TouchableOpacity
+                                    style={styles.buttonContainer}
+                                    onPress={this.saveTrussToDb}>
+                                    <Text style={styles.buttonText}>Submit</Text>
+                                </TouchableOpacity>
 
 
-
-
-
-
-
-                        </ScrollView>
+                            </ScrollView>
+                        </View>
                     </ImageBackground>
                 </View>
 

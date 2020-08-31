@@ -413,7 +413,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
         }
 
 
-        numberWeek = 2000 + currentWeekNumber()-1;
+        numberWeek = 2000 + currentWeekNumber() - 1;
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 
@@ -1531,7 +1531,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDb = () => {
 
-        if (this.state.trussNumber !== null && this.state.setFlowers !== null) {
+        if (this.state.trussNumber !== null && this.state.pruningNumber !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1570,36 +1570,36 @@ export default class Har1AngelleTrussDetails extends React.Component {
             }
 
 
-                let dataSend11 = {
-                    trussNumber: this.state.trussNumber,
-                    fruitDiameter: this.state.fruitDiameter,
-                    setFruits: this.state.setFruits,
-                    setFlowers: this.state.setFlowers,
-                    pruningNumber: this.state.pruningNumber,
-                    plantRow: '155',
-                    plantName: 'HAR 1 - Angelle',
-                    plantWeek: numberWeek,
-                    plantNumber: number,
-                    fruitLoad: this.state.fruitLoad,
-                    pruningFlower: this.state.pruneFlowering,
-                    floweringTruss: this.state.floweringTrussss,
-                    pruningSet: this.state.prunSetting,
-                    settingTruss: this.state.settingTrussNumber,
-                    pruningHarvest: this.state.pruningHar,
-                    harvestTruss: this.state.harvestTruss,
-                    dataSend: 'yes'
-    
-                
+            let dataSend11 = {
+                trussNumber: this.state.trussNumber,
+                fruitDiameter: this.state.fruitDiameter,
+                setFruits: this.state.setFruits,
+                setFlowers: this.state.setFlowers,
+                pruningNumber: this.state.pruningNumber,
+                plantRow: '155',
+                plantName: 'HAR 1 - Angelle',
+                plantWeek: numberWeek,
+                plantNumber: number,
+                fruitLoad: this.state.fruitLoad,
+                pruningFlower: this.state.pruneFlowering,
+                floweringTruss: this.state.floweringTrussss,
+                pruningSet: this.state.prunSetting,
+                settingTruss: this.state.settingTrussNumber,
+                pruningHarvest: this.state.pruningHar,
+                harvestTruss: this.state.harvestTruss,
+                dataSend: 'yes'
+
+
             }
 
-           
-            if(this.state.isItConnected === 'Online') {
+
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
@@ -1610,29 +1610,29 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
-    
+
+
                     if ((parseInt(this.state.trussNumber) + 1) !== null && this.state.pruningNumber1 !== '') {
-    
+
                         this.saveTrussToDB1();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -1640,10 +1640,10 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-               
 
 
-            }else{
+
+            } else {
 
 
                 db.addTrussDetails(data).then((result) => {
@@ -1651,29 +1651,29 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
-    
+
+
                     if ((parseInt(this.state.trussNumber) + 1) !== null && this.state.pruningNumber1 !== '') {
-    
+
                         this.saveTrussToDB1();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1Plant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -1681,16 +1681,16 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-               
 
-                
+
+
 
             }
-            
-    
-               
 
-    
+
+
+
+
         } else {
 
 
@@ -1703,7 +1703,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB1 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.setFlowers1 !== null) {
+        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.pruningNumber1 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1764,14 +1764,14 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
             }
 
-           
-            if(this.state.isItConnected === 'Online') {
+
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
@@ -1782,28 +1782,28 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 2) !== null && this.state.pruningNumber2 !== '') {
-    
+
                         this.saveTrussToDB2();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -1811,39 +1811,39 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-    
-            
 
 
-            }else{
+
+
+            } else {
 
                 db.addTrussDetails(data1).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 2) !== null && this.state.pruningNumber2 !== '') {
-    
+
                         this.saveTrussToDB2();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -1851,19 +1851,19 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-    
-            
+
+
 
 
 
             }
 
-    
-                
 
 
 
-           
+
+
+
 
 
         } else {
@@ -1877,7 +1877,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB2 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.setFlowers2 !== null) {
+        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.pruningNumber2 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1938,15 +1938,15 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
             }
 
-        
 
-            if(this.state.isItConnected === 'Online') {
+
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
@@ -1957,28 +1957,28 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== '') {
-    
+
                         this.saveTrussToDB3();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -1987,35 +1987,35 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     abc = '0';
                 })
 
-            }else{
+            } else {
 
                 db.addTrussDetails(data2).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== '') {
-    
+
                         this.saveTrussToDB3();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2025,8 +2025,8 @@ export default class Har1AngelleTrussDetails extends React.Component {
                 })
 
             }
-    
-                
+
+
 
 
         } else {
@@ -2040,7 +2040,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB3 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.setFlowers3 !== null) {
+        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2103,13 +2103,13 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
 
 
-            if(this.state.isItConnected === 'Online') {
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
@@ -2120,28 +2120,28 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 4) !== null && this.state.pruningNumber4 !== '') {
-    
+
                         this.saveTrussToDB4();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2149,38 +2149,38 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-    
 
 
-            }else{
+
+            } else {
 
                 db.addTrussDetails(data3).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 4) !== null && this.state.pruningNumber4 !== '') {
-    
+
                         this.saveTrussToDB4();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2188,13 +2188,13 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-    
+
 
 
             }
 
-           
-                
+
+
 
         } else {
 
@@ -2208,7 +2208,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB4 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.setFlowers4 !== null) {
+        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.pruningNumber4 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2269,13 +2269,13 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
             }
 
-            if(this.state.isItConnected === 'Online') {
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
@@ -2286,28 +2286,28 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 5) !== null && this.state.pruningNumber5 !== '') {
-    
+
                         this.saveTrussToDB5();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2315,37 +2315,37 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-            }else{
-            
+            } else {
+
                 db.addTrussDetails(data4).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
 
-    
+
                     if ((parseInt(this.state.trussNumber) + 5) !== null && this.state.pruningNumber5 !== '') {
-    
+
                         this.saveTrussToDB5();
 
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2355,7 +2355,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
                 })
 
             }
-   
+
         } else {
 
 
@@ -2368,7 +2368,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB5 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.setFlowers5 !== null) {
+        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.pruningNumber5 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2429,15 +2429,15 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
             }
 
-            console.log("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY : "+ this.state.pruningNumber5);
+            console.log("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY : " + this.state.pruningNumber5);
 
-            if(this.state.isItConnected === 'Online') {
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
@@ -2448,28 +2448,28 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.PruningNumber6 !== '') {
-    
+
                         this.saveTrussToDB6();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2479,35 +2479,35 @@ export default class Har1AngelleTrussDetails extends React.Component {
                 })
 
 
-            }else{
-    
+            } else {
+
                 db.addTrussDetails(data5).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.pruningNumber1 !== '') {
-    
+
                         this.saveTrussToDB6();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2517,7 +2517,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
                 })
 
             }
-    
+
 
         } else {
 
@@ -2531,7 +2531,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB6 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.setFlowers6 !== null) {
+        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.pruningNumber6 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2592,45 +2592,45 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
             }
 
-            if(this.state.isItConnected === 'Online') {
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
                 );
-    
+
                 db.addTrussDetails(data6Send).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 7) !== null && this.state.pruningNumber7 !== '') {
-    
+
                         this.saveTrussToDB7();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2638,36 +2638,36 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-    
-            }else{
+
+            } else {
 
                 db.addTrussDetails(data6).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 7) !== null && this.state.pruningNumber7 !== '') {
-    
+
                         this.saveTrussToDB7();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2678,7 +2678,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
             }
 
-           
+
         } else {
 
 
@@ -2691,7 +2691,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB7 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.setFlowers7 !== null) {
+        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.pruningNumber7 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2753,13 +2753,13 @@ export default class Har1AngelleTrussDetails extends React.Component {
             }
 
 
-            if(this.state.isItConnected === 'Online') {
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
@@ -2770,28 +2770,28 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 8) !== null && this.state.pruningNumber8 !== '') {
-    
+
                         this.saveTrussToDB8();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2799,38 +2799,38 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     });
                     abc = '0';
                 })
-    
 
-            }else{
-            
-    
+
+            } else {
+
+
                 db.addTrussDetails(data7).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 8) !== null && this.state.pruningNumber8 !== '') {
-    
+
                         this.saveTrussToDB8();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2840,8 +2840,8 @@ export default class Har1AngelleTrussDetails extends React.Component {
                 })
 
             }
-    
-    
+
+
 
         } else {
 
@@ -2855,7 +2855,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB8 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.setFlowers8 !== null) {
+        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.pruningNumber8 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2916,45 +2916,45 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
             }
 
-            if(this.state.isItConnected === 'Online') {
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
                 );
-           
+
                 db.addTrussDetails(data8Send).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 9) !== null && this.state.pruningNumber9 !== '') {
-    
+
                         this.saveTrussToDB9();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -2963,35 +2963,35 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     abc = '0';
                 })
 
-            }else{
+            } else {
 
                 db.addTrussDetails(data8).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
-    
+
                     if ((parseInt(this.state.trussNumber) + 9) !== null && this.state.pruningNumber9 !== '') {
-    
+
                         this.saveTrussToDB9();
-    
-    
+
+
                     } else {
-    
+
                         Alert.alert('Completed!')
-    
+
                         this.props.navigation.navigate('Har1AngellePlant1')
-    
+
                     }
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -3000,10 +3000,10 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     abc = '0';
                 })
             }
-    
-    
-    
-            
+
+
+
+
 
         } else {
 
@@ -3014,7 +3014,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
     saveTrussToDB9 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.setFlowers9 !== null) {
+        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.pruningNumber9 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -3075,38 +3075,38 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
             }
 
-            if(this.state.isItConnected === 'Online') {
+            if (this.state.isItConnected === 'Online') {
 
                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url = `${scriptUrl}?
                 callback=ctrlq&plantRow=${'155'}&plantName=${'HAR 1 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-    
-                console.log("URL : "+url);
+
+                console.log("URL : " + url);
                 fetch(url, { mode: 'no-cors' }).then(
                     () => { this.setState({ sent: true }); },
                     () => { this.setState({ error: true }); }
                 );
-      
-    
+
+
                 db.addTrussDetails(data9Send).then((result) => {
                     console.log(result);
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
                     Alert.alert('Completed!')
-    
+
                     this.props.navigation.navigate('Har1AngellePlant1')
-    
-    
+
+
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -3115,7 +3115,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     abc = '0';
                 })
 
-            }else{
+            } else {
 
 
                 db.addTrussDetails(data9).then((result) => {
@@ -3123,20 +3123,20 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     this.setState({
                         isLoading: false,
                         isDataSend: true,
-    
+
                     });
                     abc = '1';
                     Alert.alert('Completed!')
-    
+
                     this.props.navigation.navigate('Har1AngellePlant1')
-    
-    
+
+
                     this.setState({
-    
+
                         isDataSend: true,
                     });
                     abc = '1';
-    
+
                 }).catch((err) => {
                     console.log(err);
                     this.setState({
@@ -3145,8 +3145,8 @@ export default class Har1AngelleTrussDetails extends React.Component {
                     abc = '0';
                 })
             }
-    
-           
+
+
 
         } else {
 
@@ -3444,113 +3444,116 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
                     <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
-                        <ScrollView style={styles.formContainer}
+                        <View style={styles.formContainer}
                             keyboardShouldPersistTaps='handled'>
 
 
+
+
                             <View
-                                style={styles.container2226}>
+                                style={{
+                                    borderTopColor: 'black',
+                                    borderTopWidth: 1,
+                                }}
+                            />
+
+                            <View style={styles.rowContainer222}>
 
                                 <View
                                     style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
+                                        borderLeftColor: 'black',
+                                        borderLeftWidth: 1,
                                     }}
                                 />
 
+
+                                <Text style={styles.text222}>TrussNo</Text>
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+
+                                <Text style={styles.text222}>Set Fruit</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>Flowers</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>Pruning</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                                <Text style={styles.text222}>Fruit Dia</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                            </View>
+
+
+
+                            <View
+                                style={{
+                                    borderBottomColor: 'black',
+                                    borderBottomWidth: 1,
+                                }}
+                            />
+
+
+                            <View
+
+                                style={{
+                                    margin: 8
+
+                                }}
+                            />
+
+                            <View
+                                style={{
+                                    borderTopColor: 'black',
+                                    borderTopWidth: 1,
+
+
+                                }}
+                            />
+
+                            <ScrollView>
+
                                 <View style={styles.rowContainer222}>
+
+
 
                                     <View
                                         style={{
                                             borderLeftColor: 'black',
                                             borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>TrussNo</Text>
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <Text style={styles.text222}>Set Fruit</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>Flowers</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <Text style={styles.text222}>Pruning</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <Text style={styles.text222}>Fruit Dia</Text>
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderBottomColor: 'black',
-                                        borderBottomWidth: 1,
-                                    }}
-                                />
-
-
-                                <View
-
-                                    style={{
-                                        margin: 8
-
-                                    }}
-                                />
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
 
                                         }}
                                     />
@@ -3558,27 +3561,27 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
 
 
-                                        <TextInput
-                                            style={styles.textinputheight2}
-                                            //underlineColorAndroid="black"
-                                            autoCapitalize="none"
-                                            placeholderTextColor="#000000"
-                                            multiline={false}
-                                            keyboardType={'numeric'}
-                                            multiline={false}
-                                            returnKeyType={"next"}
-                                            ref={this.trussNumberRef}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onFocus={this.onFocus}
-                                            onChangeText={this.onChangeText}
-                                            onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
-                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
-                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
-                                            error={errors.TrussNumber}
-                                            blurOnSubmit={false}
-                                            value={this.state.trussNumber.toString()}
-                                        />
+                                    <TextInput
+                                        style={styles.textinputheight2}
+                                        //underlineColorAndroid="black"
+                                        autoCapitalize="none"
+                                        placeholderTextColor="#000000"
+                                        multiline={false}
+                                        keyboardType={'numeric'}
+                                        multiline={false}
+                                        returnKeyType={"next"}
+                                        ref={this.trussNumberRef}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onFocus={this.onFocus}
+                                        onChangeText={this.onChangeText}
+                                        onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
+                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
+                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
+                                        error={errors.TrussNumber}
+                                        blurOnSubmit={false}
+                                        value={this.state.trussNumber.toString()}
+                                    />
 
                                     <View
                                         style={{
@@ -5140,90 +5143,85 @@ export default class Har1AngelleTrussDetails extends React.Component {
                                     }}
                                 />
 
-                            </View>
 
-                            <View
-                                style={{
-                                    marginBottom: 20
-                                }}
-                            />
 
-                            <View style={styles.borderEdit}>
+                                <View
+                                    style={{
+                                        marginBottom: 20
+                                    }}
+                                />
 
-                                <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
+                                <View style={styles.borderEdit}>
 
-                                    <View
-                                        style={{
-                                            marginTop: 1
-                                        }}
-                                    />
+                                    <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Fruit Load</Text>
-                                        <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                                        <View
+                                            style={{
+                                                marginTop: 1
+                                            }}
+                                        />
+
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Fruit Load</Text>
+                                            <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                                        </View>
+
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
+
                                     </View>
 
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
+                                    <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Flowering Truss</Text>
+                                            <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                        </View>
 
-                                </View>
 
-                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Flowering Truss</Text>
-                                        <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
 
-
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
-                                </View>
-
-                                <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Setting Truss</Text>
-                                        <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                    <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Setting Truss</Text>
+                                            <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
-                                </View>
 
-                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Harvest Truss</Text>
-                                        <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                    <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Harvest Truss</Text>
+                                            <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
                                     </View>
-                                    <View
-                                        style={{
-                                            marginBottom: 5
-                                        }}
-                                    />
                                 </View>
-                            </View>
 
-                            <TouchableOpacity
-                                style={styles.buttonContainer}
-                                onPress={this.saveTrussToDb}>
-                                <Text style={styles.buttonText}>Submit</Text>
-                            </TouchableOpacity>
-
+                                <TouchableOpacity
+                                    style={styles.buttonContainer}
+                                    onPress={this.saveTrussToDb}>
+                                    <Text style={styles.buttonText}>Submit</Text>
+                                </TouchableOpacity>
 
 
-
-
-
-
-
-                        </ScrollView>
+                            </ScrollView>
+                        </View>
                     </ImageBackground>
                 </View>
 
