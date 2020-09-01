@@ -102,29 +102,29 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
   async setItem(myKey, value) {
     try {
-        this.setState({
-            isDataSend: false,
+      this.setState({
+        isDataSend: false,
 
-        });
-        abc = '0';
+      });
+      abc = '0';
 
-        return await AsyncStorage.setItem(myKey, JSON.stringify(value));
+      return await AsyncStorage.setItem(myKey, JSON.stringify(value));
     } catch (error) {
-        // console.error('AsyncStorage#setItem error: ' + error.message);
+      // console.error('AsyncStorage#setItem error: ' + error.message);
     }
-}
+  }
 
   componentDidMount() {
 
-    numberWeek  = 2000 + currentWeekNumber() - 1;
+    numberWeek = 2000 + currentWeekNumber() - 1;
     numberWeek1 = 2000 + currentWeekNumber() - 2;
     numberWeek2 = 2000 + currentWeekNumber() - 3;
     numberWeek3 = 2000 + currentWeekNumber() - 4;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
-     
-  });
+
+    });
 
     this.setState({
       weekNo: numberWeek,
@@ -146,7 +146,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
     this.setState({
       isLoading: true,
 
-  });
+    });
 
     setTimeout(() => {
 
@@ -213,7 +213,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
       this.setState({
         isLoading: false,
-      
+
       });
 
       db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 1 - Red Delight', '128').then((data) => {
@@ -222,7 +222,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
         truss4 = data;
         this.setState({
           truss4,
-         
+
 
         });
       }).catch((err) => {
@@ -240,23 +240,23 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
       this.setState({
         isLoading: true
-      
-      });
-    db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 1 - Red Delight', '128').then((data) => {
-      console.log(data);
-      console.log("Calling database")
-      plantNo1 = data;
-      this.setState({
-        plantNo1,
-        //isLoading: true
 
       });
-    }).catch((err) => {
-      console.log(err);
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 1 - Red Delight', '128').then((data) => {
+        console.log(data);
+        console.log("Calling database")
+        plantNo1 = data;
+        this.setState({
+          plantNo1,
+          //isLoading: true
 
-    })
+        });
+      }).catch((err) => {
+        console.log(err);
 
-   }, 1000);
+      })
+
+    }, 1000);
 
     setTimeout(() => {
 
@@ -318,12 +318,12 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
     }, 4000);
 
-    
+
 
     this.setState({
       isLoading: false,
 
-  });
+    });
 
     try {
       AsyncStorage.getItem('leavesPerPlant').then((text1Value) => {
@@ -407,7 +407,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
     }
 
 
-    
+
 
     /*db.plantByWeekInList('HAR 1 - Yelo', numberWeek1).then((data) => {
       console.log(data);
@@ -765,11 +765,11 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
     if (this.state.isLoading) {
       return (
-          <View style={styles.activity}>
-              <ActivityIndicator size="large" color="#0000ff" />
-          </View>
+        <View style={styles.activity}>
+          <ActivityIndicator size="large" color="#0000ff" />
+        </View>
       )
-  }
+    }
 
 
     return (
@@ -782,6 +782,16 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
             <ScrollView style={styles.formContainer}
               keyboardShouldPersistTaps='handled'>
+
+              <Text style={styles.headingText}>Plant {number} Data Checker</Text>
+
+
+
+              <View
+                style={{
+                  marginTop: 14
+                }}
+              />
 
               <View style={styles.borderEdit}>
 
@@ -805,7 +815,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Leaves Per Plant</Text>
+                  <Text style={styles.text242}> Leaves Per Plant <Text style={styles.textColorRed}>{"\n"} Min:8 Max:16</Text></Text>
                   {this.state.plantNo2.leavesPerPlant ? (<Text style={styles.text242}>{this.state.plantNo2.leavesPerPlant}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.leavesPerPlant ? (<Text style={styles.text24}>{this.state.plantNo2.leavesPerPlant}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.leavesPerPlant ? (<Text style={styles.text24}>{this.state.plantNo1.leavesPerPlant}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -816,7 +826,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Fully Set Truss    </Text>
+                  <Text style={styles.text242}> Fully Set Truss     <Text style={styles.textColorRed}>{"\n"} Min:1 Max:45</Text></Text>
                   {this.state.plantNo2.fullySetTruss ? (<Text style={styles.text242}>{this.state.plantNo2.fullySetTruss}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.fullySetTruss ? (<Text style={styles.text24}>{this.state.plantNo2.fullySetTruss}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.fullySetTruss ? (<Text style={styles.text24}>{this.state.plantNo1.fullySetTruss}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -827,7 +837,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Fully Set Trs Lgth</Text>
+                  <Text style={styles.text242}> Fully Set Trs Lgth<Text style={styles.textColorRed}>{"\n"} Min:2 Max:6</Text></Text>
                   {this.state.plantNo2.setTrussLength ? (<Text style={styles.text242}>{this.state.plantNo2.setTrussLength}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.setTrussLength ? (<Text style={styles.text24}>{this.state.plantNo2.setTrussLength}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.setTrussLength ? (<Text style={styles.text24}>{this.state.plantNo1.setTrussLength}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -838,7 +848,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Weekly Growth    </Text>
+                  <Text style={styles.text242}> Weekly Growth    <Text style={styles.textColorRed}>{"\n"} Min:16 Max:32</Text></Text>
                   {this.state.plantNo2.weeklyGrowth ? (<Text style={styles.text242}>{this.state.plantNo2.weeklyGrowth}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.weeklyGrowth ? (<Text style={styles.text24}>{this.state.plantNo2.weeklyGrowth}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.weeklyGrowth ? (<Text style={styles.text24}>{this.state.plantNo1.weeklyGrowth}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -849,7 +859,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Flwer Trus Hht    </Text>
+                  <Text style={styles.text242}> Flwer Trus Hht    <Text style={styles.textColorRed}>{"\n"} Min:10 Max:25</Text></Text>
                   {this.state.plantNo2.floweringTrussHeight ? (<Text style={styles.text242}>{this.state.plantNo2.floweringTrussHeight}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.floweringTrussHeight ? (<Text style={styles.text24}>{this.state.plantNo2.floweringTrussHeight}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.floweringTrussHeight ? (<Text style={styles.text24}>{this.state.plantNo1.floweringTrussHeight}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -861,7 +871,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Leaf Length        </Text>
+                  <Text style={styles.text242}> Leaf Length        <Text style={styles.textColorRed}>{"\n"} Min:35 Max:45</Text></Text>
                   {this.state.plantNo2.leafLength ? (<Text style={styles.text242}>{this.state.plantNo2.leafLength}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.leafLength ? (<Text style={styles.text24}>{this.state.plantNo2.leafLength}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.leafLength ? (<Text style={styles.text24}>{this.state.plantNo1.leafLength}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -873,7 +883,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Leaf Width          </Text>
+                  <Text style={styles.text242}> Leaf Width          <Text style={styles.textColorRed}>{"\n"} Min:35 Max:45</Text></Text>
                   {this.state.plantNo2.leafWidth ? (<Text style={styles.text242}>{this.state.plantNo2.leafWidth}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.leafWidth ? (<Text style={styles.text24}>{this.state.plantNo2.leafWidth}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.leafWidth ? (<Text style={styles.text24}>{this.state.plantNo1.leafWidth}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -884,7 +894,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Stem Diameter    </Text>
+                  <Text style={styles.text242}> Stem Diameter    <Text style={styles.textColorRed}>{"\n"} Min:9 Max:12</Text></Text>
                   {this.state.plantNo2.stmDiameter ? (<Text style={styles.text242}>{this.state.plantNo2.stmDiameter}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.stmDiameter ? (<Text style={styles.text24}>{this.state.plantNo2.stmDiameter}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.stmDiameter ? (<Text style={styles.text24}>{this.state.plantNo1.stmDiameter}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -895,7 +905,7 @@ export default class Har1RedDelightDataChecker1 extends React.Component {
 
                 <View style={styles.rowContainer222}>
 
-                  <Text style={styles.text242}> Lt Wk Stm Diamt</Text>
+                  <Text style={styles.text242}> Lt Wk Stm Diamt<Text style={styles.textColorRed}>{"\n"} Min:10 Max:13</Text></Text>
                   {this.state.plantNo2.lastWeekStmDiameter ? (<Text style={styles.text242}>{this.state.plantNo2.lastWeekStmDiameter}</Text>) : <Text style={styles.text242}>---</Text>}
                   {this.state.plantNo2.lastWeekStmDiameter ? (<Text style={styles.text24}>{this.state.plantNo2.lastWeekStmDiameter}</Text>) : <Text style={styles.text24}>---</Text>}
                   {this.state.plantNo1.lastWeekStmDiameter ? (<Text style={styles.text24}>{this.state.plantNo1.lastWeekStmDiameter}</Text>) : <Text style={styles.text24}>---</Text>}
@@ -1261,5 +1271,19 @@ const styles = StyleSheet.create({
     borderColor: '#000000',
     borderWidth: 1.5,
   },
+  headingText: {
+    color: 'black',
+    fontSize: 18,
+    textAlign: 'center',
+    textDecorationLine: 'underline',
+    fontWeight: 'bold'
+
+  },
+  textColorRed: {
+    color: '#2C903D',
+    fontSize: 12,
+
+  },
+
 })
 

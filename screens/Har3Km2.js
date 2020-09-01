@@ -31,7 +31,7 @@ export default class Har3Km2 extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2000 + currentWeekNumber()-1;
+        numberWeek = 2000 + currentWeekNumber()-2;
 
         this.setState({ week : numberWeek});
 

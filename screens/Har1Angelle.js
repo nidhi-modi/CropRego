@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 import Database from '../screens/Database'
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 const db = new Database();
@@ -31,19 +32,74 @@ export default class Har1Angelle extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2000 + currentWeekNumber()-1;
+        numberWeek = 2000 + currentWeekNumber()-2;
 
         this.setState({ week : numberWeek});
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
             
             this.callQuery()
+
         });
 
         //this.callQuery()
     }
 
-    
+    callDataFromPlant1=() => {
+
+        try {
+            AsyncStorage.getItem('Har1AngellePlant1').then((text1Value) => {
+                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
+                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text1Value)
+
+
+            }).done();
+        } catch (error) {
+        }
+
+        try {
+            AsyncStorage.getItem('Har1AngellePlant2').then((text2Value) => {
+                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
+                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text2Value)
+
+
+            }).done();
+        } catch (error) {
+        }
+
+        try {
+            AsyncStorage.getItem('Har1AngellePlant3').then((text3Value) => {
+                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
+                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text3Value)
+
+
+            }).done();
+        } catch (error) {
+        }
+
+        try {
+            AsyncStorage.getItem('Har1AngellePlant4').then((text4Value) => {
+                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
+                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text4Value)
+
+
+            }).done();
+        } catch (error) {
+        }
+
+        try {
+            AsyncStorage.getItem('Har1AngellePlant5').then((text5Value) => {
+                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
+                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text5Value)
+
+
+            }).done();
+        } catch (error) {
+        }
+
+       
+
+    }
 
     callQuery= () => {
 

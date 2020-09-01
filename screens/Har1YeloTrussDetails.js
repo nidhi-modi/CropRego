@@ -3517,8 +3517,7 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                 </View>
 
-                                <ScrollView>
-
+                              
                                 <View
                                     style={{
                                         borderBottomColor: 'black',
@@ -3543,7 +3542,8 @@ export default class Har1YeloTrussDetails extends React.Component {
 
                                     }}
                                 />
-                               
+                                 <ScrollView>
+
                                     <View style={styles.rowContainer222}>
 
 

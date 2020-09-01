@@ -31,17 +31,40 @@ export default class Har123 extends Component {
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
       this.callQuery()
+
+      this.getHar1YeloQuery()
     });
 
-    num = 2244444444444445555555555511111111111115552; // any number between 0 & 99
-    let result = ('0' + num).substr(-2);
-
-    console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII : "+ result);
 
 
     //this.callQuery()
   }
 
+  getHar1YeloQuery = () => {
+
+    try {
+      AsyncStorage.getItem('har1YeloTruss').then((text22Value) => {
+        //this.setState({ har1YeloPlant1: JSON.parse(text1Value) });
+        //har1YeloPlant1 = JSON.parse(text1Value);
+        console.log("HAR 1 Truss " + text22Value)
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('har1YeloPlant').then((text11Value) => {
+        //this.setState({ har1YeloPlant1: JSON.parse(text1Value) });
+        //har1YeloPlant1 = JSON.parse(text1Value);
+        console.log("HAR 1 Plant " + text11Value)
+
+
+      }).done();
+    } catch (error) {
+    }
+
+  }
 
   callQuery = () => {
 
