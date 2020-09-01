@@ -2182,7 +2182,7 @@ export default class Har3KmPlant2 extends React.Component {
                                     onPress={this.savePlantsToDbAlert}>
                                     <Text style={styles.buttonText}>Submit</Text>
                                     <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
-                                </TouchableOpacity>}F
+                                </TouchableOpacity>}
 
 
 
