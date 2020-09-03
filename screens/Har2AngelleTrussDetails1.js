@@ -413,7 +413,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
         }
 
 
-        numberWeek = 2000 + currentWeekNumber() - 2;
+        numberWeek = 2000 + currentWeekNumber() - 1;
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 
@@ -434,6 +434,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             });
 
+            numberWeek = 2000 + currentWeekNumber() - 1;
 
 
         } else if (abc === '1' && abc !== null) {
@@ -1530,7 +1531,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDb = () => {
 
-        if (this.state.trussNumber !== null && this.state.setFlowers !== null) {
+        if (this.state.trussNumber !== null && this.state.pruningNumber !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1594,42 +1595,61 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(dataSend11).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
 
-                    if ((parseInt(this.state.trussNumber) + 1) !== null && this.state.pruningNumber1 !== '') {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        this.saveTrussToDB1();
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                            this.setState({
+
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 1) !== null && this.state.pruningNumber1 !== '') {
+
+                                this.saveTrussToDB1();
 
 
-                    } else {
+                            } else {
 
-                        Alert.alert('Completed!')
+                                this.setState({
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                                    isLoading: false,
+                                    isDataSend: true,
 
-                    }
-                    this.setState({
+                                });
 
-                        isDataSend: true,
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+                        }
+
                     });
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -1702,7 +1722,8 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB1 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.setFlowers1 !== null) {
+
+        if ((parseInt(this.state.trussNumber) + 1) != null && this.state.pruningNumber1 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1766,41 +1787,64 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data1Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
+
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 2) !== null && this.state.pruningNumber2 !== '') {
-
-                        this.saveTrussToDB2();
 
 
-                    } else {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        Alert.alert('Completed!')
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                        if (response.status === 200) {
 
-                    }
-                    this.setState({
+                            this.setState({
 
-                        isDataSend: true,
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+
+                            if ((parseInt(this.state.trussNumber) + 2) !== null && this.state.pruningNumber2 !== '') {
+
+                                this.saveTrussToDB2();
+
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+                        }
+
                     });
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -1876,7 +1920,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB2 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.setFlowers2 !== null) {
+        if ((parseInt(this.state.trussNumber) + 2) != null && this.state.pruningNumber2 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -1941,41 +1985,63 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data2Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== '') {
-
-                        this.saveTrussToDB3();
 
 
-                    } else {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        Alert.alert('Completed!')
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                        if (response.status === 200) {
 
-                    }
-                    this.setState({
+                            this.setState({
 
-                        isDataSend: true,
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== '') {
+
+                                this.saveTrussToDB3();
+
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+                        }
+
                     });
+
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2039,7 +2105,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB3 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.setFlowers3 !== null) {
+        if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2104,41 +2170,68 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data3Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 4) !== null && this.state.pruningNumber4 !== '') {
-
-                        this.saveTrussToDB4();
 
 
-                    } else {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        Alert.alert('Completed!')
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                        if (response.status === 200) {
 
-                    }
+                            this.setState({
+
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 4) !== null && this.state.pruningNumber4 !== '') {
+
+                                this.saveTrussToDB4();
+
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+                        }
+
+                    });
+
+
+
                     this.setState({
 
+                        isLoading: false,
                         isDataSend: true,
+
                     });
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2207,7 +2300,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB4 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.setFlowers4 !== null) {
+        if ((parseInt(this.state.trussNumber) + 4) != null && this.state.pruningNumber4 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2270,41 +2363,65 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data4Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 5) !== null && this.state.pruningNumber5 !== '') {
-
-                        this.saveTrussToDB5();
 
 
-                    } else {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        Alert.alert('Completed!')
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                        if (response.status === 200) {
 
-                    }
-                    this.setState({
+                            this.setState({
 
-                        isDataSend: true,
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 5) !== null && this.state.pruningNumber5 !== '') {
+
+                                this.saveTrussToDB5();
+
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+
+                        }
+
                     });
+
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2367,7 +2484,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB5 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.setFlowers5 !== null) {
+        if ((parseInt(this.state.trussNumber) + 5) != null && this.state.pruningNumber5 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2428,45 +2545,69 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             }
 
-            console.log("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY : " + this.state.pruningNumber5);
-
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data5Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.PruningNumber6 !== '') {
 
-                        this.saveTrussToDB6();
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                            this.setState({
+
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.PruningNumber6 !== '') {
+
+                                this.saveTrussToDB6();
 
 
-                    } else {
+                            } else {
+                                this.setState({
 
-                        Alert.alert('Completed!')
+                                    isLoading: false,
+                                    isDataSend: true,
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                                });
+                                Alert.alert('Completed!')
 
-                    }
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+
+                        }
+
+                    });
+
+
+
                     this.setState({
 
+                        isLoading: false,
                         isDataSend: true,
+
                     });
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2530,7 +2671,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB6 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.setFlowers6 !== null) {
+        if ((parseInt(this.state.trussNumber) + 6) != null && this.state.pruningNumber6 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2593,41 +2734,65 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data6Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
+
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 7) !== null && this.state.pruningNumber7 !== '') {
 
-                        this.saveTrussToDB7();
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                            this.setState({
+
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+
+                            if ((parseInt(this.state.trussNumber) + 7) !== null && this.state.pruningNumber7 !== '') {
+
+                                this.saveTrussToDB7();
 
 
-                    } else {
+                            } else {
+                                this.setState({
 
-                        Alert.alert('Completed!')
+                                    isLoading: false,
+                                    isDataSend: true,
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                                });
 
-                    }
-                    this.setState({
+                                Alert.alert('Completed!')
 
-                        isDataSend: true,
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+
+                        }
+
                     });
+
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2690,7 +2855,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB7 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.setFlowers7 !== null) {
+        if ((parseInt(this.state.trussNumber) + 7) != null && this.state.pruningNumber7 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2754,41 +2919,64 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data7Send).then((result) => {
                     console.log(result);
+
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 8) !== null && this.state.pruningNumber8 !== '') {
 
-                        this.saveTrussToDB8();
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
 
 
-                    } else {
+                            this.setState({
 
-                        Alert.alert('Completed!')
+                                isLoading: true,
+                                isDataSend: true,
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                            });
+                            if ((parseInt(this.state.trussNumber) + 8) !== null && this.state.pruningNumber8 !== '') {
 
-                    }
-                    this.setState({
+                                this.saveTrussToDB8();
 
-                        isDataSend: true,
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+
+                        }
+
                     });
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2854,7 +3042,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB8 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.setFlowers8 !== null) {
+        if ((parseInt(this.state.trussNumber) + 8) != null && this.state.pruningNumber8 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -2917,41 +3105,68 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data8Send).then((result) => {
                     console.log(result);
+
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
+
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 9) !== null && this.state.pruningNumber9 !== '') {
 
-                        this.saveTrussToDB9();
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
 
 
-                    } else {
+                            this.setState({
 
-                        Alert.alert('Completed!')
+                                isLoading: true,
+                                isDataSend: true,
 
-                        this.props.navigation.navigate('Har2AngellePlant1')
+                            });
 
-                    }
-                    this.setState({
+                            if ((parseInt(this.state.trussNumber) + 9) !== null && this.state.pruningNumber9 !== '') {
 
-                        isDataSend: true,
+                                this.saveTrussToDB9();
+
+
+                            } else {
+
+
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har2AngellePlant1')
+
+                            }
+
+
+                        }
+
                     });
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -3013,7 +3228,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
     saveTrussToDB9 = () => {
 
-        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.setFlowers9 !== null) {
+        if ((parseInt(this.state.trussNumber) + 9) != null && this.state.pruningNumber9 !== null) {
 
             this.setState({
                 isLoading: true,
@@ -3076,34 +3291,51 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
 
                 db.addTrussDetails(data9Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
+
                     abc = '1';
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har2AngellePlant1')
 
 
-                    this.setState({
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                        callback=ctrlq&plantRow=${'227'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        isDataSend: true,
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                            this.setState({
+
+                                isLoading: false,
+                                isDataSend: true,
+        
+                            });
+        
+                            Alert.alert('Completed!')
+
+                            this.props.navigation.navigate('Har2AngellePlant1')
+
+
+                        }
+
                     });
+
+
+
+                    
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -3155,6 +3387,9 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
 
     }
+
+
+    
 
 
 
@@ -3443,12 +3678,11 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
                     <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
-                        <ScrollView style={styles.formContainer}
+                    <View style={styles.formContainer}
                             keyboardShouldPersistTaps='handled'>
 
 
-                            <View
-                                style={styles.container2226}>
+                           
 
                                 <View
                                     style={{
@@ -3517,6 +3751,8 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
                                 </View>
 
+                              
+
                                 <View
                                     style={{
                                         borderBottomColor: 'black',
@@ -3541,1688 +3777,1683 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
 
                                     }}
                                 />
+                                 <ScrollView>
+                                    <View style={styles.rowContainer222}>
 
-                                <View style={styles.rowContainer222}>
+
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+
+                                            }}
+                                        />
+
+
+
+
+                                        <TextInput
+                                            style={styles.textinputheight2}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            placeholderTextColor="#000000"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
+                                            error={errors.TrussNumber}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+
+                                            }}
+                                        />
+
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits}
+                                            value={this.state.setFruits.toString()}
+                                        />
+
+
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers')}
+                                            error={errors.SetFlowers}
+                                            value={this.state.setFlowers.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber')}
+                                            error={errors.PruningNumber}
+                                            value={this.state.pruningNumber.toString()}
+                                        />
+
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput1.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter')}
+                                            error={errors.FruitDiameter}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                    </View>
 
 
 
                                     <View
                                         style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
 
                                         }}
                                     />
 
+                                    <View style={styles.rowContainer222}>
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef1}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.lastWeekTextInput1.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber1')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1')}
+                                            error={errors.TrussNumber1}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber1.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput1 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits1')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput1.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits1}
+                                            value={this.state.setFruits1.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput1 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput1.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers1')}
+                                            error={errors.SetFlowers1}
+                                            value={this.state.setFlowers1.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput1 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput1.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1')}
+                                            error={errors.PruningNumber1}
+                                            value={this.state.pruningNumber1.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput1 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput2.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
 
-
-
-                                    <TextInput
-                                        style={styles.textinputheight2}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        placeholderTextColor="#000000"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
-                                        error={errors.TrussNumber}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-
-                                        }}
-                                    />
-
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits}
-                                        value={this.state.setFruits.toString()}
-                                    />
-
-
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers')}
-                                        error={errors.SetFlowers}
-                                        value={this.state.setFlowers.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber')}
-                                        error={errors.PruningNumber}
-                                        value={this.state.pruningNumber.toString()}
-                                    />
-
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput1.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter')}
-                                        error={errors.FruitDiameter}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                </View>
-
-
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef1}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.lastWeekTextInput1.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber1')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1')}
-                                        error={errors.TrussNumber1}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber1.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput1 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits1')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput1.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits1}
-                                        value={this.state.setFruits1.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput1 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput1.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers1')}
-                                        error={errors.SetFlowers1}
-                                        value={this.state.setFlowers1.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput1 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput1.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1')}
-                                        error={errors.PruningNumber1}
-                                        value={this.state.pruningNumber1.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput1 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput2.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        // underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef2}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.lastWeekTextInput2.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber2')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2')}
-                                        error={errors.TrussNumber2}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber2.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput2 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits2')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput2.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits2}
-                                        value={this.state.setFruits2.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput2 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput2.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers2')}
-                                        error={errors.SetFlowers2}
-                                        value={this.state.setFlowers2.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput2 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput2.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2')}
-                                        error={errors.PruningNumber2}
-                                        value={this.state.pruningNumber2.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput2 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput3.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef3}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput3.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber3')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3')}
-                                        error={errors.TrussNumber3}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber3.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput3 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits3')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput3.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits3}
-                                        value={this.state.setFruits3.toString()} />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput3 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput3.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers3')}
-                                        error={errors.SetFlowers3}
-                                        value={this.state.setFlowers3.toString()} />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput3 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput3.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3')}
-                                        error={errors.PruningNumber3}
-                                        value={this.state.pruningNumber3.toString()} />
-
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput3 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput4.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef4}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.lastWeekTextInput4.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber4')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4')}
-                                        error={errors.TrussNumber4}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber4.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput4 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits4')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput4.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits4}
-                                        value={this.state.setFruits4.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput4 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput4.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers4')}
-                                        error={errors.SetFlowers4}
-                                        value={this.state.setFlowers4.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput4 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput4.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4')}
-                                        error={errors.PruningNumber4}
-                                        value={this.state.pruningNumber4.toString()}
-                                    />
-
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput4 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput5.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef5}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitTextInput5.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber5')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5')}
-                                        error={errors.TrussNumber5}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber5.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput5 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits5')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput5.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits5}
-                                        value={this.state.setFruits5.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput5 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput5.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers5')}
-                                        error={errors.SetFlowers5}
-                                        value={this.state.setFlowers5.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput5 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput5.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5')}
-                                        error={errors.PruningNumber5}
-                                        value={this.state.pruningNumber5.toString()}
-                                    />
-
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput5 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef6}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber6')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6')}
-                                        error={errors.TrussNumber6}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber6.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput6 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits6')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput6.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits6}
-                                        value={this.state.setFruits6.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput6 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput6.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers6')}
-                                        error={errors.SetFlowers6}
-                                        value={this.state.setFlowers6.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput6 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput6.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6')}
-                                        error={errors.PruningNumber6}
-                                        value={this.state.pruningNumber6.toString()}
-                                    />
-
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput6 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef7}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber7')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7')}
-                                        error={errors.TrussNumber7}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber7.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput7 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits7')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput7.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits7}
-                                        value={this.state.setFruits7.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput7 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput7.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers7')}
-                                        error={errors.SetFlowers7}
-                                        value={this.state.setFlowers7.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput7 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput7.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7')}
-                                        error={errors.PruningNumber7}
-                                        value={this.state.pruningNumber7.toString()}
-
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput7 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef8}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber8')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8')}
-                                        error={errors.TrussNumber8}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber8.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput8 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits8')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput8.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits8}
-                                        value={this.state.setFruits8.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput8 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput8.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers8')}
-                                        error={errors.SetFlowers8}
-                                        value={this.state.setFlowers8.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput8 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput8.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8')}
-                                        error={errors.PruningNumber8}
-                                        value={this.state.pruningNumber8.toString()}
-                                    />
-
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput8 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderTopColor: 'black',
-                                        borderTopWidth: 1,
-
-                                    }}
-                                />
-
-                                <View style={styles.rowContainer222}>
-
-                                    <View
-                                        style={{
-                                            borderLeftColor: 'black',
-                                            borderLeftWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.textinputheight}
-                                        //underlineColorAndroid="black"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        multiline={false}
-                                        editable={false}
-                                        selectTextOnFocus={false}
-                                        returnKeyType={"next"}
-                                        ref={this.trussNumberRef9}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
-                                        //onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
-                                        error={errors.TrussNumber9}
-                                        blurOnSubmit={false}
-                                        value={this.state.trussNumber9.toString()}
-                                    />
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        returnKeyType={"next"}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFruitsTextInput9 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFruits9')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput9.focus(); }}
-                                        blurOnSubmit={false}
-                                        error={errors.SetFruits9}
-                                        value={this.state.setFruits9.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.setFlowersTextInput9 = input; }}
-                                        autoCorrect={false}
-                                        returnKeyType={"next"}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput9.focus(); }}
-                                        blurOnSubmit={false}
-                                        onChangeText={(text) => this.updateTextInput(text, 'setFlowers9')}
-                                        error={errors.SetFlowers9}
-                                        value={this.state.setFlowers9.toString()}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.pruningNumbersTextInput9 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput9.focus(); }}
-                                        onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9')}
-                                        error={errors.PruningNumber9}
-                                        value={this.state.pruningNumber9.toString()}
-                                    />
-
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                    <TextInput
-                                        style={styles.bottonColor}
-                                        underlineColorAndroid="black"
-                                        placeholderTextColor="#000000"
-                                        autoCapitalize="none"
-                                        multiline={false}
-                                        keyboardType={'numeric'}
-                                        ref={(input) => { this.fruitDiamterTextInput9 = input; }}
-                                        autoCorrect={false}
-                                        enablesReturnKeyAutomatically={true}
-                                        onFocus={this.onFocus}
-                                        returnKeyType={"done"}
-                                        onChangeText={this.onChangeText}
-                                        onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9')}
-                                        error={errors.FruitDiameter1}
-                                    />
-
-                                    <View
-                                        style={{
-                                            borderRightColor: 'black',
-                                            borderRightWidth: 1,
-                                        }}
-                                    />
-
-                                </View>
-
-                                <View
-                                    style={{
-                                        borderBottomColor: 'black',
-                                        borderBottomWidth: 1,
-                                    }}
-                                />
-
-                            </View>
-
-                            <View
-                                style={{
-                                    marginBottom: 20
-                                }}
-                            />
-
-                            <View style={styles.borderEdit}>
-
-                                <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
-
-                                    <View
-                                        style={{
-                                            marginTop: 1
-                                        }}
-                                    />
-
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Fruit Load</Text>
-                                        <Text style={styles.text5}>{this.state.fruitLoad}</Text>
                                     </View>
 
                                     <View
                                         style={{
-                                            marginBottom: 5
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
+
                                         }}
                                     />
 
-                                </View>
+                                    <View style={styles.rowContainer222}>
 
-                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Flowering Truss</Text>
-                                        <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            // underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef2}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.lastWeekTextInput2.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber2')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2')}
+                                            error={errors.TrussNumber2}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber2.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput2 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits2')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput2.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits2}
+                                            value={this.state.setFruits2.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput2 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput2.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers2')}
+                                            error={errors.SetFlowers2}
+                                            value={this.state.setFlowers2.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput2 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput2.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2')}
+                                            error={errors.PruningNumber2}
+                                            value={this.state.pruningNumber2.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput2 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput3.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
                                     </View>
-
 
                                     <View
                                         style={{
-                                            marginBottom: 5
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
+
                                         }}
                                     />
-                                </View>
 
-                                <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Setting Truss</Text>
-                                        <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                    <View style={styles.rowContainer222}>
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef3}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.setFruitsTextInput3.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber3')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3')}
+                                            error={errors.TrussNumber3}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber3.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput3 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits3')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput3.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits3}
+                                            value={this.state.setFruits3.toString()} />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput3 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput3.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers3')}
+                                            error={errors.SetFlowers3}
+                                            value={this.state.setFlowers3.toString()} />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput3 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput3.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3')}
+                                            error={errors.PruningNumber3}
+                                            value={this.state.pruningNumber3.toString()} />
+
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput3 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput4.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
                                     </View>
+
                                     <View
                                         style={{
-                                            marginBottom: 5
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
+
                                         }}
                                     />
-                                </View>
 
-                                <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Harvest Truss</Text>
-                                        <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                    <View style={styles.rowContainer222}>
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef4}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.lastWeekTextInput4.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber4')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4')}
+                                            error={errors.TrussNumber4}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber4.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput4 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits4')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput4.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits4}
+                                            value={this.state.setFruits4.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput4 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput4.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers4')}
+                                            error={errors.SetFlowers4}
+                                            value={this.state.setFlowers4.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput4 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput4.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4')}
+                                            error={errors.PruningNumber4}
+                                            value={this.state.pruningNumber4.toString()}
+                                        />
+
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput4 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput5.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
                                     </View>
+
                                     <View
                                         style={{
-                                            marginBottom: 5
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
+
                                         }}
                                     />
+
+                                    <View style={styles.rowContainer222}>
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef5}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.setFruitTextInput5.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber5')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5')}
+                                            error={errors.TrussNumber5}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber5.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput5 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits5')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput5.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits5}
+                                            value={this.state.setFruits5.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput5 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput5.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers5')}
+                                            error={errors.SetFlowers5}
+                                            value={this.state.setFlowers5.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput5 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput5.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5')}
+                                            error={errors.PruningNumber5}
+                                            value={this.state.pruningNumber5.toString()}
+                                        />
+
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput5 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                    </View>
+
+                                    <View
+                                        style={{
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
+
+                                        }}
+                                    />
+
+                                    <View style={styles.rowContainer222}>
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef6}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber6')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6')}
+                                            error={errors.TrussNumber6}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber6.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput6 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits6')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput6.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits6}
+                                            value={this.state.setFruits6.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput6 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput6.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers6')}
+                                            error={errors.SetFlowers6}
+                                            value={this.state.setFlowers6.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput6 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput6.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6')}
+                                            error={errors.PruningNumber6}
+                                            value={this.state.pruningNumber6.toString()}
+                                        />
+
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput6 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                    </View>
+
+                                    <View
+                                        style={{
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
+
+                                        }}
+                                    />
+
+                                    <View style={styles.rowContainer222}>
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef7}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber7')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7')}
+                                            error={errors.TrussNumber7}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber7.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput7 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits7')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput7.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits7}
+                                            value={this.state.setFruits7.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput7 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput7.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers7')}
+                                            error={errors.SetFlowers7}
+                                            value={this.state.setFlowers7.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput7 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput7.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7')}
+                                            error={errors.PruningNumber7}
+                                            value={this.state.pruningNumber7.toString()}
+
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput7 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                    </View>
+
+                                    <View
+                                        style={{
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
+
+                                        }}
+                                    />
+
+                                    <View style={styles.rowContainer222}>
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef8}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber8')}
+                                            onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8')}
+                                            error={errors.TrussNumber8}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber8.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput8 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits8')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput8.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits8}
+                                            value={this.state.setFruits8.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput8 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput8.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers8')}
+                                            error={errors.SetFlowers8}
+                                            value={this.state.setFlowers8.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput8 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput8.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8')}
+                                            error={errors.PruningNumber8}
+                                            value={this.state.pruningNumber8.toString()}
+                                        />
+
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput8 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                    </View>
+
+                                    <View
+                                        style={{
+                                            borderTopColor: 'black',
+                                            borderTopWidth: 1,
+
+                                        }}
+                                    />
+
+                                    <View style={styles.rowContainer222}>
+
+                                        <View
+                                            style={{
+                                                borderLeftColor: 'black',
+                                                borderLeftWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.textinputheight}
+                                            //underlineColorAndroid="black"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            multiline={false}
+                                            editable={false}
+                                            selectTextOnFocus={false}
+                                            returnKeyType={"next"}
+                                            ref={this.trussNumberRef9}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
+                                            //onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
+                                            onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
+                                            error={errors.TrussNumber9}
+                                            blurOnSubmit={false}
+                                            value={this.state.trussNumber9.toString()}
+                                        />
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            returnKeyType={"next"}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFruitsTextInput9 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFruits9')}
+                                            onSubmitEditing={() => { this.setFlowersTextInput9.focus(); }}
+                                            blurOnSubmit={false}
+                                            error={errors.SetFruits9}
+                                            value={this.state.setFruits9.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.setFlowersTextInput9 = input; }}
+                                            autoCorrect={false}
+                                            returnKeyType={"next"}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.pruningNumbersTextInput9.focus(); }}
+                                            blurOnSubmit={false}
+                                            onChangeText={(text) => this.updateTextInput(text, 'setFlowers9')}
+                                            error={errors.SetFlowers9}
+                                            value={this.state.setFlowers9.toString()}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.pruningNumbersTextInput9 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onSubmitEditing={() => { this.fruitDiamterTextInput9.focus(); }}
+                                            onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9')}
+                                            error={errors.PruningNumber9}
+                                            value={this.state.pruningNumber9.toString()}
+                                        />
+
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                        <TextInput
+                                            style={styles.bottonColor}
+                                            underlineColorAndroid="black"
+                                            placeholderTextColor="#000000"
+                                            autoCapitalize="none"
+                                            multiline={false}
+                                            keyboardType={'numeric'}
+                                            ref={(input) => { this.fruitDiamterTextInput9 = input; }}
+                                            autoCorrect={false}
+                                            enablesReturnKeyAutomatically={true}
+                                            onFocus={this.onFocus}
+                                            returnKeyType={"done"}
+                                            onChangeText={this.onChangeText}
+                                            onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9')}
+                                            error={errors.FruitDiameter1}
+                                        />
+
+                                        <View
+                                            style={{
+                                                borderRightColor: 'black',
+                                                borderRightWidth: 1,
+                                            }}
+                                        />
+
+                                    </View>
+
+                                    <View
+                                        style={{
+                                            borderBottomColor: 'black',
+                                            borderBottomWidth: 1,
+                                        }}
+                                    />
+
+                               
+
+                                <View
+                                    style={{
+                                        marginBottom: 20
+                                    }}
+                                />
+
+                                <View style={styles.borderEdit}>
+
+                                    <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
+
+                                        <View
+                                            style={{
+                                                marginTop: 1
+                                            }}
+                                        />
+
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Fruit Load</Text>
+                                            <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                                        </View>
+
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
+
+                                    </View>
+
+                                    <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Flowering Truss</Text>
+                                            <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                                        </View>
+
+
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
+                                    </View>
+
+                                    <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Setting Truss</Text>
+                                            <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
+                                    </View>
+
+                                    <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.text4}>Harvest Truss</Text>
+                                            <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                marginBottom: 5
+                                            }}
+                                        />
+                                    </View>
                                 </View>
-                            </View>
 
-                            <TouchableOpacity
-                                style={styles.buttonContainer}
-                                onPress={this.saveTrussToDb}>
-                                <Text style={styles.buttonText}>Submit</Text>
-                            </TouchableOpacity>
-
+                                <TouchableOpacity
+                                    style={styles.buttonContainer}
+                                    onPress={this.saveTrussToDb}>
+                                    <Text style={styles.buttonText}>Submit</Text>
+                                </TouchableOpacity>
 
 
-
-
-
-
-
-                        </ScrollView>
+                            </ScrollView>
+                        </View>
                     </ImageBackground>
                 </View>
 

@@ -1526,8 +1526,6 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
                 }
             });
     }
-
-
     saveTrussToDb = () => {
 
         if (this.state.trussNumber !== null && this.state.pruningNumber !== null) {
@@ -1594,42 +1592,61 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(dataSend11).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
 
-                    if ((parseInt(this.state.trussNumber) + 1) !== null && this.state.pruningNumber1 !== '') {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        this.saveTrussToDB1();
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                            this.setState({
+
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 1) !== null && this.state.pruningNumber1 !== '') {
+
+                                this.saveTrussToDB1();
 
 
-                    } else {
+                            } else {
 
-                        Alert.alert('Completed!')
+                                this.setState({
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                                    isLoading: false,
+                                    isDataSend: true,
 
-                    }
-                    this.setState({
+                                });
 
-                        isDataSend: true,
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+                        }
+
                     });
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -1664,7 +1681,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                        this.props.navigation.navigate('Har2AngellePlant1')
 
                     }
                     this.setState({
@@ -1701,6 +1718,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
     }
 
     saveTrussToDB1 = () => {
+
 
         if ((parseInt(this.state.trussNumber) + 1) != null && this.state.pruningNumber1 !== null) {
 
@@ -1766,41 +1784,64 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
-
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data1Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
+
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 2) !== null && this.state.pruningNumber2 !== '') {
-
-                        this.saveTrussToDB2();
 
 
-                    } else {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        Alert.alert('Completed!')
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                        if (response.status === 200) {
 
-                    }
-                    this.setState({
+                            this.setState({
 
-                        isDataSend: true,
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+
+                            if ((parseInt(this.state.trussNumber) + 2) !== null && this.state.pruningNumber2 !== '') {
+
+                                this.saveTrussToDB2();
+
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+                        }
+
                     });
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -1941,41 +1982,63 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data2Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== '') {
-
-                        this.saveTrussToDB3();
 
 
-                    } else {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        Alert.alert('Completed!')
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                        if (response.status === 200) {
 
-                    }
-                    this.setState({
+                            this.setState({
 
-                        isDataSend: true,
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 3) !== null && this.state.pruningNumber3 !== '') {
+
+                                this.saveTrussToDB3();
+
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+                        }
+
                     });
+
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2104,41 +2167,68 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data3Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 4) !== null && this.state.pruningNumber4 !== '') {
-
-                        this.saveTrussToDB4();
 
 
-                    } else {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        Alert.alert('Completed!')
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                        if (response.status === 200) {
 
-                    }
+                            this.setState({
+
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 4) !== null && this.state.pruningNumber4 !== '') {
+
+                                this.saveTrussToDB4();
+
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+                        }
+
+                    });
+
+
+
                     this.setState({
 
+                        isLoading: false,
                         isDataSend: true,
+
                     });
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2270,41 +2360,65 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data4Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 5) !== null && this.state.pruningNumber5 !== '') {
-
-                        this.saveTrussToDB5();
 
 
-                    } else {
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        Alert.alert('Completed!')
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                        if (response.status === 200) {
 
-                    }
-                    this.setState({
+                            this.setState({
 
-                        isDataSend: true,
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 5) !== null && this.state.pruningNumber5 !== '') {
+
+                                this.saveTrussToDB5();
+
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+
+                        }
+
                     });
+
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2428,45 +2542,69 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             }
 
-            console.log("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY : " + this.state.pruningNumber5);
-
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data5Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.PruningNumber6 !== '') {
 
-                        this.saveTrussToDB6();
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                            this.setState({
+
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+                            if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.PruningNumber6 !== '') {
+
+                                this.saveTrussToDB6();
 
 
-                    } else {
+                            } else {
+                                this.setState({
 
-                        Alert.alert('Completed!')
+                                    isLoading: false,
+                                    isDataSend: true,
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                                });
+                                Alert.alert('Completed!')
 
-                    }
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+
+                        }
+
+                    });
+
+
+
                     this.setState({
 
+                        isLoading: false,
                         isDataSend: true,
+
                     });
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2593,41 +2731,65 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data6Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
+
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 7) !== null && this.state.pruningNumber7 !== '') {
 
-                        this.saveTrussToDB7();
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                            this.setState({
+
+                                isLoading: true,
+                                isDataSend: true,
+
+                            });
+
+                            if ((parseInt(this.state.trussNumber) + 7) !== null && this.state.pruningNumber7 !== '') {
+
+                                this.saveTrussToDB7();
 
 
-                    } else {
+                            } else {
+                                this.setState({
 
-                        Alert.alert('Completed!')
+                                    isLoading: false,
+                                    isDataSend: true,
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                                });
 
-                    }
-                    this.setState({
+                                Alert.alert('Completed!')
 
-                        isDataSend: true,
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+
+                        }
+
                     });
+
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2754,41 +2916,64 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data7Send).then((result) => {
                     console.log(result);
+
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 8) !== null && this.state.pruningNumber8 !== '') {
 
-                        this.saveTrussToDB8();
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
 
 
-                    } else {
+                            this.setState({
 
-                        Alert.alert('Completed!')
+                                isLoading: true,
+                                isDataSend: true,
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                            });
+                            if ((parseInt(this.state.trussNumber) + 8) !== null && this.state.pruningNumber8 !== '') {
 
-                    }
-                    this.setState({
+                                this.saveTrussToDB8();
 
-                        isDataSend: true,
+
+                            } else {
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+
+                        }
+
                     });
+
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -2917,41 +3102,68 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
                 db.addTrussDetails(data8Send).then((result) => {
                     console.log(result);
+
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
+
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 9) !== null && this.state.pruningNumber9 !== '') {
 
-                        this.saveTrussToDB9();
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
 
 
-                    } else {
+                            this.setState({
 
-                        Alert.alert('Completed!')
+                                isLoading: true,
+                                isDataSend: true,
 
-                        this.props.navigation.navigate('Har3BambelloPlant1')
+                            });
 
-                    }
-                    this.setState({
+                            if ((parseInt(this.state.trussNumber) + 9) !== null && this.state.pruningNumber9 !== '') {
 
-                        isDataSend: true,
+                                this.saveTrussToDB9();
+
+
+                            } else {
+
+
+
+                                this.setState({
+
+                                    isLoading: false,
+                                    isDataSend: true,
+
+                                });
+
+                                Alert.alert('Completed!')
+
+                                this.props.navigation.navigate('Har3BambelloPlant1')
+
+                            }
+
+
+                        }
+
                     });
+
+
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -3076,34 +3288,51 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
             if (this.state.isItConnected === 'Online') {
 
-                const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                const url = `${scriptUrl}?
-                callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                console.log("URL : " + url);
-                fetch(url, { mode: 'no-cors' }).then(
-                    () => { this.setState({ sent: true }); },
-                    () => { this.setState({ error: true }); }
-                );
 
 
                 db.addTrussDetails(data9Send).then((result) => {
                     console.log(result);
                     this.setState({
-                        isLoading: false,
+
+                        isLoading: true,
                         isDataSend: true,
 
                     });
+
                     abc = '1';
-                    Alert.alert('Completed!')
-
-                    this.props.navigation.navigate('Har3BambelloPlant1')
 
 
-                    this.setState({
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                    const url = `${scriptUrl}?
+                        callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
-                        isDataSend: true,
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                            this.setState({
+
+                                isLoading: false,
+                                isDataSend: true,
+        
+                            });
+        
+                            Alert.alert('Completed!')
+
+                            this.props.navigation.navigate('Har3BambelloPlant1')
+
+
+                        }
+
                     });
+
+
+
+                    
+
+
                     abc = '1';
 
                 }).catch((err) => {
@@ -3155,7 +3384,6 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
 
 
     }
-
 
 
     onSubmitTrussNumber() {
