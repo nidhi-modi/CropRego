@@ -30,9 +30,9 @@ export default class Har123 extends Component {
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
-      this.callQuery()
+      //this.callQuery()
 
-      this.getHar1YeloQuery()
+      //this.getHar1YeloQuery()
     });
 
 
@@ -72,7 +72,6 @@ export default class Har123 extends Component {
       AsyncStorage.getItem('har1Yelo1').then((text1Value) => {
         this.setState({ har1YeloPlant1: JSON.parse(text1Value) });
         har1YeloPlant1 = JSON.parse(text1Value);
-        console.log("HARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR " + this.state.har1YeloPlant1)
 
 
       }).done();
@@ -83,7 +82,6 @@ export default class Har123 extends Component {
       AsyncStorage.getItem('har1Yelo2').then((text2Value) => {
         this.setState({ har1YeloPlant2: JSON.parse(text2Value) });
         har1YeloPlant2 = JSON.parse(text2Value)
-        console.log("HARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR " + this.state.har1YeloPlant2)
 
       }).done();
     } catch (error) {
@@ -93,7 +91,6 @@ export default class Har123 extends Component {
       AsyncStorage.getItem('har1Yelo3').then((text3Value) => {
         this.setState({ har1YeloPlant3: JSON.parse(text3Value) });
         har1YeloPlant3 = JSON.parse(text3Value)
-        console.log("HARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR " + text3Value)
 
       }).done();
     } catch (error) {
@@ -104,7 +101,6 @@ export default class Har123 extends Component {
       AsyncStorage.getItem('har1Yelo4').then((text4Value) => {
         this.setState({ har1YeloPlant4: JSON.parse(text4Value) });
         har1YeloPlant4 = JSON.parse(text4Value)
-        console.log("HARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR " + text4Value)
 
       }).done();
     } catch (error) {
@@ -115,7 +111,6 @@ export default class Har123 extends Component {
       AsyncStorage.getItem('har1Yelo5').then((text5Value) => {
         this.setState({ har1YeloPlant5: JSON.parse(text5Value) });
         har1YeloPlant5 = JSON.parse(text5Value)
-        console.log("HARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR " + text5Value)
 
       }).done();
     } catch (error) {

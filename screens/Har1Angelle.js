@@ -17,10 +17,16 @@ export default class Har1Angelle extends Component {
         this.state = {
 
             dataSet1: 0,
-            dataSet2: false,
-            dataSet3: false,
-            dataSet4: false,
-            dataSet5: false,
+            dataSet2: 0,
+            dataSet3: 0,
+            dataSet4: 0,
+            dataSet5: 0,
+
+            dataSet10: 0,
+            dataSet20: 0,
+            dataSet30: 0,
+            dataSet40: 0,
+            dataSet50: 0,
             week:''
 
 
@@ -38,7 +44,8 @@ export default class Har1Angelle extends Component {
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
             
-            this.callQuery()
+           // this.callQuery()
+            
 
         });
 
@@ -48,7 +55,7 @@ export default class Har1Angelle extends Component {
     callDataFromPlant1=() => {
 
         try {
-            AsyncStorage.getItem('Har1AngellePlant1').then((text1Value) => {
+            AsyncStorage.getItem('Har1YeloPlant').then((text1Value) => {
                 //this.setState({ fullySetTruss: JSON.parse(text2Value) });
                 console.log("ppppppppppppppppppppppppppppppppppppppp : "+text1Value)
 
@@ -58,45 +65,16 @@ export default class Har1Angelle extends Component {
         }
 
         try {
-            AsyncStorage.getItem('Har1AngellePlant2').then((text2Value) => {
+            AsyncStorage.getItem('Har1YeloTruss').then((text2Value) => {
                 //this.setState({ fullySetTruss: JSON.parse(text2Value) });
-                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text2Value)
+                console.log("ttttttttttttttttttttttttttttttttttttt : "+text2Value)
 
 
             }).done();
         } catch (error) {
         }
 
-        try {
-            AsyncStorage.getItem('Har1AngellePlant3').then((text3Value) => {
-                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
-                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text3Value)
-
-
-            }).done();
-        } catch (error) {
-        }
-
-        try {
-            AsyncStorage.getItem('Har1AngellePlant4').then((text4Value) => {
-                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
-                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text4Value)
-
-
-            }).done();
-        } catch (error) {
-        }
-
-        try {
-            AsyncStorage.getItem('Har1AngellePlant5').then((text5Value) => {
-                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
-                console.log("ppppppppppppppppppppppppppppppppppppppp : "+text5Value)
-
-
-            }).done();
-        } catch (error) {
-        }
-
+      
        
 
     }
@@ -202,6 +180,10 @@ export default class Har1Angelle extends Component {
             })
 
         }, 6000);
+
+       
+
+
 
 
 
