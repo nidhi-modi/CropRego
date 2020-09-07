@@ -102,6 +102,9 @@ export default class Database {
     };
 
 
+    
+
+
 
 
     closeDatabase(db) {
@@ -167,14 +170,14 @@ export default class Database {
         });
     }
 
-    plantByWeekInList(name,week) {
+    plantByWeekInList(name) {
         try {
         return new Promise((resolve) => {
             const plantDetails = [];
             this.initDB().then((db) => {
                 db.transaction((tx) => {
                     //need to add plant name, plant row and plant week 
-                    tx.executeSql('SELECT p.plantId, p.plantNumber, p.plantRow, p.plantName, p.plantWeek, p.leavesPerPlant, p.fullySetTruss, p.setTrussLength, p.weeklyGrowth, p.floweringTrussHeight, p.leafLength, p.leafWidth, p.stmDiameter, p.lastWeekStmDiameter FROM PlantDetails p WHERE plantName = ? AND plantWeek = ?', [name,week]).then(([tx, results]) => {
+                    tx.executeSql('SELECT p.plantId, p.plantNumber, p.plantRow, p.plantName, p.plantWeek, p.leavesPerPlant, p.fullySetTruss, p.setTrussLength, p.weeklyGrowth, p.floweringTrussHeight, p.leafLength, p.leafWidth, p.stmDiameter, p.lastWeekStmDiameter FROM PlantDetails p WHERE plantName = ?', [name]).then(([tx, results]) => {
                         console.log("Query completed");
                         var len = results.rows.length;
                         for (let i = 0; i < len; i++) {

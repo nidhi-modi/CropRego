@@ -31,6 +31,8 @@ export default class PlantDetails extends Component {
     componentDidMount() {
 
         //this._subscribe = this.props.navigation.addListener('didFocus', () => {
+
+        console.log("Get name of the plant : "+this.props.route.params.plantName);
             
         db.plantsById(this.props.route.params.plantId).then((data) => {
             console.log(data);
@@ -71,9 +73,49 @@ export default class PlantDetails extends Component {
 
     onYesPress(){
 
+        if(this.props.route.params.plantName === 'HAR 1 - Yelo'){
+
+            db.deleteplants(this.state.id);
+            this.props.navigation.navigate('Har1YeloPlantList')
+
+        }else if(this.props.route.params.plantName === 'HAR 1 - Angelle'){
+
+            db.deleteplants(this.state.id);
+            this.props.navigation.navigate('Har1AngellePlantList')
+
+
+        }else if(this.props.route.params.plantName === 'HAR 1 - Red Delight'){
+
+            db.deleteplants(this.state.id);
+            this.props.navigation.navigate('Har1RedDelightPlantList')
+
+
+        }else if(this.props.route.params.plantName === 'HAR 2 - Angelle'){
+
+            db.deleteplants(this.state.id);
+            this.props.navigation.navigate('Har2AngellePlantList')
+
+
+        }else if(this.props.route.params.plantName === 'HAR 3 - KM5512'){
+
+            db.deleteplants(this.state.id);
+            this.props.navigation.navigate('Har3KmPlantList')
+
+
+        }else if(this.props.route.params.plantName === 'HAR 3 - Bambello'){
+
+            db.deleteplants(this.state.id);
+            this.props.navigation.navigate('Har3BambelloPlantList')
+
+        }else{
+
+            db.deleteplants(this.state.id);
+            this.props.navigation.navigate('PlantList')
+
+
+        }
         
-        db.deleteplants(this.state.id);
-        this.props.navigation.navigate('PlantList')
+       
     }
 
 
@@ -96,38 +138,36 @@ export default class PlantDetails extends Component {
                     <Card style={styles.container}>
                         <View style={styles.subContainer}>
 
+                          
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Plant Id :  {this.state.plant.plantId}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Plant Name :  {this.state.plant.plantName}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Plant Name :  {this.state.plant.plantName}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Leaves Per Plant :  {this.state.plant.leavesPerPlant}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Leaves Per Plant :  {this.state.plant.leavesPerPlant}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Fully Set Truss :  {this.state.plant.fullySetTruss}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Fully Set Truss :  {this.state.plant.fullySetTruss}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Set Truss Length :  {this.state.plant.setTrussLength}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Set Truss Length :  {this.state.plant.setTrussLength}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Weekly Growth :  {this.state.plant.weeklyGrowth}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Weekly Growth :  {this.state.plant.weeklyGrowth}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Flowering Truss Height :  {this.state.plant.floweringTrussHeight}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Flowering Truss Height :  {this.state.plant.floweringTrussHeight}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Leaf Length :  {this.state.plant.leafLength}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Leaf Length :  {this.state.plant.leafLength}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Leaf Width :  {this.state.plant.leafWidth}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Leaf Width :  {this.state.plant.leafWidth}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Stem Diameter :  {this.state.plant.stmDiameter}</Text>
                             </View>
                             <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Stem Diameter :  {this.state.plant.stmDiameter}</Text>
-                            </View>
-                            <View>
-                                <Text style={{ fontSize: 20, marginTop: 10 }}>Last Week Stem Diameter :  {this.state.plant.lastWeekStmDiameter}</Text>
+                                <Text style={{ fontSize: 17, marginTop: 10 }}>Last Week Stem Diameter :  {this.state.plant.lastWeekStmDiameter}</Text>
                             </View>
 
                         </View>
@@ -161,7 +201,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         right: 5,
-        bottom: 10,
+        bottom: 12,
     },
     subContainer: {
         flex: 1,
@@ -170,6 +210,13 @@ const styles = StyleSheet.create({
         borderBottomColor: 'red',
 
 
+    },
+
+    FloatingButtonStyle: {
+
+        resizeMode: 'contain',
+        marginLeft: 15,
+        
     },
     activity: {
         position: 'absolute',

@@ -31,19 +31,19 @@ export default class PlantList extends Component {
   componentDidMount() {
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
-            
+
       this.getPlants();
-  });
-  
-      this.getPlants();
-    
+    });
+
+    //this.getPlants();
+
 
   }
 
   _onRefresh = () => {
-    this.setState({refreshing: true});
+    this.setState({ refreshing: true });
     this.getPlants();
-    
+
   }
 
   getTruss = () => {
@@ -57,7 +57,7 @@ export default class PlantList extends Component {
       });
     }).catch((err) => {
       console.log(err);
-      
+
     })
   }
 
@@ -118,7 +118,7 @@ export default class PlantList extends Component {
       )
     }
 
-   
+
     if (this.state.plants.length === 0) {
       return (
         <SafeAreaView style={styles.safeContainer}>
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
     padding: 16,
     fontSize: 24,
     color: 'black',
-    textAlign : 'center',
+    textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center'
   }

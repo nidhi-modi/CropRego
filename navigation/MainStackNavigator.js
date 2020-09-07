@@ -78,6 +78,13 @@ import Har1RedDelightTrussDetails1 from '../screens/Har1RedDelightTrussDetails1'
 import Har1RedDelightTrussDetails2 from '../screens/Har1RedDelightTrussDetails2'
 import Har1RedDelightDataChecker1 from '../screens/Har1RedDelightDataChecker1'
 import Har1RedDelightDataChecker2 from '../screens/Har1RedDelightDataChecker2'
+import Har1YeloPlantList from '../screens/Har1YeloPlantList'
+import Har1AngellePlantList from '../screens/Har1AngellePlantList'
+import Har1RedDelightPlantList from '../screens/Har1RedDelightPlantList'
+import Har2AngellePlantList from '../screens/Har2AngellePlantList'
+import Har3KmPlantList from '../screens/Har3KmPlantList'
+import Har3BambelloPlantList from '../screens/Har3BambelloPlantList'
+
 
 
 const Stack = createStackNavigator();
@@ -161,6 +168,128 @@ function MainStackNavigator() {
           , title: 'T&G Global'
         })} />
 
+        <Stack.Screen name='Har1YeloPlantList' component={Har1YeloPlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 1 Yelo'
+        })} />
+
+        <Stack.Screen name='Har1AngellePlantList' component={Har1AngellePlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 1 Angelle'
+        })} />
+
+        <Stack.Screen name='Har1RedDelightPlantList' component={Har1RedDelightPlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 1 Red Delight'
+        })} />
+
+        <Stack.Screen name='Har2AngellePlantList' component={Har1RedDelightPlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 2 Angelle'
+        })} />
+
+        <Stack.Screen name='Har3KmPlantList' component={Har3KmPlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 3 KM5512'
+        })} />
+
+        <Stack.Screen name='Har3BambelloPlantList' component={Har3BambelloPlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 3 Bambello'
+        })} />
+
+
+
 
         <Stack.Screen name='Har456' component={Har456} options={({ navigation }) => ({
           headerRight: () =>
@@ -239,7 +368,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har1YeloPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -355,7 +484,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har1AngellePlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -387,7 +516,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har1RedDelightPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -419,7 +548,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har1RedDelightPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -597,7 +726,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har2AngellePlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -630,7 +759,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har2AngellePlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -803,7 +932,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har3KmPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -835,7 +964,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har3KmPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -1010,7 +1139,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har3BambelloPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -1042,7 +1171,7 @@ function MainStackNavigator() {
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('PlantList')}>
+                onPress={() => navigation.navigate('Har3BambelloPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 

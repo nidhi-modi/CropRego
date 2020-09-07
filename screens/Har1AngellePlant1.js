@@ -635,25 +635,16 @@ export default class Har1AngellePlant1 extends React.Component {
                 db.plantsByWeekNumberAndName(no, numberWeek, 'HAR 1 - Angelle').then((data) => {
                     console.log(data);
                     console.log("Calling database")
-                    if (data !== null || data !== '' || data !== undefined) {
                         presentWeekData = 1
                         this.setState({
                             checkWeeksData: presentWeekData,
                         });
                         presentWeekData = 0
 
-                    } else {
-                        presentWeekData = 0
-                        this.setState({
-                            checkWeeksData: presentWeekData,
+                        this.setItem('yelo1',this.state.checkWeeksData)
+                        console.log("uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu : "+this.state.checkWeeksData);
 
-                        });
-                        presentWeekData = 0
-
-
-                    }
-
-
+                 
                 }).catch((err) => {
                     console.log(err);
                     presentWeekData = 0
@@ -661,6 +652,7 @@ export default class Har1AngellePlant1 extends React.Component {
                         checkWeeksData: presentWeekData,
 
                     });
+                    this.setItem(yelo1,this.state.checkWeeksData)
                     presentWeekData = 0
 
                 })
@@ -1356,6 +1348,14 @@ export default class Har1AngellePlant1 extends React.Component {
                                                     });
                                                     abc = '1';
 
+                                                    presentWeekData = 1
+                                                    this.setState({
+                                                        checkWeeksData: presentWeekData,
+                                                    });
+                                                    this.setItem(yelo1,this.state.checkWeeksData)
+
+                                                    presentWeekData = 0
+
                                                     Alert.alert('Completed!')
                                                     this.props.navigation.navigate('Har1Angelle')
                                                     this.setState({
@@ -1384,6 +1384,14 @@ export default class Har1AngellePlant1 extends React.Component {
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
+
+                                                    presentWeekData = 1
+                                                    this.setState({
+                                                        checkWeeksData: presentWeekData,
+                                                    });
+                                                    this.setItem(yelo1,this.state.checkWeeksData)
+
+                                                    presentWeekData = 0
 
                                                     Alert.alert('Completed!')
                                                     this.props.navigation.navigate('Har1Angelle')

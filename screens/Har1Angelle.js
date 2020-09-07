@@ -55,8 +55,7 @@ export default class Har1Angelle extends Component {
     callDataFromPlant1=() => {
 
         try {
-            AsyncStorage.getItem('Har1YeloPlant').then((text1Value) => {
-                //this.setState({ fullySetTruss: JSON.parse(text2Value) });
+            AsyncStorage.getItem('yelo1').then((text1Value) => {
                 console.log("ppppppppppppppppppppppppppppppppppppppp : "+text1Value)
 
 
@@ -64,7 +63,7 @@ export default class Har1Angelle extends Component {
         } catch (error) {
         }
 
-        try {
+       /* try {
             AsyncStorage.getItem('Har1YeloTruss').then((text2Value) => {
                 //this.setState({ fullySetTruss: JSON.parse(text2Value) });
                 console.log("ttttttttttttttttttttttttttttttttttttt : "+text2Value)
@@ -72,7 +71,7 @@ export default class Har1Angelle extends Component {
 
             }).done();
         } catch (error) {
-        }
+        }*/
 
       
        
