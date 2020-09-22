@@ -48,7 +48,7 @@ const db = new Database();
 let abc, plantNo;
 let weekNum = 2010;
 var numberWeek;
-let no1, no2, no3, no4, no5, no6, no7, no8, no9, no10, no;
+let no1, no2, no3, no4, no5, no;
 var presentWeekData = 0;
 var presentWeekTrussData = 0;
 
@@ -66,7 +66,7 @@ var currentWeekNumber = require('current-week-number');
 
 
 
-export default class Ger1MerlicePlant1 extends React.Component {
+export default class Har4RedDelightPlant2 extends React.Component {
 
 
 
@@ -176,6 +176,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
 
             checkWeeksData: '',
             checkWeeksTrussData: '',
+
 
         };
 
@@ -628,44 +629,11 @@ export default class Ger1MerlicePlant1 extends React.Component {
         } else {
 
         }
-        if (this.props.route.params.plant6 !== undefined) {
-            no6 = this.props.route.params.plant6;
-            console.log("Plant " + JSON.stringify(no6));
-        } else {
-
-        }
-
-        if (this.props.route.params.plant7 !== undefined) {
-            no7 = this.props.route.params.plant7;
-            console.log("Plant " + JSON.stringify(no7));
-        } else {
-        }
-
-        if (this.props.route.params.plant8 !== undefined) {
-            no8 = this.props.route.params.plant8;
-            console.log("Plant " + JSON.stringify(no8));
-        } else {
-
-        }
-
-        if (this.props.route.params.plant9 !== undefined) {
-            no9 = this.props.route.params.plant9;
-            console.log("Plant " + JSON.stringify(no9));
-        } else {
-
-        }
-
-        if (this.props.route.params.plant10 !== undefined) {
-            no10 = this.props.route.params.plant10;
-            console.log("Plant " + JSON.stringify(no10));
-        } else {
-
-        }
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
             setTimeout(() => {
-                db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 1 - Merlice', '45/46').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 4 - Red Delight', '456').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -702,9 +670,10 @@ export default class Ger1MerlicePlant1 extends React.Component {
 
             }, 1000);
 
+
             setTimeout(() => {
 
-                db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 1 - Merlice', '45/46').then((data1) => {
+                db.trussByWeekNumberRowAndName(no, numberWeek, 'HAR 4 - Red Delight', '456').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     if (data1 !== null || data1 !== '' || data1 !== undefined) {
@@ -741,7 +710,6 @@ export default class Ger1MerlicePlant1 extends React.Component {
         });
 
         console.log("Check DATAAAAAAAAAAAAAAAAAAAA : " + presentWeekData);
-
 
 
         /*this.ShowHideFullySetComponent();
@@ -795,7 +763,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 4 - Red Delight', '456').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -820,7 +788,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 4 - Red Delight', '456').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -846,7 +814,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 4 - Red Delight', '456').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -872,7 +840,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 4 - Red Delight', '456').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -898,7 +866,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 4 - Red Delight', '456').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -915,141 +883,6 @@ export default class Ger1MerlicePlant1 extends React.Component {
                             no5 = null;
 
 
-                        }else{
-
-                            if (no6 !== undefined && no6 !== null) {
-
-                                console.log("No5 Value:", no6);
-    
-                                no = '6';
-    
-    
-                                db.plantsByWeekRowNumberAndName(no6, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
-                                    console.log(data);
-                                    console.log("Calling database")
-                                    plant = data;
-                                    this.setState({
-                                        plant,
-                                        dataPresent: true,
-    
-                                    });
-                                }).catch((err) => {
-                                    console.log(err);
-    
-                                })
-    
-                                no6 = null;
-    
-    
-                            }else{
-
-                                if (no7 !== undefined && no7 !== null) {
-
-                                    console.log("No5 Value:", no7);
-        
-                                    no = '7';
-        
-        
-                                    db.plantsByWeekRowNumberAndName(no7, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
-                                        console.log(data);
-                                        console.log("Calling database")
-                                        plant = data;
-                                        this.setState({
-                                            plant,
-                                            dataPresent: true,
-        
-                                        });
-                                    }).catch((err) => {
-                                        console.log(err);
-        
-                                    })
-        
-                                    no7 = null;
-        
-        
-                                }else{
-
-                                    if (no8 !== undefined && no8 !== null) {
-
-                                        console.log("No5 Value:", no8);
-            
-                                        no = '8';
-            
-            
-                                        db.plantsByWeekRowNumberAndName(no8, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
-                                            console.log(data);
-                                            console.log("Calling database")
-                                            plant = data;
-                                            this.setState({
-                                                plant,
-                                                dataPresent: true,
-            
-                                            });
-                                        }).catch((err) => {
-                                            console.log(err);
-            
-                                        })
-            
-                                        no8 = null;
-            
-            
-                                    }else{
-
-                                        if (no9 !== undefined && no9 !== null) {
-
-                                            console.log("No5 Value:", no9);
-                
-                                            no = '9';
-                
-                
-                                            db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
-                                                console.log(data);
-                                                console.log("Calling database")
-                                                plant = data;
-                                                this.setState({
-                                                    plant,
-                                                    dataPresent: true,
-                
-                                                });
-                                            }).catch((err) => {
-                                                console.log(err);
-                
-                                            })
-                
-                                            no9 = null;
-                
-                
-                                        }else{
-
-                                            if (no10 !== undefined && no10 !== null) {
-
-                                                console.log("No5 Value:", no5);
-                    
-                                                no = '10';
-                    
-                    
-                                                db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 1 - Merlice', '45/46').then((data) => {
-                                                    console.log(data);
-                                                    console.log("Calling database")
-                                                    plant = data;
-                                                    this.setState({
-                                                        plant,
-                                                        dataPresent: true,
-                    
-                                                    });
-                                                }).catch((err) => {
-                                                    console.log(err);
-                    
-                                                })
-                    
-                                                no10 = null;
-                    
-                    
-                                            }
-                                        }
-                                    }
-                                }
-                            }
                         }
                     }
                 }
@@ -1339,7 +1172,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                 'Data Validation',
                 'There are some errors in the data validation tab, Are you sure you want to skip the validation error ?',
                 [
-                    { text: 'No', onPress: () => this.props.navigation.navigate('Ger1DataChecker1', { plantNo: no }), style: 'cancel' },
+                    { text: 'No', onPress: () => this.props.navigation.navigate('Har4RedDelightDataChecker2', { plantNo: no }), style: 'cancel' },
                     { text: 'Yes', onPress: () => this.savePlantsToDb() },
                 ],
                 {
@@ -1443,8 +1276,8 @@ export default class Ger1MerlicePlant1 extends React.Component {
         const { pruningNumber } = this.state;
 
         let data = {
-            plantRow: '45/46',
-            plantName: 'GER 1 - Merlice',
+            plantRow: '456',
+            plantName: 'HAR 4 - Red Delight',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1467,8 +1300,8 @@ export default class Ger1MerlicePlant1 extends React.Component {
         }
 
         let data1 = {
-            plantRow: '45/46',
-            plantName: 'GER 1 - Merlice',
+            plantRow: '456',
+            plantName: 'HAR 4 - Red Delight',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1508,7 +1341,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
 
                                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                                 const url = `${scriptUrl}?
-                                                callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+                                                callback=ctrlq&plantRow=${'456'}&plantName=${'HAR 4 - Red Delight'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
 
                                                 console.log("URL : " + url);
                                                 fetch(url, { mode: 'no-cors' }).then(
@@ -1527,7 +1360,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Ger1Merlice')
+                                                    this.props.navigation.navigate('Har4RedDelight2')
                                                     this.setState({
 
                                                         isDataSend: true,
@@ -1556,7 +1389,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Ger1Merlice')
+                                                    this.props.navigation.navigate('Har4RedDelight2')
                                                     this.setState({
 
                                                         isDataSend: true,
@@ -1690,8 +1523,8 @@ export default class Ger1MerlicePlant1 extends React.Component {
             setFruits: this.state.setFruits,
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
-            plantRow: '45/46',
-            plantName: 'GER 1 - Merlice',
+            plantRow: '456',
+            plantName: 'HAR 4 - Red Delight',
             plantWeek: '2009',
 
             trussNumber2: this.state.trussNumber2,
@@ -1718,7 +1551,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                                 });
                                 Alert.alert('Completed!')
 
-                                this.props.navigation.navigate('Ger1Merlice')
+                                this.props.navigation.navigate('Har4RedDelight2')
 
                             }).catch((err) => {
                                 console.log(err);
@@ -1957,7 +1790,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
 
 
                             <Text style={styles.text} onChangeText={(text) => this.updateTextInput(text, 'plantRow')}
-                                value={this.state.plantRow}>Row No 45/46 - Week No {numberWeek}</Text>
+                                value={this.state.plantRow}>Row No 456 / Week No {numberWeek}</Text>
 
 
 
@@ -2358,18 +2191,19 @@ export default class Ger1MerlicePlant1 extends React.Component {
                             <Text style={styles.text}
                                 value={this.state.plantRow}> Enter Truss Details</Text>
 
+
                             {this.state.checkWeeksTrussData !== 1 ? (
                                 <TouchableOpacity
                                     style={styles.buttonContainer}
                                     disabled={false}
-                                    onPress={() => this.props.navigation.navigate('Ger1MerliceTrussDetails', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Har4RedDelightTrussDetails2', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                 </TouchableOpacity>) :
 
                                 <TouchableOpacity
                                     style={styles.buttonContainer1}
                                     disabled={true}
-                                    onPress={() => this.props.navigation.navigate('Ger1MerliceTrussDetails', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Har4RedDelightTrussDetails2', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                     <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                 </TouchableOpacity>}
@@ -2380,7 +2214,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
                                 }}
                             />
 
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Ger1MerliceDataChecker1', { plantNo: no })}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har4RedDelightDataChecker2', { plantNo: no })}>
 
                                 {(this.state.isError) ? (<Text style={styles.validationTextError}>Data Validation</Text>) : <Text style={styles.validationText}>Data Validation</Text>}
 
@@ -2644,3 +2478,4 @@ const styles = StyleSheet.create({
     }
 
 })
+
