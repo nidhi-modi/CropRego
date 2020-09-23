@@ -68,6 +68,9 @@ import Ger4ProvinePlant1 from '../screens/Ger4ProvinePlant1'
 import Ger4Provine2Plant1 from '../screens/Ger4Provine2Plant1'
 import Ger4ProvineTrussDetails from '../screens/Ger4ProvineTrussDetails'
 import Ger4Provine2TrussDetails from '../screens/Ger4Provine2TrussDetails'
+import Ger4ProvinePlantList from '../screens/Ger4ProvinePlantList'
+import Ger4ProvineDataChecker1 from '../screens/Ger4ProvineDataChecker1'
+import Ger4ProvineDataChecker2 from '../screens/Ger4ProvineDataChecker2'
 import Ger1MerliceDataChecker1 from '../screens/Ger1MerliceDataChecker1'
 import Ger1MerliceDataChecker2 from '../screens/Ger1MerliceDataChecker2'
 import SiteSelection from '../screens/SiteSelection'
@@ -2038,7 +2041,7 @@ function MainStackNavigator() {
           , title: 'GER 1 Merlice'
         })} />
 
-      
+
 
         <Stack.Screen name='Ger1Merlice2Plant1' component={Ger1Merlice2Plant1} options={({ navigation }) => ({
           headerRight: () =>
@@ -2100,19 +2103,229 @@ function MainStackNavigator() {
           , title: 'GER 1 Merlice'
         })} />
 
-        <Stack.Screen name='Ger4Row' component={Ger4Row} options={{ title: 'T&G Global' }} />
+        <Stack.Screen name='Ger4Row' component={Ger4Row} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
 
-        <Stack.Screen name='Ger4Provine' component={Ger4Provine} options={{ title: 'T&G Global' }} />
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
 
-        <Stack.Screen name='Ger4Provine2' component={Ger4Provine2} options={{ title: 'T&G Global' }} />
+                <Image source={require('../assets/comments32.png')}
 
-        <Stack.Screen name='Ger4ProvinePlant1' component={Ger4ProvinePlant1} options={{ title: 'T&G Global' }} />
+                  style={styles.FloatingButtonStyle2} />
 
-        <Stack.Screen name='Ger4Provine2Plant1' component={Ger4Provine2Plant1} options={{ title: 'T&G Global' }} />
+              </TouchableOpacity>
 
-        <Stack.Screen name='Ger4ProvineTrussDetails' component={Ger4ProvineTrussDetails} options={{ title: 'T&G Global' }} />
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
 
-        <Stack.Screen name='Ger4Provine2TrussDetails' component={Ger4Provine2TrussDetails} options={{ title: 'T&G Global' }} />
+        <Stack.Screen name='Ger4Provine' component={Ger4Provine} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Ger4ProvinePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
+
+        <Stack.Screen name='Ger4Provine2' component={Ger4Provine2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Ger4ProvinePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
+
+        <Stack.Screen name='Ger4ProvinePlantList' component={Ger4ProvinePlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
+
+        <Stack.Screen name='Ger4ProvinePlant1' component={Ger4ProvinePlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
+
+        <Stack.Screen name='Ger4Provine2Plant1' component={Ger4Provine2Plant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
+
+        <Stack.Screen name='Ger4ProvineTrussDetails' component={Ger4ProvineTrussDetails} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
+
+        <Stack.Screen name='Ger4Provine2TrussDetails' component={Ger4Provine2TrussDetails} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
+
+        <Stack.Screen name='Ger4ProvineDataChecker2' component={Ger4ProvineDataChecker2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
+
+        <Stack.Screen name='Ger4ProvineDataChecker1' component={Ger4ProvineDataChecker1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 4 Provine'
+        })} />
 
         <Stack.Screen name='SiteSelection' component={SiteSelection} options={{ title: 'T&G Global' }} />
 

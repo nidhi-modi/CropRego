@@ -1023,7 +1023,7 @@ export default class Ger1MerlicePlant1 extends React.Component {
 
                                             if (no10 !== undefined && no10 !== null) {
 
-                                                console.log("No5 Value:", no5);
+                                                console.log("No5 Value:", no10);
                     
                                                 no = '10';
                     

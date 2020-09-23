@@ -1023,9 +1023,9 @@ export default class Ger1Merlice2Plant1 extends React.Component {
 
                                             if (no10 !== undefined && no10 !== null) {
 
-                                                console.log("No5 Value:", no5);
+                                                console.log("No5 Value:", no10);
                     
-                                                no = '5';
+                                                no = '10';
                     
                     
                                                 db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 1 - Merlice', '85/86').then((data) => {
