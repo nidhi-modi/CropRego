@@ -66,7 +66,7 @@ var currentWeekNumber = require('current-week-number');
 
 
 
-export default class Ger4ProvinePlant1 extends React.Component {
+export default class Ger2ProvinePlant1 extends React.Component {
 
 
 
@@ -665,7 +665,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
             setTimeout(() => {
-                db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 2 - Provine', '62/63').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -704,7 +704,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
 
             setTimeout(() => {
 
-                db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 4 - Provine', '70/71').then((data1) => {
+                db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 2 - Provine', '62/63').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     if (data1 !== null || data1 !== '' || data1 !== undefined) {
@@ -795,7 +795,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -820,7 +820,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -846,7 +846,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -872,7 +872,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -898,7 +898,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -924,7 +924,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                 no = '6';
     
     
-                                db.plantsByWeekRowNumberAndName(no6, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                                db.plantsByWeekRowNumberAndName(no6, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                                     console.log(data);
                                     console.log("Calling database")
                                     plant = data;
@@ -950,7 +950,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                     no = '7';
         
         
-                                    db.plantsByWeekRowNumberAndName(no7, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                                    db.plantsByWeekRowNumberAndName(no7, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                                         console.log(data);
                                         console.log("Calling database")
                                         plant = data;
@@ -976,7 +976,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                         no = '8';
             
             
-                                        db.plantsByWeekRowNumberAndName(no8, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                                        db.plantsByWeekRowNumberAndName(no8, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                                             console.log(data);
                                             console.log("Calling database")
                                             plant = data;
@@ -1002,7 +1002,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                             no = '9';
                 
                 
-                                            db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                                            db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                                                 console.log(data);
                                                 console.log("Calling database")
                                                 plant = data;
@@ -1028,7 +1028,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                                 no = '10';
                     
                     
-                                                db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 4 - Provine', '70/71').then((data) => {
+                                                db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 2 - Provine', '62/63').then((data) => {
                                                     console.log(data);
                                                     console.log("Calling database")
                                                     plant = data;
@@ -1340,7 +1340,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                 'Data Validation',
                 'There are some errors in the data validation tab, Are you sure you want to skip the validation error ?',
                 [
-                    { text: 'No', onPress: () => this.props.navigation.navigate('Ger4ProvineDataChecker1', { plantNo: no }), style: 'cancel' },
+                    { text: 'No', onPress: () => this.props.navigation.navigate('Ger2ProvineDataChecker1', { plantNo: no }), style: 'cancel' },
                     { text: 'Yes', onPress: () => this.savePlantsToDb() },
                 ],
                 {
@@ -1444,8 +1444,8 @@ export default class Ger4ProvinePlant1 extends React.Component {
         const { pruningNumber } = this.state;
 
         let data = {
-            plantRow: '70/71',
-            plantName: 'GER 4 - Provine',
+            plantRow: '62/63',
+            plantName: 'GER 2 - Provine',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1468,8 +1468,8 @@ export default class Ger4ProvinePlant1 extends React.Component {
         }
 
         let data1 = {
-            plantRow: '70/71',
-            plantName: 'GER 4 - Provine',
+            plantRow: '62/63',
+            plantName: 'GER 2 - Provine',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1509,7 +1509,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
 
                                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                                 const url = `${scriptUrl}?
-                                                callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 4 - Provine'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+                                                callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Provine'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
 
                                                 console.log("URL : " + url);
                                                 fetch(url, { mode: 'no-cors' }).then(
@@ -1528,7 +1528,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Ger4Provine')
+                                                    this.props.navigation.navigate('Ger2Provine1')
                                                     this.setState({
 
                                                         isDataSend: true,
@@ -1557,7 +1557,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Ger4Provine')
+                                                    this.props.navigation.navigate('Ger2Provine1')
                                                     this.setState({
 
                                                         isDataSend: true,
@@ -1691,8 +1691,8 @@ export default class Ger4ProvinePlant1 extends React.Component {
             setFruits: this.state.setFruits,
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
-            plantRow: '70/71',
-            plantName: 'GER 4 - Provine',
+            plantRow: '62/63',
+            plantName: 'GER 2 - Provine',
             plantWeek: '2009',
 
             trussNumber2: this.state.trussNumber2,
@@ -1719,7 +1719,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                 });
                                 Alert.alert('Completed!')
 
-                                this.props.navigation.navigate('Ger4Provine')
+                                this.props.navigation.navigate('Ger2Provine1')
 
                             }).catch((err) => {
                                 console.log(err);
@@ -1958,7 +1958,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
 
 
                             <Text style={styles.text} onChangeText={(text) => this.updateTextInput(text, 'plantRow')}
-                                value={this.state.plantRow}>Row No 70/71 - Week No {numberWeek}</Text>
+                                value={this.state.plantRow}>Row No 62/63 - Week No {numberWeek}</Text>
 
 
 
@@ -2363,14 +2363,14 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                 <TouchableOpacity
                                     style={styles.buttonContainer}
                                     disabled={false}
-                                    onPress={() => this.props.navigation.navigate('Ger4ProvineTrussDetails', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Ger2ProvineTrussDetails1', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                 </TouchableOpacity>) :
 
                                 <TouchableOpacity
                                     style={styles.buttonContainer1}
                                     disabled={true}
-                                    onPress={() => this.props.navigation.navigate('Ger4ProvineTrussDetails', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Ger2ProvineTrussDetails1', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                     <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                 </TouchableOpacity>}
@@ -2381,7 +2381,7 @@ export default class Ger4ProvinePlant1 extends React.Component {
                                 }}
                             />
 
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Ger4ProvineDataChecker1', { plantNo: no })}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Ger2ProvineDataChecker1', { plantNo: no })}>
 
                                 {(this.state.isError) ? (<Text style={styles.validationTextError}>Data Validation</Text>) : <Text style={styles.validationText}>Data Validation</Text>}
 
