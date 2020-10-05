@@ -3691,7 +3691,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
                                     }}
                                 />
 
-                                <View style={styles.rowContainer222}>
+                                <View style={styles.rowContainer21}>
 
                                     <View
                                         style={{
@@ -5692,6 +5692,11 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         textAlign: 'center',
 
+
+    },
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
 
     },
 

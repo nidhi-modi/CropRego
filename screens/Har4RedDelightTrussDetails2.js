@@ -3691,7 +3691,11 @@ export default class Har4RedDelightTrussDetails2 extends React.Component {
                                 }}
                             />
 
+<<<<<<< HEAD
                             <View style={styles.rowContainer222}>
+=======
+                            <View style={styles.rowContainer21}>
+>>>>>>> e0f301307534dc72b324de4af6ce4fadf14a1e79
 
                                 <View
                                     style={{
@@ -5650,6 +5654,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+<<<<<<< HEAD
+=======
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+
+    },
+>>>>>>> e0f301307534dc72b324de4af6ce4fadf14a1e79
 
     input: {
         marginBottom: 10,

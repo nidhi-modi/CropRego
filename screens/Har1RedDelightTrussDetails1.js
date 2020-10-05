@@ -3690,7 +3690,7 @@ export default class Har1RedDelightTrussDetails1 extends React.Component {
                                     }}
                                 />
 
-                                <View style={styles.rowContainer222}>
+                                <View style={styles.rowContainer21}>
 
                                     <View
                                         style={{
@@ -5525,6 +5525,11 @@ const styles = StyleSheet.create({
     },
     text: {
         margin: 6
+    },
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+
     },
     row: {
         flexDirection: 'row'

@@ -46,31 +46,31 @@ return (
 
       <TouchableOpacity
      style={styles.buttonContainer}
-     onPress={() => navigation.navigate('Ger1Row')}>
+     onPress={() => this.props.navigation.navigate('Ger1Row')}>
      <Text style={styles.buttonText}>GER 1 - Merlice</Text>
    </TouchableOpacity>
 
    <TouchableOpacity
      style={styles.buttonContainer}
-     onPress={() => navigation.navigate('Har1Angelle')}>
+     onPress={() => this.props.navigation.navigate('Ger2Row')}>
      <Text style={styles.buttonText}>GER 2 - Provine</Text>
    </TouchableOpacity>
 
    <TouchableOpacity
      style={styles.buttonContainer}
-     onPress={() => navigation.navigate('Har1RedDelight')}>
-     <Text style={styles.buttonText}>GER 3 - Maranice</Text>
+     onPress={() => this.props.navigation.navigate('Ger3Row')}>
+     <Text style={styles.buttonText}>GER 3 - Endeavour</Text>
    </TouchableOpacity>
 
    <TouchableOpacity
      style={styles.buttonContainer}
-     onPress={() => navigation.navigate('Ger4Row')}>
+     onPress={() => this.props.navigation.navigate('Ger4Row')}>
      <Text style={styles.buttonText}>GER 4 - Provine </Text>
    </TouchableOpacity>
 
    <TouchableOpacity
      style={styles.buttonContainer}
-     onPress={() => navigation.navigate('Har3Km')}>
+     onPress={() => this.props.navigation.navigate('Ger5Row')}>
      <Text style={styles.buttonText}>GER 5 - Merlice </Text>
    </TouchableOpacity>
 

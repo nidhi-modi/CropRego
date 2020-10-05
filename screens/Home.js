@@ -35,6 +35,10 @@ function Home(props) {
 
     navigation.navigate('OhaHome')
 
+  }else if (site1 === 'REP') {
+
+    navigation.navigate('RepHome')
+
   }
 
 
@@ -70,6 +74,13 @@ function Home(props) {
             style={styles.buttonContainer}
             onPress={() => navigation.navigate('OhaHome')}>
             <Text style={styles.buttonText}>OHA Site</Text>
+          </TouchableOpacity>) : null}
+
+          {site1 === 'REP' ?
+          (<TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => navigation.navigate('RepHome')}>
+            <Text style={styles.buttonText}>REP Site</Text>
           </TouchableOpacity>) : null}
 
       </ImageBackground>

@@ -46,6 +46,10 @@ export default class SiteSelection extends React.Component {
     
           this.props.navigation.navigate('FavHome');
     
+        }else if (houseSelected === 'REP') {
+    
+          this.props.navigation.navigate('RepHome');
+    
         }
 
       }).done();
@@ -113,6 +117,20 @@ export default class SiteSelection extends React.Component {
     );
   }
 
+  repAlertButton = () => {
+    Alert.alert(
+      'Are you sure ?',
+      'It cannot be changed',
+      [
+        { text: 'Yes', onPress: () => this.props.navigation.navigate('Home', { site1: 'REP' }) },
+        { text: 'No', onPress: () => console.log('No button clicked'), style: 'cancel' },
+      ],
+      {
+        cancelable: false
+      }
+    );
+  }
+
 
   render() {
 
@@ -149,6 +167,12 @@ export default class SiteSelection extends React.Component {
               style={styles.buttonContainer}
               onPress={this.ohaAlertButton}>
               <Text style={styles.buttonText}>OHA</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={this.repAlertButton}>
+              <Text style={styles.buttonText}>REP</Text>
             </TouchableOpacity>
 
 
