@@ -58,8 +58,8 @@ return (
 
    <TouchableOpacity
      style={styles.buttonContainer}
-     onPress={() => navigation.navigate('Har1RedDelight')}>
-     <Text style={styles.buttonText}>GER 3 - Maranice</Text>
+     onPress={() => this.props.navigation.navigate('Ger3Row')}>
+     <Text style={styles.buttonText}>GER 3 - Endeavour</Text>
    </TouchableOpacity>
 
    <TouchableOpacity
@@ -70,7 +70,7 @@ return (
 
    <TouchableOpacity
      style={styles.buttonContainer}
-     onPress={() => navigation.navigate('Har3Km')}>
+     onPress={() => this.props.navigation.navigate('Ger5Row')}>
      <Text style={styles.buttonText}>GER 5 - Merlice </Text>
    </TouchableOpacity>
 
