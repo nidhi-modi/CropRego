@@ -3690,7 +3690,7 @@ export default class Ger3EndeavourTrussDetails extends React.Component {
                                     }}
                                 />
 
-                                <View style={styles.rowContainer222}>
+                                <View style={styles.rowContainer21}>
 
                                     <View
                                         style={{
@@ -5707,6 +5707,11 @@ const styles = StyleSheet.create({
         height: 60,
         width: 40,
         textAlign: 'center',
-    }
+    },
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+
+    },
 
 })

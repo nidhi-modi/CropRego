@@ -3690,7 +3690,7 @@ export default class Ger2ProvineTrussDetails1 extends React.Component {
                                     }}
                                 />
 
-                                <View style={styles.rowContainer222}>
+                                <View style={styles.rowContainer21}>
 
                                     <View
                                         style={{
@@ -5554,6 +5554,12 @@ const styles = StyleSheet.create({
     rowContainer2226: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+    },
+
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+
     },
 
 

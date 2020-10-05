@@ -3685,7 +3685,7 @@ export default class Har3KmTrussDetails2 extends React.Component {
                                 }}
                             />
 
-                            <View style={styles.rowContainer222}>
+                            <View style={styles.rowContainer21}>
 
                                 <View
                                     style={{
@@ -5622,6 +5622,11 @@ const styles = StyleSheet.create({
         height: 55,
         justifyContent: 'center',
         alignItems: 'center'
+
+    },
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
 
     },
     buttonText: {

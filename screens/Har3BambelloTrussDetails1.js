@@ -3684,7 +3684,7 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
                                 }}
                             />
 
-                            <View style={styles.rowContainer222}>
+                            <View style={styles.rowContainer21}>
 
                                 <View
                                     style={{
@@ -5552,7 +5552,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
 
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
 
+    },
 
     text222: {
         color: '#2C903D',

@@ -3690,7 +3690,7 @@ export default class Ger1Merlice2TrussDetails extends React.Component {
                                     }}
                                 />
 
-                                <View style={styles.rowContainer222}>
+                                <View style={styles.rowContainer21}>
 
                                     <View
                                         style={{
@@ -5548,6 +5548,11 @@ const styles = StyleSheet.create({
     rowContainer222: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+
+    },
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
 
     },
 

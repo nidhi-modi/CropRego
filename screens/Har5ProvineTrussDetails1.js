@@ -3690,7 +3690,7 @@ export default class Har5ProvineTrussDetails1 extends React.Component {
                                     }}
                                 />
 
-                                <View style={styles.rowContainer222}>
+                                <View style={styles.rowContainer21}>
 
                                     <View
                                         style={{
@@ -5697,6 +5697,11 @@ const styles = StyleSheet.create({
     yellowBackground: {
 
         backgroundColor: '#ffff00'
+
+    },
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
 
     },
 
