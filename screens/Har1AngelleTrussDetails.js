@@ -3321,9 +3321,9 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
                                 isLoading: false,
                                 isDataSend: true,
-        
+
                             });
-        
+
                             Alert.alert('Completed!')
 
                             this.props.navigation.navigate('Har1AngellePlant1')
@@ -3335,7 +3335,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
 
 
-                    
+
 
 
                     abc = '1';
@@ -3690,7 +3690,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
                                 }}
                             />
 
-                            <View style={styles.rowContainer222}>
+                            {Platform.isPad ? (<View style={styles.rowContainer222}>
 
                                 <View
                                     style={{
@@ -3748,7 +3748,66 @@ export default class Har1AngelleTrussDetails extends React.Component {
                                     }}
                                 />
 
-                            </View>
+                            </View>) : (<View style={styles.rowContainer21}>
+
+                                <View
+                                    style={{
+                                        borderLeftColor: 'black',
+                                        borderLeftWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>TrussNo</Text>
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+
+                                <Text style={styles.text222}>Set Fruit</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>Flowers</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>Pruning</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                                <Text style={styles.text222}>Fruit Dia</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                            </View>)}
+
 
 
 
@@ -3776,9 +3835,7 @@ export default class Har1AngelleTrussDetails extends React.Component {
 
                                 }}
                             />
-
                             <ScrollView>
-
                                 <View style={styles.rowContainer222}>
 
 
@@ -5552,6 +5609,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
 
     },
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+
+    },
 
     rowContainer2226: {
         flexDirection: 'row',
@@ -5680,6 +5742,7 @@ const styles = StyleSheet.create({
         //borderBottomColor: 'black',
         marginBottom: 5,
         textAlign: 'center',
+        color: '#000000'
 
 
     },
@@ -5692,6 +5755,7 @@ const styles = StyleSheet.create({
         borderBottomColor: '#ff0000',
         marginBottom: 5,
         textAlign: 'center',
+        color: '#000000'
 
 
     },
@@ -5709,7 +5773,7 @@ const styles = StyleSheet.create({
         height: 60,
         width: 40,
         textAlign: 'center',
+        color: '#000000'
     }
 
 })
-

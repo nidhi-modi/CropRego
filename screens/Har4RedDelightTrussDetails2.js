@@ -3319,9 +3319,9 @@ export default class Har4RedDelightTrussDetails2 extends React.Component {
 
                                 isLoading: false,
                                 isDataSend: true,
-        
+
                             });
-        
+
                             Alert.alert('Completed!')
 
                             this.props.navigation.navigate('Har4RedDelightPlant2')
@@ -3333,7 +3333,7 @@ export default class Har4RedDelightTrussDetails2 extends React.Component {
 
 
 
-                    
+
 
 
                     abc = '1';
@@ -3389,7 +3389,7 @@ export default class Har4RedDelightTrussDetails2 extends React.Component {
     }
 
 
-   
+
 
 
 
@@ -3691,11 +3691,7 @@ export default class Har4RedDelightTrussDetails2 extends React.Component {
                                 }}
                             />
 
-<<<<<<< HEAD
-                            <View style={styles.rowContainer222}>
-=======
-                            <View style={styles.rowContainer21}>
->>>>>>> e0f301307534dc72b324de4af6ce4fadf14a1e79
+                            {Platform.isPad ? (<View style={styles.rowContainer222}>
 
                                 <View
                                     style={{
@@ -3753,7 +3749,66 @@ export default class Har4RedDelightTrussDetails2 extends React.Component {
                                     }}
                                 />
 
-                            </View>
+                            </View>) : (<View style={styles.rowContainer21}>
+
+                                <View
+                                    style={{
+                                        borderLeftColor: 'black',
+                                        borderLeftWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>TrussNo</Text>
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+
+                                <Text style={styles.text222}>Set Fruit</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>Flowers</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+
+                                <Text style={styles.text222}>Pruning</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                                <Text style={styles.text222}>Fruit Dia</Text>
+
+                                <View
+                                    style={{
+                                        borderRightColor: 'black',
+                                        borderRightWidth: 1,
+                                    }}
+                                />
+
+                            </View>)}
+
 
 
 
@@ -5555,6 +5610,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
 
     },
+    rowContainer21: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+
+    },
 
     rowContainer2226: {
         flexDirection: 'row',
@@ -5654,14 +5714,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-<<<<<<< HEAD
-=======
-    rowContainer21: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-
-    },
->>>>>>> e0f301307534dc72b324de4af6ce4fadf14a1e79
 
     input: {
         marginBottom: 10,
@@ -5691,6 +5743,7 @@ const styles = StyleSheet.create({
         //borderBottomColor: 'black',
         marginBottom: 5,
         textAlign: 'center',
+        color: '#000000'
 
 
     },
@@ -5703,6 +5756,7 @@ const styles = StyleSheet.create({
         borderBottomColor: '#ff0000',
         marginBottom: 5,
         textAlign: 'center',
+        color: '#000000'
 
 
     },
@@ -5720,7 +5774,7 @@ const styles = StyleSheet.create({
         height: 60,
         width: 40,
         textAlign: 'center',
+        color: '#000000'
     }
 
 })
-
