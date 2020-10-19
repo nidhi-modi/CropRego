@@ -120,6 +120,7 @@ export default class PlantList extends Component {
 
 
     if (this.state.plants.length === 0) {
+      
       return (
         <SafeAreaView style={styles.safeContainer}>
 
