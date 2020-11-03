@@ -4,7 +4,7 @@ import AwesomeButton from 'react-native-really-awesome-button';
 import AwesomeButtonRick from 'react-native-really-awesome-button/src/themes/rick';
 
 
-function Har3KmRow(props) {
+function Har3AngelleRow(props) {
   const { navigation } = props
   return (
     <View style={styles.container}>
@@ -15,8 +15,14 @@ function Har3KmRow(props) {
 
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Har3Km')}>
-            <Text style={styles.buttonText}>Row 348</Text>
+            onPress={() => navigation.navigate('Har3Angelle')}>
+            <Text style={styles.buttonText}>Row 323</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => navigation.navigate('Har3Angelle2')}>
+            <Text style={styles.buttonText}>Row 347</Text>
           </TouchableOpacity>
 
 
@@ -91,4 +97,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Har3KmRow
+export default Har3AngelleRow

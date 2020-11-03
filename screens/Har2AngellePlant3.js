@@ -66,7 +66,7 @@ var currentWeekNumber = require('current-week-number');
 
 
 
-export default class Har3KmPlant1 extends React.Component {
+export default class Har2AngellePlant3 extends React.Component {
 
 
 
@@ -176,6 +176,7 @@ export default class Har3KmPlant1 extends React.Component {
 
             checkWeeksData: '',
             checkWeeksTrussData: '',
+
 
         };
 
@@ -632,7 +633,7 @@ export default class Har3KmPlant1 extends React.Component {
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
             setTimeout(() => {
-                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 3 - KM5512', '348').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 2 - Angelle', '255').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -671,7 +672,7 @@ export default class Har3KmPlant1 extends React.Component {
 
             setTimeout(() => {
 
-                db.trussByWeekNumberRowAndName(no, numberWeek, 'HAR 3 - KM5512', '348').then((data1) => {
+                db.trussByWeekNumberRowAndName(no, numberWeek, 'HAR 2 - Angelle', '255').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     if (data1 !== null || data1 !== '' || data1 !== undefined) {
@@ -705,9 +706,9 @@ export default class Har3KmPlant1 extends React.Component {
                 })
             }, 2000);
 
-
         });
 
+        console.log("Check DATAAAAAAAAAAAAAAAAAAAA : " + presentWeekData);
 
 
         /*this.ShowHideFullySetComponent();
@@ -761,7 +762,7 @@ export default class Har3KmPlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 3 - KM5512', '348').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 2 - Angelle', '255').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -786,7 +787,7 @@ export default class Har3KmPlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 3 - KM5512', '348').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 2 - Angelle', '255').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -812,7 +813,7 @@ export default class Har3KmPlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 3 - KM5512', '348').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 2 - Angelle', '255').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -838,7 +839,7 @@ export default class Har3KmPlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 3 - KM5512', '348').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 2 - Angelle', '255').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -864,7 +865,7 @@ export default class Har3KmPlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 3 - KM5512', '348').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 2 - Angelle', '255').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -1170,7 +1171,7 @@ export default class Har3KmPlant1 extends React.Component {
                 'Data Validation',
                 'There are some errors in the data validation tab, Are you sure you want to skip the validation error ?',
                 [
-                    { text: 'No', onPress: () => this.props.navigation.navigate('Har3KmDataChecker1', { plantNo: no }), style: 'cancel' },
+                    { text: 'No', onPress: () => this.props.navigation.navigate('Har2AngelleDataChecker3', { plantNo: no }), style: 'cancel' },
                     { text: 'Yes', onPress: () => this.savePlantsToDb() },
                 ],
                 {
@@ -1274,8 +1275,8 @@ export default class Har3KmPlant1 extends React.Component {
         const { pruningNumber } = this.state;
 
         let data = {
-            plantRow: '348',
-            plantName: 'HAR 3 - KM5512',
+            plantRow: '255',
+            plantName: 'HAR 2 - Angelle',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1298,8 +1299,8 @@ export default class Har3KmPlant1 extends React.Component {
         }
 
         let data1 = {
-            plantRow: '348',
-            plantName: 'HAR 3 - KM5512',
+            plantRow: '255',
+            plantName: 'HAR 2 - Angelle',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1339,7 +1340,7 @@ export default class Har3KmPlant1 extends React.Component {
 
                                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                                 const url = `${scriptUrl}?
-                                                callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - KM5512'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+                                                callback=ctrlq&plantRow=${'255'}&plantName=${'HAR 2 - Angelle'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
 
                                                 console.log("URL : " + url);
                                                 fetch(url, { mode: 'no-cors' }).then(
@@ -1358,7 +1359,7 @@ export default class Har3KmPlant1 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Har3Km')
+                                                    this.props.navigation.navigate('Har2Angelle3')
                                                     this.setState({
 
                                                         isDataSend: true,
@@ -1387,7 +1388,7 @@ export default class Har3KmPlant1 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Har3Km')
+                                                    this.props.navigation.navigate('Har2Angelle3')
                                                     this.setState({
 
                                                         isDataSend: true,
@@ -1521,8 +1522,8 @@ export default class Har3KmPlant1 extends React.Component {
             setFruits: this.state.setFruits,
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
-            plantRow: '348',
-            plantName: 'HAR 3 - KM5512',
+            plantRow: '255',
+            plantName: 'HAR 2 - Angelle',
             plantWeek: '2009',
 
             trussNumber2: this.state.trussNumber2,
@@ -1549,7 +1550,7 @@ export default class Har3KmPlant1 extends React.Component {
                                 });
                                 Alert.alert('Completed!')
 
-                                this.props.navigation.navigate('Har3Km')
+                                this.props.navigation.navigate('Har2Angelle3')
 
                             }).catch((err) => {
                                 console.log(err);
@@ -1788,7 +1789,7 @@ export default class Har3KmPlant1 extends React.Component {
 
 
                             <Text style={styles.text} onChangeText={(text) => this.updateTextInput(text, 'plantRow')}
-                                value={this.state.plantRow}>Row No 348 / Week No {numberWeek}</Text>
+                                value={this.state.plantRow}>Row No 255 / Week No {numberWeek}</Text>
 
 
 
@@ -1800,7 +1801,6 @@ export default class Har3KmPlant1 extends React.Component {
 
 
                             <View pointerEvents={this.state.checkWeeksData === 1 ? 'none' : 'auto'}>
-
                                 <View style={styles.backgroundColor}>
 
                                     <View style={styles.row}>
@@ -1814,7 +1814,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholder="Enter Leaves Per Plant"
                                             placeholderTextColor="transparent"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1855,7 +1854,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1896,7 +1894,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1940,7 +1937,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1980,7 +1976,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2020,7 +2015,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2063,7 +2057,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2105,7 +2098,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2146,7 +2138,6 @@ export default class Har3KmPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2187,22 +2178,22 @@ export default class Har3KmPlant1 extends React.Component {
 
                             </View>
 
-
                             <Text style={styles.text}
                                 value={this.state.plantRow}> Enter Truss Details</Text>
+
 
                             {this.state.checkWeeksTrussData !== 1 ? (
                                 <TouchableOpacity
                                     style={styles.buttonContainer}
                                     disabled={false}
-                                    onPress={() => this.props.navigation.navigate('Har3KmTrussDetails1', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Har2AngelleTrussDetails3', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                 </TouchableOpacity>) :
 
                                 <TouchableOpacity
                                     style={styles.buttonContainer1}
                                     disabled={true}
-                                    onPress={() => this.props.navigation.navigate('Har3KmTrussDetails1', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Har2AngelleTrussDetails3', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                     <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                 </TouchableOpacity>}
@@ -2213,7 +2204,7 @@ export default class Har3KmPlant1 extends React.Component {
                                 }}
                             />
 
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har3KmDataChecker1', { plantNo: no })}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har2AngelleDataChecker3', { plantNo: no })}>
 
                                 {(this.state.isError) ? (<Text style={styles.validationTextError}>Data Validation</Text>) : <Text style={styles.validationText}>Data Validation</Text>}
 

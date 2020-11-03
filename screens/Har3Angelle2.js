@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
-import Database from '../screens/Database'
+import Database from './Database'
 
 
 const db = new Database();
 var currentWeekNumber = require('current-week-number');
 var numberWeek;
 var myBoolen;
-export default class Har3Km extends Component {
+export default class Har3Angelle2 extends Component {
     constructor(props) {
         super(props)
 
@@ -48,7 +48,7 @@ export default class Har3Km extends Component {
     callQuery= () => {
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("1", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("1", numberWeek, 'HAR 3 - Angelle','347').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -68,7 +68,7 @@ export default class Har3Km extends Component {
         }, 1000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("2", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("2", numberWeek, 'HAR 3 - Angelle','347').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -88,7 +88,7 @@ export default class Har3Km extends Component {
         }, 3000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("3", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("3", numberWeek, 'HAR 3 - Angelle','347').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -108,7 +108,7 @@ export default class Har3Km extends Component {
         }, 4000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("4", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("4", numberWeek, 'HAR 3 - Angelle','347').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -128,7 +128,7 @@ export default class Har3Km extends Component {
         }, 5000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("5", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("5", numberWeek, 'HAR 3 - Angelle','347').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -166,13 +166,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant1: 1 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant1: 1 })}>
                                 <Text style={styles.buttonText}>Plant 1 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant1: 1 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant1: 1 })}>
                                 <Text style={styles.buttonText}>Plant 1 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -182,13 +182,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet2 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant2: 2 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant2: 2 })}>
                                 <Text style={styles.buttonText}>Plant 2 - Week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant2: 2 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant2: 2 })}>
                                 <Text style={styles.buttonText}>Plant 2 - Week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -199,13 +199,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet3 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -216,13 +216,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet4 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant4: 4 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant4: 4 })}>
                                 <Text style={styles.buttonText}>Plant 4 - Week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant4: 4 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant4: 4 })}>
                                 <Text style={styles.buttonText}>Plant 4 - Week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -232,13 +232,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet5 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant5: 5 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant5: 5 })}>
                                 <Text style={styles.buttonText}>Plant 5 - Week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant5: 5 })}>
+                                onPress={() => this.props.navigation.navigate('Har3AngellePlant2', { plant5: 5 })}>
                                 <Text style={styles.buttonText}>Plant 5 - Week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 

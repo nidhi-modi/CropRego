@@ -31,7 +31,7 @@ export default class Har3Bambello2 extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2000 + currentWeekNumber()-2;
+        numberWeek = 2000 + currentWeekNumber(new Date())-1;
 
         this.setState({ week : numberWeek});
 
@@ -48,7 +48,7 @@ export default class Har3Bambello2 extends Component {
     callQuery= () => {
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("1", numberWeek, 'HAR 3 - Bambello','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("1", numberWeek, 'HAR 3 - Bambello','324').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -68,7 +68,7 @@ export default class Har3Bambello2 extends Component {
         }, 1000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("2", numberWeek, 'HAR 3 - Bambello','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("2", numberWeek, 'HAR 3 - Bambello','324').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -88,7 +88,7 @@ export default class Har3Bambello2 extends Component {
         }, 3000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("3", numberWeek, 'HAR 3 - Bambello','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("3", numberWeek, 'HAR 3 - Bambello','324').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -108,7 +108,7 @@ export default class Har3Bambello2 extends Component {
         }, 4000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("4", numberWeek, 'HAR 3 - Bambello','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("4", numberWeek, 'HAR 3 - Bambello','324').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -128,7 +128,7 @@ export default class Har3Bambello2 extends Component {
         }, 5000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("5", numberWeek, 'HAR 3 - Bambello','348').then((data) => {
+            db.plantsByWeekRowNumberAndName("5", numberWeek, 'HAR 3 - Bambello','324').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({

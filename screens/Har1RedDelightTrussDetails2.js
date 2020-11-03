@@ -434,9 +434,6 @@ export default class Har1RedDelightTrussDetails2 extends React.Component {
 
             });
 
-            numberWeek = 2000 + currentWeekNumber() - 1;
-
-
         } else if (abc === '1' && abc !== null) {
 
             AsyncStorage.clear();

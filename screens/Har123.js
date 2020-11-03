@@ -129,20 +129,20 @@ export default class Har123 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1YeloRow')}>
-              <Text style={styles.buttonText}>HAR 1 - Yelo</Text>
+              onPress={() => this.props.navigation.navigate('Har1AnnasumRow')}>
+              <Text style={styles.buttonText}>HAR 1 - Annasum</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AngelleRow')}>
-              <Text style={styles.buttonText}>HAR 1 - Angelle</Text>
+              onPress={() => this.props.navigation.navigate('Har1HTLRow')}>
+              <Text style={styles.buttonText}>HAR 1 - HTL1606242</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1RedDelightRow')}>
-              <Text style={styles.buttonText}>HAR 1 - Red Delight </Text>
+              onPress={() => this.props.navigation.navigate('Har1AvalantinoRow')}>
+              <Text style={styles.buttonText}>HAR 1 - Avalantino</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -161,6 +161,12 @@ export default class Har123 extends Component {
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har3BambelloRow')}>
               <Text style={styles.buttonText}>HAR 3 - Bambello</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har3AngelleRow')}>
+              <Text style={styles.buttonText}>HAR 3 - Angelle </Text>
             </TouchableOpacity>
 
           </ScrollView>

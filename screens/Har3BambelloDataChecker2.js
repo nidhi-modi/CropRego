@@ -116,10 +116,10 @@ export default class Har3BambelloDataChecker2 extends React.Component {
 
   componentDidMount() {
 
-    numberWeek = 2000 + currentWeekNumber() - 1;
-    numberWeek1 = 2000 + currentWeekNumber() - 2;
-    numberWeek2 = 2000 + currentWeekNumber() - 3;
-    numberWeek3 = 2000 + currentWeekNumber() - 4;
+    numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
+    numberWeek1 = 2000 + currentWeekNumber(new Date()) - 2;
+    numberWeek2 = 2000 + currentWeekNumber(new Date()) - 3;
+    numberWeek3 = 2000 + currentWeekNumber(new Date()) - 4;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
@@ -150,7 +150,7 @@ export default class Har3BambelloDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek, 'HAR 3 - Bambello', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek, 'HAR 3 - Bambello', '324').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss1 = data;
@@ -170,7 +170,7 @@ export default class Har3BambelloDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 3 - Bambello', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 3 - Bambello', '324').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss2 = data;
@@ -191,7 +191,7 @@ export default class Har3BambelloDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'HAR 3 - Bambello', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'HAR 3 - Bambello', '324').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss3 = data;
@@ -216,7 +216,7 @@ export default class Har3BambelloDataChecker2 extends React.Component {
 
       });
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 3 - Bambello', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 3 - Bambello', '324').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss4 = data;
@@ -242,7 +242,7 @@ export default class Har3BambelloDataChecker2 extends React.Component {
         isLoading: true
 
       });
-      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 3 - Bambello', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 3 - Bambello', '324').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo1 = data;
@@ -260,7 +260,7 @@ export default class Har3BambelloDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'HAR 3 - Bambello', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'HAR 3 - Bambello', '324').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo2 = data;
@@ -280,7 +280,7 @@ export default class Har3BambelloDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 3 - Bambello', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 3 - Bambello', '324').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo3 = data;
@@ -300,7 +300,7 @@ export default class Har3BambelloDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek, 'HAR 3 - Bambello', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek, 'HAR 3 - Bambello', '324').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo4 = data;

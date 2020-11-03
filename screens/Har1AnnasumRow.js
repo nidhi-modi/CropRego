@@ -4,7 +4,7 @@ import AwesomeButton from 'react-native-really-awesome-button';
 import AwesomeButtonRick from 'react-native-really-awesome-button/src/themes/rick';
 
 
-function Har3BambelloRow(props) {
+function Har1AnnasumRow(props) {
     const { navigation } = props
   return (
     <View style={styles.container}>
@@ -13,12 +13,12 @@ function Har3BambelloRow(props) {
   
         <ScrollView>
   
-     <TouchableOpacity
+        <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har3Bambello2')}>
-       <Text style={styles.buttonText}>Row 324</Text>
+       onPress={() => navigation.navigate('Har1Annasum')}>
+       <Text style={styles.buttonText}>Row 105</Text>
      </TouchableOpacity>
-
+  
   
         </ScrollView>
   
@@ -91,4 +91,4 @@ function Har3BambelloRow(props) {
   }
   })
   
-  export default Har3BambelloRow
+  export default Har1AnnasumRow

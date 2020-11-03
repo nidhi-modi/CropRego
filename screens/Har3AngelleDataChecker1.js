@@ -21,7 +21,7 @@ var avgLeavesPlant2, avgFullyTruss2, avgFullyTrussLength2, avgWeeklyGrowth2, avg
 var avgLeavesPlant3, avgFullyTruss3, avgFullyTrussLength3, avgWeeklyGrowth3, avgFlweTrussHt3, avgLeafLength3, avgLeafWdt3, avgStmDm3, avgLastWkStmDm3;
 var number, data;
 
-export default class Har3KmDataChecker1 extends React.Component {
+export default class Har3AngelleDataChecker1 extends React.Component {
 
 
 
@@ -150,7 +150,7 @@ export default class Har3KmDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek, 'HAR 3 - KM5512', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek, 'HAR 3 - Angelle', '323').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss1 = data;
@@ -170,7 +170,7 @@ export default class Har3KmDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 3 - KM5512', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 3 - Angelle', '323').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss2 = data;
@@ -191,7 +191,7 @@ export default class Har3KmDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'HAR 3 - KM5512', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'HAR 3 - Angelle', '323').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss3 = data;
@@ -216,7 +216,7 @@ export default class Har3KmDataChecker1 extends React.Component {
 
       });
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 3 - KM5512', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 3 - Angelle', '323').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss4 = data;
@@ -242,7 +242,7 @@ export default class Har3KmDataChecker1 extends React.Component {
         isLoading: true
 
       });
-      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 3 - KM5512', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'HAR 3 - Angelle', '323').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo1 = data;
@@ -260,7 +260,7 @@ export default class Har3KmDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'HAR 3 - KM5512', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'HAR 3 - Angelle', '323').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo2 = data;
@@ -280,7 +280,7 @@ export default class Har3KmDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 3 - KM5512', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'HAR 3 - Angelle', '323').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo3 = data;
@@ -300,7 +300,7 @@ export default class Har3KmDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek, 'HAR 3 - KM5512', '348').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek, 'HAR 3 - Angelle', '323').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo4 = data;

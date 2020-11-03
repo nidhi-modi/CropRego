@@ -25,6 +25,12 @@ function Har2AngelleRow(props) {
        <Text style={styles.buttonText}>Row 228</Text>
      </TouchableOpacity>
 
+     <TouchableOpacity
+       style={styles.buttonContainer}
+       onPress={() => navigation.navigate('Har2Angelle3')}>
+       <Text style={styles.buttonText}>Row 255</Text>
+     </TouchableOpacity>
+
   
         </ScrollView>
   

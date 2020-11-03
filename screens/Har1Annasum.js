@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 import Database from '../screens/Database'
+import AsyncStorage from '@react-native-community/async-storage';
+
 
 
 const db = new Database();
 var currentWeekNumber = require('current-week-number');
 var numberWeek;
 var myBoolen;
-export default class Har3Km extends Component {
+
+export default class Har1Annasum extends Component {
+
+
     constructor(props) {
         super(props)
 
@@ -33,6 +38,8 @@ export default class Har3Km extends Component {
 
         numberWeek = 2000 + currentWeekNumber(new Date())-1;
 
+        console.log("New Week number : "+numberWeek);
+
         this.setState({ week : numberWeek});
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
@@ -43,18 +50,28 @@ export default class Har3Km extends Component {
         //this.callQuery()
     }
 
+
+    async setItem(myKey, value) {
+        try {
+            return await AsyncStorage.setItem(myKey, JSON.stringify(value));
+        } catch (error) {
+        }
+    }
     
 
     callQuery= () => {
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("1", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekNumberAndName("1", numberWeek, 'HAR 1 - Annasum').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
                     dataSet1: 1,
 
                 });
+
+                this.setItem('har1Annasum1', 1 )
+
 
 
             }).catch((err) => {
@@ -68,13 +85,17 @@ export default class Har3Km extends Component {
         }, 1000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("2", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekNumberAndName("2", numberWeek, 'HAR 1 - Annasum').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
                     dataSet2: 1,
+                    
 
                 });
+
+                this.setItem('har1Annasum2', 2 )
+
 
 
             }).catch((err) => {
@@ -88,13 +109,16 @@ export default class Har3Km extends Component {
         }, 3000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("3", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekNumberAndName("3", numberWeek, 'HAR 1 - Annasum').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
                     dataSet3: 1,
 
                 });
+
+                this.setItem('har1Annasum3', 3 )
+
 
 
             }).catch((err) => {
@@ -108,13 +132,15 @@ export default class Har3Km extends Component {
         }, 4000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("4", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekNumberAndName("4", numberWeek, 'HAR 1 - Annasum').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
                     dataSet4: 1,
 
                 });
+
+                this.setItem('har1Annasum4', 4)
 
 
             }).catch((err) => {
@@ -128,13 +154,15 @@ export default class Har3Km extends Component {
         }, 5000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("5", numberWeek, 'HAR 3 - KM5512','348').then((data) => {
+            db.plantsByWeekNumberAndName("5", numberWeek, 'HAR 1 - Annasum').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
                     dataSet5: 1,
 
                 });
+
+                this.setItem('har1Annasum5', 5)
 
 
             }).catch((err) => {
@@ -163,16 +191,17 @@ export default class Har3Km extends Component {
 
                     <ScrollView>
 
+
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant1: 1 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant1: 1 })}>
                                 <Text style={styles.buttonText}>Plant 1 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant1: 1 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant1: 1 })}>
                                 <Text style={styles.buttonText}>Plant 1 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -182,13 +211,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet2 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant2: 2 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant2: 2 })}>
                                 <Text style={styles.buttonText}>Plant 2 - Week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant2: 2 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant2: 2 })}>
                                 <Text style={styles.buttonText}>Plant 2 - Week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -199,13 +228,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet3 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -216,13 +245,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet4 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant4: 4 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant4: 4 })}>
                                 <Text style={styles.buttonText}>Plant 4 - Week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant4: 4 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant4: 4 })}>
                                 <Text style={styles.buttonText}>Plant 4 - Week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -232,13 +261,13 @@ export default class Har3Km extends Component {
                         {this.state.dataSet5 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant5: 5 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant5: 5 })}>
                                 <Text style={styles.buttonText}>Plant 5 - Week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har3KmPlant1', { plant5: 5 })}>
+                                onPress={() => this.props.navigation.navigate('Har1AnnasumPlant1', { plant5: 5 })}>
                                 <Text style={styles.buttonText}>Plant 5 - Week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -393,17 +422,6 @@ const styles = StyleSheet.create({
         marginLeft: 18,
         marginRight: 15,
 
-    },
-
-    text: {
-        color: 'black',
-        fontSize: 20,
-        textAlign: 'center',
-        fontWeight: 'bold',
-        margin: 6,
-        color: '#ff0000',
-        textDecorationLine: 'underline',
-        marginTop: 10
     },
 });
 

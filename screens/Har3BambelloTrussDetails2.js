@@ -413,7 +413,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
         }
 
 
-        numberWeek = 2000 + currentWeekNumber() - 2;
+        numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 
@@ -1179,7 +1179,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
         if (this.state.trussNumber != null) {
 
-            db.trussByIdRow(this.state.trussNumber, numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data) => {
+            db.trussByIdRow(this.state.trussNumber, numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 truss = data;
@@ -1214,7 +1214,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 1) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 1), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data1) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 1), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     truss1 = data1;
@@ -1249,7 +1249,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
         setTimeout(() => {
             if ((parseInt(this.state.trussNumber) + 2) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 2), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data2) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 2), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data2) => {
                     console.log(data2);
                     console.log("Calling database")
                     truss2 = data2;
@@ -1282,7 +1282,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
         setTimeout(() => {
             if ((parseInt(this.state.trussNumber) + 3) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 3), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data3) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 3), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data3) => {
                     console.log(data3);
                     console.log("Calling database")
                     truss3 = data3;
@@ -1315,7 +1315,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
         setTimeout(() => {
             if ((parseInt(this.state.trussNumber) + 4) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 4), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data4) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 4), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data4) => {
                     console.log(data4);
                     console.log("Calling database")
                     truss4 = data4;
@@ -1348,7 +1348,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 5) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 5), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data5) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 5), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data5) => {
                     console.log(data5);
                     console.log("Calling database")
                     truss5 = data5;
@@ -1381,7 +1381,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 6) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 6), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data6) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 6), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data6) => {
                     console.log(data6);
                     console.log("Calling database")
                     truss6 = data6;
@@ -1414,7 +1414,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 7) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 7), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data7) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 7), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data7) => {
                     console.log(data7);
                     console.log("Calling database")
                     truss7 = data7;
@@ -1447,7 +1447,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 8) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 8), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data8) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 8), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data8) => {
                     console.log(data8);
                     console.log("Calling database")
                     truss8 = data8;
@@ -1480,7 +1480,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
             if ((parseInt(this.state.trussNumber) + 9) != null) {
 
-                db.trussByIdRow((parseInt(this.state.trussNumber) + 9), numberWeek - 1, 'HAR 3 - Bambello', number, '348').then((data9) => {
+                db.trussByIdRow((parseInt(this.state.trussNumber) + 9), numberWeek - 1, 'HAR 3 - Bambello', number, '324').then((data9) => {
                     console.log(data9);
                     console.log("Calling database")
                     truss9 = data9;
@@ -1552,7 +1552,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits,
                 setFlowers: this.state.setFlowers,
                 pruningNumber: this.state.pruningNumber,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1574,7 +1574,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits,
                 setFlowers: this.state.setFlowers,
                 pruningNumber: this.state.pruningNumber,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1608,7 +1608,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${this.state.trussNumber}&setFruits=${this.state.setFruits}&setFlowers=${this.state.setFlowers}&pruningNumber=${this.state.pruningNumber}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -1745,7 +1745,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits1,
                 setFlowers: this.state.setFlowers1,
                 pruningNumber: this.state.pruningNumber1,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1767,7 +1767,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits1,
                 setFlowers: this.state.setFlowers1,
                 pruningNumber: this.state.pruningNumber1,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1802,7 +1802,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -1942,7 +1942,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits2,
                 setFlowers: this.state.setFlowers2,
                 pruningNumber: this.state.pruningNumber2,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1964,7 +1964,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits2,
                 setFlowers: this.state.setFlowers2,
                 pruningNumber: this.state.pruningNumber2,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -1999,7 +1999,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2127,7 +2127,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits3,
                 setFlowers: this.state.setFlowers3,
                 pruningNumber: this.state.pruningNumber3,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2149,7 +2149,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits3,
                 setFlowers: this.state.setFlowers3,
                 pruningNumber: this.state.pruningNumber3,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2184,7 +2184,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2322,7 +2322,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits4,
                 setFlowers: this.state.setFlowers4,
                 pruningNumber: this.state.pruningNumber4,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2344,7 +2344,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits4,
                 setFlowers: this.state.setFlowers4,
                 pruningNumber: this.state.pruningNumber4,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2378,7 +2378,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2506,7 +2506,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits5,
                 setFlowers: this.state.setFlowers5,
                 pruningNumber: this.state.pruningNumber5,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2528,7 +2528,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits5,
                 setFlowers: this.state.setFlowers5,
                 pruningNumber: this.state.pruningNumber5,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2561,7 +2561,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2693,7 +2693,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits6,
                 setFlowers: this.state.setFlowers6,
                 pruningNumber: this.state.pruningNumber6,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2715,7 +2715,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits6,
                 setFlowers: this.state.setFlowers6,
                 pruningNumber: this.state.pruningNumber6,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2749,7 +2749,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2877,7 +2877,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits7,
                 setFlowers: this.state.setFlowers7,
                 pruningNumber: this.state.pruningNumber7,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2899,7 +2899,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits7,
                 setFlowers: this.state.setFlowers7,
                 pruningNumber: this.state.pruningNumber7,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -2934,7 +2934,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -3064,7 +3064,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits8,
                 setFlowers: this.state.setFlowers8,
                 pruningNumber: this.state.pruningNumber8,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -3086,7 +3086,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits8,
                 setFlowers: this.state.setFlowers8,
                 pruningNumber: this.state.pruningNumber8,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -3121,7 +3121,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -3250,7 +3250,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits9,
                 setFlowers: this.state.setFlowers9,
                 pruningNumber: this.state.pruningNumber9,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -3272,7 +3272,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                 setFruits: this.state.setFruits9,
                 setFlowers: this.state.setFlowers9,
                 pruningNumber: this.state.pruningNumber9,
-                plantRow: '348',
+                plantRow: '324',
                 plantName: 'HAR 3 - Bambello',
                 plantWeek: numberWeek,
                 plantNumber: number,
@@ -3307,7 +3307,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                        callback=ctrlq&plantRow=${'348'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                        callback=ctrlq&plantRow=${'324'}&plantName=${'HAR 3 - Bambello'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
