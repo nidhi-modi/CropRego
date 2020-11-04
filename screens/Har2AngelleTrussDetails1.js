@@ -413,7 +413,7 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
         }
 
 
-        numberWeek = 2000 + currentWeekNumber() - 1;
+        numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 
@@ -433,8 +433,6 @@ export default class Har2AngelleTrussDetails1 extends React.Component {
                 isDataSend: true,
 
             });
-
-            numberWeek = 2000 + currentWeekNumber() - 1;
 
 
         } else if (abc === '1' && abc !== null) {

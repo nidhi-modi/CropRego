@@ -497,6 +497,28 @@ export default class Har3AngelleTrussDetails2 extends React.Component {
         }
     };
 
+    getAsysncValues2() {
+
+        try {
+            AsyncStorage.getItem('setFruits').then((text1Value) => {
+                this.setState({ setFruits: JSON.parse(text1Value) });
+                console.log(this.state.setFruits)
+
+
+            }).done();
+        } catch (error) {
+        }
+        try {
+            AsyncStorage.getItem('setFruits1').then((text2Value) => {
+                this.setState({ setFruits1: JSON.parse(text2Value) });
+                console.log(this.state.setFruits1)
+
+
+            }).done();
+        } catch (error) {
+        }
+       
+    }
 
 
 
@@ -542,6 +564,7 @@ export default class Har3AngelleTrussDetails2 extends React.Component {
 
 
         this.getTrussData();
+       
         //For testing I have changed the numberweek - 2 to numberWeek in the below method
 
     }
@@ -1191,6 +1214,7 @@ export default class Har3AngelleTrussDetails2 extends React.Component {
                 });
                 console.log("Truss Details", this.state.truss);
 
+                this.getAsysncValues2();
                 this.calculateFruitLoad();
                 this.calculateHarvestTruss();
                 this.calculateSettingTruss();
@@ -3859,7 +3883,6 @@ export default class Har3AngelleTrussDetails2 extends React.Component {
                                         autoCorrect={false}
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
-                                        onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}

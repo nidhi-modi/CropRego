@@ -434,8 +434,6 @@ export default class Har1AvalantinoTrussDetails3 extends React.Component {
 
             });
 
-            numberWeek = 2000 + currentWeekNumber() - 1;
-
 
         } else if (abc === '1' && abc !== null) {
 

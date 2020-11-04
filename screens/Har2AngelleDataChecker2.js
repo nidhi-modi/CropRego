@@ -116,10 +116,10 @@ export default class Har2AngelleDataChecker2 extends React.Component {
 
   componentDidMount() {
 
-    numberWeek = 2000 + currentWeekNumber() - 1;
-    numberWeek1 = 2000 + currentWeekNumber() - 2;
-    numberWeek2 = 2000 + currentWeekNumber() - 3;
-    numberWeek3 = 2000 + currentWeekNumber() - 4;
+    numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
+    numberWeek1 = 2000 + currentWeekNumber(new Date()) - 2;
+    numberWeek2 = 2000 + currentWeekNumber(new Date()) - 3;
+    numberWeek3 = 2000 + currentWeekNumber(new Date()) - 4;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
