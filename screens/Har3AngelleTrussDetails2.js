@@ -1213,8 +1213,6 @@ export default class Har3AngelleTrussDetails2 extends React.Component {
                     pruningNumber: data.pruningNumber,
                 });
                 console.log("Truss Details", this.state.truss);
-
-                this.getAsysncValues2();
                 this.calculateFruitLoad();
                 this.calculateHarvestTruss();
                 this.calculateSettingTruss();

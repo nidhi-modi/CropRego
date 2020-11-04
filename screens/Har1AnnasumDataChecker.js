@@ -150,7 +150,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberAndName(number, numberWeek, 'HAR 1 - Annasum').then((data) => {
+      db.trussByWeekNumberAndName(number, numberWeek, 'HAR 1 - Annasun').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss1 = data;
@@ -170,7 +170,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberAndName(number, numberWeek1, 'HAR 1 - Annasum').then((data) => {
+      db.trussByWeekNumberAndName(number, numberWeek1, 'HAR 1 - Annasun').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss2 = data;
@@ -191,7 +191,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberAndName(number, numberWeek2, 'HAR 1 - Annasum').then((data) => {
+      db.trussByWeekNumberAndName(number, numberWeek2, 'HAR 1 - Annasun').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss3 = data;
@@ -216,7 +216,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
       });
 
-      db.trussByWeekNumberAndName(number, numberWeek3, 'HAR 1 - Annasum').then((data) => {
+      db.trussByWeekNumberAndName(number, numberWeek3, 'HAR 1 - Annasun').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss4 = data;
@@ -242,7 +242,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
         isLoading: true
 
       });
-      db.plantsByWeekNumberAndName(number, numberWeek1, 'HAR 1 - Annasum').then((data) => {
+      db.plantsByWeekNumberAndName(number, numberWeek1, 'HAR 1 - Annasun').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo1 = data;
@@ -260,7 +260,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
     setTimeout(() => {
 
-      db.plantsByWeekNumberAndName(number, numberWeek2, 'HAR 1 - Annasum').then((data) => {
+      db.plantsByWeekNumberAndName(number, numberWeek2, 'HAR 1 - Annasun').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo2 = data;
@@ -280,7 +280,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
     setTimeout(() => {
 
-      db.plantsByWeekNumberAndName(number, numberWeek3, 'HAR 1 - Annasum').then((data) => {
+      db.plantsByWeekNumberAndName(number, numberWeek3, 'HAR 1 - Annasun').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo3 = data;
@@ -300,7 +300,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
     setTimeout(() => {
 
-      db.plantsByWeekNumberAndName(number, numberWeek, 'HAR 1 - Annasum').then((data) => {
+      db.plantsByWeekNumberAndName(number, numberWeek, 'HAR 1 - Annasun').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo4 = data;
@@ -409,7 +409,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
 
 
-    /*db.plantByWeekInList('HAR 1 - Annasum', numberWeek1).then((data) => {
+    /*db.plantByWeekInList('HAR 1 - Annasun', numberWeek1).then((data) => {
       console.log(data);
       console.log("Calling database")
 
@@ -524,7 +524,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
     setTimeout(() => {
 
-      db.plantByWeekInList('HAR 1 - Annasum', numberWeek2).then((data1) => {
+      db.plantByWeekInList('HAR 1 - Annasun', numberWeek2).then((data1) => {
         console.log(data1);
         console.log("Calling database")
 
@@ -640,7 +640,7 @@ export default class Har1AnnasumDataChecker extends React.Component {
 
 
     setTimeout(() => {
-      db.plantByWeekInList('HAR 1 - Annasum', numberWeek3).then((data1) => {
+      db.plantByWeekInList('HAR 1 - Annasun', numberWeek3).then((data1) => {
         console.log(data1);
         console.log("Calling database")
         const leavesPlant3 = data1.map((item) => item.leavesPerPlant);

@@ -68,7 +68,7 @@ export default class Har1AnnasumPlantList extends Component {
             isLoading: true,
         });
         let plants = [];
-        db.plantByWeekInList('HAR 1 - Annasum').then((data) => {
+        db.plantByWeekInList('HAR 1 - Annasun').then((data) => {
             console.log("Calling database")
             plants = data;
             this.setState({
@@ -99,7 +99,7 @@ export default class Har1AnnasumPlantList extends Component {
             onPress={() => {
                 this.props.navigation.navigate('PlantDetails', {
                     plantId: `${item.plantId}`,
-                    plantName: 'HAR 1 - Annasum',
+                    plantName: 'HAR 1 - Annasun',
 
 
                 });

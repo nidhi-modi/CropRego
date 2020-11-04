@@ -633,7 +633,7 @@ export default class Har1HTLPlant1 extends React.Component {
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
             setTimeout(() => {
-                db.plantsByWeekNumberAndName(no, numberWeek, 'HAR 1 - HTL1606242').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 1 - HTL1606242','125').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -728,9 +728,6 @@ export default class Har1HTLPlant1 extends React.Component {
                 isErrorAsync: false,
             });
 
-            numberWeek = 2000 + currentWeekNumber(new Date());
-
-
         } else if (abc === '1' && abc !== null) {
 
             AsyncStorage.clear();
@@ -765,7 +762,7 @@ export default class Har1HTLPlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekNumberAndName(no1, numberWeek - 1, 'HAR 1 - HTL1606242').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 1 - HTL1606242','125').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -790,7 +787,7 @@ export default class Har1HTLPlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekNumberAndName(no2, numberWeek - 1, 'HAR 1 - HTL1606242').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 1 - HTL1606242','125').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -816,7 +813,7 @@ export default class Har1HTLPlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekAndName(no3, numberWeek - 1, 'HAR 1 - HTL1606242').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 1 - HTL1606242','125').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -842,7 +839,7 @@ export default class Har1HTLPlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekAndName(no4, numberWeek - 1, 'HAR 1 - HTL1606242').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 1 - HTL1606242','125').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -868,7 +865,7 @@ export default class Har1HTLPlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekAndName(no5, numberWeek - 1, 'HAR 1 - HTL1606242').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 1 - HTL1606242','125').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;

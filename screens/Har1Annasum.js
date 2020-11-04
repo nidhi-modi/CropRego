@@ -62,7 +62,7 @@ export default class Har1Annasum extends Component {
     callQuery= () => {
 
         setTimeout(() => {
-            db.plantsByWeekNumberAndName("1", numberWeek, 'HAR 1 - Annasum').then((data) => {
+            db.plantsByWeekNumberAndName("1", numberWeek, 'HAR 1 - Annasun').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -85,7 +85,7 @@ export default class Har1Annasum extends Component {
         }, 1000);
 
         setTimeout(() => {
-            db.plantsByWeekNumberAndName("2", numberWeek, 'HAR 1 - Annasum').then((data) => {
+            db.plantsByWeekNumberAndName("2", numberWeek, 'HAR 1 - Annasun').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -109,7 +109,7 @@ export default class Har1Annasum extends Component {
         }, 3000);
 
         setTimeout(() => {
-            db.plantsByWeekNumberAndName("3", numberWeek, 'HAR 1 - Annasum').then((data) => {
+            db.plantsByWeekNumberAndName("3", numberWeek, 'HAR 1 - Annasun').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -132,7 +132,7 @@ export default class Har1Annasum extends Component {
         }, 4000);
 
         setTimeout(() => {
-            db.plantsByWeekNumberAndName("4", numberWeek, 'HAR 1 - Annasum').then((data) => {
+            db.plantsByWeekNumberAndName("4", numberWeek, 'HAR 1 - Annasun').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -154,7 +154,7 @@ export default class Har1Annasum extends Component {
         }, 5000);
 
         setTimeout(() => {
-            db.plantsByWeekNumberAndName("5", numberWeek, 'HAR 1 - Annasum').then((data) => {
+            db.plantsByWeekNumberAndName("5", numberWeek, 'HAR 1 - Annasun').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({

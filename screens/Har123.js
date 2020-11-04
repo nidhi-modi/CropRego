@@ -130,7 +130,7 @@ export default class Har123 extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har1AnnasumRow')}>
-              <Text style={styles.buttonText}>HAR 1 - Annasum</Text>
+              <Text style={styles.buttonText}>HAR 1 - Annasun</Text>
             </TouchableOpacity>
 
             <TouchableOpacity

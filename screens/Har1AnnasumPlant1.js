@@ -633,7 +633,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
             setTimeout(() => {
-                db.plantsByWeekNumberAndName(no, numberWeek, 'HAR 1 - Annasum').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 1 - Annasun','105').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -672,7 +672,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
 
             setTimeout(() => {
 
-                db.trussByWeekNumberRowAndName(no, numberWeek, 'HAR 1 - Annasum', '105').then((data1) => {
+                db.trussByWeekNumberRowAndName(no, numberWeek, 'HAR 1 - Annasun', '105').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     if (data1 !== null || data1 !== '' || data1 !== undefined) {
@@ -728,8 +728,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                 isErrorAsync: false,
             });
 
-            numberWeek = 2000 + currentWeekNumber(new Date());
-
 
         } else if (abc === '1' && abc !== null) {
 
@@ -756,6 +754,8 @@ export default class Har1AnnasumPlant1 extends React.Component {
 
         }
 
+    
+
 
         if (no1 !== undefined && no1 !== null) {
 
@@ -765,7 +765,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekNumberAndName(no1, numberWeek - 1, 'HAR 1 - Annasum').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -790,7 +790,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekNumberAndName(no2, numberWeek - 1, 'HAR 1 - Annasum').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -816,7 +816,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekAndName(no3, numberWeek - 1, 'HAR 1 - Annasum').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -842,7 +842,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekAndName(no4, numberWeek - 1, 'HAR 1 - Annasum').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -868,7 +868,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekAndName(no5, numberWeek - 1, 'HAR 1 - Annasum').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -1279,7 +1279,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
 
         let data = {
             plantRow: '105',
-            plantName: 'HAR 1 - Annasum',
+            plantName: 'HAR 1 - Annasun',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1303,7 +1303,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
 
         let data1 = {
             plantRow: '105',
-            plantName: 'HAR 1 - Annasum',
+            plantName: 'HAR 1 - Annasun',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1343,7 +1343,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
 
                                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                                 const url = `${scriptUrl}?
-                                                callback=ctrlq&plantRow=${'105'}&plantName=${'HAR 1 - Annasum'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+                                                callback=ctrlq&plantRow=${'105'}&plantName=${'HAR 1 - Annasun'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
 
                                                 console.log("URL : " + url);
                                                 fetch(url, { mode: 'no-cors' }).then(
@@ -1368,7 +1368,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
-                                                    this.setItem('Har1AnnasumPlant', 1)
 
 
                                                 }).catch((err) => {
@@ -1378,7 +1377,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
-                                                    this.setItem('Har1AnnasumPlant', 0)
 
                                                 })
 
@@ -1401,7 +1399,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
-                                                    this.setItem('Har1AnnasumPlant', 1)
 
 
                                                 }).catch((err) => {
@@ -1411,7 +1408,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
-                                                    this.setItem('Har1AnnasumPlant', 0)
 
                                                 })
 
@@ -1427,7 +1423,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
 
                                             });
                                             abc = '0';
-                                            this.setItem('Har1AnnasumPlant', 0)
 
                                         }
                                     } else {
@@ -1437,7 +1432,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                                             isDataSend: false,
                                         });
                                         abc = '0';
-                                        this.setItem('Har1AnnasumPlant', 0)
                                     }
                                 } else {
                                     alert('Please fill Leaf Width');
@@ -1446,7 +1440,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                                         isDataSend: false,
                                     });
                                     abc = '0';
-                                    this.setItem('Har1AnnasumPlant', 0)
                                 }
                             } else {
                                 alert('Please fill Leaf Length');
@@ -1455,7 +1448,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                                     isDataSend: false,
                                 });
                                 abc = '0';
-                                this.setItem('Har1AnnasumPlant', 0)
                             }
                         } else {
                             alert('Please fill Flower Truss Height');
@@ -1464,7 +1456,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                                 isDataSend: false,
                             });
                             abc = '0';
-                            this.setItem('Har1AnnasumPlant', 0)
                         }
                     } else {
                         alert('Please fill Weekly Growth');
@@ -1473,7 +1464,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                             isDataSend: false,
                         });
                         abc = '0';
-                        this.setItem('Har1AnnasumPlant', 0)
                     }
                 } else {
                     alert('Please fill Fully Set Truss Length');
@@ -1482,7 +1472,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                         isDataSend: false,
                     });
                     abc = '0';
-                    this.setItem('Har1AnnasumPlant', 0)
                 }
             } else {
                 alert('Please fill Fully Set Truss');
@@ -1491,7 +1480,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                     isDataSend: false,
                 });
                 abc = '0';
-                this.setItem('Har1AnnasumPlant', 0)
             }
         } else {
 
@@ -1501,7 +1489,6 @@ export default class Har1AnnasumPlant1 extends React.Component {
                 isDataSend: false,
             });
             abc = '0';
-            this.setItem('Har1AnnasumPlant', 0)
         }
 
 
@@ -1543,7 +1530,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
             plantRow: '105',
-            plantName: 'HAR 1 - Annasum',
+            plantName: 'HAR 1 - Annasun',
             plantWeek: '2009',
 
             trussNumber2: this.state.trussNumber2,
