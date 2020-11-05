@@ -512,10 +512,11 @@ export default class Har1AnnasumTrussDetails extends React.Component {
         state[field] = text;
         this.setState(state)
 
+
         this.calculateFruitLoad();
         this.calculateHarvestTruss();
-        this.calculateSettingTruss();
-        this.calculateFloweringTruss();
+        this.calculateSettingTruss2();
+        this.calculateFloweringTruss2();
 
 
     }
@@ -541,8 +542,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
         this.setState({ trussNumber8: parseInt(this.state.trussNumber) + 8 })
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
-
         this.getTrussData();
+
+        
+
         //For testing I have changed the numberweek - 2 to numberWeek in the below method
 
     }
@@ -579,6 +582,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
         console.log("Harvest Truss : " + add);
 
     }
+
+    
 
     calculateSettingTruss = () => {
 
@@ -971,6 +976,402 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
     }
 
+    calculateSettingTruss2 = () => {
+
+        var div = 0;
+        var sub = 0;
+        var add = 0;
+        var pruningSet = 0;
+        var settingTruss = 0;
+        var settingFruit = 0;
+        var trussNum = 0;
+
+        if (this.state.setFruits9 === "") {
+
+            if (this.state.setFruits8 === "") {
+
+                if (this.state.setFruits7 === "") {
+
+                    if (this.state.setFruits6 === "") {
+
+                        if (this.state.setFruits5 === "") {
+
+                            if (this.state.setFruits4 === "") {
+
+                                if (this.state.setFruits3 === "") {
+
+                                    if (this.state.setFruits2 === "") {
+
+                                        if (this.state.setFruits1 === "") {
+
+                                            if (this.state.setFruits === "") {
+
+
+                                            } else {
+
+                                                pruningSet = parseInt(this.state.pruningNumber);
+                                                trussNum = parseInt(this.state.trussNumber);
+                                                settingFruit = parseInt(this.state.setFruits);
+                                                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                                console.log("Setting Truss Number : " + settingTruss);
+                                                this.setState({
+                                                    settingTrussNumber: settingTruss,
+                                                    settingTruss: trussNum,
+                                                    prunSetting: pruningSet,
+
+                                                });
+
+                                            }
+
+                                        } else {
+
+                                            pruningSet = parseInt(this.state.pruningNumber1);
+                                            trussNum = parseInt(this.state.trussNumber1);
+                                            settingFruit = parseInt(this.state.setFruits1);
+                                            settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                            console.log("Setting Truss Number 1 : " + settingTruss);
+                                            this.setState({
+                                                settingTrussNumber: settingTruss,
+                                                settingTruss: trussNum,
+                                                prunSetting: pruningSet,
+
+                                            });
+
+                                        }
+
+                                    } else {
+
+                                        pruningSet = parseInt(this.state.pruningNumber2);
+                                        trussNum = parseInt(this.state.trussNumber2);
+                                        settingFruit = parseInt(this.state.setFruits2);
+                                        settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                        console.log("Setting Truss Number 2 : " + settingTruss);
+                                        this.setState({
+                                            settingTrussNumber: settingTruss,
+                                            settingTruss: trussNum,
+                                            prunSetting: pruningSet,
+
+                                        });
+
+                                    }
+
+                                } else {
+
+                                    pruningSet = parseInt(this.state.pruningNumber3);
+                                    trussNum = parseInt(this.state.trussNumber3);
+                                    settingFruit = parseInt(this.state.setFruits3);
+                                    settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                    console.log("Setting Truss Number 3 : " + settingTruss);
+                                    this.setState({
+                                        settingTrussNumber: settingTruss,
+                                        settingTruss: trussNum,
+                                        prunSetting: pruningSet,
+
+                                    });
+
+                                }
+
+                            } else {
+
+                                pruningSet = parseInt(this.state.pruningNumber4);
+                                trussNum = parseInt(this.state.trussNumber4);
+                                settingFruit = parseInt(this.state.setFruits4);
+                                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                                console.log("Setting Truss Number 4 : " + settingTruss);
+                                this.setState({
+                                    settingTrussNumber: settingTruss,
+                                    settingTruss: trussNum,
+                                    prunSetting: pruningSet,
+
+                                });
+
+                            }
+
+                        } else {
+
+                            pruningSet = parseInt(this.state.pruningNumber5);
+                            trussNum = parseInt(this.state.trussNumber5);
+                            settingFruit = parseInt(this.state.setFruits5);
+                            settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                            console.log("Setting Truss Number 5 : " + settingTruss);
+                            this.setState({
+                                settingTrussNumber: settingTruss,
+                                settingTruss: trussNum,
+                                prunSetting: pruningSet,
+
+                            });
+
+
+                        }
+
+                    } else {
+
+                        pruningSet = parseInt(this.state.pruningNumber6);
+                        trussNum = parseInt(this.state.trussNumber6);
+                        settingFruit = parseInt(this.state.setFruits6);
+                        settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                        console.log("Setting Truss Number 6 : " + settingTruss);
+                        this.setState({
+                            settingTrussNumber: settingTruss,
+                            settingTruss: trussNum,
+                            prunSetting: pruningSet,
+
+                        });
+
+
+                    }
+
+                } else {
+
+                    pruningSet = parseInt(this.state.pruningNumber7);
+                    trussNum = parseInt(this.state.trussNumber7);
+                    settingFruit = parseInt(this.state.setFruits7);
+                    settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                    console.log("Setting Truss Number 7 : " + settingTruss);
+                    this.setState({
+                        settingTrussNumber: settingTruss,
+                        settingTruss: trussNum,
+                        prunSetting: pruningSet,
+
+                    });
+                }
+
+            } else {
+
+                pruningSet = parseInt(this.state.pruningNumber8);
+                trussNum = parseInt(this.state.trussNumber8);
+                settingFruit = parseInt(this.state.setFruits8);
+                settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+                console.log("Setting Truss Number 8 : " + settingTruss);
+                this.setState({
+                    settingTrussNumber: settingTruss,
+                    settingTruss: trussNum,
+                    prunSetting: pruningSet,
+
+                });
+
+            }
+
+        } else {
+
+            pruningSet = parseInt(this.state.pruningNumber9);
+            trussNum = parseInt(this.state.trussNumber9);
+            settingFruit = parseInt(this.state.setFruits9);
+            settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
+            console.log("Setting Truss Number 9 : " + settingTruss);
+            this.setState({
+                settingTrussNumber: settingTruss,
+                settingTruss2: trussNum,
+                prunSetting: pruningSet,
+            });
+
+        }
+
+    }
+
+    calculateFloweringTruss2 = () => {
+
+        var floweringTrussNum = 0;
+        var flowerPruningNumner = 0;
+        var flowering = 0;
+        var flowerSetFruits = 0;
+        var summ = 0;
+        var floweringTruss = 0;
+
+        if (this.state.setFlowers9 === "") {
+
+            if (this.state.setFlowers8 === "") {
+
+                if (this.state.setFlowers7 === "") {
+
+                    if (this.state.setFlowers6 === "") {
+
+                        if (this.state.setFlowers5 === "") {
+
+                            if (this.state.setFlowers4 === "") {
+
+                                if (this.state.setFlowers3 === "") {
+
+                                    if (this.state.setFlowers2 === "") {
+
+                                        if (this.state.setFlowers1 === "") {
+
+                                            if (this.state.setFlowers === "") {
+
+
+                                            } else {
+
+                                                flowerPruningNumner = parseInt(this.state.pruningNumber);
+                                                flowering = parseInt(this.state.setFlowers);
+                                                flowerSetFruits = parseInt(this.state.setFruits);
+                                                summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                                floweringTruss = ((parseInt(this.state.trussNumber) + (summ / flowerPruningNumner)).toFixed(2));
+                                                console.log("Flowering Truss Value : " + floweringTruss);
+                                                this.setState({
+                                                    floweringTrussss: floweringTruss,
+                                                    pruneFlowering: flowerPruningNumner,
+                                                });
+                                            }
+
+
+                                        } else {
+
+                                            flowerPruningNumner = parseInt(this.state.pruningNumber1);
+                                            flowering = parseInt(this.state.setFlowers1);
+                                            flowerSetFruits = parseInt(this.state.setFruits1);
+                                            summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                            floweringTruss = ((parseInt(this.state.trussNumber1) + (summ / flowerPruningNumner)).toFixed(2));
+                                            console.log("Flowering Truss Value : " + floweringTruss);
+                                            this.setState({
+                                                floweringTrussss: floweringTruss,
+                                                pruneFlowering: flowerPruningNumner,
+
+                                            });
+
+
+                                        }
+
+
+                                    } else {
+
+
+                                        flowerPruningNumner = parseInt(this.state.pruningNumber2);
+                                        flowering = parseInt(this.state.setFlowers2);
+                                        flowerSetFruits = parseInt(this.state.setFruits2);
+                                        summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                        floweringTruss = ((parseInt(this.state.trussNumber2) + (summ / flowerPruningNumner)).toFixed(2));
+                                        console.log("Flowering Truss Value : " + floweringTruss);
+                                        this.setState({
+                                            floweringTrussss: floweringTruss,
+                                            pruneFlowering: flowerPruningNumner,
+
+                                        });
+
+                                    }
+
+
+                                } else {
+
+                                    flowerPruningNumner = parseInt(this.state.pruningNumber3);
+                                    flowering = parseInt(this.state.setFlowers3);
+                                    flowerSetFruits = parseInt(this.state.setFruits3);
+                                    summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                    floweringTruss = ((parseInt(this.state.trussNumber3) + (summ / flowerPruningNumner)).toFixed(2));
+                                    console.log("Flowering Truss Value : " + floweringTruss);
+                                    this.setState({
+                                        floweringTrussss: floweringTruss,
+                                        pruneFlowering: flowerPruningNumner,
+
+                                    });
+
+
+                                }
+
+
+                            } else {
+
+                                flowerPruningNumner = parseInt(this.state.pruningNumber4);
+                                flowering = parseInt(this.state.setFlowers4);
+                                flowerSetFruits = parseInt(this.state.setFruits4);
+                                summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                                floweringTruss = ((parseInt(this.state.trussNumber4) + (summ / flowerPruningNumner)).toFixed(2));
+                                console.log("Flowering Truss Value : " + floweringTruss);
+                                this.setState({
+                                    floweringTrussss: floweringTruss,
+                                    pruneFlowering: flowerPruningNumner,
+
+                                });
+
+
+                            }
+
+
+                        } else {
+
+                            flowerPruningNumner = parseInt(this.state.pruningNumber5);
+                            flowering = parseInt(this.state.setFlowers5);
+                            flowerSetFruits = parseInt(this.state.setFruits5);
+                            summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                            floweringTruss = ((parseInt(this.state.trussNumber5) + (summ / flowerPruningNumner)).toFixed(2));
+                            console.log("Flowering Truss Value : " + floweringTruss);
+                            this.setState({
+                                floweringTrussss: floweringTruss,
+                                pruneFlowering: flowerPruningNumner,
+
+                            });
+
+                        }
+
+
+                    } else {
+
+                        flowerPruningNumner = parseInt(this.state.pruningNumber6);
+                        flowering = parseInt(this.state.setFlowers6);
+                        flowerSetFruits = parseInt(this.state.setFruits6);
+                        summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                        floweringTruss = ((parseInt(this.state.trussNumber6) + (summ / flowerPruningNumner)).toFixed(2));
+                        console.log("Flowering Truss Value : " + floweringTruss);
+                        this.setState({
+                            floweringTrussss: floweringTruss,
+                            pruneFlowering: flowerPruningNumner,
+
+                        });
+
+                    }
+
+
+                } else {
+
+                    flowerPruningNumner = parseInt(this.state.pruningNumber7);
+                    flowering = parseInt(this.state.setFlowers7);
+                    flowerSetFruits = parseInt(this.state.setFruits7);
+                    summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                    floweringTruss = ((parseInt(this.state.trussNumber7) + (summ / flowerPruningNumner)).toFixed(2));
+                    console.log("Flowering Truss Value : " + floweringTruss);
+                    this.setState({
+                        floweringTrussss: floweringTruss,
+                        pruneFlowering: flowerPruningNumner,
+
+                    });
+
+                }
+
+
+            } else {
+
+                flowerPruningNumner = parseInt(this.state.pruningNumber8);
+                flowering = parseInt(this.state.setFlowers8);
+                flowerSetFruits = parseInt(this.state.setFruits8);
+                summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+                floweringTruss = ((parseInt(this.state.trussNumber8) + (summ / flowerPruningNumner)).toFixed(2));
+                console.log("Flowering Truss Value : " + floweringTruss);
+                this.setState({
+                    floweringTrussss: floweringTruss,
+                    pruneFlowering: flowerPruningNumner,
+
+                });
+
+            }
+
+
+        } else {
+
+            flowerPruningNumner = parseInt(this.state.pruningNumber9);
+            flowering = parseInt(this.state.setFlowers9);
+            flowerSetFruits = parseInt(this.state.setFruits9);
+            summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
+            floweringTruss = ((parseInt(this.state.trussNumber9) + (summ / flowerPruningNumner)).toFixed(2));
+            console.log("Flowering Truss Value : " + floweringTruss);
+            this.setState({
+                floweringTrussss: floweringTruss,
+                pruneFlowering: flowerPruningNumner,
+
+            });
+
+        }
+
+    }
+
     calculateFloweringTruss = () => {
 
         var floweringTrussNum = 0;
@@ -983,13 +1384,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
         if (this.state.settingTruss !== "") {
 
+
             floweringTrussNum = this.state.settingTruss + 1;
 
 
         } else {
 
             floweringTrussNum = this.state.settingTruss2;
-
 
         }
         if (this.state.trussNumber === floweringTrussNum) {
@@ -1189,13 +1590,33 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                     setFruits: data.setFruits,
                     setFlowers: data.setFlowers,
                     pruningNumber: data.pruningNumber,
+
+                    setFruits1: data.setFruits1,
+                    setFlowers1: data.setFlowers1,
+                    pruningNumber1: data.pruningNumber1,
+
+                    setFruits2: data.setFruits2,
+                    setFlowers2: data.setFlowers2,
+                    pruningNumber2: data.pruningNumber2,
+
+                    setFruits3: data.setFruits3,
+                    setFlowers3: data.setFlowers3,
+                    pruningNumber3: data.pruningNumber3,
+
+                    setFruits4: data.setFruits4,
+                    setFlowers4: data.setFlowers4,
+                    pruningNumber4: data.pruningNumber4,
+
+                    setFruits5: data.setFruits5,
+                    setFlowers5: data.setFlowers5,
+                    pruningNumber5: data.pruningNumber5,
                 });
                 console.log("Truss Details", this.state.truss);
 
                 this.calculateFruitLoad();
                 this.calculateHarvestTruss();
-                this.calculateSettingTruss();
-                this.calculateFloweringTruss();
+                this.calculateSettingTruss2();
+                this.calculateFloweringTruss2();
 
 
             }).catch((err) => {
@@ -1229,8 +1650,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
 
                 }).catch((err) => {
@@ -1264,8 +1685,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
 
                 }).catch((err) => {
@@ -1297,8 +1718,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
                 }).catch((err) => {
                     console.log(err);
@@ -1330,8 +1751,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
                 }).catch((err) => {
                     console.log(err);
@@ -1363,8 +1784,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
                 }).catch((err) => {
                     console.log(err);
@@ -1396,8 +1817,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
                 }).catch((err) => {
                     console.log(err);
@@ -1429,8 +1850,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
                 }).catch((err) => {
                     console.log(err);
@@ -1462,8 +1883,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
                 }).catch((err) => {
                     console.log(err);
@@ -1496,8 +1917,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     this.calculateFruitLoad();
                     this.calculateHarvestTruss();
-                    this.calculateSettingTruss();
-                    this.calculateFloweringTruss();
+                    this.calculateSettingTruss2();
+                    this.calculateFloweringTruss2();
 
                 }).catch((err) => {
                     console.log(err);

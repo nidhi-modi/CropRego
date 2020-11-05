@@ -245,7 +245,6 @@ function MainStackNavigator() {
       <Stack.Navigator initialRouteName='SiteSelection'
 
         screenOptions={{
-          gestureEnabled: true,
           headerStyle: {
             backgroundColor: '#2C903D'
           },
@@ -4184,7 +4183,7 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 1 Annasum'
+          , title: 'HAR 1 Annasun'
         })} />
 
 
@@ -4217,7 +4216,7 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 1 Annasum'
+          , title: 'HAR 1 Annasun'
         })} />
 
         <Stack.Screen name='Har1AnnasumDataChecker' component={Har1AnnasumDataChecker} options={({ navigation }) => ({
@@ -4237,7 +4236,7 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 1 Annasum'
+          , title: 'HAR 1 Annasun'
         })} />
 
         <Stack.Screen name='Har1AnnasumPlant1' component={Har1AnnasumPlant1} options={({ navigation }) => ({
@@ -4257,7 +4256,7 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 1 Annasum'
+          , title: 'HAR 1 Annasun'
         })} />
 
         <Stack.Screen name='Har1AnnasumPlantList' component={Har1AnnasumPlantList} options={({ navigation }) => ({
@@ -4277,7 +4276,7 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 1 Annasum'
+          , title: 'HAR 1 Annasun'
         })} />
 
         <Stack.Screen name='Har1AnnasumTrussDetails' component={Har1AnnasumTrussDetails} options={({ navigation }) => ({
@@ -4297,7 +4296,7 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 1 Annasum'
+          , title: 'HAR 1 Annasun'
         })} />
 
 
