@@ -36,8 +36,7 @@ export default class Database {
                                 console.log("Database not yet ready ... populating data");
                                 db.transaction((tx) => {
                                     tx.executeSql('DROP TABLE IF EXISTS TrussDetails', []);
-                                    tx.executeSql('CREATE TABLE IF NOT EXISTS TrussDetails (trussID INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber VARCHAR(30), trussNumber INT(20), fruitDiameter INT(20), setFruits INT(20), setFlowers INT(20), pruningNumber INT(20), plantRow INT(20), plantName VARCHAR(30), plantWeek INT(20), fruitLoad INT(20), pruningFlower INT(20), floweringTruss INT(20), pruningSet INT(20), settingTruss INT(20), pruningHarvest INT(20), harvestTruss INT(20), dataSend INT(10))');
-                                }).then(() => {
+                                    tx.executeSql('CREATE TABLE IF NOT EXISTS TrussDetails (trussID INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber VARCHAR(30), trussNumber INT(20), fruitDiameter INT(20), setFruits INT(20), setFlowers INT(20), pruningNumber INT(20),plantRow INT(20),plantName VARCHAR(30), plantWeek INT(20), fruitLoad INT(20), pruningFlower INT(20), floweringTruss INT(20), pruningSet INT(20), settingTruss INT(20), pruningHarvest INT(20), harvestTruss INT(20), dataSend INT(10))');                                }).then(() => {
                                     console.log("Truss Details Table created successfully");
                                 }).catch(error => {
                                     console.log(error);

@@ -633,7 +633,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
             setTimeout(() => {
-                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 1 - Annasun','105').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 1 - Annasun', '105').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -722,7 +722,9 @@ export default class Har1AnnasumPlant1 extends React.Component {
         this.ShowHideLastWeekStmDiaComponent();*/
 
         if (abc === '0' || abc === null) {
-            this.getAsysncValues();
+
+
+            console.log("YYYYYYYYYYYYYYYYYYYYYYYYYY : " + no);
             this.setState({
                 isDataSend: true,
                 isErrorAsync: false,
@@ -754,7 +756,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
 
         }
 
-    
+
 
 
         if (no1 !== undefined && no1 !== null) {
@@ -765,7 +767,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 1 - Annasun', '105').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -790,7 +792,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 1 - Annasun', '105').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -816,7 +818,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 1 - Annasun', '105').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -842,7 +844,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 1 - Annasun', '105').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -868,7 +870,7 @@ export default class Har1AnnasumPlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 1 - Annasun','105').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 1 - Annasun', '105').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -911,7 +913,9 @@ export default class Har1AnnasumPlant1 extends React.Component {
 
 
     updateTextInput = (text, field) => {
+
         this.setItem(field, text)
+
         this.setState({
             isDataSend: false,
 

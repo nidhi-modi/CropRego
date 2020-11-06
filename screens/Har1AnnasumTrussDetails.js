@@ -434,8 +434,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
             });
 
-            numberWeek = 2000 + currentWeekNumber() - 1;
-
 
         } else if (abc === '1' && abc !== null) {
 
@@ -532,6 +530,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
         state[field] = text;
         this.setState(state)
 
+        
+
         this.setState({ trussNumber1: parseInt(this.state.trussNumber) + 1 })
         this.setState({ trussNumber2: parseInt(this.state.trussNumber) + 2 })
         this.setState({ trussNumber3: parseInt(this.state.trussNumber) + 3 })
@@ -542,7 +542,21 @@ export default class Har1AnnasumTrussDetails extends React.Component {
         this.setState({ trussNumber8: parseInt(this.state.trussNumber) + 8 })
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
-        this.getTrussData();
+       
+       
+
+
+        if(this.state.trussNumber !== ""){
+
+            this.calculateSettingTruss2();
+            this.calculateFloweringTruss2();
+            this.calculateFruitLoad();
+            this.calculateHarvestTruss();
+            this.getTrussData();
+
+        }
+
+        
 
         
 
@@ -986,6 +1000,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
         var settingFruit = 0;
         var trussNum = 0;
 
+        console.log("Setting truss called : "+this.state.setFruits2);
+
         if (this.state.setFruits9 === "") {
 
             if (this.state.setFruits8 === "") {
@@ -1025,8 +1041,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                                         } else {
 
+                                            var number = (parseInt(this.state.trussNumber) + 1)
+
                                             pruningSet = parseInt(this.state.pruningNumber1);
-                                            trussNum = parseInt(this.state.trussNumber1);
+                                            trussNum = parseInt(number);
                                             settingFruit = parseInt(this.state.setFruits1);
                                             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                                             console.log("Setting Truss Number 1 : " + settingTruss);
@@ -1041,8 +1059,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                                     } else {
 
+                                        var number2 = (parseInt(this.state.trussNumber)+2)
+
                                         pruningSet = parseInt(this.state.pruningNumber2);
-                                        trussNum = parseInt(this.state.trussNumber2);
+                                        trussNum = parseInt(number2);
                                         settingFruit = parseInt(this.state.setFruits2);
                                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                                         console.log("Setting Truss Number 2 : " + settingTruss);
@@ -1057,8 +1077,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                                 } else {
 
+                                    var number3 = (parseInt(this.state.trussNumber)+3)
+
                                     pruningSet = parseInt(this.state.pruningNumber3);
-                                    trussNum = parseInt(this.state.trussNumber3);
+                                    trussNum = parseInt(number3);
                                     settingFruit = parseInt(this.state.setFruits3);
                                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                                     console.log("Setting Truss Number 3 : " + settingTruss);
@@ -1073,8 +1095,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                             } else {
 
+                                var number4 = (parseInt(this.state.trussNumber)+4)
+
                                 pruningSet = parseInt(this.state.pruningNumber4);
-                                trussNum = parseInt(this.state.trussNumber4);
+                                trussNum = parseInt(number4);
                                 settingFruit = parseInt(this.state.setFruits4);
                                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                                 console.log("Setting Truss Number 4 : " + settingTruss);
@@ -1089,8 +1113,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                         } else {
 
+                            var number5 = (parseInt(this.state.trussNumber)+5)
+
                             pruningSet = parseInt(this.state.pruningNumber5);
-                            trussNum = parseInt(this.state.trussNumber5);
+                            trussNum = parseInt(number5);
                             settingFruit = parseInt(this.state.setFruits5);
                             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                             console.log("Setting Truss Number 5 : " + settingTruss);
@@ -1106,8 +1132,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     } else {
 
+                        var number6 = (parseInt(this.state.trussNumber)+6)
+
                         pruningSet = parseInt(this.state.pruningNumber6);
-                        trussNum = parseInt(this.state.trussNumber6);
+                        trussNum = parseInt(number6);
                         settingFruit = parseInt(this.state.setFruits6);
                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                         console.log("Setting Truss Number 6 : " + settingTruss);
@@ -1122,9 +1150,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                     }
 
                 } else {
+                    var number7 = (parseInt(this.state.trussNumber)+7)
 
                     pruningSet = parseInt(this.state.pruningNumber7);
-                    trussNum = parseInt(this.state.trussNumber7);
+                    trussNum = parseInt(number7);
                     settingFruit = parseInt(this.state.setFruits7);
                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                     console.log("Setting Truss Number 7 : " + settingTruss);
@@ -1138,8 +1167,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
             } else {
 
+                var number8 = (parseInt(this.state.trussNumber)+8)
+
                 pruningSet = parseInt(this.state.pruningNumber8);
-                trussNum = parseInt(this.state.trussNumber8);
+                trussNum = parseInt(number8);
                 settingFruit = parseInt(this.state.setFruits8);
                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                 console.log("Setting Truss Number 8 : " + settingTruss);
@@ -1154,8 +1185,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
         } else {
 
+            var number9 = (ParseInt(this.state.trussNumber)+9)
+
             pruningSet = parseInt(this.state.pruningNumber9);
-            trussNum = parseInt(this.state.trussNumber9);
+            trussNum = parseInt(number9);
             settingFruit = parseInt(this.state.setFruits9);
             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
             console.log("Setting Truss Number 9 : " + settingTruss);
@@ -1177,6 +1210,10 @@ export default class Har1AnnasumTrussDetails extends React.Component {
         var flowerSetFruits = 0;
         var summ = 0;
         var floweringTruss = 0;
+        var trussNum = 0;
+
+        console.log("Flowering truss called : "+this.state.setFlowers2);
+
 
         if (this.state.setFlowers9 === "") {
 
@@ -1201,11 +1238,15 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                                             } else {
 
+                                                var number01 = this.state.trussNumber
+
+
                                                 flowerPruningNumner = parseInt(this.state.pruningNumber);
                                                 flowering = parseInt(this.state.setFlowers);
                                                 flowerSetFruits = parseInt(this.state.setFruits);
+                                                trussNum = ParseInt(number01)
                                                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                                floweringTruss = ((parseInt(this.state.trussNumber) + (summ / flowerPruningNumner)).toFixed(2));
+                                                floweringTruss = (((trussNum) + (summ / flowerPruningNumner)).toFixed(2));
                                                 console.log("Flowering Truss Value : " + floweringTruss);
                                                 this.setState({
                                                     floweringTrussss: floweringTruss,
@@ -1216,11 +1257,15 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                                         } else {
 
+                                            var number11 = + (this.state.trussNumber) + 1
+
+                                            console.log("oooooooooooooooooooooooooooooo : "+number11);
                                             flowerPruningNumner = parseInt(this.state.pruningNumber1);
                                             flowering = parseInt(this.state.setFlowers1);
                                             flowerSetFruits = parseInt(this.state.setFruits1);
+                                            trussNum = number11
                                             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                            floweringTruss = ((parseInt(this.state.trussNumber1) + (summ / flowerPruningNumner)).toFixed(2));
+                                            floweringTruss = ((parseInt(number11) + (summ / flowerPruningNumner)).toFixed(2));
                                             console.log("Flowering Truss Value : " + floweringTruss);
                                             this.setState({
                                                 floweringTrussss: floweringTruss,
@@ -1234,12 +1279,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                                     } else {
 
+                                        var number21 = + (this.state.trussNumber) + 2
 
                                         flowerPruningNumner = parseInt(this.state.pruningNumber2);
                                         flowering = parseInt(this.state.setFlowers2);
                                         flowerSetFruits = parseInt(this.state.setFruits2);
                                         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                        floweringTruss = ((parseInt(this.state.trussNumber2) + (summ / flowerPruningNumner)).toFixed(2));
+                                        floweringTruss = ((parseInt(number21) + (summ / flowerPruningNumner)).toFixed(2));
                                         console.log("Flowering Truss Value : " + floweringTruss);
                                         this.setState({
                                             floweringTrussss: floweringTruss,
@@ -1252,11 +1298,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                                 } else {
 
+                                    var number31 = + (this.state.trussNumber) + 3
+
                                     flowerPruningNumner = parseInt(this.state.pruningNumber3);
                                     flowering = parseInt(this.state.setFlowers3);
                                     flowerSetFruits = parseInt(this.state.setFruits3);
                                     summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                    floweringTruss = ((parseInt(this.state.trussNumber3) + (summ / flowerPruningNumner)).toFixed(2));
+                                    floweringTruss = ((parseInt(number31) + (summ / flowerPruningNumner)).toFixed(2));
                                     console.log("Flowering Truss Value : " + floweringTruss);
                                     this.setState({
                                         floweringTrussss: floweringTruss,
@@ -1270,11 +1318,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                             } else {
 
+                                var number41 = + (this.state.trussNumber) + 4
+
                                 flowerPruningNumner = parseInt(this.state.pruningNumber4);
                                 flowering = parseInt(this.state.setFlowers4);
                                 flowerSetFruits = parseInt(this.state.setFruits4);
                                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                floweringTruss = ((parseInt(this.state.trussNumber4) + (summ / flowerPruningNumner)).toFixed(2));
+                                floweringTruss = ((parseInt(number41) + (summ / flowerPruningNumner)).toFixed(2));
                                 console.log("Flowering Truss Value : " + floweringTruss);
                                 this.setState({
                                     floweringTrussss: floweringTruss,
@@ -1288,11 +1338,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                         } else {
 
+                            var number51 = + (this.state.trussNumber) + 5
+
                             flowerPruningNumner = parseInt(this.state.pruningNumber5);
                             flowering = parseInt(this.state.setFlowers5);
                             flowerSetFruits = parseInt(this.state.setFruits5);
                             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                            floweringTruss = ((parseInt(this.state.trussNumber5) + (summ / flowerPruningNumner)).toFixed(2));
+                            floweringTruss = ((parseInt(number51) + (summ / flowerPruningNumner)).toFixed(2));
                             console.log("Flowering Truss Value : " + floweringTruss);
                             this.setState({
                                 floweringTrussss: floweringTruss,
@@ -1305,11 +1357,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                     } else {
 
+                        var number61 = + (this.state.trussNumber) + 6
+ 
                         flowerPruningNumner = parseInt(this.state.pruningNumber6);
                         flowering = parseInt(this.state.setFlowers6);
                         flowerSetFruits = parseInt(this.state.setFruits6);
                         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                        floweringTruss = ((parseInt(this.state.trussNumber6) + (summ / flowerPruningNumner)).toFixed(2));
+                        floweringTruss = ((parseInt(number61) + (summ / flowerPruningNumner)).toFixed(2));
                         console.log("Flowering Truss Value : " + floweringTruss);
                         this.setState({
                             floweringTrussss: floweringTruss,
@@ -1322,11 +1376,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
                 } else {
 
+                    var number71 = + (this.state.trussNumber) + 7
+
                     flowerPruningNumner = parseInt(this.state.pruningNumber7);
                     flowering = parseInt(this.state.setFlowers7);
                     flowerSetFruits = parseInt(this.state.setFruits7);
                     summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                    floweringTruss = ((parseInt(this.state.trussNumber7) + (summ / flowerPruningNumner)).toFixed(2));
+                    floweringTruss = ((parseInt(number71) + (summ / flowerPruningNumner)).toFixed(2));
                     console.log("Flowering Truss Value : " + floweringTruss);
                     this.setState({
                         floweringTrussss: floweringTruss,
@@ -1338,12 +1394,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
 
             } else {
+                var number81 = + (this.state.trussNumber) + 8
 
                 flowerPruningNumner = parseInt(this.state.pruningNumber8);
                 flowering = parseInt(this.state.setFlowers8);
                 flowerSetFruits = parseInt(this.state.setFruits8);
                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                floweringTruss = ((parseInt(this.state.trussNumber8) + (summ / flowerPruningNumner)).toFixed(2));
+                floweringTruss = ((parseInt(number81) + (summ / flowerPruningNumner)).toFixed(2));
                 console.log("Flowering Truss Value : " + floweringTruss);
                 this.setState({
                     floweringTrussss: floweringTruss,
@@ -1356,11 +1413,13 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
         } else {
 
+            var number91 = + (this.state.trussNumber) + 9
+
             flowerPruningNumner = parseInt(this.state.pruningNumber9);
             flowering = parseInt(this.state.setFlowers9);
             flowerSetFruits = parseInt(this.state.setFruits9);
             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-            floweringTruss = ((parseInt(this.state.trussNumber9) + (summ / flowerPruningNumner)).toFixed(2));
+            floweringTruss = ((parseInt(number91) + (summ / flowerPruningNumner)).toFixed(2));
             console.log("Flowering Truss Value : " + floweringTruss);
             this.setState({
                 floweringTrussss: floweringTruss,
@@ -1580,6 +1639,8 @@ export default class Har1AnnasumTrussDetails extends React.Component {
 
 
         if (this.state.trussNumber != null) {
+
+            console.log("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY : "+this.state.trussNumber3);
 
             db.trussById(this.state.trussNumber, numberWeek - 1, 'HAR 1 - Annasun', number).then((data) => {
                 console.log(data);
@@ -4463,7 +4524,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.lastWeekTextInput1.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber1')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1')}
                                         error={errors.TrussNumber1}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber1.toString()}
@@ -4622,7 +4682,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.lastWeekTextInput2.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber2')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2')}
                                         error={errors.TrussNumber2}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber2.toString()}
@@ -4779,7 +4838,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput3.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber3')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3')}
                                         error={errors.TrussNumber3}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber3.toString()}
@@ -4935,7 +4993,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.lastWeekTextInput4.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber4')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4')}
                                         error={errors.TrussNumber4}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber4.toString()}
@@ -5094,7 +5151,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitTextInput5.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber5')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5')}
                                         error={errors.TrussNumber5}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber5.toString()}
@@ -5253,7 +5309,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber6')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6')}
                                         error={errors.TrussNumber6}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber6.toString()}
@@ -5412,7 +5467,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber7')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7')}
                                         error={errors.TrussNumber7}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber7.toString()}
@@ -5571,7 +5625,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber8')}
-                                        onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8')}
                                         error={errors.TrussNumber8}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber8.toString()}
@@ -5732,7 +5785,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                                         onChangeText={this.onChangeText}
                                         onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
-                                        onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
                                         error={errors.TrussNumber9}
                                         blurOnSubmit={false}
                                         value={this.state.trussNumber9.toString()}

@@ -541,7 +541,15 @@ export default class Har3BambelloTrussDetails1 extends React.Component {
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
 
-        this.getTrussData();
+        if(this.state.trussNumber !== ""){
+
+            this.calculateSettingTruss2();
+            this.calculateFloweringTruss2();
+            this.calculateFruitLoad();
+            this.calculateHarvestTruss();
+            this.getTrussData();
+
+        }
         //For testing I have changed the numberweek - 2 to numberWeek in the below method
 
     }

@@ -539,7 +539,15 @@ export default class Har1HTLTrussDetails extends React.Component {
         this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
 
 
-        this.getTrussData();
+        if(this.state.trussNumber !== ""){
+
+            this.calculateSettingTruss2();
+            this.calculateFloweringTruss2();
+            this.calculateFruitLoad();
+            this.calculateHarvestTruss();
+            this.getTrussData();
+
+        }
         //For testing I have changed the numberweek - 2 to numberWeek in the below method
 
     }
@@ -587,6 +595,8 @@ export default class Har1HTLTrussDetails extends React.Component {
         var settingFruit = 0;
         var trussNum = 0;
 
+        console.log("Setting truss called : "+this.state.setFruits2);
+
         if (this.state.setFruits9 === "") {
 
             if (this.state.setFruits8 === "") {
@@ -626,8 +636,10 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                                         } else {
 
+                                            var number = (parseInt(this.state.trussNumber) + 1)
+
                                             pruningSet = parseInt(this.state.pruningNumber1);
-                                            trussNum = parseInt(this.state.trussNumber1);
+                                            trussNum = parseInt(number);
                                             settingFruit = parseInt(this.state.setFruits1);
                                             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                                             console.log("Setting Truss Number 1 : " + settingTruss);
@@ -642,8 +654,10 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                                     } else {
 
+                                        var number2 = (parseInt(this.state.trussNumber)+2)
+
                                         pruningSet = parseInt(this.state.pruningNumber2);
-                                        trussNum = parseInt(this.state.trussNumber2);
+                                        trussNum = parseInt(number2);
                                         settingFruit = parseInt(this.state.setFruits2);
                                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                                         console.log("Setting Truss Number 2 : " + settingTruss);
@@ -658,8 +672,10 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                                 } else {
 
+                                    var number3 = (parseInt(this.state.trussNumber)+3)
+
                                     pruningSet = parseInt(this.state.pruningNumber3);
-                                    trussNum = parseInt(this.state.trussNumber3);
+                                    trussNum = parseInt(number3);
                                     settingFruit = parseInt(this.state.setFruits3);
                                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                                     console.log("Setting Truss Number 3 : " + settingTruss);
@@ -674,8 +690,10 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                             } else {
 
+                                var number4 = (parseInt(this.state.trussNumber)+4)
+
                                 pruningSet = parseInt(this.state.pruningNumber4);
-                                trussNum = parseInt(this.state.trussNumber4);
+                                trussNum = parseInt(number4);
                                 settingFruit = parseInt(this.state.setFruits4);
                                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                                 console.log("Setting Truss Number 4 : " + settingTruss);
@@ -690,8 +708,10 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                         } else {
 
+                            var number5 = (parseInt(this.state.trussNumber)+5)
+
                             pruningSet = parseInt(this.state.pruningNumber5);
-                            trussNum = parseInt(this.state.trussNumber5);
+                            trussNum = parseInt(number5);
                             settingFruit = parseInt(this.state.setFruits5);
                             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                             console.log("Setting Truss Number 5 : " + settingTruss);
@@ -707,8 +727,10 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                     } else {
 
+                        var number6 = (parseInt(this.state.trussNumber)+6)
+
                         pruningSet = parseInt(this.state.pruningNumber6);
-                        trussNum = parseInt(this.state.trussNumber6);
+                        trussNum = parseInt(number6);
                         settingFruit = parseInt(this.state.setFruits6);
                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                         console.log("Setting Truss Number 6 : " + settingTruss);
@@ -723,9 +745,10 @@ export default class Har1HTLTrussDetails extends React.Component {
                     }
 
                 } else {
+                    var number7 = (parseInt(this.state.trussNumber)+7)
 
                     pruningSet = parseInt(this.state.pruningNumber7);
-                    trussNum = parseInt(this.state.trussNumber7);
+                    trussNum = parseInt(number7);
                     settingFruit = parseInt(this.state.setFruits7);
                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                     console.log("Setting Truss Number 7 : " + settingTruss);
@@ -739,8 +762,10 @@ export default class Har1HTLTrussDetails extends React.Component {
 
             } else {
 
+                var number8 = (parseInt(this.state.trussNumber)+8)
+
                 pruningSet = parseInt(this.state.pruningNumber8);
-                trussNum = parseInt(this.state.trussNumber8);
+                trussNum = parseInt(number8);
                 settingFruit = parseInt(this.state.setFruits8);
                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                 console.log("Setting Truss Number 8 : " + settingTruss);
@@ -755,8 +780,10 @@ export default class Har1HTLTrussDetails extends React.Component {
 
         } else {
 
+            var number9 = (ParseInt(this.state.trussNumber)+9)
+
             pruningSet = parseInt(this.state.pruningNumber9);
-            trussNum = parseInt(this.state.trussNumber9);
+            trussNum = parseInt(number9);
             settingFruit = parseInt(this.state.setFruits9);
             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
             console.log("Setting Truss Number 9 : " + settingTruss);
@@ -778,6 +805,10 @@ export default class Har1HTLTrussDetails extends React.Component {
         var flowerSetFruits = 0;
         var summ = 0;
         var floweringTruss = 0;
+        var trussNum = 0;
+
+        console.log("Flowering truss called : "+this.state.setFlowers2);
+
 
         if (this.state.setFlowers9 === "") {
 
@@ -802,11 +833,15 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                                             } else {
 
+                                                var number01 = this.state.trussNumber
+
+
                                                 flowerPruningNumner = parseInt(this.state.pruningNumber);
                                                 flowering = parseInt(this.state.setFlowers);
                                                 flowerSetFruits = parseInt(this.state.setFruits);
+                                                trussNum = ParseInt(number01)
                                                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                                floweringTruss = ((parseInt(this.state.trussNumber) + (summ / flowerPruningNumner)).toFixed(2));
+                                                floweringTruss = (((trussNum) + (summ / flowerPruningNumner)).toFixed(2));
                                                 console.log("Flowering Truss Value : " + floweringTruss);
                                                 this.setState({
                                                     floweringTrussss: floweringTruss,
@@ -817,11 +852,15 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                                         } else {
 
+                                            var number11 = + (this.state.trussNumber) + 1
+
+                                            console.log("oooooooooooooooooooooooooooooo : "+number11);
                                             flowerPruningNumner = parseInt(this.state.pruningNumber1);
                                             flowering = parseInt(this.state.setFlowers1);
                                             flowerSetFruits = parseInt(this.state.setFruits1);
+                                            trussNum = number11
                                             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                            floweringTruss = ((parseInt(this.state.trussNumber1) + (summ / flowerPruningNumner)).toFixed(2));
+                                            floweringTruss = ((parseInt(number11) + (summ / flowerPruningNumner)).toFixed(2));
                                             console.log("Flowering Truss Value : " + floweringTruss);
                                             this.setState({
                                                 floweringTrussss: floweringTruss,
@@ -835,12 +874,13 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                                     } else {
 
+                                        var number21 = + (this.state.trussNumber) + 2
 
                                         flowerPruningNumner = parseInt(this.state.pruningNumber2);
                                         flowering = parseInt(this.state.setFlowers2);
                                         flowerSetFruits = parseInt(this.state.setFruits2);
                                         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                        floweringTruss = ((parseInt(this.state.trussNumber2) + (summ / flowerPruningNumner)).toFixed(2));
+                                        floweringTruss = ((parseInt(number21) + (summ / flowerPruningNumner)).toFixed(2));
                                         console.log("Flowering Truss Value : " + floweringTruss);
                                         this.setState({
                                             floweringTrussss: floweringTruss,
@@ -853,11 +893,13 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                                 } else {
 
+                                    var number31 = + (this.state.trussNumber) + 3
+
                                     flowerPruningNumner = parseInt(this.state.pruningNumber3);
                                     flowering = parseInt(this.state.setFlowers3);
                                     flowerSetFruits = parseInt(this.state.setFruits3);
                                     summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                    floweringTruss = ((parseInt(this.state.trussNumber3) + (summ / flowerPruningNumner)).toFixed(2));
+                                    floweringTruss = ((parseInt(number31) + (summ / flowerPruningNumner)).toFixed(2));
                                     console.log("Flowering Truss Value : " + floweringTruss);
                                     this.setState({
                                         floweringTrussss: floweringTruss,
@@ -871,11 +913,13 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                             } else {
 
+                                var number41 = + (this.state.trussNumber) + 4
+
                                 flowerPruningNumner = parseInt(this.state.pruningNumber4);
                                 flowering = parseInt(this.state.setFlowers4);
                                 flowerSetFruits = parseInt(this.state.setFruits4);
                                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                floweringTruss = ((parseInt(this.state.trussNumber4) + (summ / flowerPruningNumner)).toFixed(2));
+                                floweringTruss = ((parseInt(number41) + (summ / flowerPruningNumner)).toFixed(2));
                                 console.log("Flowering Truss Value : " + floweringTruss);
                                 this.setState({
                                     floweringTrussss: floweringTruss,
@@ -889,11 +933,13 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                         } else {
 
+                            var number51 = + (this.state.trussNumber) + 5
+
                             flowerPruningNumner = parseInt(this.state.pruningNumber5);
                             flowering = parseInt(this.state.setFlowers5);
                             flowerSetFruits = parseInt(this.state.setFruits5);
                             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                            floweringTruss = ((parseInt(this.state.trussNumber5) + (summ / flowerPruningNumner)).toFixed(2));
+                            floweringTruss = ((parseInt(number51) + (summ / flowerPruningNumner)).toFixed(2));
                             console.log("Flowering Truss Value : " + floweringTruss);
                             this.setState({
                                 floweringTrussss: floweringTruss,
@@ -906,11 +952,13 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                     } else {
 
+                        var number61 = + (this.state.trussNumber) + 6
+ 
                         flowerPruningNumner = parseInt(this.state.pruningNumber6);
                         flowering = parseInt(this.state.setFlowers6);
                         flowerSetFruits = parseInt(this.state.setFruits6);
                         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                        floweringTruss = ((parseInt(this.state.trussNumber6) + (summ / flowerPruningNumner)).toFixed(2));
+                        floweringTruss = ((parseInt(number61) + (summ / flowerPruningNumner)).toFixed(2));
                         console.log("Flowering Truss Value : " + floweringTruss);
                         this.setState({
                             floweringTrussss: floweringTruss,
@@ -923,11 +971,13 @@ export default class Har1HTLTrussDetails extends React.Component {
 
                 } else {
 
+                    var number71 = + (this.state.trussNumber) + 7
+
                     flowerPruningNumner = parseInt(this.state.pruningNumber7);
                     flowering = parseInt(this.state.setFlowers7);
                     flowerSetFruits = parseInt(this.state.setFruits7);
                     summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                    floweringTruss = ((parseInt(this.state.trussNumber7) + (summ / flowerPruningNumner)).toFixed(2));
+                    floweringTruss = ((parseInt(number71) + (summ / flowerPruningNumner)).toFixed(2));
                     console.log("Flowering Truss Value : " + floweringTruss);
                     this.setState({
                         floweringTrussss: floweringTruss,
@@ -939,12 +989,13 @@ export default class Har1HTLTrussDetails extends React.Component {
 
 
             } else {
+                var number81 = + (this.state.trussNumber) + 8
 
                 flowerPruningNumner = parseInt(this.state.pruningNumber8);
                 flowering = parseInt(this.state.setFlowers8);
                 flowerSetFruits = parseInt(this.state.setFruits8);
                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                floweringTruss = ((parseInt(this.state.trussNumber8) + (summ / flowerPruningNumner)).toFixed(2));
+                floweringTruss = ((parseInt(number81) + (summ / flowerPruningNumner)).toFixed(2));
                 console.log("Flowering Truss Value : " + floweringTruss);
                 this.setState({
                     floweringTrussss: floweringTruss,
@@ -957,11 +1008,13 @@ export default class Har1HTLTrussDetails extends React.Component {
 
         } else {
 
+            var number91 = + (this.state.trussNumber) + 9
+
             flowerPruningNumner = parseInt(this.state.pruningNumber9);
             flowering = parseInt(this.state.setFlowers9);
             flowerSetFruits = parseInt(this.state.setFruits9);
             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-            floweringTruss = ((parseInt(this.state.trussNumber9) + (summ / flowerPruningNumner)).toFixed(2));
+            floweringTruss = ((parseInt(number91) + (summ / flowerPruningNumner)).toFixed(2));
             console.log("Flowering Truss Value : " + floweringTruss);
             this.setState({
                 floweringTrussss: floweringTruss,
