@@ -573,17 +573,31 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
         var add = 0;
         var prunNum = 0;
 
-        prunNum = parseInt(this.state.pruningNumber)
+        if (this.state.setFlowers === "") {
 
-        div = (parseInt((this.state.setFruits) ? (this.state.setFruits) : 0) / parseFloat((this.state.pruningNumber) ? (this.state.pruningNumber) : 0))
-        sub = (1 - div);
-        add = (((parseInt(this.state.trussNumber) ? parseInt(this.state.trussNumber) : 0) + sub).toFixed(2))
-        this.setState({
-            harvestTruss: add,
-            pruningHar: prunNum,
-        });
+            prunNum = parseInt(this.state.pruningNumber)
+
+            div = (parseInt((this.state.setFruits) ? (this.state.setFruits) : 0) / parseFloat((this.state.pruningNumber) ? (this.state.pruningNumber) : 0))
+            sub = (1 - div);
+            add = (((parseInt(this.state.trussNumber) ? parseInt(this.state.trussNumber) : 0) + sub).toFixed(2))
+            this.setState({
+                harvestTruss: add,
+                pruningHar: prunNum,
+            });
+
+        } else {
+
+            prunNum = parseInt(this.state.pruningNumber)
+            var num = this.state.trussNumber
+
+            this.setState({
+                harvestTruss: num,
+                pruningHar: prunNum,
+            });
+        }
 
         console.log("Harvest Truss : " + add);
+
 
     }
 
@@ -843,7 +857,7 @@ export default class Har3BambelloTrussDetails2 extends React.Component {
                                                 flowerSetFruits = parseInt(this.state.setFruits);
                                                 trussNum = ParseInt(number01)
                                                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                                                floweringTruss = (((trussNum) + (summ / flowerPruningNumner)).toFixed(2));
+                                                floweringTruss = ((parseInt(number01) + (summ / flowerPruningNumner)).toFixed(2));
                                                 console.log("Flowering Truss Value : " + floweringTruss);
                                                 this.setState({
                                                     floweringTrussss: floweringTruss,

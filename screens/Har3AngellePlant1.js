@@ -1323,16 +1323,7 @@ export default class Har3AngellePlant1 extends React.Component {
         }
 
 
-        if (leavesPerPlant) {
-            if (fullySetTruss) {
-                if (setTrussLength) {
-                    if (weeklyGrowth) {
-                        if (floweringTrussHeight) {
-                            if (leafLength) {
-                                if (leafWidth) {
-                                    if (stmDiameter) {
-                                        if (lastWeekStmDiameter) {
-
+      
 
 
 
@@ -1408,82 +1399,7 @@ export default class Har3AngellePlant1 extends React.Component {
 
 
 
-                                        } else {
-                                            alert('Please fill Last Week Stem Diameter');
-                                            this.setState({
-                                                isLoading: false,
-                                                isDataSend: false,
-
-                                            });
-                                            abc = '0';
-
-                                        }
-                                    } else {
-                                        alert('Please fill Steam Diamater');
-                                        this.setState({
-                                            isLoading: false,
-                                            isDataSend: false,
-                                        });
-                                        abc = '0';
-                                    }
-                                } else {
-                                    alert('Please fill Leaf Width');
-                                    this.setState({
-                                        isLoading: false,
-                                        isDataSend: false,
-                                    });
-                                    abc = '0';
-                                }
-                            } else {
-                                alert('Please fill Leaf Length');
-                                this.setState({
-                                    isLoading: false,
-                                    isDataSend: false,
-                                });
-                                abc = '0';
-                            }
-                        } else {
-                            alert('Please fill Flower Truss Height');
-                            this.setState({
-                                isLoading: false,
-                                isDataSend: false,
-                            });
-                            abc = '0';
-                        }
-                    } else {
-                        alert('Please fill Weekly Growth');
-                        this.setState({
-                            isLoading: false,
-                            isDataSend: false,
-                        });
-                        abc = '0';
-                    }
-                } else {
-                    alert('Please fill Fully Set Truss Length');
-                    this.setState({
-                        isLoading: false,
-                        isDataSend: false,
-                    });
-                    abc = '0';
-                }
-            } else {
-                alert('Please fill Fully Set Truss');
-                this.setState({
-                    isLoading: false,
-                    isDataSend: false,
-                });
-                abc = '0';
-            }
-        } else {
-
-            alert('Please fill Leaves Per Plant');
-            this.setState({
-                isLoading: false,
-                isDataSend: false,
-            });
-            abc = '0';
-        }
-
+                                      
 
     }
 
