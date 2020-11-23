@@ -1664,25 +1664,6 @@ export default class Har1AnnasumTrussDetails extends React.Component {
                     setFlowers: data.setFlowers,
                     pruningNumber: data.pruningNumber,
 
-                    setFruits1: data.setFruits1,
-                    setFlowers1: data.setFlowers1,
-                    pruningNumber1: data.pruningNumber1,
-
-                    setFruits2: data.setFruits2,
-                    setFlowers2: data.setFlowers2,
-                    pruningNumber2: data.pruningNumber2,
-
-                    setFruits3: data.setFruits3,
-                    setFlowers3: data.setFlowers3,
-                    pruningNumber3: data.pruningNumber3,
-
-                    setFruits4: data.setFruits4,
-                    setFlowers4: data.setFlowers4,
-                    pruningNumber4: data.pruningNumber4,
-
-                    setFruits5: data.setFruits5,
-                    setFlowers5: data.setFlowers5,
-                    pruningNumber5: data.pruningNumber5,
                 });
                 console.log("Truss Details", this.state.truss);
 
