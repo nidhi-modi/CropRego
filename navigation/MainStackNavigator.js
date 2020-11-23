@@ -227,6 +227,33 @@ import Har3AngellePlantList from '../screens/Har3AngellePlantList'
 import Har3AngelleRow from '../screens/Har3AngelleRow'
 import Har3AngelleTrussDetails1 from '../screens/Har3AngelleTrussDetails1'
 import Har3AngelleTrussDetails2 from '../screens/Har3AngelleTrussDetails2'
+import Oha1Row from '../screens/Oha1Row'
+import Oha2NRow from '../screens/Oha2NRow'
+import Oha2SRow from '../screens/Oha2SRow'
+import Oha1Merlice from '../screens/Oha1Merlice'
+import Oha1Merlice2 from '../screens/Oha1Merlice2'
+import Oha1MerlicePlantList from '../screens/Oha1MerlicePlantList'
+import Oha1MerliceTrussDetails1 from '../screens/Oha1MerliceTrussDetails1'
+import Oha1MerliceTrussDetails2 from '../screens/Oha1MerliceTrussDetails2'
+import Oha1MerlicePlant1 from '../screens/Oha1MerlicePlant1'
+import Oha1MerlicePlant2 from '../screens/Oha1MerlicePlant2'
+import Oha1MerliceDataChecker1 from '../screens/Oha1MerliceDataChecker1'
+import Oha1MerliceDataChecker2 from '../screens/Oha1MerliceDataChecker2'
+import Oha2NMerlice from '../screens/Oha2NMerlice'
+import Oha2NMerlice2 from '../screens/Oha2NMerlice2'
+import Oha2NMerliceDataChecker1 from '../screens/Oha2NMerliceDataChecker1'
+import Oha2NMerliceDataChecker2 from '../screens/Oha2NMerliceDataChecker2'
+import Oha2NMerlicePlantList from '../screens/Oha2NMerlicePlantList'
+import Oha2NMerlicePlant1 from '../screens/Oha2NMerlicePlant1'
+import Oha2NMerlicePlant2 from '../screens/Oha2NMerlicePlant2'
+import Oha2NMerliceTrussDetails1 from '../screens/Oha2NMerliceTrussDetails1'
+import Oha2NMerliceTrussDetails2 from '../screens/Oha2NMerliceTrussDetails2'
+import Oha2SMerlice from '../screens/Oha2SMerlice'
+import Oha2SMerliceDataChecker1 from '../screens/Oha2SMerliceDataChecker1'
+import Oha2SMerlicePlant1 from '../screens/Oha2SMerlicePlant1'
+import Oha2SMerlicePlantList from '../screens/Oha2SMerlicePlantList'
+import Oha2SMerliceTrussDetails1 from '../screens/Oha2SMerliceTrussDetails1'
+
 
 
 const Stack = createStackNavigator();
@@ -305,7 +332,25 @@ function MainStackNavigator() {
 
         <Stack.Screen name='FavHome' component={FavHome} options={{ headerLeft: () => null, title: 'T&G Global' }} />
 
-        <Stack.Screen name='OhaHome' component={OhaHome} options={{ headerLeft: () => null, title: 'T&G Global' }} />
+        <Stack.Screen name='OhaHome' component={OhaHome} options={({ navigation }) => ({
+          headerLeft: () => null, headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'T&G Global'
+        })} />
 
         <Stack.Screen name='Har123' component={Har123} options={({ navigation }) => ({
           headerRight: () =>
@@ -4574,6 +4619,26 @@ function MainStackNavigator() {
           , title: 'HAR 1 Avalantino'
         })} />
 
+        <Stack.Screen name='Har3AngellePlantList' component={Har3AngellePlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 3 Angelle'
+        })} />
+
         <Stack.Screen name='Har1AvalantinoDataChecker1' component={Har1AvalantinoDataChecker1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
@@ -5051,6 +5116,586 @@ function MainStackNavigator() {
               }}></View>
             </View>
           , title: 'HAR 3 Angelle'
+        })} />
+
+        <Stack.Screen name='Oha1Row' component={Oha1Row} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NRow' component={Oha2NRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2SRow' component={Oha2SRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2S Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1Merlice' component={Oha1Merlice} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Oha1MerlicePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1Merlice2' component={Oha1Merlice2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Oha1MerlicePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1MerlicePlantList' component={Oha1MerlicePlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1MerliceTrussDetails1' component={Oha1MerliceTrussDetails1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1MerliceTrussDetails2' component={Oha1MerliceTrussDetails2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1MerlicePlant1' component={Oha1MerlicePlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1MerlicePlant2' component={Oha1MerlicePlant2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1MerliceDataChecker1' component={Oha1MerliceDataChecker1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha1MerliceDataChecker2' component={Oha1MerliceDataChecker2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 1 Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerlice' component={Oha2NMerlice} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Oha2NMerlicePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerlice2' component={Oha2NMerlice2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Oha2NMerlicePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerlicePlantList' component={Oha2NMerlicePlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerliceDataChecker1' component={Oha2NMerliceDataChecker1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerliceDataChecker2' component={Oha2NMerliceDataChecker2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerlicePlant1' component={Oha2NMerlicePlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerlicePlant2' component={Oha2NMerlicePlant2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerliceTrussDetails1' component={Oha2NMerliceTrussDetails1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2NMerliceTrussDetails2' component={Oha2NMerliceTrussDetails2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2N Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2SMerlice' component={Oha2SMerlice} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Oha2SMerlicePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2S Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2SMerliceDataChecker1' component={Oha2SMerliceDataChecker1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2S Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2SMerlicePlant1' component={Oha2SMerlicePlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2S Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2SMerlicePlantList' component={Oha2SMerlicePlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2S Merlice'
+        })} />
+
+        <Stack.Screen name='Oha2SMerliceTrussDetails1' component={Oha2SMerliceTrussDetails1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'OHA 2S Merlice'
         })} />
       </Stack.Navigator>
 

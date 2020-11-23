@@ -60,7 +60,7 @@ export default class HarHome extends React.Component {
             <Text style={styles.buttonText}>HAR 123 Registration </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+             <TouchableOpacity
             style={styles.buttonContainer}
             onPress={() => this.props.navigation.navigate('Har456')}>
             <Text style={styles.buttonText}>HAR 456 Registration</Text>

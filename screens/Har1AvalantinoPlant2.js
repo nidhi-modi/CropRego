@@ -728,9 +728,6 @@ export default class Har1AvalantinoPlant2 extends React.Component {
                 isErrorAsync: false,
             });
 
-            numberWeek = 2000 + currentWeekNumber(new Date());
-
-
         } else if (abc === '1' && abc !== null) {
 
             AsyncStorage.clear();
