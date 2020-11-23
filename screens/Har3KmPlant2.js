@@ -1294,7 +1294,6 @@ export default class Har3KmPlant2 extends React.Component {
             pruningNumber: this.state.pruningNumber,
             dataSend: 'no'
 
-
         }
 
         let data1 = {

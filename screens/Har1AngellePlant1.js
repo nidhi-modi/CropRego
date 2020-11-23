@@ -175,6 +175,8 @@ export default class Har1AngellePlant1 extends React.Component {
             checkWeeksData: '',
             checkWeeksTrussData: '',
 
+            combinedData: [],
+
         };
 
 
@@ -593,6 +595,29 @@ export default class Har1AngellePlant1 extends React.Component {
         console.log("Data send : ", this.state.isDataSend);
         console.log("show : ", this.state.show);
         this.ShowHideComponent();
+
+         //TESTING
+
+         const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
+         const url = `${scriptUrl}?callback=ctrlq&action=${'doGet'}`;
+ 
+         console.log("URL : " + url);
+         fetch(url, { mode: 'no-cors' }).then((response) => response.json())
+             .then((responseJson) => {
+ 
+                 this.setState({ combinedData: responseJson, isLoading: false })
+                 //console.log(this.state.combinedData);
+                 if (responseJson !== null) {
+ 
+                     this.renderEntryData();
+                 }
+ 
+             }).catch((error) => {
+ 
+                 console.log(error);
+             });
+ 
+         //END
 
 
         if (this.props.route.params.plant1 !== undefined) {
