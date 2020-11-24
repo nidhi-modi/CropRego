@@ -16,6 +16,8 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* regoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* regoTests.m */; };
+		2E3C150781D53F2A10B5BA1E /* libPods-regoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA379C7858CE5D275E63C50 /* libPods-regoTests.a */; };
+		5F440E3B34205A96EBCF7CB1 /* libPods-rego.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 495F34C2A2697F76D57B11EE /* libPods-rego.a */; };
 		807D6F7991F183410BF58C05 /* libPods-rego-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7F39F9B4AF4B5C48E6C0DD /* libPods-rego-tvOSTests.a */; };
 		B5B77D1FCC7AE2BFCC9FCAF4 /* libPods-rego-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B05F93D221F0AF91C35D8242 /* libPods-rego-tvOS.a */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3C150781D53F2A10B5BA1E /* libPods-regoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F440E3B34205A96EBCF7CB1 /* libPods-rego.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
