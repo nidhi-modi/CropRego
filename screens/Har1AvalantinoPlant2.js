@@ -1722,7 +1722,6 @@ export default class Har1AvalantinoPlant2 extends React.Component {
                             />
 
 
-                            <View pointerEvents={this.state.checkWeeksData === 1 ? 'none' : 'auto'}>
                                 <View style={styles.backgroundColor}>
 
                                     <View style={styles.row}>
@@ -2074,7 +2073,6 @@ export default class Har1AvalantinoPlant2 extends React.Component {
 
                                     </View>
 
-                                </View>
 
 
                                 <View

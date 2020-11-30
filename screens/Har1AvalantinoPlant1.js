@@ -632,43 +632,7 @@ export default class Har1AvalantinoPlant1 extends React.Component {
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
-            setTimeout(() => {
-                db.deletePlantsByWeekRowNumberAndName(no, numberWeek, 'HAR 1 - Avalantino','116').then((data) => {
-                    console.log(data);
-                    console.log("Calling database")
-                    if (data !== null || data !== '' || data !== undefined) {
-                        presentWeekData = 1
-                        this.setState({
-                            checkWeeksData: presentWeekData,
-                        });
-                        presentWeekData = 0
-                        console.log("DATA NOT NULLL : " + this.state.checkWeeksData);
-
-                    } else {
-                        presentWeekData = 0
-                        this.setState({
-                            checkWeeksData: presentWeekData,
-
-                        });
-                        presentWeekData = 0
-                        console.log("DATA NULLL : " + this.state.checkWeeksData);
-
-
-                    }
-
-
-                }).catch((err) => {
-                    console.log(err);
-                    presentWeekData = 0
-                    this.setState({
-                        checkWeeksData: presentWeekData,
-
-                    });
-                    presentWeekData = 0
-
-                })
-
-            }, 1000);
+           
 
             setTimeout(() => {
                 db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 1 - Avalantino','116').then((data) => {
@@ -1762,7 +1726,6 @@ export default class Har1AvalantinoPlant1 extends React.Component {
                             />
 
 
-                            <View pointerEvents={this.state.checkWeeksData === 1 ? 'none' : 'auto'}>
                                 <View style={styles.backgroundColor}>
 
                                     <View style={styles.row}>
@@ -2139,7 +2102,6 @@ export default class Har1AvalantinoPlant1 extends React.Component {
                                     </TouchableOpacity>}
 
 
-                            </View>
                             <Text style={styles.text}
                                 value={this.state.plantRow}> Enter Truss Details</Text>
 
