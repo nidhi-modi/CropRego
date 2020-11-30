@@ -206,10 +206,19 @@ export default class App extends Component {
     let plants = {};
     db.plantsByStatus('no').then((data) => {
       console.log("Calling database")
+      listPlants = data;
       plants = data;
-      console.log('details from App:', plants)
+      console.log('details from App:', data)
 
+      firebase.database().ref('croprego/').push(objify("PlantDetails", plants)
 
+      ).then((data) => {
+        //success callback
+        console.log('data ', data)
+      }).catch((error) => {
+        //error callback
+        console.log('error ', error)
+      })
       this.setState({
         listPlants,
       });
@@ -228,9 +237,20 @@ export default class App extends Component {
     let truss = {};
     db.trussByStatus('no').then((data) => {
       console.log("Calling database")
-      truss = data;
-      console.log('details from App:', truss)
+      listTrusss = data;
 
+      truss = data;
+      console.log('details from App:', data)
+
+      firebase.database().ref('croprego/').push(objify("TrussDetails", truss)
+
+      ).then((data) => {
+        //success callback
+        console.log('data ', data)
+      }).catch((error) => {
+        //error callback
+        console.log('error ', error)
+      })
 
       this.setState({
         listTrusss,
@@ -244,7 +264,7 @@ export default class App extends Component {
 
   }
 
-  getPlants = () => {
+  /*getPlants = () => {
     let plants = [];
     db.listPlants().then((data) => {
       console.log("Calling database")
@@ -280,15 +300,7 @@ export default class App extends Component {
       console.log('details from App:', truss)
 
 
-      firebase.database().ref('croprego/').push(objify("TrussDetails", truss)
-
-      ).then((data) => {
-        //success callback
-        console.log('data ', data)
-      }).catch((error) => {
-        //error callback
-        console.log('error ', error)
-      })
+     
       this.setState({
         truss,
       });
@@ -297,7 +309,7 @@ export default class App extends Component {
       console.log(err);
 
     })
-  }
+  }*/
 
 
   keyExtractor = (item, index) => index.toString()
