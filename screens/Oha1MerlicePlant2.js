@@ -2109,14 +2109,14 @@ export default class Oha1Merlice2Plant2 extends React.Component {
                                 <TouchableOpacity
                                     style={styles.buttonContainer}
                                     disabled={false}
-                                    onPress={() => this.props.navigation.navigate('Oha1Merlice2TrussDetails2', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Oha1MerliceTrussDetails2', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                 </TouchableOpacity>) :
 
                                 <TouchableOpacity
                                     style={styles.buttonContainer1}
                                     disabled={true}
-                                    onPress={() => this.props.navigation.navigate('Oha1Merlice2TrussDetails2', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Oha1MerliceTrussDetails2', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                     <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                 </TouchableOpacity>}
@@ -2127,7 +2127,7 @@ export default class Oha1Merlice2Plant2 extends React.Component {
                                 }}
                             />
 
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Oha1Merlice2DataChecker2', { plantNo: no })}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Oha1MerliceDataChecker2', { plantNo: no })}>
 
                                 {(this.state.isError) ? (<Text style={styles.validationTextError}>Data Validation</Text>) : <Text style={styles.validationText}>Data Validation</Text>}
 
@@ -2296,7 +2296,7 @@ const styles = StyleSheet.create({
         marginLeft: 15
     },
     buttonText: {
-        fontSize: 53,
+        fontSize: 23,
         color: '#ffffff',
         fontWeight: 'bold',
         fontStyle: 'italic'
@@ -2332,7 +2332,7 @@ const styles = StyleSheet.create({
 
     backgroundColor: {
 
-        backgroundColor: 'rgba(537,537,537,0.65)',
+        backgroundColor: 'rgba(237,237,237,0.65)',
         padding: 10,
 
 

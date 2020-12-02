@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, TextInput, ActivityIndicator, ImageBackground, SafeAreaView, Alert, ToastAndroid, AlertIOS, Platform } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, TextInput, ActivityIndicator, Keyboard, ImageBackground, SafeAreaView, Alert, ToastAndroid, AlertIOS, Platform } from 'react-native'
 import { ListItem, Button } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputLayout } from 'rn-textinputlayout';
@@ -1241,12 +1241,12 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                             } else {
 
                                                 var number01 = this.state.trussNumber
+                                                console.log("oooooooooooooooooooooooooooooo : " + number01);
 
 
                                                 flowerPruningNumner = parseInt(this.state.pruningNumber);
                                                 flowering = parseInt(this.state.setFlowers);
                                                 flowerSetFruits = parseInt(this.state.setFruits);
-                                                trussNum = ParseInt(number01)
                                                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                                                 floweringTruss = ((parseInt(number01) + (summ / flowerPruningNumner)).toFixed(2));
                                                 console.log("Flowering Truss Value : " + floweringTruss);
@@ -4322,7 +4322,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
                                         error={errors.TrussNumber}
@@ -4355,7 +4355,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits}
                                         value={this.state.setFruits.toString()}
@@ -4384,7 +4384,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers')}
                                         error={errors.SetFlowers}
@@ -4412,7 +4412,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber')}
                                         error={errors.PruningNumber}
                                         value={this.state.pruningNumber.toString()}
@@ -4438,7 +4438,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput1.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter')}
                                         error={errors.FruitDiameter}
@@ -4489,7 +4489,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.lastWeekTextInput1.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber1')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1')}
                                         error={errors.TrussNumber1}
@@ -4519,7 +4519,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits1')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput1.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits1}
                                         value={this.state.setFruits1.toString()}
@@ -4546,7 +4546,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput1.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers1')}
                                         error={errors.SetFlowers1}
@@ -4574,7 +4574,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput1.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1')}
                                         error={errors.PruningNumber1}
                                         value={this.state.pruningNumber1.toString()}
@@ -4600,7 +4600,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput2.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1')}
                                         error={errors.FruitDiameter1}
@@ -4648,7 +4648,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.lastWeekTextInput2.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber2')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2')}
                                         error={errors.TrussNumber2}
@@ -4678,7 +4678,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits2')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput2.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits2}
                                         value={this.state.setFruits2.toString()}
@@ -4705,7 +4705,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput2.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers2')}
                                         error={errors.SetFlowers2}
@@ -4733,7 +4733,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput2.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2')}
                                         error={errors.PruningNumber2}
                                         value={this.state.pruningNumber2.toString()}
@@ -4805,7 +4805,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput3.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber3')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3')}
                                         error={errors.TrussNumber3}
@@ -4835,7 +4835,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits3')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput3.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits3}
                                         value={this.state.setFruits3.toString()} />
@@ -4861,7 +4861,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput3.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers3')}
                                         error={errors.SetFlowers3}
@@ -4888,7 +4888,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput3.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3')}
                                         error={errors.PruningNumber3}
                                         value={this.state.pruningNumber3.toString()} />
@@ -4913,7 +4913,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput4.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3')}
                                         error={errors.FruitDiameter1}
@@ -4961,7 +4961,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.lastWeekTextInput4.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber4')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4')}
                                         error={errors.TrussNumber4}
@@ -4991,7 +4991,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits4')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput4.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits4}
                                         value={this.state.setFruits4.toString()}
@@ -5018,7 +5018,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput4.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers4')}
                                         error={errors.SetFlowers4}
@@ -5046,7 +5046,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput4.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4')}
                                         error={errors.PruningNumber4}
                                         value={this.state.pruningNumber4.toString()}
@@ -5072,7 +5072,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput5.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4')}
                                         error={errors.FruitDiameter1}
@@ -5120,7 +5120,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitTextInput5.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber5')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5')}
                                         error={errors.TrussNumber5}
@@ -5150,7 +5150,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits5')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput5.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits5}
                                         value={this.state.setFruits5.toString()}
@@ -5177,7 +5177,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput5.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers5')}
                                         error={errors.SetFlowers5}
@@ -5205,7 +5205,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput5.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5')}
                                         error={errors.PruningNumber5}
                                         value={this.state.pruningNumber5.toString()}
@@ -5231,7 +5231,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5')}
                                         error={errors.FruitDiameter1}
@@ -5279,7 +5279,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput6.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber6')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6')}
                                         error={errors.TrussNumber6}
@@ -5309,7 +5309,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits6')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput6.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits6}
                                         value={this.state.setFruits6.toString()}
@@ -5336,7 +5336,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput6.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers6')}
                                         error={errors.SetFlowers6}
@@ -5364,7 +5364,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput6.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6')}
                                         error={errors.PruningNumber6}
                                         value={this.state.pruningNumber6.toString()}
@@ -5390,7 +5390,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6')}
                                         error={errors.FruitDiameter1}
@@ -5438,7 +5438,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput7.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber7')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7')}
                                         error={errors.TrussNumber7}
@@ -5468,7 +5468,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits7')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput7.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits7}
                                         value={this.state.setFruits7.toString()}
@@ -5495,7 +5495,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput7.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers7')}
                                         error={errors.SetFlowers7}
@@ -5523,7 +5523,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput7.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7')}
                                         error={errors.PruningNumber7}
                                         value={this.state.pruningNumber7.toString()}
@@ -5549,7 +5549,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7')}
                                         error={errors.FruitDiameter1}
@@ -5597,7 +5597,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput8.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber8')}
                                         onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8')}
                                         error={errors.TrussNumber8}
@@ -5627,7 +5627,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits8')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput8.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits8}
                                         value={this.state.setFruits8.toString()}
@@ -5654,7 +5654,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput8.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers8')}
                                         error={errors.SetFlowers8}
@@ -5682,7 +5682,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput8.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8')}
                                         error={errors.PruningNumber8}
                                         value={this.state.pruningNumber8.toString()}
@@ -5708,7 +5708,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
-                                        onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8')}
                                         error={errors.FruitDiameter1}
@@ -5758,7 +5758,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.setFruitsTextInput9.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         //onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
                                         onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
                                         error={errors.TrussNumber9}
@@ -5788,7 +5788,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFruits9')}
-                                        onSubmitEditing={() => { this.setFlowersTextInput9.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         error={errors.SetFruits9}
                                         value={this.state.setFruits9.toString()}
@@ -5815,7 +5815,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         enablesReturnKeyAutomatically={true}
                                         onFocus={this.onFocus}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.pruningNumbersTextInput9.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         blurOnSubmit={false}
                                         onChangeText={(text) => this.updateTextInput(text, 'setFlowers9')}
                                         error={errors.SetFlowers9}
@@ -5843,7 +5843,7 @@ export default class Oha2NMerliceTrussDetails1 extends React.Component {
                                         onFocus={this.onFocus}
                                         returnKeyType={"done"}
                                         onChangeText={this.onChangeText}
-                                        onSubmitEditing={() => { this.fruitDiamterTextInput9.focus(); }}
+                                        onSubmitEditing={Keyboard.dismiss}
                                         onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9')}
                                         error={errors.PruningNumber9}
                                         value={this.state.pruningNumber9.toString()}
