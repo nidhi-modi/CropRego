@@ -6144,7 +6144,7 @@ const styles = StyleSheet.create({
 
     },
     buttonText: {
-        fontSize: 53,
+        fontSize: 23,
         color: '#ffffff',
         fontWeight: 'bold',
         fontStyle: 'italic'

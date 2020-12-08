@@ -13,12 +13,6 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { Table, TableWrapper, Row, Cell } from 'react-native-table-component';
 import AsyncStorage from '@react-native-community/async-storage';
 import NetInfo from "@react-native-community/netinfo";
-
-
-
-
-
-
 import Database from './Database'
 import { identity } from 'lodash';
 import { color } from 'react-native-reanimated';
