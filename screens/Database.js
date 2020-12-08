@@ -12,6 +12,7 @@ const database_size = 20000000;
 
 export default class Database {
 
+
     initDB2() {
         let db;
         return new Promise((resolve) => {
@@ -431,6 +432,56 @@ export default class Database {
         });
     }
 
+    plantListByStatus(status) {
+        try {
+        return new Promise((resolve) => {
+            const plantDetails = [];
+            this.initDB().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('SELECT p.plantId, p.plantNumber, p.plantRow, p.plantName, p.plantWeek, p.leavesPerPlant, p.fullySetTruss, p.setTrussLength, p.weeklyGrowth, p.floweringTrussHeight, p.leafLength, p.leafWidth, p.stmDiameter, p.lastWeekStmDiameter, p.dataSend FROM PlantDetails p WHERE plantWeek = ?', [status]).then(([tx, results]) => {
+                        console.log("Query completed");
+                        var len = results.rows.length;
+                        for (let i = 0; i < len; i++) {
+                            let row = results.rows.item(i);
+                            const { plantId, plantNumber, plantRow, plantName, plantWeek, leavesPerPlant, fullySetTruss, setTrussLength, weeklyGrowth, floweringTrussHeight, leafLength, leafWidth, stmDiameter, lastWeekStmDiameter, dataSend } = row;
+                            plantDetails.push({
+                                plantId,
+                                plantNumber,
+                                plantRow,
+                                plantName,
+                                plantWeek,
+                                leavesPerPlant,
+                                fullySetTruss,
+                                setTrussLength,
+                                weeklyGrowth,
+                                floweringTrussHeight,
+                                leafLength,
+                                leafWidth,
+                                stmDiameter,
+                                lastWeekStmDiameter,
+                                dataSend
+                            });
+                        }
+                        console.log(plantDetails);
+                        resolve(plantDetails);
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+    catch (err_1) {
+        console.log(err_1);
+    }
+    }
 
     trussByStatus(status) {
         console.log(status);
@@ -444,6 +495,58 @@ export default class Database {
                             let row = results.rows.item(0);
                             resolve(row);
                         }
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+
+    listTrussByStatus(status) {
+        return new Promise((resolve) => {
+            const trussDetails = [];
+            this.initDB2().then((db) => {
+                db.transaction((tx) => {
+
+
+                    tx.executeSql('SELECT p.trussID, p.plantNumber, p.trussNumber, p.fruitDiameter, p.setFruits, p.setFlowers, p.pruningNumber, p.plantRow, p.plantName, p.plantWeek, p.fruitLoad, p.pruningFlower, p.floweringTruss, p.pruningSet, p.settingTruss, p.pruningHarvest, p.harvestTruss, p.dataSend FROM TrussDetails p WHERE plantWeek = ?', [status]).then(([tx, results]) => {
+                        console.log("Query completed");
+                        var len = results.rows.length;
+                        for (let i = 0; i < len; i++) {
+                            let row = results.rows.item(i);
+                            const { trussID, plantNumber, trussNumber, fruitDiameter, setFruits, setFlowers, pruningNumber, plantRow, plantName, plantWeek, fruitLoad, pruningFlower, floweringTruss, pruningSet, settingTruss, pruningHarvest, harvestTruss, dataSend} = row;
+                            trussDetails.push({
+                                trussID,
+                                plantNumber,
+                                trussNumber,
+                                fruitDiameter,
+                                setFruits,
+                                setFlowers,
+                                pruningNumber,
+                                plantRow,
+                                plantName,
+                                plantWeek,
+                                fruitLoad,
+                                pruningFlower,
+                                floweringTruss, 
+                                pruningSet, 
+                                settingTruss, 
+                                pruningHarvest, 
+                                harvestTruss,
+                                dataSend
+                                
+
+                            });
+                        }
+                        console.log(trussDetails);
+                        resolve(trussDetails);
                     });
                 }).then((result) => {
                     this.closeDatabase(db);

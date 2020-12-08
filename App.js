@@ -31,6 +31,10 @@ import BackgroundTask from 'react-native-background-task'
 const db = new Database();
 var firebase = require("firebase");
 
+var currentWeekNumber = require('current-week-number');
+var numberWeek;
+
+
 function replaceUndefinedOrNull(key, value) {
   if (value === null || value === undefined) {
     return undefined;
@@ -145,6 +149,9 @@ export default class App extends Component {
 
     console.ignoredYellowBox = ['react-native BugReporting extraData:'];
 
+    numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
+    console.log("Current Week Number From App: ", numberWeek);
+
 
     module.hot.accept(() => { });
 
@@ -204,13 +211,13 @@ export default class App extends Component {
   getPlantsByInfoStatus = () => {
 
     let plants = {};
-    db.plantsByStatus('no').then((data) => {
+    db.plantListByStatus(numberWeek).then((data) => {
       console.log("Calling database")
       listPlants = data;
       plants = data;
       console.log('details from App:', data)
 
-      firebase.database().ref('croprego/').push(objify("PlantDetails", plants)
+      firebase.database().ref('croprego/').push(objify("PlantDetails", data)
 
       ).then((data) => {
         //success callback
@@ -235,14 +242,14 @@ export default class App extends Component {
   getTrussByInfoStatus = () => {
 
     let truss = {};
-    db.trussByStatus('no').then((data) => {
+    db.listTrussByStatus(numberWeek).then((data) => {
       console.log("Calling database")
       listTrusss = data;
 
       truss = data;
       console.log('details from App:', data)
 
-      firebase.database().ref('croprego/').push(objify("TrussDetails", truss)
+      firebase.database().ref('croprego/').push(objify("TrussDetails", data)
 
       ).then((data) => {
         //success callback
