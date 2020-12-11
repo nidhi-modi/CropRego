@@ -15,13 +15,13 @@ function Ger2Row(props) {
 
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Ger2Provine1')}>
+            onPress={() => navigation.navigate('Ger2Merlice1')}>
             <Text style={styles.buttonText}>Row 62/63</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Ger2Provine2')}>
+            onPress={() => navigation.navigate('Ger2Merlice2')}>
             <Text style={styles.buttonText}>Row 102/125</Text>
           </TouchableOpacity>
 

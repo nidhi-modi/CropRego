@@ -66,7 +66,7 @@ var currentWeekNumber = require('current-week-number');
 
 
 
-export default class Ger2ProvinePlant2 extends React.Component {
+export default class Ger2MerlicePlant1 extends React.Component {
 
 
 
@@ -176,6 +176,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
 
             checkWeeksData: '',
             checkWeeksTrussData: '',
+
 
         };
 
@@ -573,7 +574,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
 
     componentDidMount() {
 
-        numberWeek = 2000 + currentWeekNumber() - 2;
+        numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
         console.log("Current Week Number: ", numberWeek);
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
@@ -628,6 +629,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
         } else {
 
         }
+
         if (this.props.route.params.plant6 !== undefined) {
             no6 = this.props.route.params.plant6;
             console.log("Plant " + JSON.stringify(no6));
@@ -639,6 +641,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
             no7 = this.props.route.params.plant7;
             console.log("Plant " + JSON.stringify(no7));
         } else {
+
         }
 
         if (this.props.route.params.plant8 !== undefined) {
@@ -664,8 +667,10 @@ export default class Ger2ProvinePlant2 extends React.Component {
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
+           
+
             setTimeout(() => {
-                db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 2 - Provine', '102/125').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 2 - Merlice', '62/63').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -704,7 +709,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
 
             setTimeout(() => {
 
-                db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 2 - Provine', '102/125').then((data1) => {
+                db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 2 - Merlice', '62/63').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     if (data1 !== null || data1 !== '' || data1 !== undefined) {
@@ -740,7 +745,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
 
         });
 
-        console.log("Check DATAAAAAAAAAAAAAAAAAAAA : " + presentWeekData);
+
 
 
 
@@ -795,7 +800,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -820,7 +825,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -846,7 +851,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -872,7 +877,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -898,7 +903,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -915,16 +920,16 @@ export default class Ger2ProvinePlant2 extends React.Component {
                             no5 = null;
 
 
-                        }else{
+                        }else {
 
                             if (no6 !== undefined && no6 !== null) {
 
-                                console.log("No5 Value:", no6);
+                                console.log("No6 Value:", no6);
     
                                 no = '6';
     
     
-                                db.plantsByWeekRowNumberAndName(no6, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                                db.plantsByWeekRowNumberAndName(no6, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                                     console.log(data);
                                     console.log("Calling database")
                                     plant = data;
@@ -941,8 +946,8 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                 no6 = null;
     
     
-                            }else{
-
+                            }else {
+    
                                 if (no7 !== undefined && no7 !== null) {
 
                                     console.log("No5 Value:", no7);
@@ -950,7 +955,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                     no = '7';
         
         
-                                    db.plantsByWeekRowNumberAndName(no7, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                                    db.plantsByWeekRowNumberAndName(no7, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                                         console.log(data);
                                         console.log("Calling database")
                                         plant = data;
@@ -967,16 +972,16 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                     no7 = null;
         
         
-                                }else{
+                                }else {
 
                                     if (no8 !== undefined && no8 !== null) {
 
-                                        console.log("No5 Value:", no8);
+                                        console.log("No8 Value:", no8);
             
                                         no = '8';
             
             
-                                        db.plantsByWeekRowNumberAndName(no8, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                                        db.plantsByWeekRowNumberAndName(no8, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                                             console.log(data);
                                             console.log("Calling database")
                                             plant = data;
@@ -993,16 +998,16 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                         no8 = null;
             
             
-                                    }else{
+                                    }else {
 
                                         if (no9 !== undefined && no9 !== null) {
 
-                                            console.log("No5 Value:", no9);
+                                            console.log("No9 Value:", no9);
                 
-                                            no = '9';
+                                            no = '5';
                 
                 
-                                            db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                                            db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                                                 console.log(data);
                                                 console.log("Calling database")
                                                 plant = data;
@@ -1019,16 +1024,17 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             no9 = null;
                 
                 
-                                        }else{
-
+                                        }else {
+                
+                
                                             if (no10 !== undefined && no10 !== null) {
 
-                                                console.log("No5 Value:", no10);
+                                                console.log("No10 Value:", no10);
                     
-                                                no = '10';
+                                                no = '5';
                     
                     
-                                                db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 2 - Provine', '102/125').then((data) => {
+                                                db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 2 - Merlice', '62/63').then((data) => {
                                                     console.log(data);
                                                     console.log("Calling database")
                                                     plant = data;
@@ -1043,13 +1049,22 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                                 })
                     
                                                 no10 = null;
-                    
-                    
                                             }
+                                            
                                         }
+            
+            
+                                        
                                     }
+        
+        
+                                    
                                 }
+    
+                                
                             }
+
+
 
                         }
                     }
@@ -1340,7 +1355,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
                 'Data Validation',
                 'There are some errors in the data validation tab, Are you sure you want to skip the validation error ?',
                 [
-                    { text: 'No', onPress: () => this.props.navigation.navigate('Ger2ProvineDataChecker2', { plantNo: no }), style: 'cancel' },
+                    { text: 'No', onPress: () => this.props.navigation.navigate('Ger2MerliceDataChecker1', { plantNo: no }), style: 'cancel' },
                     { text: 'Yes', onPress: () => this.savePlantsToDb() },
                 ],
                 {
@@ -1444,8 +1459,8 @@ export default class Ger2ProvinePlant2 extends React.Component {
         const { pruningNumber } = this.state;
 
         let data = {
-            plantRow: '102/125',
-            plantName: 'GER 2 - Provine',
+            plantRow: '62/63',
+            plantName: 'GER 2 - Merlice',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1468,8 +1483,8 @@ export default class Ger2ProvinePlant2 extends React.Component {
         }
 
         let data1 = {
-            plantRow: '102/125',
-            plantName: 'GER 2 - Provine',
+            plantRow: '62/63',
+            plantName: 'GER 2 - Merlice',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1492,24 +1507,13 @@ export default class Ger2ProvinePlant2 extends React.Component {
         }
 
 
-        if (leavesPerPlant) {
-            if (fullySetTruss) {
-                if (setTrussLength) {
-                    if (weeklyGrowth) {
-                        if (floweringTrussHeight) {
-                            if (leafLength) {
-                                if (leafWidth) {
-                                    if (stmDiameter) {
-                                        if (lastWeekStmDiameter) {
-
-
-
+    
 
                                             if (this.state.isItConnected === 'Online') {
 
                                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                                 const url = `${scriptUrl}?
-                                                callback=ctrlq&plantRow=${'102/125'}&plantName=${'GER 2 - Provine'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+                                                callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
 
                                                 console.log("URL : " + url);
                                                 fetch(url, { mode: 'no-cors' }).then(
@@ -1528,12 +1532,15 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Ger2Provine2')
+                                                    AsyncStorage.clear()
+                                                    this.props.navigation.navigate('Ger2Merlice1')
                                                     this.setState({
 
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
+                                                    this.setItem('Ger2MerlicePlant1', 1)
+
 
                                                 }).catch((err) => {
                                                     console.log(err);
@@ -1542,6 +1549,8 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
+                                                    this.setItem('Ger2MerlicePlant1', 0)
+
                                                 })
 
                                             } else {
@@ -1557,12 +1566,15 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Ger2Provine2')
+                                                    AsyncStorage.clear()
+                                                    this.props.navigation.navigate('Ger2Merlice1')
                                                     this.setState({
 
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
+                                                    this.setItem('Ger2MerlicePlant1', 1)
+
 
                                                 }).catch((err) => {
                                                     console.log(err);
@@ -1571,87 +1583,15 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
+                                                    this.setItem('Ger2MerlicePlant1', 0)
+
                                                 })
 
                                             }
 
 
 
-                                        } else {
-                                            alert('Please fill Last Week Stem Diameter');
-                                            this.setState({
-                                                isLoading: false,
-                                                isDataSend: false,
-
-                                            });
-                                            abc = '0';
-
-                                        }
-                                    } else {
-                                        alert('Please fill Steam Diamater');
-                                        this.setState({
-                                            isLoading: false,
-                                            isDataSend: false,
-                                        });
-                                        abc = '0';
-                                    }
-                                } else {
-                                    alert('Please fill Leaf Width');
-                                    this.setState({
-                                        isLoading: false,
-                                        isDataSend: false,
-                                    });
-                                    abc = '0';
-                                }
-                            } else {
-                                alert('Please fill Leaf Length');
-                                this.setState({
-                                    isLoading: false,
-                                    isDataSend: false,
-                                });
-                                abc = '0';
-                            }
-                        } else {
-                            alert('Please fill Flower Truss Height');
-                            this.setState({
-                                isLoading: false,
-                                isDataSend: false,
-                            });
-                            abc = '0';
-                        }
-                    } else {
-                        alert('Please fill Weekly Growth');
-                        this.setState({
-                            isLoading: false,
-                            isDataSend: false,
-                        });
-                        abc = '0';
-                    }
-                } else {
-                    alert('Please fill Fully Set Truss Length');
-                    this.setState({
-                        isLoading: false,
-                        isDataSend: false,
-                    });
-                    abc = '0';
-                }
-            } else {
-                alert('Please fill Fully Set Truss');
-                this.setState({
-                    isLoading: false,
-                    isDataSend: false,
-                });
-                abc = '0';
-            }
-        } else {
-
-            alert('Please fill Leaves Per Plant');
-            this.setState({
-                isLoading: false,
-                isDataSend: false,
-            });
-            abc = '0';
-        }
+                                       
 
 
     }
@@ -1691,8 +1631,8 @@ export default class Ger2ProvinePlant2 extends React.Component {
             setFruits: this.state.setFruits,
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
-            plantRow: '102/125',
-            plantName: 'GER 2 - Provine',
+            plantRow: '62/63',
+            plantName: 'GER 2 - Merlice',
             plantWeek: '2009',
 
             trussNumber2: this.state.trussNumber2,
@@ -1719,7 +1659,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                 });
                                 Alert.alert('Completed!')
 
-                                this.props.navigation.navigate('Ger2Provine2')
+                                this.props.navigation.navigate('Ger2Merlice1')
 
                             }).catch((err) => {
                                 console.log(err);
@@ -1958,7 +1898,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
 
 
                             <Text style={styles.text} onChangeText={(text) => this.updateTextInput(text, 'plantRow')}
-                                value={this.state.plantRow}>Row No 102/125 - Week No {numberWeek}</Text>
+                                value={this.state.plantRow}>Row No 62/63 - Week No {numberWeek}</Text>
 
 
 
@@ -1969,7 +1909,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                             />
 
 
-                            <View pointerEvents={this.state.checkWeeksData === 1 ? 'none' : 'auto'}>
                                 <View style={styles.backgroundColor}>
 
                                     <View style={styles.row}>
@@ -1983,7 +1922,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholder="Enter Leaves Per Plant"
                                             placeholderTextColor="transparent"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2024,7 +1962,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2065,7 +2002,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2109,7 +2045,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2149,7 +2084,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2189,7 +2123,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2232,7 +2165,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2274,7 +2206,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2315,7 +2246,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2354,7 +2284,6 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                         <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                     </TouchableOpacity>}
 
-                            </View>
 
                             <Text style={styles.text}
                                 value={this.state.plantRow}> Enter Truss Details</Text>
@@ -2363,14 +2292,14 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                 <TouchableOpacity
                                     style={styles.buttonContainer}
                                     disabled={false}
-                                    onPress={() => this.props.navigation.navigate('Ger2ProvineTrussDetails2', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Ger2MerliceTrussDetails1', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                 </TouchableOpacity>) :
 
                                 <TouchableOpacity
                                     style={styles.buttonContainer1}
                                     disabled={true}
-                                    onPress={() => this.props.navigation.navigate('Ger2ProvineTrussDetails2', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Ger2MerliceTrussDetails1', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                     <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                 </TouchableOpacity>}
@@ -2381,7 +2310,7 @@ export default class Ger2ProvinePlant2 extends React.Component {
                                 }}
                             />
 
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Ger2ProvineDataChecker2', { plantNo: no })}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Ger2MerliceDataChecker1', { plantNo: no })}>
 
                                 {(this.state.isError) ? (<Text style={styles.validationTextError}>Data Validation</Text>) : <Text style={styles.validationText}>Data Validation</Text>}
 
@@ -2645,3 +2574,4 @@ const styles = StyleSheet.create({
     }
 
 })
+

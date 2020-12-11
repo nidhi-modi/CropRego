@@ -116,10 +116,10 @@ export default class Ger1MerliceDataChecker1 extends React.Component {
 
   componentDidMount() {
 
-    numberWeek = 2000 + currentWeekNumber() - 1;
-    numberWeek1 = 2000 + currentWeekNumber() - 2;
-    numberWeek2 = 2000 + currentWeekNumber() - 3;
-    numberWeek3 = 2000 + currentWeekNumber() - 4;
+    numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
+    numberWeek1 = 2000 + currentWeekNumber(new Date()) - 2;
+    numberWeek2 = 2000 + currentWeekNumber(new Date()) - 3;
+    numberWeek3 = 2000 + currentWeekNumber(new Date()) - 4;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
@@ -1191,7 +1191,7 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    backgroundColor: 'rgba(0,128,0,0.65)',
+    backgroundColor: 'rgba(0,116,0,0.65)',
     borderRadius: 5,
     padding: 10,
     margin: 20,
@@ -1286,3 +1286,4 @@ const styles = StyleSheet.create({
   },
 
 })
+

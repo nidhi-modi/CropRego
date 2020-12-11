@@ -53,7 +53,7 @@ return (
    <TouchableOpacity
      style={styles.buttonContainer}
      onPress={() => this.props.navigation.navigate('Ger2Row')}>
-     <Text style={styles.buttonText}>GER 2 - Provine</Text>
+     <Text style={styles.buttonText}>GER 2 - Merlice</Text>
    </TouchableOpacity>
 
    <TouchableOpacity

@@ -74,15 +74,15 @@ import Ger4ProvineDataChecker2 from '../screens/Ger4ProvineDataChecker2'
 import Ger1MerliceDataChecker1 from '../screens/Ger1MerliceDataChecker1'
 import Ger1MerliceDataChecker2 from '../screens/Ger1MerliceDataChecker2'
 import Ger2Row from '../screens/Ger2Row'
-import Ger2Provine1 from '../screens/Ger2Provine1'
-import Ger2Provine2 from '../screens/Ger2Provine2'
-import Ger2ProvinePlantList from '../screens/Ger2ProvinePlantList'
-import Ger2ProvinePlant1 from '../screens/Ger2ProvinePlant1'
-import Ger2ProvinePlant2 from '../screens/Ger2ProvinePlant2'
-import Ger2ProvineDataChecker1 from '../screens/Ger2ProvineDataChecker1'
-import Ger2ProvineDataChecker2 from '../screens/Ger2ProvineDataChecker2'
-import Ger2ProvineTrussDetails1 from '../screens/Ger2ProvineTrussDetails1'
-import Ger2ProvineTrussDetails2 from '../screens/Ger2ProvineTrussDetails2'
+import Ger2Merlice1 from '../screens/Ger2Merlice1'
+import Ger2Merlice2 from '../screens/Ger2Merlice2'
+import Ger2MerlicePlantList from '../screens/Ger2MerlicePlantList'
+import Ger2MerlicePlant1 from '../screens/Ger2MerlicePlant1'
+import Ger2MerlicePlant2 from '../screens/Ger2MerlicePlant2'
+import Ger2MerliceDataChecker1 from '../screens/Ger2MerliceDataChecker1'
+import Ger2MerliceDataChecker2 from '../screens/Ger2MerliceDataChecker2'
+import Ger2MerliceTrussDetails1 from '../screens/Ger2MerliceTrussDetails1'
+import Ger2MerliceTrussDetails2 from '../screens/Ger2MerliceTrussDetails2'
 import SiteSelection from '../screens/SiteSelection'
 import Har1YeloDataChecker from '../screens/Har1YeloDataChecker'
 import Har1AngellePlant1 from '../screens/Har1AngellePlant1'
@@ -2503,16 +2503,16 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2Provine1' component={Ger2Provine1} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2Merlice1' component={Ger2Merlice1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('Ger2ProvinePlantList')}>
+                onPress={() => navigation.navigate('Ger2MerlicePlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -2535,16 +2535,16 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2Provine2' component={Ger2Provine2} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2Merlice2' component={Ger2Merlice2} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('Ger2ProvinePlantList')}>
+                onPress={() => navigation.navigate('Ger2MerlicePlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -2567,10 +2567,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2ProvinePlantList' component={Ger2ProvinePlantList} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2MerlicePlantList' component={Ger2MerlicePlantList} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2587,10 +2587,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2ProvinePlant1' component={Ger2ProvinePlant1} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2MerlicePlant1' component={Ger2MerlicePlant1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2607,10 +2607,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2ProvinePlant2' component={Ger2ProvinePlant2} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2MerlicePlant2' component={Ger2MerlicePlant2} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2627,10 +2627,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2ProvineDataChecker1' component={Ger2ProvineDataChecker1} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2MerliceDataChecker1' component={Ger2MerliceDataChecker1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2647,10 +2647,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2ProvineDataChecker2' component={Ger2ProvineDataChecker2} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2MerliceDataChecker2' component={Ger2MerliceDataChecker2} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2667,10 +2667,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2ProvineTrussDetails1' component={Ger2ProvineTrussDetails1} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2MerliceTrussDetails1' component={Ger2MerliceTrussDetails1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2687,10 +2687,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
-        <Stack.Screen name='Ger2ProvineTrussDetails2' component={Ger2ProvineTrussDetails2} options={({ navigation }) => ({
+        <Stack.Screen name='Ger2MerliceTrussDetails2' component={Ger2MerliceTrussDetails2} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2707,7 +2707,7 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 2 Provine'
+          , title: 'GER 2 Merlice'
         })} />
 
         <Stack.Screen name='SiteSelection' component={SiteSelection} options={{ title: 'T&G Global' }} />

@@ -12,7 +12,7 @@ const db = new Database();
 
 
 
-export default class Ger2ProvinePlantList extends Component {
+export default class Ger2MerlicePlantList extends Component {
 
 
     constructor(props) {
@@ -68,7 +68,7 @@ export default class Ger2ProvinePlantList extends Component {
             isLoading: true,
         });
         let plants = [];
-        db.plantByWeekInList('GER 2 - Provine').then((data) => {
+        db.plantByWeekInList('GER 2 - Merlice').then((data) => {
             console.log("Calling database")
             plants = data;
             this.setState({
@@ -99,7 +99,7 @@ export default class Ger2ProvinePlantList extends Component {
             onPress={() => {
                 this.props.navigation.navigate('PlantDetails', {
                     plantId: `${item.plantId}`,
-                    plantName: 'GER 2 - Provine',
+                    plantName: 'GER 2 - Merlice',
 
 
                 });
@@ -295,3 +295,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 })
+
