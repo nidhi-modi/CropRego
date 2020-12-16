@@ -21,18 +21,18 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import MainStackNavigator from './navigation/MainStackNavigator'
 import Home from './screens/Home'
-  import Database from '../rego/screens/Database'
-  import { fbDB } from '../rego/screens/config'
-  import { Firebase } from 'react-native-firebase';
-  import BackgroundTask from 'react-native-background-task'
+import Database from '../rego/screens/Database'
+import { fbDB } from '../rego/screens/config'
+import { Firebase } from 'react-native-firebase';
+import BackgroundTask from 'react-native-background-task'
+import { listTodos } from './graphql/queries'
 
 
+const db = new Database();
+var firebase = require("firebase");
 
-  const db = new Database();
-  var firebase = require("firebase");
-
-  var currentWeekNumber = require('current-week-number');
-  var numberWeek;
+var currentWeekNumber = require('current-week-number');
+var numberWeek;
 
 
 function replaceUndefinedOrNull(key, value) {
@@ -67,10 +67,10 @@ BackgroundTask.define(() => {
   const url1 = `${scriptUrl2}?
   callback=ctrlq&plantRow=${this.state.listTrusss.plantRow}&plantName=${this.state.listTrusss.plantName}&plantWeek=${this.state.listTrusss.plantWeek}&plantNumber=${this.state.listTrusss.plantNumber}&trussNumber=${this.state.listTrusss.trussNumber}&setFruits=${this.state.listTrusss.setFruits}&setFlowers=${this.state.listTrusss.setFlowers}&pruningNumber=${this.state.listTrusss.pruningNumber}&fruitLoad=${this.state.listTrusss.fruitLoad}&fruitDiameter=${this.state.listTrusss.fruitDiameter}&pruningFlower=${this.state.listTrusss.pruneFlowering}&floweringTruss=${this.state.listTrusss.floweringTrussss}&pruningSet=${this.state.listTrusss.prunSetting}&settingTruss=${this.state.listTrusss.settingTrussNumber}&pruningHarvest=${this.state.listTrusss.pruningHar}&harvestTruss=${this.state.listTrusss.harvestTruss}`;
 
-  console.log("URL : "+url1);
+  console.log("URL : " + url1);
   fetch(url1, { mode: 'no-cors' }).then(
-      () => { this.setState({ sent: true }); },
-      () => { this.setState({ error: true }); }
+    () => { this.setState({ sent: true }); },
+    () => { this.setState({ error: true }); }
   );
   BackgroundTask.finish()
 
@@ -88,6 +88,7 @@ YellowBox.ignoreWarnings([
   'Module RCTImageLoader', // works
   'Require cycle:', // doesn't work
 ])
+
 
 
 
@@ -143,6 +144,7 @@ export default class App extends Component {
 
 
 
+
   async componentDidMount() {
 
     console.disableYellowBox = true;
@@ -153,6 +155,8 @@ export default class App extends Component {
     console.log("Current Week Number From App: ", numberWeek);
 
 
+
+
     module.hot.accept(() => { });
 
 
@@ -161,21 +165,21 @@ export default class App extends Component {
     SplashScreen.hide();
 
     this.getPlantsByInfoStatus();
-     const data = await this.performTimeConsumingTask();
+    const data = await this.performTimeConsumingTask();
 
-     if (data !== null) {
-       // alert('Moved to next Screen here');
- 
-     }
- 
-     this.getTrussByInfoStatus();
+    if (data !== null) {
+      // alert('Moved to next Screen here');
+
+    }
+
+    this.getTrussByInfoStatus();
 
     BackgroundTask.schedule();
 
     this.checkStatus()
 
 
-   
+
 
   }
 
@@ -217,7 +221,7 @@ export default class App extends Component {
       plants = data;
       console.log('details from App:', data)
 
-      firebase.database().ref('croprego/').push(objify("PlantDetails", data)
+      /*firebase.database().ref('croprego/').push(objify("PlantDetails", data)
 
       ).then((data) => {
         //success callback
@@ -225,7 +229,7 @@ export default class App extends Component {
       }).catch((error) => {
         //error callback
         console.log('error ', error)
-      })
+      })*/
       this.setState({
         listPlants,
       });
@@ -249,7 +253,7 @@ export default class App extends Component {
       truss = data;
       console.log('details from App:', data)
 
-      firebase.database().ref('croprego/').push(objify("TrussDetails", data)
+      /*firebase.database().ref('croprego/').push(objify("TrussDetails", data)
 
       ).then((data) => {
         //success callback
@@ -257,7 +261,7 @@ export default class App extends Component {
       }).catch((error) => {
         //error callback
         console.log('error ', error)
-      })
+      })*/
 
       this.setState({
         listTrusss,

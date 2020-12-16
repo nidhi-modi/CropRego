@@ -22,7 +22,7 @@ function Ger2Row(props) {
           <TouchableOpacity
             style={styles.buttonContainer}
             onPress={() => navigation.navigate('Ger2Merlice2')}>
-            <Text style={styles.buttonText}>Row 102/125</Text>
+            <Text style={styles.buttonText}>Row 102/103</Text>
           </TouchableOpacity>
 
 

@@ -1,0 +1,12 @@
+projects:
+  aPiKey:
+    schemaPath: graphql/schema.json
+    includes:
+      - rego
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: graphql
