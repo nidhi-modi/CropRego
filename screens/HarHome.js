@@ -4,10 +4,6 @@ import AsyncStorage from '@react-native-community/async-storage';
 import NetInfo from "@react-native-community/netinfo";
 
 
-
-
-
-
 export default class HarHome extends React.Component {
 
 
@@ -32,17 +28,17 @@ export default class HarHome extends React.Component {
   }
 
 
-
-  componentDidMount() {
+componentDidMount() {
 
   
 
     BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+
+   
   }
 
   
-
-
+  
   componentWillUnmount() {
     BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
   }

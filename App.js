@@ -21,18 +21,18 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import MainStackNavigator from './navigation/MainStackNavigator'
 import Home from './screens/Home'
-import Database from '../rego/screens/Database'
-import { fbDB } from '../rego/screens/config'
-import { Firebase } from 'react-native-firebase';
-import BackgroundTask from 'react-native-background-task'
+  import Database from '../rego/screens/Database'
+  import { fbDB } from '../rego/screens/config'
+  import { Firebase } from 'react-native-firebase';
+  import BackgroundTask from 'react-native-background-task'
 
 
 
-const db = new Database();
-var firebase = require("firebase");
+  const db = new Database();
+  var firebase = require("firebase");
 
-var currentWeekNumber = require('current-week-number');
-var numberWeek;
+  var currentWeekNumber = require('current-week-number');
+  var numberWeek;
 
 
 function replaceUndefinedOrNull(key, value) {
