@@ -221,7 +221,7 @@ export default class App extends Component {
       plants = data;
       console.log('details from App:', data)
 
-      /*firebase.database().ref('croprego/').push(objify("PlantDetails", data)
+      firebase.database().ref('croprego/').push(objify("PlantDetails", data)
 
       ).then((data) => {
         //success callback
@@ -229,7 +229,7 @@ export default class App extends Component {
       }).catch((error) => {
         //error callback
         console.log('error ', error)
-      })*/
+      })
 
       /*fetch('http://192.168.110.2:80/Insert_Plant.php',
             {
@@ -307,7 +307,7 @@ export default class App extends Component {
       truss = data;
       console.log('details from App:', data)
 
-      /*firebase.database().ref('croprego/').push(objify("TrussDetails", data)
+      firebase.database().ref('croprego/').push(objify("TrussDetails", data)
 
       ).then((data) => {
         //success callback
@@ -315,7 +315,7 @@ export default class App extends Component {
       }).catch((error) => {
         //error callback
         console.log('error ', error)
-      })*/
+      })
 
       this.setState({
         listTrusss,
