@@ -230,6 +230,60 @@ export default class App extends Component {
         //error callback
         console.log('error ', error)
       })*/
+
+      /*fetch('http://192.168.110.2:80/Insert_Plant.php',
+            {
+                method: 'POST',
+                headers: 
+                {
+                    'Accept': 'application/json', 
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(
+                {
+
+                 
+                  plantNumber : this.state.plants.plantNumber,
+ 
+                  plantRow : this.state.plants.plantRow,
+ 
+                  plantName : this.state.plants.plantName,
+
+                  plantWeek : this.state.plants.plantWeek,
+ 
+                  leavesPerPlant : this.state.plants.leavesPerPlant,
+ 
+                  setTrussLength : this.state.plants.setTrussLength,
+
+                  weeklyGrowth : this.state.plants.weeklyGrowth,
+ 
+                  floweringTrussHeight : this.state.plants.floweringTrussHeight,
+ 
+                  leafLength : this.state.plants.leafLength,
+
+                  leafWidth : this.state.plants.leafWidth,
+ 
+                  stmDiameter : this.state.plants.stmDiameter,
+ 
+                  lastWeekStmDiameter : this.state.plants.lastWeekStmDiameter,
+
+                  dataSend : this.state.plants.dataSend
+ 
+                })
+ 
+            }).then((response) => response.text()).then((responseJsonFromServer) =>
+            {
+                console.log("Response : ",responseJsonFromServer)
+ 
+ 
+            }).catch((error) =>
+            {
+                console.error(error);
+ 
+            });*/
+      
+
+
       this.setState({
         listPlants,
       });

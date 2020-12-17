@@ -1898,7 +1898,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
 
 
                             <Text style={styles.text} onChangeText={(text) => this.updateTextInput(text, 'plantRow')}
-                                value={this.state.plantRow}>Row No 102/125 - Week No {numberWeek}</Text>
+                                value={this.state.plantRow}>Row No 102/103 - Week No {numberWeek}</Text>
 
 
 
