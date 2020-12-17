@@ -2215,7 +2215,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data1 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 1),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter1,
                 setFruits: this.state.setFruits1,
                 setFlowers: this.state.setFlowers1,
                 pruningNumber: this.state.pruningNumber1,
@@ -2237,7 +2237,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data1Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 1),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter1,
                 setFruits: this.state.setFruits1,
                 setFlowers: this.state.setFlowers1,
                 pruningNumber: this.state.pruningNumber1,
@@ -2276,7 +2276,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 1}&setFruits=${this.state.setFruits1}&setFlowers=${this.state.setFlowers1}&pruningNumber=${this.state.pruningNumber1}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter1}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2412,7 +2412,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data2 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 2),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter2,
                 setFruits: this.state.setFruits2,
                 setFlowers: this.state.setFlowers2,
                 pruningNumber: this.state.pruningNumber2,
@@ -2434,7 +2434,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data2Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 2),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter2,
                 setFruits: this.state.setFruits2,
                 setFlowers: this.state.setFlowers2,
                 pruningNumber: this.state.pruningNumber2,
@@ -2473,7 +2473,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 2}&setFruits=${this.state.setFruits2}&setFlowers=${this.state.setFlowers2}&pruningNumber=${this.state.pruningNumber2}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter2}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2597,7 +2597,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data3 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 3),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter3,
                 setFruits: this.state.setFruits3,
                 setFlowers: this.state.setFlowers3,
                 pruningNumber: this.state.pruningNumber3,
@@ -2619,7 +2619,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data3Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 3),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter3,
                 setFruits: this.state.setFruits3,
                 setFlowers: this.state.setFlowers3,
                 pruningNumber: this.state.pruningNumber3,
@@ -2658,7 +2658,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 3}&setFruits=${this.state.setFruits3}&setFlowers=${this.state.setFlowers3}&pruningNumber=${this.state.pruningNumber3}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter3}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2792,7 +2792,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data4 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 4),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter4,
                 setFruits: this.state.setFruits4,
                 setFlowers: this.state.setFlowers4,
                 pruningNumber: this.state.pruningNumber4,
@@ -2814,7 +2814,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data4Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 4),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter4,
                 setFruits: this.state.setFruits4,
                 setFlowers: this.state.setFlowers4,
                 pruningNumber: this.state.pruningNumber4,
@@ -2852,7 +2852,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 4}&setFruits=${this.state.setFruits4}&setFlowers=${this.state.setFlowers4}&pruningNumber=${this.state.pruningNumber4}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter4}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -2976,7 +2976,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data5 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 5),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter5,
                 setFruits: this.state.setFruits5,
                 setFlowers: this.state.setFlowers5,
                 pruningNumber: this.state.pruningNumber5,
@@ -2998,7 +2998,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data5Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 5),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter5,
                 setFruits: this.state.setFruits5,
                 setFlowers: this.state.setFlowers5,
                 pruningNumber: this.state.pruningNumber5,
@@ -3035,7 +3035,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 5}&setFruits=${this.state.setFruits5}&setFlowers=${this.state.setFlowers5}&pruningNumber=${this.state.pruningNumber5}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter5}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -3163,7 +3163,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data6 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 6),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter6,
                 setFruits: this.state.setFruits6,
                 setFlowers: this.state.setFlowers6,
                 pruningNumber: this.state.pruningNumber6,
@@ -3185,7 +3185,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data6Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 6),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter6,
                 setFruits: this.state.setFruits6,
                 setFlowers: this.state.setFlowers6,
                 pruningNumber: this.state.pruningNumber6,
@@ -3223,7 +3223,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 6}&setFruits=${this.state.setFruits6}&setFlowers=${this.state.setFlowers6}&pruningNumber=${this.state.pruningNumber6}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter6}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -3347,7 +3347,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data7 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 7),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter7,
                 setFruits: this.state.setFruits7,
                 setFlowers: this.state.setFlowers7,
                 pruningNumber: this.state.pruningNumber7,
@@ -3369,7 +3369,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data7Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 7),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter7,
                 setFruits: this.state.setFruits7,
                 setFlowers: this.state.setFlowers7,
                 pruningNumber: this.state.pruningNumber7,
@@ -3408,7 +3408,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 7}&setFruits=${this.state.setFruits7}&setFlowers=${this.state.setFlowers7}&pruningNumber=${this.state.pruningNumber7}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter7}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -3534,7 +3534,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data8 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 8),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter8,
                 setFruits: this.state.setFruits8,
                 setFlowers: this.state.setFlowers8,
                 pruningNumber: this.state.pruningNumber8,
@@ -3556,7 +3556,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data8Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 8),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter8,
                 setFruits: this.state.setFruits8,
                 setFlowers: this.state.setFlowers8,
                 pruningNumber: this.state.pruningNumber8,
@@ -3595,7 +3595,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                    callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 8}&setFruits=${this.state.setFruits8}&setFlowers=${this.state.setFlowers8}&pruningNumber=${this.state.pruningNumber8}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter8}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
@@ -3720,7 +3720,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data9 = {
                 trussNumber: (parseInt(this.state.trussNumber) + 9),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter9,
                 setFruits: this.state.setFruits9,
                 setFlowers: this.state.setFlowers9,
                 pruningNumber: this.state.pruningNumber9,
@@ -3742,7 +3742,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
             let data9Send = {
                 trussNumber: (parseInt(this.state.trussNumber) + 9),
-                fruitDiameter: this.state.fruitDiameter,
+                fruitDiameter: this.state.fruitDiameter9,
                 setFruits: this.state.setFruits9,
                 setFlowers: this.state.setFlowers9,
                 pruningNumber: this.state.pruningNumber9,
@@ -3781,7 +3781,7 @@ export default class Ger2MerliceTrussDetails1 extends React.Component {
 
                     const scriptUrl = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                     const url = `${scriptUrl}?
-                        callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
+                        callback=ctrlq&plantRow=${'62/63'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${number}&trussNumber=${parseInt(this.state.trussNumber) + 9}&setFruits=${this.state.setFruits9}&setFlowers=${this.state.setFlowers9}&pruningNumber=${this.state.pruningNumber9}&fruitLoad=${this.state.fruitLoad}&fruitDiameter=${this.state.fruitDiameter9}&pruningFlower=${this.state.pruneFlowering}&floweringTruss=${this.state.floweringTrussss}&pruningSet=${this.state.prunSetting}&settingTruss=${this.state.settingTrussNumber}&pruningHarvest=${this.state.pruningHar}&harvestTruss=${this.state.harvestTruss}`;
 
                     console.log("URL : " + url);
                     fetch(url, { mode: 'no-cors' }).then((response) => {
