@@ -38,7 +38,7 @@ export default class Har1Angelle extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2000 + currentWeekNumber()-2;
+        numberWeek = 2100 + currentWeekNumber()-2;
 
         this.setState({ week : numberWeek});
 

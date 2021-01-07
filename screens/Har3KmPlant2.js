@@ -573,7 +573,7 @@ export default class Har3KmPlant2 extends React.Component {
 
     componentDidMount() {
 
-        numberWeek = 2000 + currentWeekNumber() - 2;
+        numberWeek = 2100 + currentWeekNumber() - 2;
         console.log("Current Week Number: ", numberWeek);
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];

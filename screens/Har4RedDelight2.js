@@ -31,7 +31,7 @@ export default class Har4RedDelight2 extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2000 + currentWeekNumber()-2;
+        numberWeek = 2100 + currentWeekNumber()-2;
 
         this.setState({ week : numberWeek});
 

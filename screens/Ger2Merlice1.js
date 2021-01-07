@@ -33,7 +33,7 @@ export default class Ger2Merlice1 extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2000 + currentWeekNumber(new Date())-1;
+        numberWeek = 2100 + currentWeekNumber(new Date())-1;
 
         console.log("New Week number : "+numberWeek);
 

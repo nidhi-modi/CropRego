@@ -9,7 +9,7 @@ function Har3Flamentyno(props) {
 
     const { navigation } = props
 
-    numberWeek = 2000 + currentWeekNumber()-1;
+    numberWeek = 2100 + currentWeekNumber()-1;
 
     React.useLayoutEffect(() => {
         navigation.setOptions({

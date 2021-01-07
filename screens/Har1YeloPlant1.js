@@ -574,7 +574,7 @@ export default class Har1YeloPlant1 extends React.Component {
 
     componentDidMount() {
 
-        numberWeek = 2000 + currentWeekNumber() - 2;
+        numberWeek = 2100 + currentWeekNumber() - 2;
         console.log("Current Week Number: ", numberWeek);
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
@@ -728,7 +728,7 @@ export default class Har1YeloPlant1 extends React.Component {
                 isErrorAsync: false,
             });
 
-            numberWeek = 2000 + currentWeekNumber();
+            numberWeek = 2100 + currentWeekNumber();
 
 
         } else if (abc === '1' && abc !== null) {

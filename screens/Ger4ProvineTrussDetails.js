@@ -413,7 +413,7 @@ export default class Ger4ProvineTrussDetails extends React.Component {
         }
 
 
-        numberWeek = 2000 + currentWeekNumber() - 2;
+        numberWeek = 2100 + currentWeekNumber() - 2;
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 

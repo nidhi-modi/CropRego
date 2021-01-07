@@ -116,10 +116,10 @@ export default class Ger1MerliceDataChecker1 extends React.Component {
 
   componentDidMount() {
 
-    numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
-    numberWeek1 = 2000 + currentWeekNumber(new Date()) - 2;
-    numberWeek2 = 2000 + currentWeekNumber(new Date()) - 3;
-    numberWeek3 = 2000 + currentWeekNumber(new Date()) - 4;
+    numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
+    numberWeek1 = 2100 + currentWeekNumber(new Date()) - 2;
+    numberWeek2 = 2100 + currentWeekNumber(new Date()) - 3;
+    numberWeek3 = 2100 + currentWeekNumber(new Date()) - 4;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 

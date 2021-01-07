@@ -413,7 +413,7 @@ export default class Har1AvalantinoTrussDetails3 extends React.Component {
         }
 
 
-        numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
+        numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 

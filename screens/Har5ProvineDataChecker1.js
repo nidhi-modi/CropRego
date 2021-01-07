@@ -116,10 +116,10 @@ export default class Har5ProvineDataChecker1 extends React.Component {
 
   componentDidMount() {
 
-    numberWeek = 2000 + currentWeekNumber() - 2;
-    numberWeek1 = 2000 + currentWeekNumber() - 3;
-    numberWeek2 = 2000 + currentWeekNumber() - 4;
-    numberWeek3 = 2000 + currentWeekNumber() - 5;
+    numberWeek = 2100 + currentWeekNumber() - 2;
+    numberWeek1 = 2100 + currentWeekNumber() - 3;
+    numberWeek2 = 2100 + currentWeekNumber() - 4;
+    numberWeek3 = 2100 + currentWeekNumber() - 5;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
