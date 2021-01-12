@@ -150,7 +150,7 @@ export default class Ger2MerliceDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek, 'GER 2 - Merlice', '62/63').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek, 'GER 2 - Merlice', '70/71').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss1 = data;
@@ -170,7 +170,7 @@ export default class Ger2MerliceDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'GER 2 - Merlice', '62/63').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'GER 2 - Merlice', '70/71').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss2 = data;
@@ -191,7 +191,7 @@ export default class Ger2MerliceDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'GER 2 - Merlice', '62/63').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'GER 2 - Merlice', '70/71').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss3 = data;
@@ -216,7 +216,7 @@ export default class Ger2MerliceDataChecker1 extends React.Component {
 
       });
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'GER 2 - Merlice', '62/63').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'GER 2 - Merlice', '70/71').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss4 = data;
@@ -242,7 +242,7 @@ export default class Ger2MerliceDataChecker1 extends React.Component {
         isLoading: true
 
       });
-      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'GER 2 - Merlice', '62/63').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'GER 2 - Merlice', '70/71').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo1 = data;
@@ -260,7 +260,7 @@ export default class Ger2MerliceDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'GER 2 - Merlice', '62/63').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'GER 2 - Merlice', '70/71').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo2 = data;
@@ -280,7 +280,7 @@ export default class Ger2MerliceDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'GER 2 - Merlice', '62/63').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'GER 2 - Merlice', '70/71').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo3 = data;
@@ -300,7 +300,7 @@ export default class Ger2MerliceDataChecker1 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek, 'GER 2 - Merlice', '62/63').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek, 'GER 2 - Merlice', '70/71').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo4 = data;

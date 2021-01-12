@@ -53,7 +53,7 @@ export default class Ger2Merlice2 extends Component {
     callQuery = () => {
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("1", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("1", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -73,7 +73,7 @@ export default class Ger2Merlice2 extends Component {
         }, 1000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("2", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("2", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -93,7 +93,7 @@ export default class Ger2Merlice2 extends Component {
         }, 3000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("3", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("3", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -113,7 +113,7 @@ export default class Ger2Merlice2 extends Component {
         }, 4000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("4", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("4", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -133,7 +133,7 @@ export default class Ger2Merlice2 extends Component {
         }, 5000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("5", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("5", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -153,7 +153,7 @@ export default class Ger2Merlice2 extends Component {
         }, 6000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("6", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("6", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -173,7 +173,7 @@ export default class Ger2Merlice2 extends Component {
         }, 7000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("7", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("7", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -193,7 +193,7 @@ export default class Ger2Merlice2 extends Component {
         }, 8000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("8", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("8", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -213,7 +213,7 @@ export default class Ger2Merlice2 extends Component {
         }, 9000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("9", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("9", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -233,7 +233,7 @@ export default class Ger2Merlice2 extends Component {
         }, 10000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("10", numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName("10", numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({

@@ -670,7 +670,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
            
 
             setTimeout(() => {
-                db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 2 - Merlice', '102/103').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 2 - Merlice', '114/115').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -709,7 +709,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
 
             setTimeout(() => {
 
-                db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 2 - Merlice', '102/103').then((data1) => {
+                db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 2 - Merlice', '114/115').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     if (data1 !== null || data1 !== '' || data1 !== undefined) {
@@ -800,7 +800,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -825,7 +825,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -851,7 +851,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -877,7 +877,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -903,7 +903,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -929,7 +929,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
                                 no = '6';
     
     
-                                db.plantsByWeekRowNumberAndName(no6, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                                db.plantsByWeekRowNumberAndName(no6, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                                     console.log(data);
                                     console.log("Calling database")
                                     plant = data;
@@ -955,7 +955,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
                                     no = '7';
         
         
-                                    db.plantsByWeekRowNumberAndName(no7, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                                    db.plantsByWeekRowNumberAndName(no7, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                                         console.log(data);
                                         console.log("Calling database")
                                         plant = data;
@@ -981,7 +981,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
                                         no = '8';
             
             
-                                        db.plantsByWeekRowNumberAndName(no8, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                                        db.plantsByWeekRowNumberAndName(no8, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                                             console.log(data);
                                             console.log("Calling database")
                                             plant = data;
@@ -1004,10 +1004,10 @@ export default class Ger2MerlicePlant2 extends React.Component {
 
                                             console.log("No9 Value:", no9);
                 
-                                            no = '5';
+                                            no = '9';
                 
                 
-                                            db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                                            db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                                                 console.log(data);
                                                 console.log("Calling database")
                                                 plant = data;
@@ -1031,10 +1031,10 @@ export default class Ger2MerlicePlant2 extends React.Component {
 
                                                 console.log("No10 Value:", no10);
                     
-                                                no = '5';
+                                                no = '10';
                     
                     
-                                                db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 2 - Merlice', '102/103').then((data) => {
+                                                db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 2 - Merlice', '114/115').then((data) => {
                                                     console.log(data);
                                                     console.log("Calling database")
                                                     plant = data;
@@ -1459,7 +1459,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
         const { pruningNumber } = this.state;
 
         let data = {
-            plantRow: '102/103',
+            plantRow: '114/115',
             plantName: 'GER 2 - Merlice',
             plantWeek: numberWeek,
             plantNumber: no,
@@ -1483,7 +1483,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
         }
 
         let data1 = {
-            plantRow: '102/103',
+            plantRow: '114/115',
             plantName: 'GER 2 - Merlice',
             plantWeek: numberWeek,
             plantNumber: no,
@@ -1513,7 +1513,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
 
                                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                                 const url = `${scriptUrl}?
-                                                callback=ctrlq&plantRow=${'102/103'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+                                                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
 
                                                 console.log("URL : " + url);
                                                 fetch(url, { mode: 'no-cors' }).then(
@@ -1631,7 +1631,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
             setFruits: this.state.setFruits,
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
-            plantRow: '102/103',
+            plantRow: '114/115',
             plantName: 'GER 2 - Merlice',
             plantWeek: '2009',
 
@@ -1898,7 +1898,7 @@ export default class Ger2MerlicePlant2 extends React.Component {
 
 
                             <Text style={styles.text} onChangeText={(text) => this.updateTextInput(text, 'plantRow')}
-                                value={this.state.plantRow}>Row No 102/103 - Week No {numberWeek}</Text>
+                                value={this.state.plantRow}>Row No 114/115 - Week No {numberWeek}</Text>
 
 
 
