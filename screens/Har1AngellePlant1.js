@@ -17,15 +17,6 @@ import axios from 'axios';
 import NetInfo from "@react-native-community/netinfo";
 
 
-
-
-
-
-
-
-
-
-
 /*let defaults = {
     LeavesPerPlant: '0',
     FullysetTruss: '0',

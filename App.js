@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, { Component, AsyncStorage } from 'react';
 import {
   Platform,
   StyleSheet,
@@ -33,6 +33,7 @@ var firebase = require("firebase");
 
 var currentWeekNumber = require('current-week-number');
 var numberWeek;
+var houseSelected;
 
 
 function replaceUndefinedOrNull(key, value) {
@@ -137,6 +138,10 @@ export default class App extends Component {
       listPlants: {},
       listTrusss: {},
 
+      sample: [],
+
+
+
 
 
     };
@@ -151,11 +156,20 @@ export default class App extends Component {
 
     console.ignoredYellowBox = ['react-native BugReporting extraData:'];
 
-    numberWeek = 2000 + currentWeekNumber(new Date()) - 1;
+    numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
     console.log("Current Week Number From App: ", numberWeek);
 
 
 
+    try {
+      AsyncStorage.getItem('house').then((text1Value) => {
+        houseSelected = JSON.parse(text1Value);
+
+        console.log("ooooooooooooooooooooooooooooooooooooooooooooooooooooo : " + houseSelected);
+
+      }).done();
+    } catch (error) {
+    }
 
     module.hot.accept(() => { });
 
@@ -163,6 +177,9 @@ export default class App extends Component {
 
 
     SplashScreen.hide();
+
+
+
 
     this.getPlantsByInfoStatus();
     const data = await this.performTimeConsumingTask();
@@ -281,7 +298,7 @@ export default class App extends Component {
                 console.error(error);
  
             });*/
-      
+
 
 
       this.setState({
@@ -305,9 +322,17 @@ export default class App extends Component {
       listTrusss = data;
 
       truss = data;
+
+      this.setState({ truss: data })
       console.log('details from App:', data)
 
+      const sampleData = data.pruningFlower;
+
+      this.setState({ sample: sampleData })
+
+
       firebase.database().ref('croprego/').push(objify("TrussDetails", data)
+
 
       ).then((data) => {
         //success callback
