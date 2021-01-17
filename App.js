@@ -160,17 +160,6 @@ export default class App extends Component {
     console.log("Current Week Number From App: ", numberWeek);
 
 
-
-    try {
-      AsyncStorage.getItem('house').then((text1Value) => {
-        houseSelected = JSON.parse(text1Value);
-
-        console.log("ooooooooooooooooooooooooooooooooooooooooooooooooooooo : " + houseSelected);
-
-      }).done();
-    } catch (error) {
-    }
-
     module.hot.accept(() => { });
 
 

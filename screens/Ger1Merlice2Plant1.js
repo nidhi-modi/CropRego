@@ -1005,7 +1005,7 @@ export default class Ger1Merlice2Plant1 extends React.Component {
 
                                             console.log("No9 Value:", no9);
                 
-                                            no = '5';
+                                            no = '9';
                 
                 
                                             db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'GER 1 - Merlice','45/46').then((data) => {
@@ -1032,7 +1032,7 @@ export default class Ger1Merlice2Plant1 extends React.Component {
 
                                                 console.log("No10 Value:", no10);
                     
-                                                no = '5';
+                                                no = '10';
                     
                     
                                                 db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'GER 1 - Merlice','45/46').then((data) => {
