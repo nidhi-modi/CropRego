@@ -1,0 +1,903 @@
+2021-01-13 00:29:40 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7ffc606c3bf0; archive(resolved)='<IDEArchive: 0x7ffc6580fec0>', distributionTask(resolved)='2', distributionDestination(resolved)='1', distributionMethod(resolved)='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	Chain (12, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7ffc606c3bf0; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7ffc606c5650; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7ffc5c7e7a90; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7ffc5c7e9de0; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7ffc589bb650; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7ffc570f7150; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7ffcaf09ee60; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7ffc646aa8b0; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7ffc572e0b40; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7ffcdd982200; teamID='4Q6XJ675Q5', teamName='Nidhi Modi', teamType='Individual', username='nidhi.modi@tandg.global', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7ffc621130c0; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='(null)'>
+	<IDEDistributionContext: 0x7ffc58408250; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7ffcdc48fda0>', team='(null)'>
+	<IDEDistributionContext: 0x7ffc5840e750; archive = '<IDEArchive: 0x7ffc6580fec0>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7ffc606c3bf0>
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionCreateDestRootStep
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionCopyItemStep
+2021-01-13 00:29:40 +0000  Running /usr/bin/ditto '-V' '/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app'
+2021-01-13 00:29:40 +0000  >>> Copying /Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app 
+2021-01-13 00:29:40 +0000  copying file ./_CodeSignature/CodeResources ... 
+2021-01-13 00:29:40 +0000  26212 bytes for ./_CodeSignature/CodeResources
+2021-01-13 00:29:40 +0000  copying file ./Fontisto.ttf ... 
+2021-01-13 00:29:40 +0000  313528 bytes for ./Fontisto.ttf
+copying file ./Octicons.ttf ... 
+2021-01-13 00:29:40 +0000  28364 bytes for ./Octicons.ttf
+copying file ./Feather.ttf ... 
+2021-01-13 00:29:40 +0000  56024 bytes for ./Feather.ttf
+copying file ./BinOrderingApp ... 
+2021-01-13 00:29:40 +0000  120427376 bytes for ./BinOrderingApp
+copying file ./Entypo.ttf ... 
+2021-01-13 00:29:40 +0000  65584 bytes for ./Entypo.ttf
+copying file ./FontAwesome5_Brands.ttf ... 
+2021-01-13 00:29:40 +0000  132728 bytes for ./FontAwesome5_Brands.ttf
+copying file ./MaterialCommunityIcons.ttf ... 
+2021-01-13 00:29:40 +0000  899432 bytes for ./MaterialCommunityIcons.ttf
+copying file ./AntDesign.ttf ... 
+2021-01-13 00:29:40 +0000  70344 bytes for ./AntDesign.ttf
+copying file ./Foundation.ttf ... 
+2021-01-13 00:29:40 +0000  56976 bytes for ./Foundation.ttf
+2021-01-13 00:29:40 +0000  copying file ./Ionicons.ttf ... 
+2021-01-13 00:29:40 +0000  247192 bytes for ./Ionicons.ttf
+copying file ./FontAwesome5_Solid.ttf ... 
+2021-01-13 00:29:40 +0000  202616 bytes for ./FontAwesome5_Solid.ttf
+copying file ./FontAwesome5_Regular.ttf ... 
+2021-01-13 00:29:40 +0000  34092 bytes for ./FontAwesome5_Regular.ttf
+2021-01-13 00:29:40 +0000  copying file ./AccessibilityResources.bundle/en.lproj/Localizable.strings ... 
+2021-01-13 00:29:40 +0000  530 bytes for ./AccessibilityResources.bundle/en.lproj/Localizable.strings
+2021-01-13 00:29:40 +0000  copying file ./AccessibilityResources.bundle/Info.plist ... 
+2021-01-13 00:29:40 +0000  742 bytes for ./AccessibilityResources.bundle/Info.plist
+2021-01-13 00:29:40 +0000  copying file ./FontAwesome.ttf ... 
+2021-01-13 00:29:40 +0000  165548 bytes for ./FontAwesome.ttf
+copying file ./Zocial.ttf ... 
+2021-01-13 00:29:40 +0000  25552 bytes for ./Zocial.ttf
+copying file ./EvilIcons.ttf ... 
+2021-01-13 00:29:40 +0000  13456 bytes for ./EvilIcons.ttf
+copying file ./main.jsbundle ... 
+2021-01-13 00:29:40 +0000  1706333 bytes for ./main.jsbundle
+2021-01-13 00:29:40 +0000  copying file ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-11.0+.nib ... 
+2021-01-13 00:29:40 +0000  4144 bytes for ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-11.0+.nib
+2021-01-13 00:29:40 +0000  copying file ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib ... 
+2021-01-13 00:29:40 +0000  4276 bytes for ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
+2021-01-13 00:29:40 +0000  copying file ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-11.0+.nib ... 
+2021-01-13 00:29:40 +0000  896 bytes for ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-11.0+.nib
+2021-01-13 00:29:40 +0000  copying file ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib ... 
+2021-01-13 00:29:40 +0000  896 bytes for ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib
+2021-01-13 00:29:40 +0000  copying file ./LaunchScreen.storyboardc/Info.plist ... 
+2021-01-13 00:29:40 +0000  258 bytes for ./LaunchScreen.storyboardc/Info.plist
+2021-01-13 00:29:40 +0000  copying file ./Frameworks/libswiftCoreImage.dylib ... 
+2021-01-13 00:29:40 +0000  466576 bytes for ./Frameworks/libswiftCoreImage.dylib
+2021-01-13 00:29:40 +0000  copying file ./Frameworks/libswiftObjectiveC.dylib ... 
+2021-01-13 00:29:40 +0000  679696 bytes for ./Frameworks/libswiftObjectiveC.dylib
+2021-01-13 00:29:40 +0000  copying file ./Frameworks/libswiftCore.dylib ... 
+2021-01-13 00:29:40 +0000  95497600 bytes for ./Frameworks/libswiftCore.dylib
+copying file ./Frameworks/libswiftCoreGraphics.dylib ... 
+2021-01-13 00:29:40 +0000  2041040 bytes for ./Frameworks/libswiftCoreGraphics.dylib
+copying file ./Frameworks/libswiftUIKit.dylib ... 
+2021-01-13 00:29:40 +0000  1608816 bytes for ./Frameworks/libswiftUIKit.dylib
+copying file ./Frameworks/libswiftMetal.dylib ... 
+2021-01-13 00:29:40 +0000  724432 bytes for ./Frameworks/libswiftMetal.dylib
+copying file ./Frameworks/libswiftDispatch.dylib ... 
+2021-01-13 00:29:40 +0000  4056912 bytes for ./Frameworks/libswiftDispatch.dylib
+copying file ./Frameworks/libswiftos.dylib ... 
+2021-01-13 00:29:40 +0000  857184 bytes for ./Frameworks/libswiftos.dylib
+copying file ./Frameworks/libswiftCoreFoundation.dylib ... 
+2021-01-13 00:29:40 +0000  450400 bytes for ./Frameworks/libswiftCoreFoundation.dylib
+copying file ./Frameworks/libswiftDarwin.dylib ... 
+2021-01-13 00:29:40 +0000  1091440 bytes for ./Frameworks/libswiftDarwin.dylib
+copying file ./Frameworks/libswiftQuartzCore.dylib ... 
+2021-01-13 00:29:40 +0000  486352 bytes for ./Frameworks/libswiftQuartzCore.dylib
+2021-01-13 00:29:40 +0000  copying file ./Frameworks/libswiftFoundation.dylib ... 
+2021-01-13 00:29:40 +0000  43094320 bytes for ./Frameworks/libswiftFoundation.dylib
+2021-01-13 00:29:40 +0000  copying file ./SimpleLineIcons.ttf ... 
+2021-01-13 00:29:40 +0000  54056 bytes for ./SimpleLineIcons.ttf
+copying file ./embedded.mobileprovision ... 
+2021-01-13 00:29:40 +0000  7584 bytes for ./embedded.mobileprovision
+2021-01-13 00:29:40 +0000  copying file ./assets/app.json ... 
+2021-01-13 00:29:40 +0000  65 bytes for ./assets/app.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-ratings/src/images/bell.png ... 
+2021-01-13 00:29:40 +0000  2989 bytes for ./assets/node_modules/react-native-ratings/src/images/bell.png
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-ratings/src/images/airbnb-star-selected.png ... 
+2021-01-13 00:29:40 +0000  934 bytes for ./assets/node_modules/react-native-ratings/src/images/airbnb-star-selected.png
+copying file ./assets/node_modules/react-native-ratings/src/images/heart.png ... 
+2021-01-13 00:29:40 +0000  1928 bytes for ./assets/node_modules/react-native-ratings/src/images/heart.png
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-ratings/src/images/airbnb-star.png ... 
+2021-01-13 00:29:40 +0000  930 bytes for ./assets/node_modules/react-native-ratings/src/images/airbnb-star.png
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-ratings/src/images/rocket.png ... 
+2021-01-13 00:29:40 +0000  4050 bytes for ./assets/node_modules/react-native-ratings/src/images/rocket.png
+copying file ./assets/node_modules/react-native-ratings/src/images/star.png ... 
+2021-01-13 00:29:40 +0000  1961 bytes for ./assets/node_modules/react-native-ratings/src/images/star.png
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/@react-navigation/stack/src/views/assets/back-icon@3x.png ... 
+2021-01-13 00:29:40 +0000  761 bytes for ./assets/node_modules/@react-navigation/stack/src/views/assets/back-icon@3x.png
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/@react-navigation/stack/src/views/assets/back-icon@2x.png ... 
+2021-01-13 00:29:40 +0000  405 bytes for ./assets/node_modules/@react-navigation/stack/src/views/assets/back-icon@2x.png
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/@react-navigation/stack/src/views/assets/back-icon.png ... 
+2021-01-13 00:29:40 +0000  290 bytes for ./assets/node_modules/@react-navigation/stack/src/views/assets/back-icon.png
+copying file ./assets/node_modules/@react-navigation/stack/src/views/assets/back-icon-mask.png ... 
+2021-01-13 00:29:40 +0000  913 bytes for ./assets/node_modules/@react-navigation/stack/src/views/assets/back-icon-mask.png
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Ionicons.json ... 
+2021-01-13 00:29:40 +0000  106287 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Ionicons.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Fontisto.json ... 
+2021-01-13 00:29:40 +0000  13107 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Fontisto.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/EvilIcons.json ... 
+2021-01-13 00:29:40 +0000  1454 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/EvilIcons.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Octicons.json ... 
+2021-01-13 00:29:40 +0000  3992 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Octicons.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free_meta.json ... 
+2021-01-13 00:29:40 +0000  27903 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free_meta.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome.json ... 
+2021-01-13 00:29:40 +0000  17437 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/MaterialIcons.json ... 
+2021-01-13 00:29:40 +0000  38522 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/MaterialIcons.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Entypo.json ... 
+2021-01-13 00:29:40 +0000  9486 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Entypo.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/SimpleLineIcons.json ... 
+2021-01-13 00:29:40 +0000  4102 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/SimpleLineIcons.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/AntDesign.json ... 
+2021-01-13 00:29:40 +0000  6303 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/AntDesign.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free.json ... 
+2021-01-13 00:29:40 +0000  32278 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Feather.json ... 
+2021-01-13 00:29:40 +0000  6080 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Feather.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json ... 
+2021-01-13 00:29:40 +0000  151816 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Foundation.json ... 
+2021-01-13 00:29:40 +0000  6417 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Foundation.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Zocial.json ... 
+2021-01-13 00:29:40 +0000  2013 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Zocial.json
+2021-01-13 00:29:40 +0000  copying file ./assets/node_modules/realm/package.json ... 
+2021-01-13 00:29:40 +0000  5552 bytes for ./assets/node_modules/realm/package.json
+2021-01-13 00:29:40 +0000  copying file ./assets/assets/downGreen.png ... 
+2021-01-13 00:29:40 +0000  1342 bytes for ./assets/assets/downGreen.png
+2021-01-13 00:29:40 +0000  copying file ./assets/assets/menu32.png ... 
+2021-01-13 00:29:40 +0000  186 bytes for ./assets/assets/menu32.png
+2021-01-13 00:29:40 +0000  copying file ./assets/assets/upRed.png ... 
+2021-01-13 00:29:40 +0000  1098 bytes for ./assets/assets/upRed.png
+2021-01-13 00:29:40 +0000  copying file ./assets/assets/background2.png ... 
+2021-01-13 00:29:40 +0000  2909 bytes for ./assets/assets/background2.png
+2021-01-13 00:29:40 +0000  copying file ./assets/assets/upGreen.png ... 
+2021-01-13 00:29:40 +0000  1537 bytes for ./assets/assets/upGreen.png
+2021-01-13 00:29:40 +0000  copying file ./assets/assets/downRed.png ... 
+2021-01-13 00:29:40 +0000  1051 bytes for ./assets/assets/downRed.png
+2021-01-13 00:29:40 +0000  copying file ./Info.plist ... 
+2021-01-13 00:29:40 +0000  1343 bytes for ./Info.plist
+2021-01-13 00:29:40 +0000  copying file ./PkgInfo ... 
+2021-01-13 00:29:40 +0000  8 bytes for ./PkgInfo
+2021-01-13 00:29:40 +0000  copying file ./MaterialIcons.ttf ... 
+2021-01-13 00:29:40 +0000  230384 bytes for ./MaterialIcons.ttf
+2021-01-13 00:29:40 +0000  /usr/bin/ditto exited with 0
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionEmbedProfileStep
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffcaecf5460; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ddf4050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc62ebd5c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5fea5040>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc6043aae0; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5c1b5850; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc62ebd5c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5fe6b8a0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc6044a910; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61f81d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc62ebd5c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5fea5040>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc619b2e50; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc97035190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc62ebd5c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5fe6b8a0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc5dde4e80; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5dd7db80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc62ebd5c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5fea5040>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc6042a110; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61b301d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc62ebd5c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5fe6b8a0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc5d56a870; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ac437d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc58504190; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcce71fa80>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc5c614640; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc6112d390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc58504190; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc61478690>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc5a1f9180; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc64dc7740; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc58504190; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc61478690>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc5b994ac0; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffca23ca1d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc56e82880>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc5ddc9310; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5e289520; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc56eabee0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Skipping profile for item: <IDEDistributionItem: 0x7ffc5a625070; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffcb26954d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc58504190; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc61478690>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionInfoPlistStep
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionItemRemovalStep
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2021-01-13 00:29:40 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2021-01-13 00:29:40 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/BinOrderingApp' '-l' '-o' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/BinOrderingApp'
+2021-01-13 00:29:40 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-01-13 00:29:40 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2021-01-13 00:29:41 +0000  Running /usr/bin/ditto '-V' '/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/BCSymbolMaps/A0FC0942-38EB-3419-8CFF-F5374FA6B29C.bcsymbolmap' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/BCSymbolMaps/A0FC0942-38EB-3419-8CFF-F5374FA6B29C.bcsymbolmap'
+2021-01-13 00:29:41 +0000  >>> Copying /Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/BCSymbolMaps/A0FC0942-38EB-3419-8CFF-F5374FA6B29C.bcsymbolmap 
+2021-01-13 00:29:41 +0000  copying file ./A0FC0942-38EB-3419-8CFF-F5374FA6B29C.bcsymbolmap ... 
+2021-01-13 00:29:41 +0000  4392229 bytes for ./A0FC0942-38EB-3419-8CFF-F5374FA6B29C.bcsymbolmap
+2021-01-13 00:29:41 +0000  /usr/bin/ditto exited with 0
+2021-01-13 00:29:41 +0000  Running /usr/bin/ditto '-V' '/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/BCSymbolMaps/1199DB50-0473-30E9-843C-E5CE6A0F8C2A.bcsymbolmap' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/BCSymbolMaps/1199DB50-0473-30E9-843C-E5CE6A0F8C2A.bcsymbolmap'
+2021-01-13 00:29:41 +0000  >>> Copying /Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/BCSymbolMaps/1199DB50-0473-30E9-843C-E5CE6A0F8C2A.bcsymbolmap 
+2021-01-13 00:29:41 +0000  copying file ./1199DB50-0473-30E9-843C-E5CE6A0F8C2A.bcsymbolmap ... 
+2021-01-13 00:29:41 +0000  4498644 bytes for ./1199DB50-0473-30E9-843C-E5CE6A0F8C2A.bcsymbolmap
+2021-01-13 00:29:41 +0000  /usr/bin/ditto exited with 0
+2021-01-13 00:29:41 +0000  Processing step: IDEDistributionSymbolsStep
+2021-01-13 00:29:41 +0000  Excluding symbols for libswiftCore.dylib
+2021-01-13 00:29:41 +0000  Excluding symbols for libswiftCoreFoundation.dylib
+2021-01-13 00:29:41 +0000  Excluding symbols for libswiftCoreGraphics.dylib
+2021-01-13 00:29:41 +0000  Excluding symbols for libswiftCoreImage.dylib
+2021-01-13 00:29:41 +0000  Excluding symbols for libswiftDarwin.dylib
+2021-01-13 00:29:41 +0000  Excluding symbols for libswiftDispatch.dylib
+2021-01-13 00:29:42 +0000  Excluding symbols for libswiftFoundation.dylib
+2021-01-13 00:29:42 +0000  Excluding symbols for libswiftMetal.dylib
+2021-01-13 00:29:42 +0000  Excluding symbols for libswiftObjectiveC.dylib
+2021-01-13 00:29:42 +0000  Excluding symbols for libswiftQuartzCore.dylib
+2021-01-13 00:29:42 +0000  Excluding symbols for libswiftUIKit.dylib
+2021-01-13 00:29:42 +0000  Excluding symbols for libswiftos.dylib
+2021-01-13 00:29:42 +0000  Excluding symbols for BinOrderingApp.app
+2021-01-13 00:29:42 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2021-01-13 00:29:42 +0000  Running /usr/bin/ditto '-V' '/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/SwiftSupport' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/SwiftSupport'
+2021-01-13 00:29:42 +0000  >>> Copying /Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/SwiftSupport 
+2021-01-13 00:29:42 +0000  copying file ./iphoneos/libswiftCoreImage.dylib ... 
+2021-01-13 00:29:42 +0000  533860 bytes for ./iphoneos/libswiftCoreImage.dylib
+copying file ./iphoneos/libswiftObjectiveC.dylib ... 
+2021-01-13 00:29:42 +0000  853551 bytes for ./iphoneos/libswiftObjectiveC.dylib
+2021-01-13 00:29:42 +0000  copying file ./iphoneos/libswiftCore.dylib ... 
+2021-01-13 00:29:42 +0000  140528485 bytes for ./iphoneos/libswiftCore.dylib
+copying file ./iphoneos/libswiftCoreGraphics.dylib ... 
+2021-01-13 00:29:42 +0000  2727342 bytes for ./iphoneos/libswiftCoreGraphics.dylib
+2021-01-13 00:29:42 +0000  copying file ./iphoneos/libswiftUIKit.dylib ... 
+2021-01-13 00:29:42 +0000  2211578 bytes for ./iphoneos/libswiftUIKit.dylib
+2021-01-13 00:29:42 +0000  copying file ./iphoneos/libswiftMetal.dylib ... 
+2021-01-13 00:29:42 +0000  897158 bytes for ./iphoneos/libswiftMetal.dylib
+copying file ./iphoneos/libswiftDispatch.dylib ... 
+2021-01-13 00:29:42 +0000  5501326 bytes for ./iphoneos/libswiftDispatch.dylib
+copying file ./iphoneos/libswiftos.dylib ... 
+2021-01-13 00:29:42 +0000  1136720 bytes for ./iphoneos/libswiftos.dylib
+2021-01-13 00:29:42 +0000  copying file ./iphoneos/libswiftCoreFoundation.dylib ... 
+2021-01-13 00:29:42 +0000  503572 bytes for ./iphoneos/libswiftCoreFoundation.dylib
+copying file ./iphoneos/libswiftDarwin.dylib ... 
+2021-01-13 00:29:42 +0000  1412282 bytes for ./iphoneos/libswiftDarwin.dylib
+copying file ./iphoneos/libswiftQuartzCore.dylib ... 
+2021-01-13 00:29:42 +0000  580069 bytes for ./iphoneos/libswiftQuartzCore.dylib
+copying file ./iphoneos/libswiftFoundation.dylib ... 
+2021-01-13 00:29:42 +0000  62290314 bytes for ./iphoneos/libswiftFoundation.dylib
+2021-01-13 00:29:42 +0000  /usr/bin/ditto exited with 0
+2021-01-13 00:29:42 +0000  Processing step: IDEDistributionAppThinningStep
+2021-01-13 00:29:42 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2021-01-13 00:29:42 +0000  Processing step: IDEDistributionArchThinningStep
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Successfully thinned item "libswiftCore.dylib", arch "arm64e"
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Successfully thinned item "libswiftCoreFoundation.dylib", arch "arm64e"
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Successfully thinned item "libswiftCoreGraphics.dylib", arch "arm64e"
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Successfully thinned item "libswiftCoreImage.dylib", arch "arm64e"
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Successfully thinned item "libswiftDarwin.dylib", arch "arm64e"
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Successfully thinned item "libswiftDispatch.dylib", arch "arm64e"
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:42 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:42 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Successfully thinned item "libswiftFoundation.dylib", arch "arm64e"
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Successfully thinned item "libswiftMetal.dylib", arch "arm64e"
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Successfully thinned item "libswiftObjectiveC.dylib", arch "arm64e"
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Successfully thinned item "libswiftQuartzCore.dylib", arch "arm64e"
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Successfully thinned item "libswiftUIKit.dylib", arch "arm64e"
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib' '-verify_arch' 'arm64e'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib' '-remove' 'arm64e' '-output' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-01-13 00:29:43 +0000  Successfully thinned item "libswiftos.dylib", arch "arm64e"
+2021-01-13 00:29:43 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/BinOrderingApp' '-verify_arch' 'arm64e'
+2021-01-13 00:29:43 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-01-13 00:29:43 +0000  Skipping architecture thinning for item "BinOrderingApp" because arch "arm64e" wasn't found
+2021-01-13 00:29:43 +0000  Processing step: IDEDistributionODRStep
+2021-01-13 00:29:43 +0000  Processing step: IDEDistributionStripXattrsStep
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffcaecf5460; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ddf4050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e6c5d70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc6043aae0; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5c1b5850; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e6a9200>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc6044a910; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61f81d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcc7c6f2e0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc619b2e50; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc97035190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e6a9200>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc5dde4e80; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5dd7db80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e6c5d70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc6042a110; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61b301d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea72930>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc5d56a870; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ac437d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e6c5d70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc5c614640; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc6112d390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea72930>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc5a1f9180; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc64dc7740; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e6c5d70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc5b994ac0; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffca23ca1d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea72930>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc5ddc9310; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5e289520; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e6c5d70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7ffc5a625070; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffcb26954d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea72930>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'>
+2021-01-13 00:29:43 +0000  Running /usr/bin/xattr '-crs' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app'
+2021-01-13 00:29:43 +0000  /usr/bin/xattr exited with 0
+2021-01-13 00:29:43 +0000  Processing step: IDEDistributionCodesignStep
+2021-01-13 00:29:43 +0000  Entitlements for <IDEDistributionItem: 0x7ffcaecf5460; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ddf4050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65591840; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeabf460>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:43 +0000  Entitlements for <IDEDistributionItem: 0x7ffcaecf5460; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ddf4050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65006180; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeac1230>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:43 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffcaecf5460; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ddf4050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc61cc6e90; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5c2c73b0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7ffc64cbdb80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~YBjOWO
+2021-01-13 00:29:43 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~YBjOWO' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib'
+2021-01-13 00:29:43 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib: replacing existing signature
+2021-01-13 00:29:44 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCore]
+2021-01-13 00:29:44 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:44 +0000  Entitlements for <IDEDistributionItem: 0x7ffc6043aae0; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5c1b5850; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65591840; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea66090>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:44 +0000  Entitlements for <IDEDistributionItem: 0x7ffc6043aae0; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5c1b5850; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5d20fab0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5a710760>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:44 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc6043aae0; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5c1b5850; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5da5ae30; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5a7de3f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7ffc63d857f0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~xYocfc
+2021-01-13 00:29:44 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~xYocfc' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'
+2021-01-13 00:29:44 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib: replacing existing signature
+2021-01-13 00:29:44 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreFoundation]
+2021-01-13 00:29:44 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:44 +0000  Entitlements for <IDEDistributionItem: 0x7ffc6044a910; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61f81d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65591840; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea66090>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:44 +0000  Entitlements for <IDEDistributionItem: 0x7ffc6044a910; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61f81d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65006180; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeaa0320>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:44 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc6044a910; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61f81d70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc58307c90; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e63ef80>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7ffc58a49dc0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~Z9asIV
+2021-01-13 00:29:44 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~Z9asIV' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'
+2021-01-13 00:29:44 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib: replacing existing signature
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreGraphics]
+2021-01-13 00:29:45 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc619b2e50; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc97035190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65591840; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea66090>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc619b2e50; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc97035190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5d21a7b0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5a7fd1c0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:45 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc619b2e50; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc97035190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc6500d1a0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea094a0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7ffc6557a480:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~yrtpXL
+2021-01-13 00:29:45 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~yrtpXL' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib: replacing existing signature
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreImage]
+2021-01-13 00:29:45 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5dde4e80; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5dd7db80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65591840; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeaa0e00>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5dde4e80; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5dd7db80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc61ced440; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc61478690>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:45 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc5dde4e80; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5dd7db80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc6500d1a0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea09570>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7ffc60c237e0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~VyivvF
+2021-01-13 00:29:45 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~VyivvF' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib: replacing existing signature
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDarwin]
+2021-01-13 00:29:45 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc6042a110; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61b301d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc655a74c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeaa4a40>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc6042a110; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61b301d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc6500d1a0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeac1230>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:45 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc6042a110; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc61b301d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc58307c90; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e63ef80>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7ffc671100d0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~lSZFA2
+2021-01-13 00:29:45 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~lSZFA2' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib: replacing existing signature
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDispatch]
+2021-01-13 00:29:45 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5d56a870; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ac437d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65591840; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeaabac0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5d56a870; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ac437d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65006180; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea066b0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:45 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc5d56a870; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5ac437d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc58307c90; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e6ab8a0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7ffc6197b660:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~IFqgPc
+2021-01-13 00:29:45 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~IFqgPc' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib: replacing existing signature
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftFoundation]
+2021-01-13 00:29:45 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5c614640; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc6112d390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65591840; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeac7050>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5c614640; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc6112d390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65006180; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcba454760>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:45 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc5c614640; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc6112d390; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc57cb0a10; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc9e62bf40>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7ffc5a1ed580:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~pH3Iym
+2021-01-13 00:29:45 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~pH3Iym' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib: replacing existing signature
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftMetal]
+2021-01-13 00:29:45 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5a1f9180; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc64dc7740; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5d179db0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffccd5cdcd0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5a1f9180; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc64dc7740; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc61c60ab0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcc3fa2ec0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:45 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc5a1f9180; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc64dc7740; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc65591840; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5f85e3f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7ffc65584b90:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~r68v0F
+2021-01-13 00:29:45 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~r68v0F' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib: replacing existing signature
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftObjectiveC]
+2021-01-13 00:29:45 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5b994ac0; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffca23ca1d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5a906e10; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5b7cf9c0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:45 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5b994ac0; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffca23ca1d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5ea96920; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea89e50>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:45 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc5b994ac0; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffca23ca1d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc6505dcf0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcba454760>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7ffc6710ebb0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~uZyDaX
+2021-01-13 00:29:45 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~uZyDaX' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'
+2021-01-13 00:29:45 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib: replacing existing signature
+2021-01-13 00:29:46 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftQuartzCore]
+2021-01-13 00:29:46 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:46 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5ddc9310; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5e289520; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5a906e10; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5c2c73b0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:46 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5ddc9310; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5e289520; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5ea96920; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea89e50>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:46 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc5ddc9310; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc5e289520; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc6505dcf0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeac7050>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7ffc6558a070:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~azTsU6
+2021-01-13 00:29:46 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~azTsU6' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'
+2021-01-13 00:29:46 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib: replacing existing signature
+2021-01-13 00:29:46 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftUIKit]
+2021-01-13 00:29:46 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:46 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5a625070; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffcb26954d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5d21a7b0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5a786cb0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-01-13 00:29:46 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5a625070; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffcb26954d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5ea96920; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaeae1ab0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-01-13 00:29:46 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc5a625070; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffcb26954d0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc6505dcf0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcc7c6f2e0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='(null)', teamID='4Q6XJ675Q5', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7ffc65588e80:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~rTrqXc
+2021-01-13 00:29:46 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~rTrqXc' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib'
+2021-01-13 00:29:46 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib: replacing existing signature
+2021-01-13 00:29:46 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftos]
+2021-01-13 00:29:46 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:46 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5b590e30; bundleID='org.reactjs.native.example.BinOrderingApp', path='<DVTFilePath:0x7ffc5660f3b0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc6542ce30; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5ea96920; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffcaea821c0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='{
+    "application-identifier" = "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp";
+    "com.apple.developer.team-identifier" = 4Q6XJ675Q5;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp"
+    );
+}', teamID='4Q6XJ675Q5', identifier='org.reactjs.native.example.BinOrderingApp', executablePath='<DVTFilePath:0x7ffc64c8b840:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/BinOrderingApp'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = 4Q6XJ675Q5;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp"
+    );
+}
+2021-01-13 00:29:46 +0000  Entitlements for <IDEDistributionItem: 0x7ffc5b590e30; bundleID='org.reactjs.native.example.BinOrderingApp', path='<DVTFilePath:0x7ffc5660f3b0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc6542ce30; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc5d8b41c0; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5be11090>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='{
+    "application-identifier" = "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp";
+    "com.apple.developer.team-identifier" = 4Q6XJ675Q5;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp"
+    );
+}', teamID='4Q6XJ675Q5', identifier='org.reactjs.native.example.BinOrderingApp', executablePath='<DVTFilePath:0x7ffc64c8b840:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/BinOrderingApp'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = 4Q6XJ675Q5;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp"
+    );
+}
+2021-01-13 00:29:46 +0000  Writing entitlements for <IDEDistributionItem: 0x7ffc5b590e30; bundleID='org.reactjs.native.example.BinOrderingApp', path='<DVTFilePath:0x7ffc5660f3b0:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7ffc6542ce30; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7ffc63726f50; name='Apple Development: nidhi.modi@tandg.global (GR79WACY9P)', hash='041464FD2BF043002DCFEF62C565493478BE8E2E', serialNumber='<DVTSigningCertificateSerialNumber: 0x7ffc5be04460>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-07-02 04:31:02 +0000''>', entitlements='{
+    "application-identifier" = "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp";
+    "com.apple.developer.team-identifier" = 4Q6XJ675Q5;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "4Q6XJ675Q5.org.reactjs.native.example.BinOrderingApp"
+    );
+}', teamID='4Q6XJ675Q5', identifier='org.reactjs.native.example.BinOrderingApp', executablePath='<DVTFilePath:0x7ffc64c8b840:'/Users/nidhimodi/Library/Developer/Xcode/Archives/2021-01-13/BinOrderingApp 13-01-21, 11.41 AM.xcarchive/Products/Applications/BinOrderingApp.app/BinOrderingApp'>', hardenedRuntime='0'>'> to: /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~cjQ0EH
+2021-01-13 00:29:46 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'E0FFB9A107D50CD60D9A246FC2CBCCE733A3D2D3' '--entitlements' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/entitlements~~~cjQ0EH' '--preserve-metadata=identifier,flags,runtime' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app'
+2021-01-13 00:29:47 +0000  /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app: signed app bundle with Mach-O universal (armv7 arm64) [org.reactjs.native.example.BinOrderingApp]
+2021-01-13 00:29:47 +0000  /usr/bin/codesign exited with 0
+2021-01-13 00:29:47 +0000  Processing step: IDEDistributionZipODRItemStep
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-01-13 00:29:47 +0000  Processing step: IDEDistributionCreateIPAStep
+2021-01-13 00:29:47 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root' '/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Packages/BinOrderingApp.ipa'
+2021-01-13 00:29:47 +0000  >>> Copying /var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root 
+2021-01-13 00:29:47 +0000  copying file ./BCSymbolMaps/1199DB50-0473-30E9-843C-E5CE6A0F8C2A.bcsymbolmap ... 
+2021-01-13 00:29:47 +0000  4498644 bytes for ./BCSymbolMaps/1199DB50-0473-30E9-843C-E5CE6A0F8C2A.bcsymbolmap
+copying file ./BCSymbolMaps/A0FC0942-38EB-3419-8CFF-F5374FA6B29C.bcsymbolmap ... 
+2021-01-13 00:29:47 +0000  4392229 bytes for ./BCSymbolMaps/A0FC0942-38EB-3419-8CFF-F5374FA6B29C.bcsymbolmap
+2021-01-13 00:29:47 +0000  copying file ./Payload/BinOrderingApp.app/_CodeSignature/CodeResources ... 
+2021-01-13 00:29:47 +0000  26212 bytes for ./Payload/BinOrderingApp.app/_CodeSignature/CodeResources
+copying file ./Payload/BinOrderingApp.app/Fontisto.ttf ... 
+2021-01-13 00:29:47 +0000  313528 bytes for ./Payload/BinOrderingApp.app/Fontisto.ttf
+copying file ./Payload/BinOrderingApp.app/Octicons.ttf ... 
+2021-01-13 00:29:47 +0000  28364 bytes for ./Payload/BinOrderingApp.app/Octicons.ttf
+2021-01-13 00:29:47 +0000  copying file ./Payload/BinOrderingApp.app/Feather.ttf ... 
+2021-01-13 00:29:47 +0000  56024 bytes for ./Payload/BinOrderingApp.app/Feather.ttf
+copying file ./Payload/BinOrderingApp.app/BinOrderingApp ... 
+2021-01-13 00:29:50 +0000  103024832 bytes for ./Payload/BinOrderingApp.app/BinOrderingApp
+copying file ./Payload/BinOrderingApp.app/Entypo.ttf ... 
+2021-01-13 00:29:50 +0000  65584 bytes for ./Payload/BinOrderingApp.app/Entypo.ttf
+copying file ./Payload/BinOrderingApp.app/FontAwesome5_Brands.ttf ... 
+2021-01-13 00:29:50 +0000  132728 bytes for ./Payload/BinOrderingApp.app/FontAwesome5_Brands.ttf
+copying file ./Payload/BinOrderingApp.app/MaterialCommunityIcons.ttf ... 
+2021-01-13 00:29:50 +0000  899432 bytes for ./Payload/BinOrderingApp.app/MaterialCommunityIcons.ttf
+copying file ./Payload/BinOrderingApp.app/AntDesign.ttf ... 
+2021-01-13 00:29:50 +0000  70344 bytes for ./Payload/BinOrderingApp.app/AntDesign.ttf
+copying file ./Payload/BinOrderingApp.app/Foundation.ttf ... 
+2021-01-13 00:29:50 +0000  56976 bytes for ./Payload/BinOrderingApp.app/Foundation.ttf
+copying file ./Payload/BinOrderingApp.app/Ionicons.ttf ... 
+2021-01-13 00:29:50 +0000  247192 bytes for ./Payload/BinOrderingApp.app/Ionicons.ttf
+copying file ./Payload/BinOrderingApp.app/FontAwesome5_Solid.ttf ... 
+2021-01-13 00:29:50 +0000  202616 bytes for ./Payload/BinOrderingApp.app/FontAwesome5_Solid.ttf
+copying file ./Payload/BinOrderingApp.app/FontAwesome5_Regular.ttf ... 
+2021-01-13 00:29:50 +0000  34092 bytes for ./Payload/BinOrderingApp.app/FontAwesome5_Regular.ttf
+2021-01-13 00:29:50 +0000  copying file ./Payload/BinOrderingApp.app/AccessibilityResources.bundle/en.lproj/Localizable.strings ... 
+2021-01-13 00:29:50 +0000  530 bytes for ./Payload/BinOrderingApp.app/AccessibilityResources.bundle/en.lproj/Localizable.strings
+copying file ./Payload/BinOrderingApp.app/AccessibilityResources.bundle/Info.plist ... 
+2021-01-13 00:29:50 +0000  742 bytes for ./Payload/BinOrderingApp.app/AccessibilityResources.bundle/Info.plist
+copying file ./Payload/BinOrderingApp.app/FontAwesome.ttf ... 
+2021-01-13 00:29:50 +0000  165548 bytes for ./Payload/BinOrderingApp.app/FontAwesome.ttf
+copying file ./Payload/BinOrderingApp.app/Zocial.ttf ... 
+2021-01-13 00:29:50 +0000  25552 bytes for ./Payload/BinOrderingApp.app/Zocial.ttf
+copying file ./Payload/BinOrderingApp.app/EvilIcons.ttf ... 
+2021-01-13 00:29:50 +0000  13456 bytes for ./Payload/BinOrderingApp.app/EvilIcons.ttf
+copying file ./Payload/BinOrderingApp.app/main.jsbundle ... 
+2021-01-13 00:29:50 +0000  1706333 bytes for ./Payload/BinOrderingApp.app/main.jsbundle
+2021-01-13 00:29:50 +0000  copying file ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-11.0+.nib ... 
+2021-01-13 00:29:50 +0000  4144 bytes for ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-11.0+.nib
+copying file ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib ... 
+2021-01-13 00:29:50 +0000  4276 bytes for ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
+2021-01-13 00:29:50 +0000  copying file ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-11.0+.nib ... 
+2021-01-13 00:29:50 +0000  896 bytes for ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-11.0+.nib
+copying file ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib ... 
+2021-01-13 00:29:50 +0000  896 bytes for ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib
+copying file ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/Info.plist ... 
+2021-01-13 00:29:50 +0000  258 bytes for ./Payload/BinOrderingApp.app/LaunchScreen.storyboardc/Info.plist
+2021-01-13 00:29:50 +0000  copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib ... 
+2021-01-13 00:29:50 +0000  352352 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib ... 
+2021-01-13 00:29:50 +0000  500080 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib ... 
+2021-01-13 00:29:53 +0000  69852784 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib ... 
+2021-01-13 00:29:53 +0000  1535328 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib ... 
+2021-01-13 00:29:53 +0000  1200960 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib ... 
+2021-01-13 00:29:53 +0000  544896 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib ... 
+2021-01-13 00:29:53 +0000  2993312 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib ... 
+2021-01-13 00:29:53 +0000  644944 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib ... 
+2021-01-13 00:29:53 +0000  335904 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib ... 
+2021-01-13 00:29:53 +0000  813968 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib ... 
+2021-01-13 00:29:53 +0000  355584 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib
+copying file ./Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib ... 
+2021-01-13 00:29:54 +0000  31957056 bytes for ./Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/SimpleLineIcons.ttf ... 
+2021-01-13 00:29:54 +0000  54056 bytes for ./Payload/BinOrderingApp.app/SimpleLineIcons.ttf
+copying file ./Payload/BinOrderingApp.app/embedded.mobileprovision ... 
+2021-01-13 00:29:54 +0000  7328 bytes for ./Payload/BinOrderingApp.app/embedded.mobileprovision
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/app.json ... 
+2021-01-13 00:29:54 +0000  65 bytes for ./Payload/BinOrderingApp.app/assets/app.json
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/bell.png ... 
+2021-01-13 00:29:54 +0000  2989 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/bell.png
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/airbnb-star-selected.png ... 
+2021-01-13 00:29:54 +0000  934 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/airbnb-star-selected.png
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/heart.png ... 
+2021-01-13 00:29:54 +0000  1928 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/heart.png
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/airbnb-star.png ... 
+2021-01-13 00:29:54 +0000  930 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/airbnb-star.png
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/rocket.png ... 
+2021-01-13 00:29:54 +0000  4050 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/rocket.png
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/star.png ... 
+2021-01-13 00:29:54 +0000  1961 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-ratings/src/images/star.png
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/node_modules/@react-navigation/stack/src/views/assets/back-icon@3x.png ... 
+2021-01-13 00:29:54 +0000  761 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/@react-navigation/stack/src/views/assets/back-icon@3x.png
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/@react-navigation/stack/src/views/assets/back-icon@2x.png ... 
+2021-01-13 00:29:54 +0000  405 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/@react-navigation/stack/src/views/assets/back-icon@2x.png
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/@react-navigation/stack/src/views/assets/back-icon.png ... 
+2021-01-13 00:29:54 +0000  290 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/@react-navigation/stack/src/views/assets/back-icon.png
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/@react-navigation/stack/src/views/assets/back-icon-mask.png ... 
+2021-01-13 00:29:54 +0000  913 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/@react-navigation/stack/src/views/assets/back-icon-mask.png
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Ionicons.json ... 
+2021-01-13 00:29:54 +0000  106287 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Ionicons.json
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Fontisto.json ... 
+2021-01-13 00:29:54 +0000  13107 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Fontisto.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/EvilIcons.json ... 
+2021-01-13 00:29:54 +0000  1454 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/EvilIcons.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Octicons.json ... 
+2021-01-13 00:29:54 +0000  3992 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Octicons.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free_meta.json ... 
+2021-01-13 00:29:54 +0000  27903 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free_meta.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome.json ... 
+2021-01-13 00:29:54 +0000  17437 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/MaterialIcons.json ... 
+2021-01-13 00:29:54 +0000  38522 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/MaterialIcons.json
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Entypo.json ... 
+2021-01-13 00:29:54 +0000  9486 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Entypo.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/SimpleLineIcons.json ... 
+2021-01-13 00:29:54 +0000  4102 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/SimpleLineIcons.json
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/AntDesign.json ... 
+2021-01-13 00:29:54 +0000  6303 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/AntDesign.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free.json ... 
+2021-01-13 00:29:54 +0000  32278 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Feather.json ... 
+2021-01-13 00:29:54 +0000  6080 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Feather.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json ... 
+2021-01-13 00:29:54 +0000  151816 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Foundation.json ... 
+2021-01-13 00:29:54 +0000  6417 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Foundation.json
+copying file ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Zocial.json ... 
+2021-01-13 00:29:54 +0000  2013 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/react-native-vector-icons/glyphmaps/Zocial.json
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/node_modules/realm/package.json ... 
+2021-01-13 00:29:54 +0000  5552 bytes for ./Payload/BinOrderingApp.app/assets/node_modules/realm/package.json
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/assets/assets/downGreen.png ... 
+2021-01-13 00:29:54 +0000  1342 bytes for ./Payload/BinOrderingApp.app/assets/assets/downGreen.png
+copying file ./Payload/BinOrderingApp.app/assets/assets/menu32.png ... 
+2021-01-13 00:29:54 +0000  186 bytes for ./Payload/BinOrderingApp.app/assets/assets/menu32.png
+copying file ./Payload/BinOrderingApp.app/assets/assets/upRed.png ... 
+2021-01-13 00:29:54 +0000  1098 bytes for ./Payload/BinOrderingApp.app/assets/assets/upRed.png
+copying file ./Payload/BinOrderingApp.app/assets/assets/background2.png ... 
+2021-01-13 00:29:54 +0000  2909 bytes for ./Payload/BinOrderingApp.app/assets/assets/background2.png
+copying file ./Payload/BinOrderingApp.app/assets/assets/upGreen.png ... 
+2021-01-13 00:29:54 +0000  1537 bytes for ./Payload/BinOrderingApp.app/assets/assets/upGreen.png
+copying file ./Payload/BinOrderingApp.app/assets/assets/downRed.png ... 
+2021-01-13 00:29:54 +0000  1051 bytes for ./Payload/BinOrderingApp.app/assets/assets/downRed.png
+2021-01-13 00:29:54 +0000  copying file ./Payload/BinOrderingApp.app/Info.plist ... 
+2021-01-13 00:29:54 +0000  1343 bytes for ./Payload/BinOrderingApp.app/Info.plist
+copying file ./Payload/BinOrderingApp.app/PkgInfo ... 
+2021-01-13 00:29:54 +0000  8 bytes for ./Payload/BinOrderingApp.app/PkgInfo
+copying file ./Payload/BinOrderingApp.app/MaterialIcons.ttf ... 
+2021-01-13 00:29:54 +0000  230384 bytes for ./Payload/BinOrderingApp.app/MaterialIcons.ttf
+2021-01-13 00:29:54 +0000  copying file ./SwiftSupport/iphoneos/libswiftCoreImage.dylib ... 
+2021-01-13 00:29:54 +0000  466448 bytes for ./SwiftSupport/iphoneos/libswiftCoreImage.dylib
+copying file ./SwiftSupport/iphoneos/libswiftObjectiveC.dylib ... 
+2021-01-13 00:29:54 +0000  679568 bytes for ./SwiftSupport/iphoneos/libswiftObjectiveC.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCore.dylib ... 
+2021-01-13 00:29:58 +0000  95497472 bytes for ./SwiftSupport/iphoneos/libswiftCore.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreGraphics.dylib ... 
+2021-01-13 00:29:58 +0000  2040928 bytes for ./SwiftSupport/iphoneos/libswiftCoreGraphics.dylib
+2021-01-13 00:29:58 +0000  copying file ./SwiftSupport/iphoneos/libswiftUIKit.dylib ... 
+2021-01-13 00:29:58 +0000  1608688 bytes for ./SwiftSupport/iphoneos/libswiftUIKit.dylib
+copying file ./SwiftSupport/iphoneos/libswiftMetal.dylib ... 
+2021-01-13 00:29:58 +0000  724304 bytes for ./SwiftSupport/iphoneos/libswiftMetal.dylib
+copying file ./SwiftSupport/iphoneos/libswiftDispatch.dylib ... 
+2021-01-13 00:29:58 +0000  4056784 bytes for ./SwiftSupport/iphoneos/libswiftDispatch.dylib
+copying file ./SwiftSupport/iphoneos/libswiftos.dylib ... 
+2021-01-13 00:29:58 +0000  857072 bytes for ./SwiftSupport/iphoneos/libswiftos.dylib
+copying file ./SwiftSupport/iphoneos/libswiftCoreFoundation.dylib ... 
+2021-01-13 00:29:58 +0000  450272 bytes for ./SwiftSupport/iphoneos/libswiftCoreFoundation.dylib
+copying file ./SwiftSupport/iphoneos/libswiftDarwin.dylib ... 
+2021-01-13 00:29:58 +0000  1091328 bytes for ./SwiftSupport/iphoneos/libswiftDarwin.dylib
+copying file ./SwiftSupport/iphoneos/libswiftQuartzCore.dylib ... 
+2021-01-13 00:29:58 +0000  486224 bytes for ./SwiftSupport/iphoneos/libswiftQuartzCore.dylib
+copying file ./SwiftSupport/iphoneos/libswiftFoundation.dylib ... 
+2021-01-13 00:30:00 +0000  43094208 bytes for ./SwiftSupport/iphoneos/libswiftFoundation.dylib
+2021-01-13 00:30:00 +0000  /usr/bin/ditto exited with 0
+2021-01-13 00:30:00 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2021-01-13 00:30:00 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2021-01-13 00:30:00 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc61ccd910:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc61ccd910:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftObjectiveC.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc62452550:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc62452550:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftFoundation.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc61ce5810:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc61ce5810:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreGraphics.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc5be10730:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc5be10730:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftos.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc61cdd780:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc61cdd780:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCore.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc62497800:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc62497800:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDarwin.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc63c96580:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc63c96580:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreFoundation.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc5be45be0:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc5be45be0:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftDispatch.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc61cccab0:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc61cccab0:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftMetal.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc5eb432b0:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc5eb432b0:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftQuartzCore.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc61c07850:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc61c07850:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftUIKit.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc585ecdc0:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>
+2021-01-13 00:30:00 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7ffc585ecdc0:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app/Frameworks/libswiftCoreImage.dylib'>
+2021-01-13 00:30:00 +0000  IDEDistributionItem init <DVTFilePath:0x7ffc64d85860:'/var/folders/5r/7y48htwn5s796fpyklfkwz4m0000gn/T/XcodeDistPipeline.~~~aPunpk/Root/Payload/BinOrderingApp.app'>
+2021-01-13 00:30:00 +0000  Processing step: IDEDistributionCreateManifestStep
+2021-01-13 00:30:00 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native'
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, Iƒmage, ImageBackground } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 import Database from '../screens/Database'
 
