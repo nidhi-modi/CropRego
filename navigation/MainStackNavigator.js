@@ -311,7 +311,8 @@ function MainStackNavigator() {
         })} />
 
         <Stack.Screen name='GerHome' component={GerHome} options={({ navigation }) => ({
-          headerLeft: () => null, headerRight: () =>
+          headerLeft: () => null, 
+          headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
               <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}

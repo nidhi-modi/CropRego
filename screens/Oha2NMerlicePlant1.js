@@ -870,7 +870,7 @@ export default class Oha2NMerlicePlant1 extends React.Component {
                                 console.log("Calling database")
                                 plant = data;
                                 this.setState({
-                                    plant,
+                plant,
                                     dataPresent: true,
 
                                 });

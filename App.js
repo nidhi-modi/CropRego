@@ -158,8 +158,7 @@ export default class App extends Component {
 
     numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
     console.log("Current Week Number From App: ", numberWeek);
-
-
+   
     module.hot.accept(() => { });
 
 
@@ -170,7 +169,7 @@ export default class App extends Component {
 
 
 
-    this.getPlantsByInfoStatus();
+    //this.getPlantsByInfoStatus();
     const data = await this.performTimeConsumingTask();
 
     if (data !== null) {
@@ -178,7 +177,7 @@ export default class App extends Component {
 
     }
 
-    this.getTrussByInfoStatus();
+    //this.getTrussByInfoStatus();
 
     BackgroundTask.schedule();
 

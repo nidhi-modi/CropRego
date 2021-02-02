@@ -463,7 +463,6 @@ export default class Database {
                                 dataSend
                             });
                         }
-                        console.log(plantDetails);
                         resolve(plantDetails);
                     });
                 }).then((result) => {
@@ -545,7 +544,6 @@ export default class Database {
 
                             });
                         }
-                        console.log(trussDetails);
                         resolve(trussDetails);
                     });
                 }).then((result) => {
