@@ -671,7 +671,11 @@ export default class Ger1Merlice2Plant1 extends React.Component {
 
 
             setTimeout(() => {
+<<<<<<< HEAD
                 db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 1 - Merlice', '85/86').then((data) => {
+=======
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'GER 1 - Merlice','81/86').then((data) => {
+>>>>>>> c82fa685bdd3d45ca49f603a99446bc203ed9696
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -710,7 +714,11 @@ export default class Ger1Merlice2Plant1 extends React.Component {
 
             setTimeout(() => {
 
+<<<<<<< HEAD
                 db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 1 - Merlice', '85/86').then((data1) => {
+=======
+                db.trussByWeekNumberRowAndName(no, numberWeek, 'GER 1 - Merlice','81/86').then((data1) => {
+>>>>>>> c82fa685bdd3d45ca49f603a99446bc203ed9696
                     console.log(data1);
                     console.log("Calling database")
                     if (data1 !== null || data1 !== '' || data1 !== undefined) {
@@ -1460,7 +1468,7 @@ export default class Ger1Merlice2Plant1 extends React.Component {
         const { pruningNumber } = this.state;
 
         let data = {
-            plantRow: '85/86',
+            plantRow: '81/86',
             plantName: 'GER 1 - Merlice',
             plantWeek: numberWeek,
             plantNumber: no,
@@ -1484,7 +1492,7 @@ export default class Ger1Merlice2Plant1 extends React.Component {
         }
 
         let data1 = {
-            plantRow: '85/86',
+            plantRow: '81/86',
             plantName: 'GER 1 - Merlice',
             plantWeek: numberWeek,
             plantNumber: no,
@@ -1510,11 +1518,17 @@ export default class Ger1Merlice2Plant1 extends React.Component {
 
 
 
+<<<<<<< HEAD
         if (this.state.isItConnected === 'Online') {
 
             const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
             const url = `${scriptUrl}?
                                                 callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+=======
+                                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
+                                                const url = `${scriptUrl}?
+                                                callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+>>>>>>> c82fa685bdd3d45ca49f603a99446bc203ed9696
 
             console.log("URL : " + url);
             fetch(url, { mode: 'no-cors' }).then(
@@ -1632,7 +1646,7 @@ export default class Ger1Merlice2Plant1 extends React.Component {
             setFruits: this.state.setFruits,
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
-            plantRow: '85/86',
+            plantRow: '81/86',
             plantName: 'GER 1 - Merlice',
             plantWeek: '2009',
 
@@ -1899,7 +1913,7 @@ export default class Ger1Merlice2Plant1 extends React.Component {
 
 
                             <Text style={styles.text} onChangeText={(text) => this.updateTextInput(text, 'plantRow')}
-                                value={this.state.plantRow}>Row No 85/86 - Week No {numberWeek}</Text>
+                                value={this.state.plantRow}>Row No 81/86 - Week No {numberWeek}</Text>
 
 
 
