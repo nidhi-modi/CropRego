@@ -4338,7 +4338,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     this.setState({ isLoading: true })
 
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 1
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 1
     let G1Filter1Plant1Truss1 = []
     let G1Filter1Plant1Truss2 = []
     let G1Filter1Plant1Truss3 = []
@@ -4351,14 +4351,14 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     let G1Filter1Plant1Truss0 = []
     //END
 
-    //GER 1 Merlice/ Plant 1/ 85/86/ Truss Number 1-10
+    //GER 1 Merlice/ Plant 1/ 81/86/ Truss Number 1-10
 
     G1Filter1Plant1Truss1 = this.state.truss.filter(sampleItemTruss => {
 
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 1
 
@@ -4370,7 +4370,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 2
 
@@ -4382,7 +4382,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 3
 
@@ -4394,7 +4394,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 4
 
@@ -4406,7 +4406,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 5
 
@@ -4418,7 +4418,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 6
 
@@ -4430,7 +4430,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 7
 
@@ -4442,7 +4442,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 8
 
@@ -4454,7 +4454,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 9
 
@@ -4466,7 +4466,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '1' &&
         sampleItemTruss.trussNumber === 10
 
@@ -4477,7 +4477,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl139 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url139 = `${scriptUrl139}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss1[0].trussNumber}&setFruits=${G1Filter1Plant1Truss1[0].setFruits}&setFlowers=${G1Filter1Plant1Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss1[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss1[0].trussNumber}&setFruits=${G1Filter1Plant1Truss1[0].setFruits}&setFlowers=${G1Filter1Plant1Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url139);
 
@@ -4489,7 +4489,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl140 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url140 = `${scriptUrl140}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss2[0].trussNumber}&setFruits=${G1Filter1Plant1Truss2[0].setFruits}&setFlowers=${G1Filter1Plant1Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss2[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss2[0].trussNumber}&setFruits=${G1Filter1Plant1Truss2[0].setFruits}&setFlowers=${G1Filter1Plant1Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url140);
 
@@ -4501,7 +4501,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl141 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url141 = `${scriptUrl141}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss3[0].trussNumber}&setFruits=${G1Filter1Plant1Truss3[0].setFruits}&setFlowers=${G1Filter1Plant1Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss3[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss3[0].trussNumber}&setFruits=${G1Filter1Plant1Truss3[0].setFruits}&setFlowers=${G1Filter1Plant1Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url141);
 
@@ -4513,7 +4513,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl142 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url142 = `${scriptUrl142}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss4[0].trussNumber}&setFruits=${G1Filter1Plant1Truss4[0].setFruits}&setFlowers=${G1Filter1Plant1Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss4[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss4[0].trussNumber}&setFruits=${G1Filter1Plant1Truss4[0].setFruits}&setFlowers=${G1Filter1Plant1Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url142);
 
@@ -4525,7 +4525,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl143 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url143 = `${scriptUrl143}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss5[0].trussNumber}&setFruits=${G1Filter1Plant1Truss5[0].setFruits}&setFlowers=${G1Filter1Plant1Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss5[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss5[0].trussNumber}&setFruits=${G1Filter1Plant1Truss5[0].setFruits}&setFlowers=${G1Filter1Plant1Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url143);
 
@@ -4537,7 +4537,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl144 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url144 = `${scriptUrl144}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss6[0].trussNumber}&setFruits=${G1Filter1Plant1Truss6[0].setFruits}&setFlowers=${G1Filter1Plant1Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss6[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss6[0].trussNumber}&setFruits=${G1Filter1Plant1Truss6[0].setFruits}&setFlowers=${G1Filter1Plant1Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url144);
 
@@ -4549,7 +4549,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl145 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url145 = `${scriptUrl145}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss7[0].trussNumber}&setFruits=${G1Filter1Plant1Truss7[0].setFruits}&setFlowers=${G1Filter1Plant1Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss7[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss7[0].trussNumber}&setFruits=${G1Filter1Plant1Truss7[0].setFruits}&setFlowers=${G1Filter1Plant1Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url145);
 
@@ -4561,7 +4561,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl146 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url146 = `${scriptUrl146}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss8[0].trussNumber}&setFruits=${G1Filter1Plant1Truss8[0].setFruits}&setFlowers=${G1Filter1Plant1Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss8[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss8[0].trussNumber}&setFruits=${G1Filter1Plant1Truss8[0].setFruits}&setFlowers=${G1Filter1Plant1Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url146);
 
@@ -4573,7 +4573,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl147 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url147 = `${scriptUrl147}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss9[0].trussNumber}&setFruits=${G1Filter1Plant1Truss9[0].setFruits}&setFlowers=${G1Filter1Plant1Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss9[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss9[0].trussNumber}&setFruits=${G1Filter1Plant1Truss9[0].setFruits}&setFlowers=${G1Filter1Plant1Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url147);
 
@@ -4585,7 +4585,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl148 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url148 = `${scriptUrl148}?
-      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss0[0].trussNumber}&setFruits=${G1Filter1Plant1Truss0[0].setFruits}&setFlowers=${G1Filter1Plant1Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss0[0].harvestTruss}`;
+      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant1Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant1Truss0[0].trussNumber}&setFruits=${G1Filter1Plant1Truss0[0].setFruits}&setFlowers=${G1Filter1Plant1Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant1Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant1Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant1Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant1Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant1Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant1Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant1Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant1Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant1Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url148);
 
@@ -4745,7 +4745,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     this.setState({ isLoading: true })
 
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 2
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 2
     let G1Filter1Plant2Truss1 = []
     let G1Filter1Plant2Truss2 = []
     let G1Filter1Plant2Truss3 = []
@@ -4765,7 +4765,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 1
 
@@ -4777,7 +4777,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 2
 
@@ -4789,7 +4789,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 3
 
@@ -4801,7 +4801,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 4
 
@@ -4813,7 +4813,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 5
 
@@ -4825,7 +4825,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 6
 
@@ -4837,7 +4837,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 7
 
@@ -4849,7 +4849,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 8
 
@@ -4861,7 +4861,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 9
 
@@ -4873,7 +4873,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '2' &&
         sampleItemTruss.trussNumber === 10
 
@@ -4883,7 +4883,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl149 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url149 = `${scriptUrl149}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss1[0].trussNumber}&setFruits=${G1Filter1Plant2Truss1[0].setFruits}&setFlowers=${G1Filter1Plant2Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss1[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss1[0].trussNumber}&setFruits=${G1Filter1Plant2Truss1[0].setFruits}&setFlowers=${G1Filter1Plant2Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url149);
 
@@ -4895,7 +4895,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl150 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url150 = `${scriptUrl150}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss2[0].trussNumber}&setFruits=${G1Filter1Plant2Truss2[0].setFruits}&setFlowers=${G1Filter1Plant2Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss2[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss2[0].trussNumber}&setFruits=${G1Filter1Plant2Truss2[0].setFruits}&setFlowers=${G1Filter1Plant2Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url150);
 
@@ -4907,7 +4907,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl151 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url151 = `${scriptUrl151}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss3[0].trussNumber}&setFruits=${G1Filter1Plant2Truss3[0].setFruits}&setFlowers=${G1Filter1Plant2Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss3[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss3[0].trussNumber}&setFruits=${G1Filter1Plant2Truss3[0].setFruits}&setFlowers=${G1Filter1Plant2Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url151);
 
@@ -4919,7 +4919,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl152 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url152 = `${scriptUrl152}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss4[0].trussNumber}&setFruits=${G1Filter1Plant2Truss4[0].setFruits}&setFlowers=${G1Filter1Plant2Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss4[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss4[0].trussNumber}&setFruits=${G1Filter1Plant2Truss4[0].setFruits}&setFlowers=${G1Filter1Plant2Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url152);
 
@@ -4931,7 +4931,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl153 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url153 = `${scriptUrl153}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss5[0].trussNumber}&setFruits=${G1Filter1Plant2Truss5[0].setFruits}&setFlowers=${G1Filter1Plant2Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss5[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss5[0].trussNumber}&setFruits=${G1Filter1Plant2Truss5[0].setFruits}&setFlowers=${G1Filter1Plant2Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url153);
 
@@ -4943,7 +4943,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl154 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url154 = `${scriptUrl154}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss6[0].trussNumber}&setFruits=${G1Filter1Plant2Truss6[0].setFruits}&setFlowers=${G1Filter1Plant2Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss6[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss6[0].trussNumber}&setFruits=${G1Filter1Plant2Truss6[0].setFruits}&setFlowers=${G1Filter1Plant2Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url154);
 
@@ -4955,7 +4955,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl155 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url155 = `${scriptUrl155}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss7[0].trussNumber}&setFruits=${G1Filter1Plant2Truss7[0].setFruits}&setFlowers=${G1Filter1Plant2Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss7[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss7[0].trussNumber}&setFruits=${G1Filter1Plant2Truss7[0].setFruits}&setFlowers=${G1Filter1Plant2Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url155);
 
@@ -4967,7 +4967,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl156 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url156 = `${scriptUrl156}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss8[0].trussNumber}&setFruits=${G1Filter1Plant2Truss8[0].setFruits}&setFlowers=${G1Filter1Plant2Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss8[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss8[0].trussNumber}&setFruits=${G1Filter1Plant2Truss8[0].setFruits}&setFlowers=${G1Filter1Plant2Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url156);
 
@@ -4979,7 +4979,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl157 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url157 = `${scriptUrl157}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss9[0].trussNumber}&setFruits=${G1Filter1Plant2Truss9[0].setFruits}&setFlowers=${G1Filter1Plant2Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss9[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss9[0].trussNumber}&setFruits=${G1Filter1Plant2Truss9[0].setFruits}&setFlowers=${G1Filter1Plant2Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url157);
 
@@ -4991,7 +4991,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl158 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url158 = `${scriptUrl158}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss0[0].trussNumber}&setFruits=${G1Filter1Plant2Truss0[0].setFruits}&setFlowers=${G1Filter1Plant2Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss0[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant2Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant2Truss0[0].trussNumber}&setFruits=${G1Filter1Plant2Truss0[0].setFruits}&setFlowers=${G1Filter1Plant2Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant2Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant2Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant2Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant2Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant2Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant2Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant2Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant2Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant2Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url158);
 
@@ -5148,7 +5148,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     this.setState({ isLoading: true })
 
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 3
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 3
     let G1Filter1Plant3Truss1 = []
     let G1Filter1Plant3Truss2 = []
     let G1Filter1Plant3Truss3 = []
@@ -5168,7 +5168,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 1
 
@@ -5180,7 +5180,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 2
 
@@ -5192,7 +5192,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 3
 
@@ -5204,7 +5204,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 4
 
@@ -5216,7 +5216,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 5
 
@@ -5228,7 +5228,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 6
 
@@ -5240,7 +5240,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 7
 
@@ -5252,7 +5252,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 8
 
@@ -5264,7 +5264,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 9
 
@@ -5276,7 +5276,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '3' &&
         sampleItemTruss.trussNumber === 10
 
@@ -5287,7 +5287,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl159 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url159 = `${scriptUrl159}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss1[0].trussNumber}&setFruits=${G1Filter1Plant3Truss1[0].setFruits}&setFlowers=${G1Filter1Plant3Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss1[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss1[0].trussNumber}&setFruits=${G1Filter1Plant3Truss1[0].setFruits}&setFlowers=${G1Filter1Plant3Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url159);
 
@@ -5299,7 +5299,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl160 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url160 = `${scriptUrl160}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss2[0].trussNumber}&setFruits=${G1Filter1Plant3Truss2[0].setFruits}&setFlowers=${G1Filter1Plant3Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss2[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss2[0].trussNumber}&setFruits=${G1Filter1Plant3Truss2[0].setFruits}&setFlowers=${G1Filter1Plant3Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url160);
 
@@ -5311,7 +5311,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl161 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url161 = `${scriptUrl161}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss3[0].trussNumber}&setFruits=${G1Filter1Plant3Truss3[0].setFruits}&setFlowers=${G1Filter1Plant3Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss3[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss3[0].trussNumber}&setFruits=${G1Filter1Plant3Truss3[0].setFruits}&setFlowers=${G1Filter1Plant3Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url161);
 
@@ -5323,7 +5323,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl162 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url162 = `${scriptUrl162}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss4[0].trussNumber}&setFruits=${G1Filter1Plant3Truss4[0].setFruits}&setFlowers=${G1Filter1Plant3Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss4[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss4[0].trussNumber}&setFruits=${G1Filter1Plant3Truss4[0].setFruits}&setFlowers=${G1Filter1Plant3Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url162);
 
@@ -5335,7 +5335,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl163 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url163 = `${scriptUrl163}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss5[0].trussNumber}&setFruits=${G1Filter1Plant3Truss5[0].setFruits}&setFlowers=${G1Filter1Plant3Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss5[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss5[0].trussNumber}&setFruits=${G1Filter1Plant3Truss5[0].setFruits}&setFlowers=${G1Filter1Plant3Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url163);
 
@@ -5347,7 +5347,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl164 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url164 = `${scriptUrl164}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss6[0].trussNumber}&setFruits=${G1Filter1Plant3Truss6[0].setFruits}&setFlowers=${G1Filter1Plant3Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss6[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss6[0].trussNumber}&setFruits=${G1Filter1Plant3Truss6[0].setFruits}&setFlowers=${G1Filter1Plant3Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url164);
 
@@ -5359,7 +5359,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl165 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url165 = `${scriptUrl165}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss7[0].trussNumber}&setFruits=${G1Filter1Plant3Truss7[0].setFruits}&setFlowers=${G1Filter1Plant3Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss7[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss7[0].trussNumber}&setFruits=${G1Filter1Plant3Truss7[0].setFruits}&setFlowers=${G1Filter1Plant3Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url165);
 
@@ -5371,7 +5371,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl166 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url166 = `${scriptUrl166}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss8[0].trussNumber}&setFruits=${G1Filter1Plant3Truss8[0].setFruits}&setFlowers=${G1Filter1Plant3Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss8[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss8[0].trussNumber}&setFruits=${G1Filter1Plant3Truss8[0].setFruits}&setFlowers=${G1Filter1Plant3Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url166);
 
@@ -5383,7 +5383,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl167 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url167 = `${scriptUrl167}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss9[0].trussNumber}&setFruits=${G1Filter1Plant3Truss9[0].setFruits}&setFlowers=${G1Filter1Plant3Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss9[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss9[0].trussNumber}&setFruits=${G1Filter1Plant3Truss9[0].setFruits}&setFlowers=${G1Filter1Plant3Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url167);
 
@@ -5395,7 +5395,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl168 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url168 = `${scriptUrl168}?
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss0[0].trussNumber}&setFruits=${G1Filter1Plant3Truss0[0].setFruits}&setFlowers=${G1Filter1Plant3Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss0[0].harvestTruss}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant3Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant3Truss0[0].trussNumber}&setFruits=${G1Filter1Plant3Truss0[0].setFruits}&setFlowers=${G1Filter1Plant3Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant3Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant3Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant3Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant3Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant3Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant3Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant3Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant3Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant3Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url168);
 
@@ -5552,7 +5552,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     this.setState({ isLoading: true })
 
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 4
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 4
     let G1Filter1Plant4Truss1 = []
     let G1Filter1Plant4Truss2 = []
     let G1Filter1Plant4Truss3 = []
@@ -5572,7 +5572,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 1
 
@@ -5584,7 +5584,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 2
 
@@ -5596,7 +5596,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 3
 
@@ -5608,7 +5608,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 4
 
@@ -5620,7 +5620,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 5
 
@@ -5632,7 +5632,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 6
 
@@ -5644,7 +5644,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 7
 
@@ -5656,7 +5656,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 8
 
@@ -5668,7 +5668,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 9
 
@@ -5680,7 +5680,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '4' &&
         sampleItemTruss.trussNumber === 10
 
@@ -5691,7 +5691,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl169 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url169 = `${scriptUrl169}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss1[0].trussNumber}&setFruits=${G1Filter1Plant4Truss1[0].setFruits}&setFlowers=${G1Filter1Plant4Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss1[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss1[0].trussNumber}&setFruits=${G1Filter1Plant4Truss1[0].setFruits}&setFlowers=${G1Filter1Plant4Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url169);
 
@@ -5703,7 +5703,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl170 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url170 = `${scriptUrl170}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss2[0].trussNumber}&setFruits=${G1Filter1Plant4Truss2[0].setFruits}&setFlowers=${G1Filter1Plant4Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss2[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss2[0].trussNumber}&setFruits=${G1Filter1Plant4Truss2[0].setFruits}&setFlowers=${G1Filter1Plant4Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url170);
 
@@ -5715,7 +5715,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl171 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url171 = `${scriptUrl171}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss3[0].trussNumber}&setFruits=${G1Filter1Plant4Truss3[0].setFruits}&setFlowers=${G1Filter1Plant4Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss3[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss3[0].trussNumber}&setFruits=${G1Filter1Plant4Truss3[0].setFruits}&setFlowers=${G1Filter1Plant4Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url171);
 
@@ -5727,7 +5727,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl172 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url172 = `${scriptUrl172}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss4[0].trussNumber}&setFruits=${G1Filter1Plant4Truss4[0].setFruits}&setFlowers=${G1Filter1Plant4Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss4[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss4[0].trussNumber}&setFruits=${G1Filter1Plant4Truss4[0].setFruits}&setFlowers=${G1Filter1Plant4Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url172);
 
@@ -5739,7 +5739,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl173 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url173 = `${scriptUrl173}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss5[0].trussNumber}&setFruits=${G1Filter1Plant4Truss5[0].setFruits}&setFlowers=${G1Filter1Plant4Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss5[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss5[0].trussNumber}&setFruits=${G1Filter1Plant4Truss5[0].setFruits}&setFlowers=${G1Filter1Plant4Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url173);
 
@@ -5752,7 +5752,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl174 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url174 = `${scriptUrl174}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss6[0].trussNumber}&setFruits=${G1Filter1Plant4Truss6[0].setFruits}&setFlowers=${G1Filter1Plant4Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss6[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss6[0].trussNumber}&setFruits=${G1Filter1Plant4Truss6[0].setFruits}&setFlowers=${G1Filter1Plant4Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url174);
 
@@ -5764,7 +5764,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl175 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url175 = `${scriptUrl175}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss7[0].trussNumber}&setFruits=${G1Filter1Plant4Truss7[0].setFruits}&setFlowers=${G1Filter1Plant4Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss7[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss7[0].trussNumber}&setFruits=${G1Filter1Plant4Truss7[0].setFruits}&setFlowers=${G1Filter1Plant4Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url175);
 
@@ -5776,7 +5776,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl176 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url176 = `${scriptUrl176}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss8[0].trussNumber}&setFruits=${G1Filter1Plant4Truss8[0].setFruits}&setFlowers=${G1Filter1Plant4Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss8[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss8[0].trussNumber}&setFruits=${G1Filter1Plant4Truss8[0].setFruits}&setFlowers=${G1Filter1Plant4Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url176);
 
@@ -5788,7 +5788,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl177 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url177 = `${scriptUrl177}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss9[0].trussNumber}&setFruits=${G1Filter1Plant4Truss9[0].setFruits}&setFlowers=${G1Filter1Plant4Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss9[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss9[0].trussNumber}&setFruits=${G1Filter1Plant4Truss9[0].setFruits}&setFlowers=${G1Filter1Plant4Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url177);
 
@@ -5800,7 +5800,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl178 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url178 = `${scriptUrl178}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss0[0].trussNumber}&setFruits=${G1Filter1Plant4Truss0[0].setFruits}&setFlowers=${G1Filter1Plant4Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss0[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant4Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant4Truss0[0].trussNumber}&setFruits=${G1Filter1Plant4Truss0[0].setFruits}&setFlowers=${G1Filter1Plant4Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant4Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant4Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant4Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant4Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant4Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant4Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant4Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant4Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant4Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url178);
 
@@ -5956,7 +5956,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     this.setState({ isLoading: true })
 
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 5
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 5
     let G1Filter1Plant5Truss1 = []
     let G1Filter1Plant5Truss2 = []
     let G1Filter1Plant5Truss3 = []
@@ -5976,7 +5976,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 1
 
@@ -5988,7 +5988,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 2
 
@@ -6000,7 +6000,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 3
 
@@ -6012,7 +6012,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 4
 
@@ -6024,7 +6024,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 5
 
@@ -6036,7 +6036,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 6
 
@@ -6048,7 +6048,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 7
 
@@ -6060,7 +6060,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 8
 
@@ -6072,7 +6072,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 9
 
@@ -6084,7 +6084,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '5' &&
         sampleItemTruss.trussNumber === 10
 
@@ -6095,7 +6095,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl179 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url179 = `${scriptUrl179}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss1[0].trussNumber}&setFruits=${G1Filter1Plant5Truss1[0].setFruits}&setFlowers=${G1Filter1Plant5Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss1[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss1[0].trussNumber}&setFruits=${G1Filter1Plant5Truss1[0].setFruits}&setFlowers=${G1Filter1Plant5Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url179);
 
@@ -6107,7 +6107,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl180 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url180 = `${scriptUrl180}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss2[0].trussNumber}&setFruits=${G1Filter1Plant5Truss2[0].setFruits}&setFlowers=${G1Filter1Plant5Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss2[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss2[0].trussNumber}&setFruits=${G1Filter1Plant5Truss2[0].setFruits}&setFlowers=${G1Filter1Plant5Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url180);
 
@@ -6119,7 +6119,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl181 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url181 = `${scriptUrl181}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss3[0].trussNumber}&setFruits=${G1Filter1Plant5Truss3[0].setFruits}&setFlowers=${G1Filter1Plant5Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss3[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss3[0].trussNumber}&setFruits=${G1Filter1Plant5Truss3[0].setFruits}&setFlowers=${G1Filter1Plant5Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url181);
 
@@ -6131,7 +6131,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl182 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url182 = `${scriptUrl182}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss4[0].trussNumber}&setFruits=${G1Filter1Plant5Truss4[0].setFruits}&setFlowers=${G1Filter1Plant5Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss4[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss4[0].trussNumber}&setFruits=${G1Filter1Plant5Truss4[0].setFruits}&setFlowers=${G1Filter1Plant5Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url182);
 
@@ -6143,7 +6143,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl183 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url183 = `${scriptUrl183}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss5[0].trussNumber}&setFruits=${G1Filter1Plant5Truss5[0].setFruits}&setFlowers=${G1Filter1Plant5Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss5[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss5[0].trussNumber}&setFruits=${G1Filter1Plant5Truss5[0].setFruits}&setFlowers=${G1Filter1Plant5Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url183);
 
@@ -6155,7 +6155,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl184 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url184 = `${scriptUrl184}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss6[0].trussNumber}&setFruits=${G1Filter1Plant5Truss6[0].setFruits}&setFlowers=${G1Filter1Plant5Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss6[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss6[0].trussNumber}&setFruits=${G1Filter1Plant5Truss6[0].setFruits}&setFlowers=${G1Filter1Plant5Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url184);
 
@@ -6167,7 +6167,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl185 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url185 = `${scriptUrl185}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss7[0].trussNumber}&setFruits=${G1Filter1Plant5Truss7[0].setFruits}&setFlowers=${G1Filter1Plant5Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss7[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss7[0].trussNumber}&setFruits=${G1Filter1Plant5Truss7[0].setFruits}&setFlowers=${G1Filter1Plant5Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url185);
 
@@ -6179,7 +6179,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl186 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url186 = `${scriptUrl186}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss8[0].trussNumber}&setFruits=${G1Filter1Plant5Truss8[0].setFruits}&setFlowers=${G1Filter1Plant5Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss8[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss8[0].trussNumber}&setFruits=${G1Filter1Plant5Truss8[0].setFruits}&setFlowers=${G1Filter1Plant5Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url186);
 
@@ -6191,7 +6191,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl187 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url187 = `${scriptUrl187}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss9[0].trussNumber}&setFruits=${G1Filter1Plant5Truss9[0].setFruits}&setFlowers=${G1Filter1Plant5Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss9[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss9[0].trussNumber}&setFruits=${G1Filter1Plant5Truss9[0].setFruits}&setFlowers=${G1Filter1Plant5Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url187);
 
@@ -6203,7 +6203,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl188 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url188 = `${scriptUrl188}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss0[0].trussNumber}&setFruits=${G1Filter1Plant5Truss0[0].setFruits}&setFlowers=${G1Filter1Plant5Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss0[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant5Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant5Truss0[0].trussNumber}&setFruits=${G1Filter1Plant5Truss0[0].setFruits}&setFlowers=${G1Filter1Plant5Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant5Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant5Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant5Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant5Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant5Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant5Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant5Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant5Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant5Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url188);
 
@@ -6359,7 +6359,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 6
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 6
     let G1Filter1Plant6Truss1 = []
     let G1Filter1Plant6Truss2 = []
     let G1Filter1Plant6Truss3 = []
@@ -6379,7 +6379,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 1
 
@@ -6391,7 +6391,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 2
 
@@ -6403,7 +6403,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 3
 
@@ -6415,7 +6415,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 4
 
@@ -6427,7 +6427,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 5
 
@@ -6439,7 +6439,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 6
 
@@ -6451,7 +6451,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 7
 
@@ -6463,7 +6463,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 8
 
@@ -6475,7 +6475,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 9
 
@@ -6487,7 +6487,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '6' &&
         sampleItemTruss.trussNumber === 10
 
@@ -6498,7 +6498,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl189 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url189 = `${scriptUrl189}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss1[0].trussNumber}&setFruits=${G1Filter1Plant6Truss1[0].setFruits}&setFlowers=${G1Filter1Plant6Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss1[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss1[0].trussNumber}&setFruits=${G1Filter1Plant6Truss1[0].setFruits}&setFlowers=${G1Filter1Plant6Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url189);
 
@@ -6511,7 +6511,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl190 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url190 = `${scriptUrl190}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss2[0].trussNumber}&setFruits=${G1Filter1Plant6Truss2[0].setFruits}&setFlowers=${G1Filter1Plant6Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss2[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss2[0].trussNumber}&setFruits=${G1Filter1Plant6Truss2[0].setFruits}&setFlowers=${G1Filter1Plant6Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url190);
 
@@ -6523,7 +6523,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl191 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url191 = `${scriptUrl191}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss3[0].trussNumber}&setFruits=${G1Filter1Plant6Truss3[0].setFruits}&setFlowers=${G1Filter1Plant6Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss3[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss3[0].trussNumber}&setFruits=${G1Filter1Plant6Truss3[0].setFruits}&setFlowers=${G1Filter1Plant6Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url191);
 
@@ -6535,7 +6535,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl192 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url192 = `${scriptUrl192}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss4[0].trussNumber}&setFruits=${G1Filter1Plant6Truss4[0].setFruits}&setFlowers=${G1Filter1Plant6Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss4[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss4[0].trussNumber}&setFruits=${G1Filter1Plant6Truss4[0].setFruits}&setFlowers=${G1Filter1Plant6Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url192);
 
@@ -6547,7 +6547,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl193 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url193 = `${scriptUrl193}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss5[0].trussNumber}&setFruits=${G1Filter1Plant6Truss5[0].setFruits}&setFlowers=${G1Filter1Plant6Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss5[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss5[0].trussNumber}&setFruits=${G1Filter1Plant6Truss5[0].setFruits}&setFlowers=${G1Filter1Plant6Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url193);
 
@@ -6559,7 +6559,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl194 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url194 = `${scriptUrl194}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss6[0].trussNumber}&setFruits=${G1Filter1Plant6Truss6[0].setFruits}&setFlowers=${G1Filter1Plant6Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss6[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss6[0].trussNumber}&setFruits=${G1Filter1Plant6Truss6[0].setFruits}&setFlowers=${G1Filter1Plant6Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url194);
 
@@ -6571,7 +6571,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl195 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url195 = `${scriptUrl195}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss7[0].trussNumber}&setFruits=${G1Filter1Plant6Truss7[0].setFruits}&setFlowers=${G1Filter1Plant6Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss7[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss7[0].trussNumber}&setFruits=${G1Filter1Plant6Truss7[0].setFruits}&setFlowers=${G1Filter1Plant6Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url195);
 
@@ -6583,7 +6583,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl196 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url196 = `${scriptUrl196}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss8[0].trussNumber}&setFruits=${G1Filter1Plant6Truss8[0].setFruits}&setFlowers=${G1Filter1Plant6Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss8[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss8[0].trussNumber}&setFruits=${G1Filter1Plant6Truss8[0].setFruits}&setFlowers=${G1Filter1Plant6Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url196);
 
@@ -6595,7 +6595,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl197 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url197 = `${scriptUrl197}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss9[0].trussNumber}&setFruits=${G1Filter1Plant6Truss9[0].setFruits}&setFlowers=${G1Filter1Plant6Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss9[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss9[0].trussNumber}&setFruits=${G1Filter1Plant6Truss9[0].setFruits}&setFlowers=${G1Filter1Plant6Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url197);
 
@@ -6607,7 +6607,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl198 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url198 = `${scriptUrl198}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss0[0].trussNumber}&setFruits=${G1Filter1Plant6Truss0[0].setFruits}&setFlowers=${G1Filter1Plant6Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss0[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant6Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant6Truss0[0].trussNumber}&setFruits=${G1Filter1Plant6Truss0[0].setFruits}&setFlowers=${G1Filter1Plant6Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant6Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant6Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant6Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant6Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant6Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant6Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant6Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant6Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant6Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url198);
 
@@ -6763,7 +6763,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 7
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 7
     let G1Filter1Plant7Truss1 = []
     let G1Filter1Plant7Truss2 = []
     let G1Filter1Plant7Truss3 = []
@@ -6783,7 +6783,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 1
 
@@ -6795,7 +6795,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 2
 
@@ -6807,7 +6807,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 3
 
@@ -6819,7 +6819,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 4
 
@@ -6831,7 +6831,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 5
 
@@ -6843,7 +6843,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 6
 
@@ -6855,7 +6855,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 7
 
@@ -6867,7 +6867,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 8
 
@@ -6879,7 +6879,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 9
 
@@ -6891,7 +6891,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '7' &&
         sampleItemTruss.trussNumber === 10
 
@@ -6902,7 +6902,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl199 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url199 = `${scriptUrl199}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss1[0].trussNumber}&setFruits=${G1Filter1Plant7Truss1[0].setFruits}&setFlowers=${G1Filter1Plant7Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss1[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss1[0].trussNumber}&setFruits=${G1Filter1Plant7Truss1[0].setFruits}&setFlowers=${G1Filter1Plant7Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url199);
 
@@ -6914,7 +6914,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl200 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url200 = `${scriptUrl200}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss2[0].trussNumber}&setFruits=${G1Filter1Plant7Truss2[0].setFruits}&setFlowers=${G1Filter1Plant7Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss2[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss2[0].trussNumber}&setFruits=${G1Filter1Plant7Truss2[0].setFruits}&setFlowers=${G1Filter1Plant7Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url200);
 
@@ -6926,7 +6926,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl201 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url201 = `${scriptUrl201}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss3[0].trussNumber}&setFruits=${G1Filter1Plant7Truss3[0].setFruits}&setFlowers=${G1Filter1Plant7Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss3[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss3[0].trussNumber}&setFruits=${G1Filter1Plant7Truss3[0].setFruits}&setFlowers=${G1Filter1Plant7Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url201);
 
@@ -6938,7 +6938,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl202 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url202 = `${scriptUrl202}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss4[0].trussNumber}&setFruits=${G1Filter1Plant7Truss4[0].setFruits}&setFlowers=${G1Filter1Plant7Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss4[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss4[0].trussNumber}&setFruits=${G1Filter1Plant7Truss4[0].setFruits}&setFlowers=${G1Filter1Plant7Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url202);
 
@@ -6950,7 +6950,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl203 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url203 = `${scriptUrl203}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss5[0].trussNumber}&setFruits=${G1Filter1Plant7Truss5[0].setFruits}&setFlowers=${G1Filter1Plant7Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss5[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss5[0].trussNumber}&setFruits=${G1Filter1Plant7Truss5[0].setFruits}&setFlowers=${G1Filter1Plant7Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url203);
 
@@ -6962,7 +6962,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl204 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url204 = `${scriptUrl204}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss6[0].trussNumber}&setFruits=${G1Filter1Plant7Truss6[0].setFruits}&setFlowers=${G1Filter1Plant7Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss6[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss6[0].trussNumber}&setFruits=${G1Filter1Plant7Truss6[0].setFruits}&setFlowers=${G1Filter1Plant7Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url204);
 
@@ -6974,7 +6974,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl205 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url205 = `${scriptUrl205}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss7[0].trussNumber}&setFruits=${G1Filter1Plant7Truss7[0].setFruits}&setFlowers=${G1Filter1Plant7Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss7[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss7[0].trussNumber}&setFruits=${G1Filter1Plant7Truss7[0].setFruits}&setFlowers=${G1Filter1Plant7Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url205);
 
@@ -6986,7 +6986,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl206 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url206 = `${scriptUrl206}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss8[0].trussNumber}&setFruits=${G1Filter1Plant7Truss8[0].setFruits}&setFlowers=${G1Filter1Plant7Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss8[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss8[0].trussNumber}&setFruits=${G1Filter1Plant7Truss8[0].setFruits}&setFlowers=${G1Filter1Plant7Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url206);
 
@@ -6998,7 +6998,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl207 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url207 = `${scriptUrl207}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss9[0].trussNumber}&setFruits=${G1Filter1Plant7Truss9[0].setFruits}&setFlowers=${G1Filter1Plant7Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss9[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss9[0].trussNumber}&setFruits=${G1Filter1Plant7Truss9[0].setFruits}&setFlowers=${G1Filter1Plant7Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url207);
 
@@ -7011,7 +7011,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl208 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url208 = `${scriptUrl208}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss0[0].trussNumber}&setFruits=${G1Filter1Plant7Truss0[0].setFruits}&setFlowers=${G1Filter1Plant7Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss0[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant7Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant7Truss0[0].trussNumber}&setFruits=${G1Filter1Plant7Truss0[0].setFruits}&setFlowers=${G1Filter1Plant7Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant7Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant7Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant7Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant7Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant7Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant7Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant7Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant7Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant7Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url208);
 
@@ -7167,7 +7167,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 8
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 8
     let G1Filter1Plant8Truss1 = []
     let G1Filter1Plant8Truss2 = []
     let G1Filter1Plant8Truss3 = []
@@ -7187,7 +7187,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 1
 
@@ -7199,7 +7199,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 2
 
@@ -7211,7 +7211,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 3
 
@@ -7223,7 +7223,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 4
 
@@ -7235,7 +7235,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 5
 
@@ -7247,7 +7247,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 6
 
@@ -7259,7 +7259,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 7
 
@@ -7271,7 +7271,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 8
 
@@ -7283,7 +7283,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 9
 
@@ -7295,7 +7295,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '8' &&
         sampleItemTruss.trussNumber === 10
 
@@ -7305,7 +7305,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl209 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url209 = `${scriptUrl209}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss1[0].trussNumber}&setFruits=${G1Filter1Plant8Truss1[0].setFruits}&setFlowers=${G1Filter1Plant8Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss1[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss1[0].trussNumber}&setFruits=${G1Filter1Plant8Truss1[0].setFruits}&setFlowers=${G1Filter1Plant8Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url209);
 
@@ -7317,7 +7317,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl210 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url210 = `${scriptUrl210}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss2[0].trussNumber}&setFruits=${G1Filter1Plant8Truss2[0].setFruits}&setFlowers=${G1Filter1Plant8Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss2[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss2[0].trussNumber}&setFruits=${G1Filter1Plant8Truss2[0].setFruits}&setFlowers=${G1Filter1Plant8Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url210);
 
@@ -7329,7 +7329,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl211 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url211 = `${scriptUrl211}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss3[0].trussNumber}&setFruits=${G1Filter1Plant8Truss3[0].setFruits}&setFlowers=${G1Filter1Plant8Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss3[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss3[0].trussNumber}&setFruits=${G1Filter1Plant8Truss3[0].setFruits}&setFlowers=${G1Filter1Plant8Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url211);
 
@@ -7341,7 +7341,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl212 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url212 = `${scriptUrl212}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss4[0].trussNumber}&setFruits=${G1Filter1Plant8Truss4[0].setFruits}&setFlowers=${G1Filter1Plant8Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss4[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss4[0].trussNumber}&setFruits=${G1Filter1Plant8Truss4[0].setFruits}&setFlowers=${G1Filter1Plant8Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url212);
 
@@ -7353,7 +7353,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl213 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url213 = `${scriptUrl213}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss5[0].trussNumber}&setFruits=${G1Filter1Plant8Truss5[0].setFruits}&setFlowers=${G1Filter1Plant8Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss5[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss5[0].trussNumber}&setFruits=${G1Filter1Plant8Truss5[0].setFruits}&setFlowers=${G1Filter1Plant8Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url213);
 
@@ -7365,7 +7365,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl214 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url214 = `${scriptUrl214}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss6[0].trussNumber}&setFruits=${G1Filter1Plant8Truss6[0].setFruits}&setFlowers=${G1Filter1Plant8Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss6[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss6[0].trussNumber}&setFruits=${G1Filter1Plant8Truss6[0].setFruits}&setFlowers=${G1Filter1Plant8Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url214);
 
@@ -7377,7 +7377,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl215 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url215 = `${scriptUrl215}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss7[0].trussNumber}&setFruits=${G1Filter1Plant8Truss7[0].setFruits}&setFlowers=${G1Filter1Plant8Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss7[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss7[0].trussNumber}&setFruits=${G1Filter1Plant8Truss7[0].setFruits}&setFlowers=${G1Filter1Plant8Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url215);
 
@@ -7389,7 +7389,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl216 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url216 = `${scriptUrl216}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss8[0].trussNumber}&setFruits=${G1Filter1Plant8Truss8[0].setFruits}&setFlowers=${G1Filter1Plant8Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss8[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss8[0].trussNumber}&setFruits=${G1Filter1Plant8Truss8[0].setFruits}&setFlowers=${G1Filter1Plant8Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url216);
 
@@ -7401,7 +7401,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl217 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url217 = `${scriptUrl217}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss9[0].trussNumber}&setFruits=${G1Filter1Plant8Truss9[0].setFruits}&setFlowers=${G1Filter1Plant8Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss9[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss9[0].trussNumber}&setFruits=${G1Filter1Plant8Truss9[0].setFruits}&setFlowers=${G1Filter1Plant8Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url217);
 
@@ -7413,7 +7413,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl218 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url218 = `${scriptUrl218}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss0[0].trussNumber}&setFruits=${G1Filter1Plant8Truss0[0].setFruits}&setFlowers=${G1Filter1Plant8Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss0[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant8Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant8Truss0[0].trussNumber}&setFruits=${G1Filter1Plant8Truss0[0].setFruits}&setFlowers=${G1Filter1Plant8Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant8Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant8Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant8Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant8Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant8Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant8Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant8Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant8Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant8Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url218);
 
@@ -7565,7 +7565,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 9
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 9
     let G1Filter1Plant9Truss1 = []
     let G1Filter1Plant9Truss2 = []
     let G1Filter1Plant9Truss3 = []
@@ -7585,7 +7585,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 1
 
@@ -7597,7 +7597,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 2
 
@@ -7609,7 +7609,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 3
 
@@ -7621,7 +7621,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 4
 
@@ -7633,7 +7633,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 5
 
@@ -7645,7 +7645,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 6
 
@@ -7657,7 +7657,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 7
 
@@ -7669,7 +7669,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 8
 
@@ -7681,7 +7681,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 9
 
@@ -7693,7 +7693,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '9' &&
         sampleItemTruss.trussNumber === 10
 
@@ -7704,7 +7704,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl219 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url219 = `${scriptUrl219}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss1[0].trussNumber}&setFruits=${G1Filter1Plant9Truss1[0].setFruits}&setFlowers=${G1Filter1Plant9Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss1[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss1[0].trussNumber}&setFruits=${G1Filter1Plant9Truss1[0].setFruits}&setFlowers=${G1Filter1Plant9Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url219);
 
@@ -7716,7 +7716,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl220 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url220 = `${scriptUrl220}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss2[0].trussNumber}&setFruits=${G1Filter1Plant9Truss2[0].setFruits}&setFlowers=${G1Filter1Plant9Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss2[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss2[0].trussNumber}&setFruits=${G1Filter1Plant9Truss2[0].setFruits}&setFlowers=${G1Filter1Plant9Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url220);
 
@@ -7728,7 +7728,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl221 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url221 = `${scriptUrl221}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss3[0].trussNumber}&setFruits=${G1Filter1Plant9Truss3[0].setFruits}&setFlowers=${G1Filter1Plant9Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss3[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss3[0].trussNumber}&setFruits=${G1Filter1Plant9Truss3[0].setFruits}&setFlowers=${G1Filter1Plant9Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url221);
 
@@ -7740,7 +7740,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl222 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url222 = `${scriptUrl222}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss4[0].trussNumber}&setFruits=${G1Filter1Plant9Truss4[0].setFruits}&setFlowers=${G1Filter1Plant9Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss4[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss4[0].trussNumber}&setFruits=${G1Filter1Plant9Truss4[0].setFruits}&setFlowers=${G1Filter1Plant9Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url222);
 
@@ -7752,7 +7752,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl223 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url223 = `${scriptUrl223}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss5[0].trussNumber}&setFruits=${G1Filter1Plant9Truss5[0].setFruits}&setFlowers=${G1Filter1Plant9Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss5[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss5[0].trussNumber}&setFruits=${G1Filter1Plant9Truss5[0].setFruits}&setFlowers=${G1Filter1Plant9Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url223);
 
@@ -7764,7 +7764,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl224 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url224 = `${scriptUrl224}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss6[0].trussNumber}&setFruits=${G1Filter1Plant9Truss6[0].setFruits}&setFlowers=${G1Filter1Plant9Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss6[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss6[0].trussNumber}&setFruits=${G1Filter1Plant9Truss6[0].setFruits}&setFlowers=${G1Filter1Plant9Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url224);
 
@@ -7777,7 +7777,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl225 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url225 = `${scriptUrl225}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss7[0].trussNumber}&setFruits=${G1Filter1Plant9Truss7[0].setFruits}&setFlowers=${G1Filter1Plant9Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss7[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss7[0].trussNumber}&setFruits=${G1Filter1Plant9Truss7[0].setFruits}&setFlowers=${G1Filter1Plant9Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url225);
 
@@ -7789,7 +7789,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl226 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url226 = `${scriptUrl226}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss8[0].trussNumber}&setFruits=${G1Filter1Plant9Truss8[0].setFruits}&setFlowers=${G1Filter1Plant9Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss8[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss8[0].trussNumber}&setFruits=${G1Filter1Plant9Truss8[0].setFruits}&setFlowers=${G1Filter1Plant9Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url226);
 
@@ -7801,7 +7801,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl227 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url227 = `${scriptUrl227}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss9[0].trussNumber}&setFruits=${G1Filter1Plant9Truss9[0].setFruits}&setFlowers=${G1Filter1Plant9Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss9[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss9[0].trussNumber}&setFruits=${G1Filter1Plant9Truss9[0].setFruits}&setFlowers=${G1Filter1Plant9Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url227);
 
@@ -7813,7 +7813,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl228 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url228 = `${scriptUrl228}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss0[0].trussNumber}&setFruits=${G1Filter1Plant9Truss0[0].setFruits}&setFlowers=${G1Filter1Plant9Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss0[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant9Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant9Truss0[0].trussNumber}&setFruits=${G1Filter1Plant9Truss0[0].setFruits}&setFlowers=${G1Filter1Plant9Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant9Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant9Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant9Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant9Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant9Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant9Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant9Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant9Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant9Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url228);
 
@@ -7965,7 +7965,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 10
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 10
     let G1Filter1Plant10Truss1 = []
     let G1Filter1Plant10Truss2 = []
     let G1Filter1Plant10Truss3 = []
@@ -7985,7 +7985,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 1
 
@@ -7997,7 +7997,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 2
 
@@ -8009,7 +8009,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 3
 
@@ -8021,7 +8021,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 4
 
@@ -8033,7 +8033,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 5
 
@@ -8045,7 +8045,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 6
 
@@ -8057,7 +8057,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 7
 
@@ -8069,7 +8069,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 8
 
@@ -8081,7 +8081,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 9
 
@@ -8093,7 +8093,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItemTruss.plantName === 'GER 1 - Merlice' &&
-        sampleItemTruss.plantRow === '85/86' &&
+        sampleItemTruss.plantRow === '81/86' &&
         sampleItemTruss.plantNumber === '10' &&
         sampleItemTruss.trussNumber === 10
 
@@ -8104,7 +8104,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl229 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
     const url229 = `${scriptUrl229}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss1[0].trussNumber}&setFruits=${G1Filter1Plant10Truss1[0].setFruits}&setFlowers=${G1Filter1Plant10Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss1[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss1[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss1[0].trussNumber}&setFruits=${G1Filter1Plant10Truss1[0].setFruits}&setFlowers=${G1Filter1Plant10Truss1[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss1[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss1[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss1[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss1[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss1[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss1[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss1[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss1[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss1[0].harvestTruss}`;
 
     console.log("URL : " + url229);
 
@@ -8116,7 +8116,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
           const scriptUrl230 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
           const url230 = `${scriptUrl230}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss2[0].trussNumber}&setFruits=${G1Filter1Plant10Truss2[0].setFruits}&setFlowers=${G1Filter1Plant10Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss2[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss2[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss2[0].trussNumber}&setFruits=${G1Filter1Plant10Truss2[0].setFruits}&setFlowers=${G1Filter1Plant10Truss2[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss2[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss2[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss2[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss2[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss2[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss2[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss2[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss2[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss2[0].harvestTruss}`;
 
           console.log("URL : " + url230);
 
@@ -8128,7 +8128,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl231 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                 const url231 = `${scriptUrl231}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss3[0].trussNumber}&setFruits=${G1Filter1Plant10Truss3[0].setFruits}&setFlowers=${G1Filter1Plant10Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss3[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss3[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss3[0].trussNumber}&setFruits=${G1Filter1Plant10Truss3[0].setFruits}&setFlowers=${G1Filter1Plant10Truss3[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss3[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss3[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss3[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss3[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss3[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss3[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss3[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss3[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss3[0].harvestTruss}`;
 
                 console.log("URL : " + url231);
 
@@ -8140,7 +8140,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                       const scriptUrl232 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                       const url232 = `${scriptUrl232}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss4[0].trussNumber}&setFruits=${G1Filter1Plant10Truss4[0].setFruits}&setFlowers=${G1Filter1Plant10Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss4[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss4[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss4[0].trussNumber}&setFruits=${G1Filter1Plant10Truss4[0].setFruits}&setFlowers=${G1Filter1Plant10Truss4[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss4[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss4[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss4[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss4[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss4[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss4[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss4[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss4[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss4[0].harvestTruss}`;
 
                       console.log("URL : " + url232);
 
@@ -8152,7 +8152,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl233 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                             const url233 = `${scriptUrl233}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss5[0].trussNumber}&setFruits=${G1Filter1Plant10Truss5[0].setFruits}&setFlowers=${G1Filter1Plant10Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss5[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss5[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss5[0].trussNumber}&setFruits=${G1Filter1Plant10Truss5[0].setFruits}&setFlowers=${G1Filter1Plant10Truss5[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss5[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss5[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss5[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss5[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss5[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss5[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss5[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss5[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss5[0].harvestTruss}`;
 
                             console.log("URL : " + url233);
 
@@ -8165,7 +8165,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                   const scriptUrl234 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                   const url234 = `${scriptUrl234}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss6[0].trussNumber}&setFruits=${G1Filter1Plant10Truss6[0].setFruits}&setFlowers=${G1Filter1Plant10Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss6[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss6[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss6[0].trussNumber}&setFruits=${G1Filter1Plant10Truss6[0].setFruits}&setFlowers=${G1Filter1Plant10Truss6[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss6[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss6[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss6[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss6[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss6[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss6[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss6[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss6[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss6[0].harvestTruss}`;
 
                                   console.log("URL : " + url234);
 
@@ -8177,7 +8177,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl235 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                         const url235 = `${scriptUrl235}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss7[0].trussNumber}&setFruits=${G1Filter1Plant10Truss7[0].setFruits}&setFlowers=${G1Filter1Plant10Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss7[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss7[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss7[0].trussNumber}&setFruits=${G1Filter1Plant10Truss7[0].setFruits}&setFlowers=${G1Filter1Plant10Truss7[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss7[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss7[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss7[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss7[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss7[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss7[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss7[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss7[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss7[0].harvestTruss}`;
 
                                         console.log("URL : " + url235);
 
@@ -8189,7 +8189,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                               const scriptUrl236 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                               const url236 = `${scriptUrl236}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss8[0].trussNumber}&setFruits=${G1Filter1Plant10Truss8[0].setFruits}&setFlowers=${G1Filter1Plant10Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss8[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss8[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss8[0].trussNumber}&setFruits=${G1Filter1Plant10Truss8[0].setFruits}&setFlowers=${G1Filter1Plant10Truss8[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss8[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss8[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss8[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss8[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss8[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss8[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss8[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss8[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss8[0].harvestTruss}`;
 
                                               console.log("URL : " + url236);
 
@@ -8201,7 +8201,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                     const scriptUrl237 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                     const url237 = `${scriptUrl237}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss9[0].trussNumber}&setFruits=${G1Filter1Plant10Truss9[0].setFruits}&setFlowers=${G1Filter1Plant10Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss9[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss9[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss9[0].trussNumber}&setFruits=${G1Filter1Plant10Truss9[0].setFruits}&setFlowers=${G1Filter1Plant10Truss9[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss9[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss9[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss9[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss9[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss9[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss9[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss9[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss9[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss9[0].harvestTruss}`;
 
                                                     console.log("URL : " + url237);
 
@@ -8213,7 +8213,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                           const scriptUrl238 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
                                                           const url238 = `${scriptUrl238}?
-  callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss0[0].trussNumber}&setFruits=${G1Filter1Plant10Truss0[0].setFruits}&setFlowers=${G1Filter1Plant10Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss0[0].harvestTruss}`;
+  callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1Filter1Plant10Truss0[0].plantNumber}&trussNumber=${G1Filter1Plant10Truss0[0].trussNumber}&setFruits=${G1Filter1Plant10Truss0[0].setFruits}&setFlowers=${G1Filter1Plant10Truss0[0].setFlowers}&pruningNumber=${G1Filter1Plant10Truss0[0].pruningNumber}&fruitLoad=${G1Filter1Plant10Truss0[0].fruitLoad}&fruitDiameter=${G1Filter1Plant10Truss0[0].fruitDiameter}&pruningFlower=${G1Filter1Plant10Truss0[0].pruneFlowering}&floweringTruss=${G1Filter1Plant10Truss0[0].floweringTrussss}&pruningSet=${G1Filter1Plant10Truss0[0].prunSetting}&settingTruss=${G1Filter1Plant10Truss0[0].settingTrussNumber}&pruningHarvest=${G1Filter1Plant10Truss0[0].pruningHar}&harvestTruss=${G1Filter1Plant10Truss0[0].harvestTruss}`;
 
                                                           console.log("URL : " + url238);
 
@@ -8365,7 +8365,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 10
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 10
     let G2Filter1Plant1Truss1 = []
     let G2Filter1Plant1Truss2 = []
     let G2Filter1Plant1Truss3 = []
@@ -8764,7 +8764,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     this.setState({ isLoading: true })
 
 
-    //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 10
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 10
     let G2Filter1Plant2Truss1 = []
     let G2Filter1Plant2Truss2 = []
     let G2Filter1Plant2Truss3 = []
@@ -9163,7 +9163,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-     //INITIALIZATION G1 MERLICE ROW 85/86 PLANT 10
+     //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 10
      let G2Filter1Plant3Truss1 = []
      let G2Filter1Plant3Truss2 = []
      let G2Filter1Plant3Truss3 = []
@@ -16613,7 +16613,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-    //INITIALIZATION FOR GER 1 - MERLICE ROW 85/86
+    //INITIALIZATION FOR GER 1 - MERLICE ROW 81/86
     let G1filter2Plant1 = []
     let G1filter2Plant2 = []
     let G1filter2Plant3 = []
@@ -16626,14 +16626,14 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     let G1filter2Plant10 = []
     //ENDS
 
-    //FILTERING GER 1 MERLICE ROW 85/86
+    //FILTERING GER 1 MERLICE ROW 81/86
 
     G1filter2Plant1 = this.state.plants.filter(sampleItem => {
 
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 1
       )
     });
@@ -16643,7 +16643,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 2
       )
     });
@@ -16653,7 +16653,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 3
       )
     });
@@ -16663,7 +16663,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 4
       )
     });
@@ -16673,7 +16673,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 5
       )
     });
@@ -16683,7 +16683,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 6
       )
     });
@@ -16693,7 +16693,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 7
       )
     });
@@ -16703,7 +16703,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 8
       )
     });
@@ -16713,7 +16713,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 9
       )
     });
@@ -16723,7 +16723,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
       return (
 
         sampleItem.plantName === 'GER 1 - Merlice' &&
-        sampleItem.plantRow === '85/86' &&
+        sampleItem.plantRow === '81/86' &&
         sampleItem.plantNumber === 10
       )
     });
@@ -16732,7 +16732,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     const scriptUrl11 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
     const url11 = `${scriptUrl11}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant1[0].plantNumber}&leaves=${G1filter2Plant1[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant1[0].fullySetTruss}&setTrussLength=${G1filter2Plant1[0].setTrussLength}&weeklyGrowth=${G1filter2Plant1[0].weeklyGrowth}&flowerHeight=${G1filter2Plant1[0].floweringTrussHeight}&leafLength=${G1filter2Plant1[0].leafLength}&leafWidth=${G1filter2Plant1[0].leafWidth}&stmDia=${G1filter2Plant1[0].stmDiameter}&lastWkStmDia=${G1filter2Plant1[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant1[0].plantNumber}&leaves=${G1filter2Plant1[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant1[0].fullySetTruss}&setTrussLength=${G1filter2Plant1[0].setTrussLength}&weeklyGrowth=${G1filter2Plant1[0].weeklyGrowth}&flowerHeight=${G1filter2Plant1[0].floweringTrussHeight}&leafLength=${G1filter2Plant1[0].leafLength}&leafWidth=${G1filter2Plant1[0].leafWidth}&stmDia=${G1filter2Plant1[0].stmDiameter}&lastWkStmDia=${G1filter2Plant1[0].lastWeekStmDiameter}`;
 
     console.log("URL : " + url11);
     fetch(url11, { mode: 'no-cors' }).then((response) => {
@@ -16744,7 +16744,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
         const scriptUrl12 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
         const url12 = `${scriptUrl12}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant2[0].plantNumber}&leaves=${G1filter2Plant2[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant2[0].fullySetTruss}&setTrussLength=${G1filter2Plant2[0].setTrussLength}&weeklyGrowth=${G1filter2Plant2[0].weeklyGrowth}&flowerHeight=${G1filter2Plant2[0].floweringTrussHeight}&leafLength=${G1filter2Plant2[0].leafLength}&leafWidth=${G1filter2Plant2[0].leafWidth}&stmDia=${G1filter2Plant2[0].stmDiameter}&lastWkStmDia=${G1filter2Plant2[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant2[0].plantNumber}&leaves=${G1filter2Plant2[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant2[0].fullySetTruss}&setTrussLength=${G1filter2Plant2[0].setTrussLength}&weeklyGrowth=${G1filter2Plant2[0].weeklyGrowth}&flowerHeight=${G1filter2Plant2[0].floweringTrussHeight}&leafLength=${G1filter2Plant2[0].leafLength}&leafWidth=${G1filter2Plant2[0].leafWidth}&stmDia=${G1filter2Plant2[0].stmDiameter}&lastWkStmDia=${G1filter2Plant2[0].lastWeekStmDiameter}`;
 
         console.log("URL : " + url12);
         fetch(url12, { mode: 'no-cors' }).then((response) => {
@@ -16755,7 +16755,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
             const scriptUrl13 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
             const url13 = `${scriptUrl13}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant3[0].plantNumber}&leaves=${G1filter2Plant3[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant3[0].fullySetTruss}&setTrussLength=${G1filter2Plant3[0].setTrussLength}&weeklyGrowth=${G1filter2Plant3[0].weeklyGrowth}&flowerHeight=${G1filter2Plant3[0].floweringTrussHeight}&leafLength=${G1filter2Plant3[0].leafLength}&leafWidth=${G1filter2Plant3[0].leafWidth}&stmDia=${G1filter2Plant3[0].stmDiameter}&lastWkStmDia=${G1filter2Plant3[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant3[0].plantNumber}&leaves=${G1filter2Plant3[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant3[0].fullySetTruss}&setTrussLength=${G1filter2Plant3[0].setTrussLength}&weeklyGrowth=${G1filter2Plant3[0].weeklyGrowth}&flowerHeight=${G1filter2Plant3[0].floweringTrussHeight}&leafLength=${G1filter2Plant3[0].leafLength}&leafWidth=${G1filter2Plant3[0].leafWidth}&stmDia=${G1filter2Plant3[0].stmDiameter}&lastWkStmDia=${G1filter2Plant3[0].lastWeekStmDiameter}`;
 
             console.log("URL : " + url13);
             fetch(url13, { mode: 'no-cors' }).then((response) => {
@@ -16767,7 +16767,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                 const scriptUrl14 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                 const url14 = `${scriptUrl14}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant4[0].plantNumber}&leaves=${G1filter2Plant4[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant4[0].fullySetTruss}&setTrussLength=${G1filter2Plant4[0].setTrussLength}&weeklyGrowth=${G1filter2Plant4[0].weeklyGrowth}&flowerHeight=${G1filter2Plant4[0].floweringTrussHeight}&leafLength=${G1filter2Plant4[0].leafLength}&leafWidth=${G1filter2Plant4[0].leafWidth}&stmDia=${G1filter2Plant4[0].stmDiameter}&lastWkStmDia=${G1filter2Plant4[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant4[0].plantNumber}&leaves=${G1filter2Plant4[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant4[0].fullySetTruss}&setTrussLength=${G1filter2Plant4[0].setTrussLength}&weeklyGrowth=${G1filter2Plant4[0].weeklyGrowth}&flowerHeight=${G1filter2Plant4[0].floweringTrussHeight}&leafLength=${G1filter2Plant4[0].leafLength}&leafWidth=${G1filter2Plant4[0].leafWidth}&stmDia=${G1filter2Plant4[0].stmDiameter}&lastWkStmDia=${G1filter2Plant4[0].lastWeekStmDiameter}`;
 
                 console.log("URL : " + url14);
                 fetch(url14, { mode: 'no-cors' }).then((response) => {
@@ -16779,7 +16779,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                     const scriptUrl15 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                     const url15 = `${scriptUrl15}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant5[0].plantNumber}&leaves=${G1filter2Plant5[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant5[0].fullySetTruss}&setTrussLength=${G1filter2Plant5[0].setTrussLength}&weeklyGrowth=${G1filter2Plant5[0].weeklyGrowth}&flowerHeight=${G1filter2Plant5[0].floweringTrussHeight}&leafLength=${G1filter2Plant5[0].leafLength}&leafWidth=${G1filter2Plant5[0].leafWidth}&stmDia=${G1filter2Plant5[0].stmDiameter}&lastWkStmDia=${G1filter2Plant5[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant5[0].plantNumber}&leaves=${G1filter2Plant5[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant5[0].fullySetTruss}&setTrussLength=${G1filter2Plant5[0].setTrussLength}&weeklyGrowth=${G1filter2Plant5[0].weeklyGrowth}&flowerHeight=${G1filter2Plant5[0].floweringTrussHeight}&leafLength=${G1filter2Plant5[0].leafLength}&leafWidth=${G1filter2Plant5[0].leafWidth}&stmDia=${G1filter2Plant5[0].stmDiameter}&lastWkStmDia=${G1filter2Plant5[0].lastWeekStmDiameter}`;
 
                     console.log("URL : " + url15);
                     fetch(url15, { mode: 'no-cors' }).then((response) => {
@@ -16790,7 +16790,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                         const scriptUrl16 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                         const url16 = `${scriptUrl16}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant6[0].plantNumber}&leaves=${G1filter2Plant6[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant6[0].fullySetTruss}&setTrussLength=${G1filter2Plant6[0].setTrussLength}&weeklyGrowth=${G1filter2Plant6[0].weeklyGrowth}&flowerHeight=${G1filter2Plant6[0].floweringTrussHeight}&leafLength=${G1filter2Plant6[0].leafLength}&leafWidth=${G1filter2Plant6[0].leafWidth}&stmDia=${G1filter2Plant6[0].stmDiameter}&lastWkStmDia=${G1filter2Plant6[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant6[0].plantNumber}&leaves=${G1filter2Plant6[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant6[0].fullySetTruss}&setTrussLength=${G1filter2Plant6[0].setTrussLength}&weeklyGrowth=${G1filter2Plant6[0].weeklyGrowth}&flowerHeight=${G1filter2Plant6[0].floweringTrussHeight}&leafLength=${G1filter2Plant6[0].leafLength}&leafWidth=${G1filter2Plant6[0].leafWidth}&stmDia=${G1filter2Plant6[0].stmDiameter}&lastWkStmDia=${G1filter2Plant6[0].lastWeekStmDiameter}`;
 
                         console.log("URL : " + url16);
                         fetch(url16, { mode: 'no-cors' }).then((response) => {
@@ -16801,7 +16801,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                             const scriptUrl17 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                             const url17 = `${scriptUrl17}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant7[0].plantNumber}&leaves=${G1filter2Plant7[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant7[0].fullySetTruss}&setTrussLength=${G1filter2Plant7[0].setTrussLength}&weeklyGrowth=${G1filter2Plant7[0].weeklyGrowth}&flowerHeight=${G1filter2Plant7[0].floweringTrussHeight}&leafLength=${G1filter2Plant7[0].leafLength}&leafWidth=${G1filter2Plant7[0].leafWidth}&stmDia=${G1filter2Plant7[0].stmDiameter}&lastWkStmDia=${G1filter2Plant7[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant7[0].plantNumber}&leaves=${G1filter2Plant7[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant7[0].fullySetTruss}&setTrussLength=${G1filter2Plant7[0].setTrussLength}&weeklyGrowth=${G1filter2Plant7[0].weeklyGrowth}&flowerHeight=${G1filter2Plant7[0].floweringTrussHeight}&leafLength=${G1filter2Plant7[0].leafLength}&leafWidth=${G1filter2Plant7[0].leafWidth}&stmDia=${G1filter2Plant7[0].stmDiameter}&lastWkStmDia=${G1filter2Plant7[0].lastWeekStmDiameter}`;
 
                             console.log("URL : " + url17);
                             fetch(url17, { mode: 'no-cors' }).then((response) => {
@@ -16814,7 +16814,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                 const scriptUrl18 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                 const url18 = `${scriptUrl18}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant8[0].plantNumber}&leaves=${G1filter2Plant8[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant8[0].fullySetTruss}&setTrussLength=${G1filter2Plant8[0].setTrussLength}&weeklyGrowth=${G1filter2Plant8[0].weeklyGrowth}&flowerHeight=${G1filter2Plant8[0].floweringTrussHeight}&leafLength=${G1filter2Plant8[0].leafLength}&leafWidth=${G1filter2Plant8[0].leafWidth}&stmDia=${G1filter2Plant8[0].stmDiameter}&lastWkStmDia=${G1filter2Plant8[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant8[0].plantNumber}&leaves=${G1filter2Plant8[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant8[0].fullySetTruss}&setTrussLength=${G1filter2Plant8[0].setTrussLength}&weeklyGrowth=${G1filter2Plant8[0].weeklyGrowth}&flowerHeight=${G1filter2Plant8[0].floweringTrussHeight}&leafLength=${G1filter2Plant8[0].leafLength}&leafWidth=${G1filter2Plant8[0].leafWidth}&stmDia=${G1filter2Plant8[0].stmDiameter}&lastWkStmDia=${G1filter2Plant8[0].lastWeekStmDiameter}`;
 
                                 console.log("URL : " + url18);
                                 fetch(url18, { mode: 'no-cors' }).then((response) => {
@@ -16826,7 +16826,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                     const scriptUrl19 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                     const url19 = `${scriptUrl19}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant9[0].plantNumber}&leaves=${G1filter2Plant9[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant9[0].fullySetTruss}&setTrussLength=${G1filter2Plant9[0].setTrussLength}&weeklyGrowth=${G1filter2Plant9[0].weeklyGrowth}&flowerHeight=${G1filter2Plant9[0].floweringTrussHeight}&leafLength=${G1filter2Plant9[0].leafLength}&leafWidth=${G1filter2Plant9[0].leafWidth}&stmDia=${G1filter2Plant9[0].stmDiameter}&lastWkStmDia=${G1filter2Plant9[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant9[0].plantNumber}&leaves=${G1filter2Plant9[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant9[0].fullySetTruss}&setTrussLength=${G1filter2Plant9[0].setTrussLength}&weeklyGrowth=${G1filter2Plant9[0].weeklyGrowth}&flowerHeight=${G1filter2Plant9[0].floweringTrussHeight}&leafLength=${G1filter2Plant9[0].leafLength}&leafWidth=${G1filter2Plant9[0].leafWidth}&stmDia=${G1filter2Plant9[0].stmDiameter}&lastWkStmDia=${G1filter2Plant9[0].lastWeekStmDiameter}`;
 
                                     console.log("URL : " + url19);
                                     fetch(url19, { mode: 'no-cors' }).then((response) => {
@@ -16837,7 +16837,7 @@ callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                         const scriptUrl19 = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                         const url19 = `${scriptUrl19}?
-callback=ctrlq&plantRow=${'85/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant10[0].plantNumber}&leaves=${G1filter2Plant10[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant10[0].fullySetTruss}&setTrussLength=${G1filter2Plant10[0].setTrussLength}&weeklyGrowth=${G1filter2Plant10[0].weeklyGrowth}&flowerHeight=${G1filter2Plant10[0].floweringTrussHeight}&leafLength=${G1filter2Plant10[0].leafLength}&leafWidth=${G1filter2Plant10[0].leafWidth}&stmDia=${G1filter2Plant10[0].stmDiameter}&lastWkStmDia=${G1filter2Plant10[0].lastWeekStmDiameter}`;
+callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G1filter2Plant10[0].plantNumber}&leaves=${G1filter2Plant10[0].leavesPerPlant}&fullySetTruss=${G1filter2Plant10[0].fullySetTruss}&setTrussLength=${G1filter2Plant10[0].setTrussLength}&weeklyGrowth=${G1filter2Plant10[0].weeklyGrowth}&flowerHeight=${G1filter2Plant10[0].floweringTrussHeight}&leafLength=${G1filter2Plant10[0].leafLength}&leafWidth=${G1filter2Plant10[0].leafWidth}&stmDia=${G1filter2Plant10[0].stmDiameter}&lastWkStmDia=${G1filter2Plant10[0].lastWeekStmDiameter}`;
 
                                         console.log("URL : " + url19);
                                         fetch(url19, { mode: 'no-cors' }).then((response) => {
