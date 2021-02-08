@@ -66,7 +66,7 @@ var currentWeekNumber = require('current-week-number');
 
 
 
-export default class Har4YeloPlant1 extends React.Component {
+export default class Har4AnnasunPlant1 extends React.Component {
 
 
 
@@ -176,6 +176,7 @@ export default class Har4YeloPlant1 extends React.Component {
 
             checkWeeksData: '',
             checkWeeksTrussData: '',
+
 
         };
 
@@ -573,7 +574,7 @@ export default class Har4YeloPlant1 extends React.Component {
 
     componentDidMount() {
 
-        numberWeek = 2100 + currentWeekNumber() - 2;
+        numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
         console.log("Current Week Number: ", numberWeek);
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
@@ -632,7 +633,7 @@ export default class Har4YeloPlant1 extends React.Component {
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
             setTimeout(() => {
-                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 4 - Yelo', '455').then((data) => {
+                db.plantsByWeekRowNumberAndName(no, numberWeek, 'HAR 4 - Annasun', '455').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     if (data !== null || data !== '' || data !== undefined) {
@@ -671,7 +672,7 @@ export default class Har4YeloPlant1 extends React.Component {
 
             setTimeout(() => {
 
-                db.trussByWeekNumberRowAndName(no, numberWeek, 'HAR 4 - Yelo', '455').then((data1) => {
+                db.trussByWeekNumberRowAndName(no, numberWeek, 'HAR 4 - Annasun', '455').then((data1) => {
                     console.log(data1);
                     console.log("Calling database")
                     if (data1 !== null || data1 !== '' || data1 !== undefined) {
@@ -707,7 +708,7 @@ export default class Har4YeloPlant1 extends React.Component {
 
         });
 
-        console.log("Check DATAAAAAAAAAAAAAAAAAAAA : " + presentWeekData);
+
 
 
 
@@ -721,7 +722,9 @@ export default class Har4YeloPlant1 extends React.Component {
         this.ShowHideLastWeekStmDiaComponent();*/
 
         if (abc === '0' || abc === null) {
-            this.getAsysncValues();
+
+
+            console.log("YYYYYYYYYYYYYYYYYYYYYYYYYY : " + no);
             this.setState({
                 isDataSend: true,
                 isErrorAsync: false,
@@ -754,6 +757,8 @@ export default class Har4YeloPlant1 extends React.Component {
         }
 
 
+
+
         if (no1 !== undefined && no1 !== null) {
 
             console.log("No1 Value:", no1);
@@ -762,7 +767,7 @@ export default class Har4YeloPlant1 extends React.Component {
             no = '1';
 
 
-            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 4 - Yelo', '455').then((data) => {
+            db.plantsByWeekRowNumberAndName(no1, numberWeek - 1, 'HAR 4 - Annasun', '455').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 plant = data;
@@ -787,7 +792,7 @@ export default class Har4YeloPlant1 extends React.Component {
                 no = '2';
 
 
-                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 4 - Yelo', '455').then((data) => {
+                db.plantsByWeekRowNumberAndName(no2, numberWeek - 1, 'HAR 4 - Annasun', '455').then((data) => {
                     console.log(data);
                     console.log("Calling database")
                     plant = data;
@@ -813,7 +818,7 @@ export default class Har4YeloPlant1 extends React.Component {
                     console.log("No3 Value:", no3);
 
 
-                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 4 - Yelo', '455').then((data) => {
+                    db.plantsByWeekRowNumberAndName(no3, numberWeek - 1, 'HAR 4 - Annasun', '455').then((data) => {
                         console.log(data);
                         console.log("Calling database")
                         plant = data;
@@ -839,7 +844,7 @@ export default class Har4YeloPlant1 extends React.Component {
                         no = '4';
 
 
-                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 4 - Yelo', '455').then((data) => {
+                        db.plantsByWeekRowNumberAndName(no4, numberWeek - 1, 'HAR 4 - Annasun', '455').then((data) => {
                             console.log(data);
                             console.log("Calling database")
                             plant = data;
@@ -865,7 +870,7 @@ export default class Har4YeloPlant1 extends React.Component {
                             no = '5';
 
 
-                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 4 - Yelo', '455').then((data) => {
+                            db.plantsByWeekRowNumberAndName(no5, numberWeek - 1, 'HAR 4 - Annasun', '455').then((data) => {
                                 console.log(data);
                                 console.log("Calling database")
                                 plant = data;
@@ -908,7 +913,9 @@ export default class Har4YeloPlant1 extends React.Component {
 
 
     updateTextInput = (text, field) => {
+
         this.setItem(field, text)
+
         this.setState({
             isDataSend: false,
 
@@ -1171,7 +1178,7 @@ export default class Har4YeloPlant1 extends React.Component {
                 'Data Validation',
                 'There are some errors in the data validation tab, Are you sure you want to skip the validation error ?',
                 [
-                    { text: 'No', onPress: () => this.props.navigation.navigate('Har4YeloDataChecker1', { plantNo: no }), style: 'cancel' },
+                    { text: 'No', onPress: () => this.props.navigation.navigate('Har4AnnasunDataChecker1', { plantNo: no }), style: 'cancel' },
                     { text: 'Yes', onPress: () => this.savePlantsToDb() },
                 ],
                 {
@@ -1276,7 +1283,7 @@ export default class Har4YeloPlant1 extends React.Component {
 
         let data = {
             plantRow: '455',
-            plantName: 'HAR 4 - Yelo',
+            plantName: 'HAR 4 - Annasun',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1300,7 +1307,7 @@ export default class Har4YeloPlant1 extends React.Component {
 
         let data1 = {
             plantRow: '455',
-            plantName: 'HAR 4 - Yelo',
+            plantName: 'HAR 4 - Annasun',
             plantWeek: numberWeek,
             plantNumber: no,
             leavesPerPlant: this.state.leavesPerPlant,
@@ -1323,24 +1330,11 @@ export default class Har4YeloPlant1 extends React.Component {
         }
 
 
-        if (leavesPerPlant) {
-            if (fullySetTruss) {
-                if (setTrussLength) {
-                    if (weeklyGrowth) {
-                        if (floweringTrussHeight) {
-                            if (leafLength) {
-                                if (leafWidth) {
-                                    if (stmDiameter) {
-                                        if (lastWeekStmDiameter) {
-
-
-
-
                                             if (this.state.isItConnected === 'Online') {
 
                                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
                                                 const url = `${scriptUrl}?
-                                                callback=ctrlq&plantRow=${'455'}&plantName=${'HAR 4 - Yelo'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
+                                                callback=ctrlq&plantRow=${'455'}&plantName=${'HAR 4 - Annasun'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
 
                                                 console.log("URL : " + url);
                                                 fetch(url, { mode: 'no-cors' }).then(
@@ -1359,12 +1353,13 @@ export default class Har4YeloPlant1 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Har4Yelo')
+                                                    this.props.navigation.navigate('Har4Annasun')
                                                     this.setState({
 
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
+
 
                                                 }).catch((err) => {
                                                     console.log(err);
@@ -1373,6 +1368,7 @@ export default class Har4YeloPlant1 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
+
                                                 })
 
                                             } else {
@@ -1388,12 +1384,13 @@ export default class Har4YeloPlant1 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
-                                                    this.props.navigation.navigate('Har4Yelo')
+                                                    this.props.navigation.navigate('Har4Annasun')
                                                     this.setState({
 
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
+
 
                                                 }).catch((err) => {
                                                     console.log(err);
@@ -1402,87 +1399,10 @@ export default class Har4YeloPlant1 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
+
                                                 })
 
                                             }
-
-
-
-                                        } else {
-                                            alert('Please fill Last Week Stem Diameter');
-                                            this.setState({
-                                                isLoading: false,
-                                                isDataSend: false,
-
-                                            });
-                                            abc = '0';
-
-                                        }
-                                    } else {
-                                        alert('Please fill Steam Diamater');
-                                        this.setState({
-                                            isLoading: false,
-                                            isDataSend: false,
-                                        });
-                                        abc = '0';
-                                    }
-                                } else {
-                                    alert('Please fill Leaf Width');
-                                    this.setState({
-                                        isLoading: false,
-                                        isDataSend: false,
-                                    });
-                                    abc = '0';
-                                }
-                            } else {
-                                alert('Please fill Leaf Length');
-                                this.setState({
-                                    isLoading: false,
-                                    isDataSend: false,
-                                });
-                                abc = '0';
-                            }
-                        } else {
-                            alert('Please fill Flower Truss Height');
-                            this.setState({
-                                isLoading: false,
-                                isDataSend: false,
-                            });
-                            abc = '0';
-                        }
-                    } else {
-                        alert('Please fill Weekly Growth');
-                        this.setState({
-                            isLoading: false,
-                            isDataSend: false,
-                        });
-                        abc = '0';
-                    }
-                } else {
-                    alert('Please fill Fully Set Truss Length');
-                    this.setState({
-                        isLoading: false,
-                        isDataSend: false,
-                    });
-                    abc = '0';
-                }
-            } else {
-                alert('Please fill Fully Set Truss');
-                this.setState({
-                    isLoading: false,
-                    isDataSend: false,
-                });
-                abc = '0';
-            }
-        } else {
-
-            alert('Please fill Leaves Per Plant');
-            this.setState({
-                isLoading: false,
-                isDataSend: false,
-            });
-            abc = '0';
-        }
 
 
     }
@@ -1523,7 +1443,7 @@ export default class Har4YeloPlant1 extends React.Component {
             setFlowers: this.state.setFlowers,
             pruningNumber: this.state.pruningNumber,
             plantRow: '455',
-            plantName: 'HAR 4 - Yelo',
+            plantName: 'HAR 4 - Annasun',
             plantWeek: '2009',
 
             trussNumber2: this.state.trussNumber2,
@@ -1550,7 +1470,7 @@ export default class Har4YeloPlant1 extends React.Component {
                                 });
                                 Alert.alert('Completed!')
 
-                                this.props.navigation.navigate('Har4yelo')
+                                this.props.navigation.navigate('Har4Annasun')
 
                             }).catch((err) => {
                                 console.log(err);
@@ -1814,7 +1734,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholder="Enter Leaves Per Plant"
                                             placeholderTextColor="transparent"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1855,7 +1774,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1896,7 +1814,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1940,7 +1857,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1980,7 +1896,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2020,7 +1935,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2063,7 +1977,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2105,7 +2018,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2146,7 +2058,6 @@ export default class Har4YeloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2174,19 +2085,21 @@ export default class Har4YeloPlant1 extends React.Component {
                                 {this.state.checkWeeksData !== 1 ? (
                                     <TouchableOpacity
                                         style={styles.buttonContainer}
+                                        disabled={false}
                                         onPress={this.savePlantsToDbAlert}>
                                         <Text style={styles.buttonText}>Submit</Text>
                                     </TouchableOpacity>) :
 
                                     <TouchableOpacity
                                         style={styles.buttonContainer1}
+                                        disabled={true}
                                         onPress={this.savePlantsToDbAlert}>
                                         <Text style={styles.buttonText}>Submit</Text>
                                         <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                     </TouchableOpacity>}
 
-                            </View>
 
+                            </View>
                             <Text style={styles.text}
                                 value={this.state.plantRow}> Enter Truss Details</Text>
 
@@ -2194,14 +2107,14 @@ export default class Har4YeloPlant1 extends React.Component {
                                 <TouchableOpacity
                                     style={styles.buttonContainer}
                                     disabled={false}
-                                    onPress={() => this.props.navigation.navigate('Har4YeloTrussDetails1', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Har4AnnasunTrussDetails1', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                 </TouchableOpacity>) :
 
                                 <TouchableOpacity
                                     style={styles.buttonContainer1}
                                     disabled={true}
-                                    onPress={() => this.props.navigation.navigate('Har4YeloTrussDetails1', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Har4AnnasunTrussDetails1', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                     <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                 </TouchableOpacity>}
@@ -2212,7 +2125,7 @@ export default class Har4YeloPlant1 extends React.Component {
                                 }}
                             />
 
-                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har4YeloDataChecker1', { plantNo: no })}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har4AnnasunDataChecker1', { plantNo: no })}>
 
                                 {(this.state.isError) ? (<Text style={styles.validationTextError}>Data Validation</Text>) : <Text style={styles.validationText}>Data Validation</Text>}
 
@@ -2477,3 +2390,4 @@ const styles = StyleSheet.create({
 
 })
 
+//export default FlamentynoPlant1

@@ -574,7 +574,7 @@ export default class Har4BambelloPlant1 extends React.Component {
 
     componentDidMount() {
 
-        numberWeek = 2100 + currentWeekNumber() - 2;
+        numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
         console.log("Current Week Number: ", numberWeek);
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
@@ -708,7 +708,8 @@ export default class Har4BambelloPlant1 extends React.Component {
 
         });
 
-        console.log("Check DATAAAAAAAAAAAAAAAAAAAA : " + presentWeekData);
+
+
 
 
         /*this.ShowHideFullySetComponent();
@@ -721,7 +722,9 @@ export default class Har4BambelloPlant1 extends React.Component {
         this.ShowHideLastWeekStmDiaComponent();*/
 
         if (abc === '0' || abc === null) {
-            this.getAsysncValues();
+
+
+            console.log("YYYYYYYYYYYYYYYYYYYYYYYYYY : " + no);
             this.setState({
                 isDataSend: true,
                 isErrorAsync: false,
@@ -752,6 +755,8 @@ export default class Har4BambelloPlant1 extends React.Component {
 
 
         }
+
+
 
 
         if (no1 !== undefined && no1 !== null) {
@@ -908,7 +913,9 @@ export default class Har4BambelloPlant1 extends React.Component {
 
 
     updateTextInput = (text, field) => {
+
         this.setItem(field, text)
+
         this.setState({
             isDataSend: false,
 
@@ -1323,19 +1330,6 @@ export default class Har4BambelloPlant1 extends React.Component {
         }
 
 
-        if (leavesPerPlant) {
-            if (fullySetTruss) {
-                if (setTrussLength) {
-                    if (weeklyGrowth) {
-                        if (floweringTrussHeight) {
-                            if (leafLength) {
-                                if (leafWidth) {
-                                    if (stmDiameter) {
-                                        if (lastWeekStmDiameter) {
-
-
-
-
                                             if (this.state.isItConnected === 'Online') {
 
                                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
@@ -1366,6 +1360,7 @@ export default class Har4BambelloPlant1 extends React.Component {
                                                     });
                                                     abc = '1';
 
+
                                                 }).catch((err) => {
                                                     console.log(err);
                                                     this.setState({
@@ -1373,6 +1368,7 @@ export default class Har4BambelloPlant1 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
+
                                                 })
 
                                             } else {
@@ -1395,6 +1391,7 @@ export default class Har4BambelloPlant1 extends React.Component {
                                                     });
                                                     abc = '1';
 
+
                                                 }).catch((err) => {
                                                     console.log(err);
                                                     this.setState({
@@ -1402,87 +1399,10 @@ export default class Har4BambelloPlant1 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
+
                                                 })
 
                                             }
-
-
-
-                                        } else {
-                                            alert('Please fill Last Week Stem Diameter');
-                                            this.setState({
-                                                isLoading: false,
-                                                isDataSend: false,
-
-                                            });
-                                            abc = '0';
-
-                                        }
-                                    } else {
-                                        alert('Please fill Steam Diamater');
-                                        this.setState({
-                                            isLoading: false,
-                                            isDataSend: false,
-                                        });
-                                        abc = '0';
-                                    }
-                                } else {
-                                    alert('Please fill Leaf Width');
-                                    this.setState({
-                                        isLoading: false,
-                                        isDataSend: false,
-                                    });
-                                    abc = '0';
-                                }
-                            } else {
-                                alert('Please fill Leaf Length');
-                                this.setState({
-                                    isLoading: false,
-                                    isDataSend: false,
-                                });
-                                abc = '0';
-                            }
-                        } else {
-                            alert('Please fill Flower Truss Height');
-                            this.setState({
-                                isLoading: false,
-                                isDataSend: false,
-                            });
-                            abc = '0';
-                        }
-                    } else {
-                        alert('Please fill Weekly Growth');
-                        this.setState({
-                            isLoading: false,
-                            isDataSend: false,
-                        });
-                        abc = '0';
-                    }
-                } else {
-                    alert('Please fill Fully Set Truss Length');
-                    this.setState({
-                        isLoading: false,
-                        isDataSend: false,
-                    });
-                    abc = '0';
-                }
-            } else {
-                alert('Please fill Fully Set Truss');
-                this.setState({
-                    isLoading: false,
-                    isDataSend: false,
-                });
-                abc = '0';
-            }
-        } else {
-
-            alert('Please fill Leaves Per Plant');
-            this.setState({
-                isLoading: false,
-                isDataSend: false,
-            });
-            abc = '0';
-        }
 
 
     }
@@ -1814,7 +1734,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholder="Enter Leaves Per Plant"
                                             placeholderTextColor="transparent"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1855,7 +1774,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1896,7 +1814,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1940,7 +1857,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -1980,7 +1896,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2020,7 +1935,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2063,7 +1977,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2105,7 +2018,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2146,7 +2058,6 @@ export default class Har4BambelloPlant1 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2174,18 +2085,21 @@ export default class Har4BambelloPlant1 extends React.Component {
                                 {this.state.checkWeeksData !== 1 ? (
                                     <TouchableOpacity
                                         style={styles.buttonContainer}
+                                        disabled={false}
                                         onPress={this.savePlantsToDbAlert}>
                                         <Text style={styles.buttonText}>Submit</Text>
                                     </TouchableOpacity>) :
 
                                     <TouchableOpacity
                                         style={styles.buttonContainer1}
+                                        disabled={true}
                                         onPress={this.savePlantsToDbAlert}>
                                         <Text style={styles.buttonText}>Submit</Text>
                                         <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                     </TouchableOpacity>}
-                            </View>
 
+
+                            </View>
                             <Text style={styles.text}
                                 value={this.state.plantRow}> Enter Truss Details</Text>
 
@@ -2476,3 +2390,4 @@ const styles = StyleSheet.create({
 
 })
 
+//export default FlamentynoPlant1

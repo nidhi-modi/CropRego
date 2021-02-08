@@ -27,11 +27,10 @@ export default class Har4Km extends Component {
 
     }
 
-
     componentDidMount() {
 
 
-        numberWeek = 2100 + currentWeekNumber()-2;
+        numberWeek = 2100 + currentWeekNumber(new Date())-1;
 
         this.setState({ week : numberWeek});
 
@@ -48,7 +47,7 @@ export default class Har4Km extends Component {
     callQuery= () => {
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("1", numberWeek, 'HAR 4 - KM5512','415').then((data) => {
+            db.plantsByWeekRowNumberAndName("1", numberWeek, 'HAR 4 - KM5512','413').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -68,7 +67,7 @@ export default class Har4Km extends Component {
         }, 1000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("2", numberWeek, 'HAR 4 - KM5512','415').then((data) => {
+            db.plantsByWeekRowNumberAndName("2", numberWeek, 'HAR 4 - KM5512','413').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -88,7 +87,7 @@ export default class Har4Km extends Component {
         }, 3000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("3", numberWeek, 'HAR 4 - KM5512','415').then((data) => {
+            db.plantsByWeekRowNumberAndName("3", numberWeek, 'HAR 4 - KM5512','413').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -108,7 +107,7 @@ export default class Har4Km extends Component {
         }, 4000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("4", numberWeek, 'HAR 4 - KM5512','415').then((data) => {
+            db.plantsByWeekRowNumberAndName("4", numberWeek, 'HAR 4 - KM5512','413').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -128,7 +127,7 @@ export default class Har4Km extends Component {
         }, 5000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("5", numberWeek, 'HAR 4 - KM5512','415').then((data) => {
+            db.plantsByWeekRowNumberAndName("5", numberWeek, 'HAR 4 - KM5512','413').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({

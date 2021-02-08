@@ -4,7 +4,7 @@ import AwesomeButton from 'react-native-really-awesome-button';
 import AwesomeButtonRick from 'react-native-really-awesome-button/src/themes/rick';
 
 
-function Har4YeloRow(props) {
+function Har4AvalantinoRow(props) {
     const { navigation } = props
   return (
     <View style={styles.container}>
@@ -15,11 +15,9 @@ function Har4YeloRow(props) {
   
         <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har4Yelo')}>
-       <Text style={styles.buttonText}>Row 455</Text>
+       onPress={() => navigation.navigate('Har4Avalantino')}>
+       <Text style={styles.buttonText}>Row 426</Text>
      </TouchableOpacity>
-
-
   
         </ScrollView>
   
@@ -92,4 +90,4 @@ function Har4YeloRow(props) {
   }
   })
   
-  export default Har4YeloRow
+  export default Har4AvalantinoRow

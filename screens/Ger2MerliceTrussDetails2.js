@@ -3048,22 +3048,24 @@ export default class Ger2MerliceTrussDetails2 extends React.Component {
                                 isDataSend: true,
 
                             });
-                            if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.PruningNumber6 !== '') {
+                            if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.pruningNumber6 !== '') {
 
                                 this.saveTrussToDB6();
-
-
+        
+        
                             } else {
+        
                                 this.setState({
-
+        
                                     isLoading: false,
                                     isDataSend: true,
-
+        
                                 });
+        
                                 Alert.alert('Completed!')
-
-                                this.props.navigation.navigate('Ger2MerlicePlant2')
-
+        
+                                this.props.navigation.navigate('Ger1MerlicePlant1')
+        
                             }
 
 
@@ -3103,16 +3105,23 @@ export default class Ger2MerliceTrussDetails2 extends React.Component {
                     });
                     abc = '1';
 
-                    if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.pruningNumber1 !== '') {
+                    if ((parseInt(this.state.trussNumber) + 6) !== null && this.state.pruningNumber6 !== '') {
 
                         this.saveTrussToDB6();
 
 
                     } else {
 
+                        this.setState({
+
+                            isLoading: false,
+                            isDataSend: true,
+
+                        });
+
                         Alert.alert('Completed!')
 
-                        this.props.navigation.navigate('Ger2MerlicePlant2')
+                        this.props.navigation.navigate('Ger1MerlicePlant1')
 
                     }
                     this.setState({

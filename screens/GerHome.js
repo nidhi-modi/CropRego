@@ -4,7 +4,8 @@ import AwesomeButton from 'react-native-really-awesome-button';
 import AwesomeButtonRick from 'react-native-really-awesome-button/src/themes/rick';
 import Database from '../screens/Database'
 //import { GoogleSpreadsheet } from "google-spreadsheet";
-
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 
 const db = new Database();
@@ -35,6 +36,11 @@ export default class GerHome extends React.Component {
       error: false,
 
       isLoading: false,
+      minValue: '',
+      macValue: '',
+      lastValue: '',
+
+      animating: true,
 
 
 
@@ -121,6 +127,7 @@ export default class GerHome extends React.Component {
 
       this.sendPlant1Trusses();
 
+
     }).catch((err) => {
       console.log(err);
 
@@ -131,6 +138,8 @@ export default class GerHome extends React.Component {
 
 
   }
+
+
 
   sendPlant1Trusses = () => {
 
@@ -9163,397 +9172,397 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-     //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 10
-     let G2Filter1Plant3Truss1 = []
-     let G2Filter1Plant3Truss2 = []
-     let G2Filter1Plant3Truss3 = []
-     let G2Filter1Plant3Truss4 = []
-     let G2Filter1Plant3Truss5 = []
-     let G2Filter1Plant3Truss6 = []
-     let G2Filter1Plant3Truss7 = []
-     let G2Filter1Plant3Truss8 = []
-     let G2Filter1Plant3Truss9 = []
-     let G2Filter1Plant3Truss0 = []
-     //END
- 
-     //GER 2 Merlice/ Plant 3/ 70-71/ Truss Number 1-10
- 
-     G2Filter1Plant3Truss1 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 1
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss2 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 2
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss3 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 3
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss4 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 4
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss5 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 5
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss6 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 6
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss7 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 7
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss8 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 8
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss9 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 9
- 
-       )
-     });
- 
-     G2Filter1Plant3Truss0 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '3' &&
-         sampleItemTruss.trussNumber === 0
- 
-       )
-     });
- 
-     //END
- 
-     const scriptUrl259 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-     const url259 = `${scriptUrl259}?
+    //INITIALIZATION G1 MERLICE ROW 81/86 PLANT 10
+    let G2Filter1Plant3Truss1 = []
+    let G2Filter1Plant3Truss2 = []
+    let G2Filter1Plant3Truss3 = []
+    let G2Filter1Plant3Truss4 = []
+    let G2Filter1Plant3Truss5 = []
+    let G2Filter1Plant3Truss6 = []
+    let G2Filter1Plant3Truss7 = []
+    let G2Filter1Plant3Truss8 = []
+    let G2Filter1Plant3Truss9 = []
+    let G2Filter1Plant3Truss0 = []
+    //END
+
+    //GER 2 Merlice/ Plant 3/ 70-71/ Truss Number 1-10
+
+    G2Filter1Plant3Truss1 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 1
+
+      )
+    });
+
+    G2Filter1Plant3Truss2 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 2
+
+      )
+    });
+
+    G2Filter1Plant3Truss3 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 3
+
+      )
+    });
+
+    G2Filter1Plant3Truss4 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 4
+
+      )
+    });
+
+    G2Filter1Plant3Truss5 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 5
+
+      )
+    });
+
+    G2Filter1Plant3Truss6 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 6
+
+      )
+    });
+
+    G2Filter1Plant3Truss7 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 7
+
+      )
+    });
+
+    G2Filter1Plant3Truss8 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 8
+
+      )
+    });
+
+    G2Filter1Plant3Truss9 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 9
+
+      )
+    });
+
+    G2Filter1Plant3Truss0 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '3' &&
+        sampleItemTruss.trussNumber === 0
+
+      )
+    });
+
+    //END
+
+    const scriptUrl259 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+    const url259 = `${scriptUrl259}?
    callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss1[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss1[0].trussNumber}&setFruits=${G2Filter1Plant3Truss1[0].setFruits}&setFlowers=${G2Filter1Plant3Truss1[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss1[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss1[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss1[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss1[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss1[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss1[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss1[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss1[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss1[0].harvestTruss}`;
- 
-     console.log("URL : " + url259);
- 
-     fetch(url259, { mode: 'no-cors' }).then((response) => {
- 
-       if (response.status === 200) {
- 
-         if (G2Filter1Plant3Truss2.length) {
- 
-           const scriptUrl260 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-           const url260 = `${scriptUrl260}?
+
+    console.log("URL : " + url259);
+
+    fetch(url259, { mode: 'no-cors' }).then((response) => {
+
+      if (response.status === 200) {
+
+        if (G2Filter1Plant3Truss2.length) {
+
+          const scriptUrl260 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+          const url260 = `${scriptUrl260}?
    callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss2[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss2[0].trussNumber}&setFruits=${G2Filter1Plant3Truss2[0].setFruits}&setFlowers=${G2Filter1Plant3Truss2[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss2[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss2[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss2[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss2[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss2[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss2[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss2[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss2[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss2[0].harvestTruss}`;
- 
-           console.log("URL : " + url260);
- 
-           fetch(url260, { mode: 'no-cors' }).then((response) => {
- 
-             if (response.status === 200) {
- 
-               if (G2Filter1Plant3Truss3.length) {
- 
-                 const scriptUrl261 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                 const url261 = `${scriptUrl261}?
+
+          console.log("URL : " + url260);
+
+          fetch(url260, { mode: 'no-cors' }).then((response) => {
+
+            if (response.status === 200) {
+
+              if (G2Filter1Plant3Truss3.length) {
+
+                const scriptUrl261 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                const url261 = `${scriptUrl261}?
          callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss3[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss3[0].trussNumber}&setFruits=${G2Filter1Plant3Truss3[0].setFruits}&setFlowers=${G2Filter1Plant3Truss3[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss3[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss3[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss3[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss3[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss3[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss3[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss3[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss3[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss3[0].harvestTruss}`;
- 
-                 console.log("URL : " + url261);
- 
-                 fetch(url261, { mode: 'no-cors' }).then((response) => {
- 
-                   if (response.status === 200) {
- 
-                     if (G2Filter1Plant3Truss4.length) {
- 
-                       const scriptUrl262 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                       const url262 = `${scriptUrl262}?
+
+                console.log("URL : " + url261);
+
+                fetch(url261, { mode: 'no-cors' }).then((response) => {
+
+                  if (response.status === 200) {
+
+                    if (G2Filter1Plant3Truss4.length) {
+
+                      const scriptUrl262 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                      const url262 = `${scriptUrl262}?
          callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss4[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss4[0].trussNumber}&setFruits=${G2Filter1Plant3Truss4[0].setFruits}&setFlowers=${G2Filter1Plant3Truss4[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss4[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss4[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss4[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss4[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss4[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss4[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss4[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss4[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss4[0].harvestTruss}`;
- 
-                       console.log("URL : " + url262);
- 
-                       fetch(url262, { mode: 'no-cors' }).then((response) => {
- 
-                         if (response.status === 200) {
- 
-                           if (G2Filter1Plant3Truss5.length) {
- 
-                             const scriptUrl263 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                             const url263 = `${scriptUrl263}?
+
+                      console.log("URL : " + url262);
+
+                      fetch(url262, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                          if (G2Filter1Plant3Truss5.length) {
+
+                            const scriptUrl263 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                            const url263 = `${scriptUrl263}?
          callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss5[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss5[0].trussNumber}&setFruits=${G2Filter1Plant3Truss5[0].setFruits}&setFlowers=${G2Filter1Plant3Truss5[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss5[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss5[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss5[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss5[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss5[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss5[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss5[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss5[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss5[0].harvestTruss}`;
- 
-                             console.log("URL : " + url263);
- 
-                             fetch(url263, { mode: 'no-cors' }).then((response) => {
- 
-                               if (response.status === 200) {
- 
-                                 if (G2Filter1Plant3Truss6.length) {
- 
-                                   const scriptUrl264 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                   const url264 = `${scriptUrl264}?
+
+                            console.log("URL : " + url263);
+
+                            fetch(url263, { mode: 'no-cors' }).then((response) => {
+
+                              if (response.status === 200) {
+
+                                if (G2Filter1Plant3Truss6.length) {
+
+                                  const scriptUrl264 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                  const url264 = `${scriptUrl264}?
                callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss6[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss6[0].trussNumber}&setFruits=${G2Filter1Plant3Truss6[0].setFruits}&setFlowers=${G2Filter1Plant3Truss6[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss6[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss6[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss6[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss6[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss6[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss6[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss6[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss6[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss6[0].harvestTruss}`;
- 
-                                   console.log("URL : " + url264);
- 
-                                   fetch(url264, { mode: 'no-cors' }).then((response) => {
- 
-                                     if (response.status === 200) {
- 
-                                       if (G2Filter1Plant3Truss7.length) {
- 
-                                         const scriptUrl265 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                         const url265 = `${scriptUrl265}?
+
+                                  console.log("URL : " + url264);
+
+                                  fetch(url264, { mode: 'no-cors' }).then((response) => {
+
+                                    if (response.status === 200) {
+
+                                      if (G2Filter1Plant3Truss7.length) {
+
+                                        const scriptUrl265 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                        const url265 = `${scriptUrl265}?
                callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss7[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss7[0].trussNumber}&setFruits=${G2Filter1Plant3Truss7[0].setFruits}&setFlowers=${G2Filter1Plant3Truss7[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss7[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss7[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss7[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss7[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss7[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss7[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss7[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss7[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss7[0].harvestTruss}`;
- 
-                                         console.log("URL : " + url265);
- 
-                                         fetch(url265, { mode: 'no-cors' }).then((response) => {
- 
-                                           if (response.status === 200) {
- 
-                                             if (G2Filter1Plant3Truss8.length) {
- 
-                                               const scriptUrl266 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                               const url266 = `${scriptUrl266}?
+
+                                        console.log("URL : " + url265);
+
+                                        fetch(url265, { mode: 'no-cors' }).then((response) => {
+
+                                          if (response.status === 200) {
+
+                                            if (G2Filter1Plant3Truss8.length) {
+
+                                              const scriptUrl266 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                              const url266 = `${scriptUrl266}?
                      callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss8[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss8[0].trussNumber}&setFruits=${G2Filter1Plant3Truss8[0].setFruits}&setFlowers=${G2Filter1Plant3Truss8[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss8[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss8[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss8[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss8[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss8[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss8[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss8[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss8[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss8[0].harvestTruss}`;
- 
-                                               console.log("URL : " + url266);
- 
-                                               fetch(url266, { mode: 'no-cors' }).then((response) => {
- 
-                                                 if (response.status === 200) {
- 
-                                                   if (G2Filter1Plant3Truss9.length) {
- 
-                                                     const scriptUrl267 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                     const url267 = `${scriptUrl267}?
+
+                                              console.log("URL : " + url266);
+
+                                              fetch(url266, { mode: 'no-cors' }).then((response) => {
+
+                                                if (response.status === 200) {
+
+                                                  if (G2Filter1Plant3Truss9.length) {
+
+                                                    const scriptUrl267 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                    const url267 = `${scriptUrl267}?
                      callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss9[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss9[0].trussNumber}&setFruits=${G2Filter1Plant3Truss9[0].setFruits}&setFlowers=${G2Filter1Plant3Truss9[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss9[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss9[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss9[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss9[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss9[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss9[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss9[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss9[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss9[0].harvestTruss}`;
- 
-                                                     console.log("URL : " + url267);
- 
-                                                     fetch(url267, { mode: 'no-cors' }).then((response) => {
- 
-                                                       if (response.status === 200) {
- 
-                                                         if (G2Filter1Plant3Truss0.length) {
- 
-                                                           const scriptUrl268 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                           const url268 = `${scriptUrl268}?
+
+                                                    console.log("URL : " + url267);
+
+                                                    fetch(url267, { mode: 'no-cors' }).then((response) => {
+
+                                                      if (response.status === 200) {
+
+                                                        if (G2Filter1Plant3Truss0.length) {
+
+                                                          const scriptUrl268 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                          const url268 = `${scriptUrl268}?
                      callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant3Truss0[0].plantNumber}&trussNumber=${G2Filter1Plant3Truss0[0].trussNumber}&setFruits=${G2Filter1Plant3Truss0[0].setFruits}&setFlowers=${G2Filter1Plant3Truss0[0].setFlowers}&pruningNumber=${G2Filter1Plant3Truss0[0].pruningNumber}&fruitLoad=${G2Filter1Plant3Truss0[0].fruitLoad}&fruitDiameter=${G2Filter1Plant3Truss0[0].fruitDiameter}&pruningFlower=${G2Filter1Plant3Truss0[0].pruneFlowering}&floweringTruss=${G2Filter1Plant3Truss0[0].floweringTrussss}&pruningSet=${G2Filter1Plant3Truss0[0].prunSetting}&settingTruss=${G2Filter1Plant3Truss0[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant3Truss0[0].pruningHar}&harvestTruss=${G2Filter1Plant3Truss0[0].harvestTruss}`;
- 
-                                                           console.log("URL : " + url268);
- 
-                                                           fetch(url268, { mode: 'no-cors' }).then((response) => {
- 
-                                                             if (response.status === 200) {
- 
-                                                               this.sendRow3Plant4Trusses();
- 
- 
-                                                             } else {
- 
-                                                               this.setState({ isLoading: false })
-                                                               this.sendRow3Plant4Trusses()
- 
-                                                             }
- 
-                                                           });
- 
-                                                         } else {
-                                                           this.setState({ isLoading: false })
-                                                           this.sendRow3Plant4Trusses()
- 
-                                                         }
- 
-                                                       } else {
- 
-                                                         this.setState({ isLoading: false })
-                                                         this.sendRow3Plant4Trusses()
-                                                       }
- 
-                                                     });
- 
-                                                   } else {
-                                                     this.setState({ isLoading: false })
-                                                     this.sendRow3Plant4Trusses()
- 
-                                                   }
- 
-                                                 } else {
- 
-                                                   this.setState({ isLoading: false })
-                                                   this.sendRow3Plant4Trusses()
-                                                 }
-                                               });
- 
-                                             } else {
-                                               this.setState({ isLoading: false })
-                                               this.sendRow3Plant4Trusses()
- 
-                                             }
- 
-                                           } else {
- 
-                                             this.setState({ isLoading: false })
-                                             this.sendRow3Plant4Trusses()
-                                           }
- 
-                                         });
- 
-                                       } else {
-                                         this.setState({ isLoading: false })
-                                         this.sendRow3Plant4Trusses()
- 
-                                       }
- 
-                                     } else {
- 
-                                       this.setState({ isLoading: false })
-                                       this.sendRow3Plant4Trusses()
-                                     }
- 
-                                   });
- 
-                                 } else {
-                                   this.setState({ isLoading: false })
-                                   this.sendRow3Plant4Trusses()
- 
-                                 }
- 
-                               } else {
- 
-                                 this.setState({ isLoading: false })
-                                 this.sendRow3Plant4Trusses()
-                               }
- 
-                             });
- 
-                           } else {
-                             this.setState({ isLoading: false })
-                             this.sendRow3Plant4Trusses()
- 
-                           }
- 
-                         } else {
- 
-                           this.setState({ isLoading: false })
-                           this.sendRow3Plant4Trusses()
-                         }
- 
- 
-                       });
- 
-                     } else {
-                       this.setState({ isLoading: false })
-                       this.sendRow3Plant4Trusses()
- 
-                     }
- 
-                   } else {
- 
-                     this.setState({ isLoading: false })
-                     this.sendRow3Plant4Trusses()
-                   }
- 
-                 });
- 
-               } else {
-                 this.setState({ isLoading: false })
-                 this.sendRow3Plant4Trusses()
- 
-               }
- 
-             } else {
- 
-               this.setState({ isLoading: false })
-               this.sendRow3Plant4Trusses()
-             }
- 
-           });
- 
-         } else {
-           this.setState({ isLoading: false })
-           this.sendRow3Plant4Trusses()
- 
-         }
- 
-       } else {
- 
-         this.setState({ isLoading: false })
-         this.sendRow3Plant4Trusses()
-       }
-     });
+
+                                                          console.log("URL : " + url268);
+
+                                                          fetch(url268, { mode: 'no-cors' }).then((response) => {
+
+                                                            if (response.status === 200) {
+
+                                                              this.sendRow3Plant4Trusses();
+
+
+                                                            } else {
+
+                                                              this.setState({ isLoading: false })
+                                                              this.sendRow3Plant4Trusses()
+
+                                                            }
+
+                                                          });
+
+                                                        } else {
+                                                          this.setState({ isLoading: false })
+                                                          this.sendRow3Plant4Trusses()
+
+                                                        }
+
+                                                      } else {
+
+                                                        this.setState({ isLoading: false })
+                                                        this.sendRow3Plant4Trusses()
+                                                      }
+
+                                                    });
+
+                                                  } else {
+                                                    this.setState({ isLoading: false })
+                                                    this.sendRow3Plant4Trusses()
+
+                                                  }
+
+                                                } else {
+
+                                                  this.setState({ isLoading: false })
+                                                  this.sendRow3Plant4Trusses()
+                                                }
+                                              });
+
+                                            } else {
+                                              this.setState({ isLoading: false })
+                                              this.sendRow3Plant4Trusses()
+
+                                            }
+
+                                          } else {
+
+                                            this.setState({ isLoading: false })
+                                            this.sendRow3Plant4Trusses()
+                                          }
+
+                                        });
+
+                                      } else {
+                                        this.setState({ isLoading: false })
+                                        this.sendRow3Plant4Trusses()
+
+                                      }
+
+                                    } else {
+
+                                      this.setState({ isLoading: false })
+                                      this.sendRow3Plant4Trusses()
+                                    }
+
+                                  });
+
+                                } else {
+                                  this.setState({ isLoading: false })
+                                  this.sendRow3Plant4Trusses()
+
+                                }
+
+                              } else {
+
+                                this.setState({ isLoading: false })
+                                this.sendRow3Plant4Trusses()
+                              }
+
+                            });
+
+                          } else {
+                            this.setState({ isLoading: false })
+                            this.sendRow3Plant4Trusses()
+
+                          }
+
+                        } else {
+
+                          this.setState({ isLoading: false })
+                          this.sendRow3Plant4Trusses()
+                        }
+
+
+                      });
+
+                    } else {
+                      this.setState({ isLoading: false })
+                      this.sendRow3Plant4Trusses()
+
+                    }
+
+                  } else {
+
+                    this.setState({ isLoading: false })
+                    this.sendRow3Plant4Trusses()
+                  }
+
+                });
+
+              } else {
+                this.setState({ isLoading: false })
+                this.sendRow3Plant4Trusses()
+
+              }
+
+            } else {
+
+              this.setState({ isLoading: false })
+              this.sendRow3Plant4Trusses()
+            }
+
+          });
+
+        } else {
+          this.setState({ isLoading: false })
+          this.sendRow3Plant4Trusses()
+
+        }
+
+      } else {
+
+        this.setState({ isLoading: false })
+        this.sendRow3Plant4Trusses()
+      }
+    });
 
   }
 
@@ -9561,397 +9570,397 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-     //INITIALIZATION G2 MERLICE ROW 70/71 PLANT 10
-     let G2Filter1Plant4Truss1 = []
-     let G2Filter1Plant4Truss2 = []
-     let G2Filter1Plant4Truss3 = []
-     let G2Filter1Plant4Truss4 = []
-     let G2Filter1Plant4Truss5 = []
-     let G2Filter1Plant4Truss6 = []
-     let G2Filter1Plant4Truss7 = []
-     let G2Filter1Plant4Truss8 = []
-     let G2Filter1Plant4Truss9 = []
-     let G2Filter1Plant4Truss0 = []
-     //END
- 
-     //GER 2 Merlice/ Plant 4/ 70-71/ Truss Number 1-10
- 
-     G2Filter1Plant4Truss1 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 1
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss2 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 2
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss3 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 3
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss4 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 4
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss5 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 5
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss6 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 6
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss7 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 7
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss8 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 8
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss9 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 9
- 
-       )
-     });
- 
-     G2Filter1Plant4Truss0 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '70/71' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 0
- 
-       )
-     });
- 
-     //END
- 
-     const scriptUrl269 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-     const url269 = `${scriptUrl269}?
+    //INITIALIZATION G2 MERLICE ROW 70/71 PLANT 10
+    let G2Filter1Plant4Truss1 = []
+    let G2Filter1Plant4Truss2 = []
+    let G2Filter1Plant4Truss3 = []
+    let G2Filter1Plant4Truss4 = []
+    let G2Filter1Plant4Truss5 = []
+    let G2Filter1Plant4Truss6 = []
+    let G2Filter1Plant4Truss7 = []
+    let G2Filter1Plant4Truss8 = []
+    let G2Filter1Plant4Truss9 = []
+    let G2Filter1Plant4Truss0 = []
+    //END
+
+    //GER 2 Merlice/ Plant 4/ 70-71/ Truss Number 1-10
+
+    G2Filter1Plant4Truss1 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 1
+
+      )
+    });
+
+    G2Filter1Plant4Truss2 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 2
+
+      )
+    });
+
+    G2Filter1Plant4Truss3 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 3
+
+      )
+    });
+
+    G2Filter1Plant4Truss4 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 4
+
+      )
+    });
+
+    G2Filter1Plant4Truss5 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 5
+
+      )
+    });
+
+    G2Filter1Plant4Truss6 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 6
+
+      )
+    });
+
+    G2Filter1Plant4Truss7 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 7
+
+      )
+    });
+
+    G2Filter1Plant4Truss8 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 8
+
+      )
+    });
+
+    G2Filter1Plant4Truss9 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 9
+
+      )
+    });
+
+    G2Filter1Plant4Truss0 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '70/71' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 0
+
+      )
+    });
+
+    //END
+
+    const scriptUrl269 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+    const url269 = `${scriptUrl269}?
    callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss1[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss1[0].trussNumber}&setFruits=${G2Filter1Plant4Truss1[0].setFruits}&setFlowers=${G2Filter1Plant4Truss1[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss1[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss1[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss1[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss1[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss1[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss1[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss1[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss1[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss1[0].harvestTruss}`;
- 
-     console.log("URL : " + url269);
- 
-     fetch(url269, { mode: 'no-cors' }).then((response) => {
- 
-       if (response.status === 200) {
- 
-         if (G2Filter1Plant4Truss2.length) {
- 
-           const scriptUrl270 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-           const url270 = `${scriptUrl270}?
+
+    console.log("URL : " + url269);
+
+    fetch(url269, { mode: 'no-cors' }).then((response) => {
+
+      if (response.status === 200) {
+
+        if (G2Filter1Plant4Truss2.length) {
+
+          const scriptUrl270 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+          const url270 = `${scriptUrl270}?
    callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss2[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss2[0].trussNumber}&setFruits=${G2Filter1Plant4Truss2[0].setFruits}&setFlowers=${G2Filter1Plant4Truss2[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss2[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss2[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss2[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss2[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss2[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss2[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss2[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss2[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss2[0].harvestTruss}`;
- 
-           console.log("URL : " + url270);
- 
-           fetch(url270, { mode: 'no-cors' }).then((response) => {
- 
-             if (response.status === 200) {
- 
-               if (G2Filter1Plant4Truss3.length) {
- 
-                 const scriptUrl271 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                 const url271 = `${scriptUrl271}?
+
+          console.log("URL : " + url270);
+
+          fetch(url270, { mode: 'no-cors' }).then((response) => {
+
+            if (response.status === 200) {
+
+              if (G2Filter1Plant4Truss3.length) {
+
+                const scriptUrl271 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                const url271 = `${scriptUrl271}?
          callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss3[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss3[0].trussNumber}&setFruits=${G2Filter1Plant4Truss3[0].setFruits}&setFlowers=${G2Filter1Plant4Truss3[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss3[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss3[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss3[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss3[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss3[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss3[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss3[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss3[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss3[0].harvestTruss}`;
- 
-                 console.log("URL : " + url271);
- 
-                 fetch(url271, { mode: 'no-cors' }).then((response) => {
- 
-                   if (response.status === 200) {
- 
-                     if (G2Filter1Plant4Truss4.length) {
- 
-                       const scriptUrl272 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                       const url272 = `${scriptUrl272}?
+
+                console.log("URL : " + url271);
+
+                fetch(url271, { mode: 'no-cors' }).then((response) => {
+
+                  if (response.status === 200) {
+
+                    if (G2Filter1Plant4Truss4.length) {
+
+                      const scriptUrl272 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                      const url272 = `${scriptUrl272}?
          callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss4[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss4[0].trussNumber}&setFruits=${G2Filter1Plant4Truss4[0].setFruits}&setFlowers=${G2Filter1Plant4Truss4[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss4[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss4[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss4[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss4[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss4[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss4[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss4[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss4[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss4[0].harvestTruss}`;
- 
-                       console.log("URL : " + url272);
- 
-                       fetch(url272, { mode: 'no-cors' }).then((response) => {
- 
-                         if (response.status === 200) {
- 
-                           if (G2Filter1Plant4Truss5.length) {
- 
-                             const scriptUrl273 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                             const url273 = `${scriptUrl273}?
+
+                      console.log("URL : " + url272);
+
+                      fetch(url272, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                          if (G2Filter1Plant4Truss5.length) {
+
+                            const scriptUrl273 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                            const url273 = `${scriptUrl273}?
          callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss5[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss5[0].trussNumber}&setFruits=${G2Filter1Plant4Truss5[0].setFruits}&setFlowers=${G2Filter1Plant4Truss5[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss5[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss5[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss5[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss5[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss5[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss5[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss5[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss5[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss5[0].harvestTruss}`;
- 
-                             console.log("URL : " + url273);
- 
-                             fetch(url273, { mode: 'no-cors' }).then((response) => {
- 
-                               if (response.status === 200) {
- 
-                                 if (G2Filter1Plant4Truss6.length) {
- 
-                                   const scriptUrl274 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                   const url274 = `${scriptUrl274}?
+
+                            console.log("URL : " + url273);
+
+                            fetch(url273, { mode: 'no-cors' }).then((response) => {
+
+                              if (response.status === 200) {
+
+                                if (G2Filter1Plant4Truss6.length) {
+
+                                  const scriptUrl274 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                  const url274 = `${scriptUrl274}?
                callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss6[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss6[0].trussNumber}&setFruits=${G2Filter1Plant4Truss6[0].setFruits}&setFlowers=${G2Filter1Plant4Truss6[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss6[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss6[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss6[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss6[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss6[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss6[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss6[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss6[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss6[0].harvestTruss}`;
- 
-                                   console.log("URL : " + url274);
- 
-                                   fetch(url274, { mode: 'no-cors' }).then((response) => {
- 
-                                     if (response.status === 200) {
- 
-                                       if (G2Filter1Plant4Truss7.length) {
- 
-                                         const scriptUrl275 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                         const url275 = `${scriptUrl275}?
+
+                                  console.log("URL : " + url274);
+
+                                  fetch(url274, { mode: 'no-cors' }).then((response) => {
+
+                                    if (response.status === 200) {
+
+                                      if (G2Filter1Plant4Truss7.length) {
+
+                                        const scriptUrl275 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                        const url275 = `${scriptUrl275}?
                callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss7[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss7[0].trussNumber}&setFruits=${G2Filter1Plant4Truss7[0].setFruits}&setFlowers=${G2Filter1Plant4Truss7[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss7[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss7[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss7[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss7[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss7[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss7[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss7[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss7[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss7[0].harvestTruss}`;
- 
-                                         console.log("URL : " + url275);
- 
-                                         fetch(url275, { mode: 'no-cors' }).then((response) => {
- 
-                                           if (response.status === 200) {
- 
-                                             if (G2Filter1Plant4Truss8.length) {
- 
-                                               const scriptUrl276 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                               const url276 = `${scriptUrl276}?
+
+                                        console.log("URL : " + url275);
+
+                                        fetch(url275, { mode: 'no-cors' }).then((response) => {
+
+                                          if (response.status === 200) {
+
+                                            if (G2Filter1Plant4Truss8.length) {
+
+                                              const scriptUrl276 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                              const url276 = `${scriptUrl276}?
                      callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss8[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss8[0].trussNumber}&setFruits=${G2Filter1Plant4Truss8[0].setFruits}&setFlowers=${G2Filter1Plant4Truss8[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss8[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss8[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss8[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss8[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss8[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss8[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss8[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss8[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss8[0].harvestTruss}`;
- 
-                                               console.log("URL : " + url276);
- 
-                                               fetch(url276, { mode: 'no-cors' }).then((response) => {
- 
-                                                 if (response.status === 200) {
- 
-                                                   if (G2Filter1Plant4Truss9.length) {
- 
-                                                     const scriptUrl277 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                     const url277 = `${scriptUrl277}?
+
+                                              console.log("URL : " + url276);
+
+                                              fetch(url276, { mode: 'no-cors' }).then((response) => {
+
+                                                if (response.status === 200) {
+
+                                                  if (G2Filter1Plant4Truss9.length) {
+
+                                                    const scriptUrl277 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                    const url277 = `${scriptUrl277}?
                      callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss9[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss9[0].trussNumber}&setFruits=${G2Filter1Plant4Truss9[0].setFruits}&setFlowers=${G2Filter1Plant4Truss9[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss9[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss9[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss9[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss9[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss9[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss9[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss9[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss9[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss9[0].harvestTruss}`;
- 
-                                                     console.log("URL : " + url277);
- 
-                                                     fetch(url277, { mode: 'no-cors' }).then((response) => {
- 
-                                                       if (response.status === 200) {
- 
-                                                         if (G2Filter1Plant4Truss0.length) {
- 
-                                                           const scriptUrl278 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                           const url278 = `${scriptUrl278}?
+
+                                                    console.log("URL : " + url277);
+
+                                                    fetch(url277, { mode: 'no-cors' }).then((response) => {
+
+                                                      if (response.status === 200) {
+
+                                                        if (G2Filter1Plant4Truss0.length) {
+
+                                                          const scriptUrl278 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                          const url278 = `${scriptUrl278}?
                      callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter1Plant4Truss0[0].plantNumber}&trussNumber=${G2Filter1Plant4Truss0[0].trussNumber}&setFruits=${G2Filter1Plant4Truss0[0].setFruits}&setFlowers=${G2Filter1Plant4Truss0[0].setFlowers}&pruningNumber=${G2Filter1Plant4Truss0[0].pruningNumber}&fruitLoad=${G2Filter1Plant4Truss0[0].fruitLoad}&fruitDiameter=${G2Filter1Plant4Truss0[0].fruitDiameter}&pruningFlower=${G2Filter1Plant4Truss0[0].pruneFlowering}&floweringTruss=${G2Filter1Plant4Truss0[0].floweringTrussss}&pruningSet=${G2Filter1Plant4Truss0[0].prunSetting}&settingTruss=${G2Filter1Plant4Truss0[0].settingTrussNumber}&pruningHarvest=${G2Filter1Plant4Truss0[0].pruningHar}&harvestTruss=${G2Filter1Plant4Truss0[0].harvestTruss}`;
- 
-                                                           console.log("URL : " + url278);
- 
-                                                           fetch(url278, { mode: 'no-cors' }).then((response) => {
- 
-                                                             if (response.status === 200) {
- 
-                                                               this.sendRow3Plant5Trusses();
- 
- 
-                                                             } else {
- 
-                                                               this.setState({ isLoading: false })
-                                                               this.sendRow3Plant5Trusses()
- 
-                                                             }
- 
-                                                           });
- 
-                                                         } else {
-                                                           this.setState({ isLoading: false })
-                                                           this.sendRow3Plant5Trusses()
- 
-                                                         }
- 
-                                                       } else {
- 
-                                                         this.setState({ isLoading: false })
-                                                         this.sendRow3Plant5Trusses()
-                                                       }
- 
-                                                     });
- 
-                                                   } else {
-                                                     this.setState({ isLoading: false })
-                                                     this.sendRow3Plant5Trusses()
- 
-                                                   }
- 
-                                                 } else {
- 
-                                                   this.setState({ isLoading: false })
-                                                   this.sendRow3Plant5Trusses()
-                                                 }
-                                               });
- 
-                                             } else {
-                                               this.setState({ isLoading: false })
-                                               this.sendRow3Plant5Trusses()
- 
-                                             }
- 
-                                           } else {
- 
-                                             this.setState({ isLoading: false })
-                                             this.sendRow3Plant5Trusses()
-                                           }
- 
-                                         });
- 
-                                       } else {
-                                         this.setState({ isLoading: false })
-                                         this.sendRow3Plant5Trusses()
- 
-                                       }
- 
-                                     } else {
- 
-                                       this.setState({ isLoading: false })
-                                       this.sendRow3Plant5Trusses()
-                                     }
- 
-                                   });
- 
-                                 } else {
-                                   this.setState({ isLoading: false })
-                                   this.sendRow3Plant5Trusses()
- 
-                                 }
- 
-                               } else {
- 
-                                 this.setState({ isLoading: false })
-                                 this.sendRow3Plant5Trusses()
-                               }
- 
-                             });
- 
-                           } else {
-                             this.setState({ isLoading: false })
-                             this.sendRow3Plant5Trusses()
- 
-                           }
- 
-                         } else {
- 
-                           this.setState({ isLoading: false })
-                           this.sendRow3Plant5Trusses()
-                         }
- 
- 
-                       });
- 
-                     } else {
-                       this.setState({ isLoading: false })
-                       this.sendRow3Plant5Trusses()
- 
-                     }
- 
-                   } else {
- 
-                     this.setState({ isLoading: false })
-                     this.sendRow3Plant5Trusses()
-                   }
- 
-                 });
- 
-               } else {
-                 this.setState({ isLoading: false })
-                 this.sendRow3Plant5Trusses()
- 
-               }
- 
-             } else {
- 
-               this.setState({ isLoading: false })
-               this.sendRow3Plant5Trusses()
-             }
- 
-           });
- 
-         } else {
-           this.setState({ isLoading: false })
-           this.sendRow3Plant5Trusses()
- 
-         }
- 
-       } else {
- 
-         this.setState({ isLoading: false })
-         this.sendRow3Plant5Trusses()
-       }
-     });
+
+                                                          console.log("URL : " + url278);
+
+                                                          fetch(url278, { mode: 'no-cors' }).then((response) => {
+
+                                                            if (response.status === 200) {
+
+                                                              this.sendRow3Plant5Trusses();
+
+
+                                                            } else {
+
+                                                              this.setState({ isLoading: false })
+                                                              this.sendRow3Plant5Trusses()
+
+                                                            }
+
+                                                          });
+
+                                                        } else {
+                                                          this.setState({ isLoading: false })
+                                                          this.sendRow3Plant5Trusses()
+
+                                                        }
+
+                                                      } else {
+
+                                                        this.setState({ isLoading: false })
+                                                        this.sendRow3Plant5Trusses()
+                                                      }
+
+                                                    });
+
+                                                  } else {
+                                                    this.setState({ isLoading: false })
+                                                    this.sendRow3Plant5Trusses()
+
+                                                  }
+
+                                                } else {
+
+                                                  this.setState({ isLoading: false })
+                                                  this.sendRow3Plant5Trusses()
+                                                }
+                                              });
+
+                                            } else {
+                                              this.setState({ isLoading: false })
+                                              this.sendRow3Plant5Trusses()
+
+                                            }
+
+                                          } else {
+
+                                            this.setState({ isLoading: false })
+                                            this.sendRow3Plant5Trusses()
+                                          }
+
+                                        });
+
+                                      } else {
+                                        this.setState({ isLoading: false })
+                                        this.sendRow3Plant5Trusses()
+
+                                      }
+
+                                    } else {
+
+                                      this.setState({ isLoading: false })
+                                      this.sendRow3Plant5Trusses()
+                                    }
+
+                                  });
+
+                                } else {
+                                  this.setState({ isLoading: false })
+                                  this.sendRow3Plant5Trusses()
+
+                                }
+
+                              } else {
+
+                                this.setState({ isLoading: false })
+                                this.sendRow3Plant5Trusses()
+                              }
+
+                            });
+
+                          } else {
+                            this.setState({ isLoading: false })
+                            this.sendRow3Plant5Trusses()
+
+                          }
+
+                        } else {
+
+                          this.setState({ isLoading: false })
+                          this.sendRow3Plant5Trusses()
+                        }
+
+
+                      });
+
+                    } else {
+                      this.setState({ isLoading: false })
+                      this.sendRow3Plant5Trusses()
+
+                    }
+
+                  } else {
+
+                    this.setState({ isLoading: false })
+                    this.sendRow3Plant5Trusses()
+                  }
+
+                });
+
+              } else {
+                this.setState({ isLoading: false })
+                this.sendRow3Plant5Trusses()
+
+              }
+
+            } else {
+
+              this.setState({ isLoading: false })
+              this.sendRow3Plant5Trusses()
+            }
+
+          });
+
+        } else {
+          this.setState({ isLoading: false })
+          this.sendRow3Plant5Trusses()
+
+        }
+
+      } else {
+
+        this.setState({ isLoading: false })
+        this.sendRow3Plant5Trusses()
+      }
+    });
 
 
   }
@@ -10354,7 +10363,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
   }
 
-  sendRow3Plant6Trusses= () => {
+  sendRow3Plant6Trusses = () => {
 
     this.setState({ isLoading: true })
 
@@ -11548,7 +11557,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
   }
 
-  sendRow3Plant9Trusses= () => {
+  sendRow3Plant9Trusses = () => {
 
     this.setState({ isLoading: true })
 
@@ -13544,397 +13553,397 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
     this.setState({ isLoading: true })
 
 
-     //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
-     let G2Filter2Plant4Truss1 = []
-     let G2Filter2Plant4Truss2 = []
-     let G2Filter2Plant4Truss3 = []
-     let G2Filter2Plant4Truss4 = []
-     let G2Filter2Plant4Truss5 = []
-     let G2Filter2Plant4Truss6 = []
-     let G2Filter2Plant4Truss7 = []
-     let G2Filter2Plant4Truss8 = []
-     let G2Filter2Plant4Truss9 = []
-     let G2Filter2Plant4Truss0 = []
-     //END
- 
-     //GER 2 Merlice/ Plant 3/ 114-115/ Truss Number 1-10
- 
-     G2Filter2Plant4Truss1 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 1
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss2 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 2
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss3 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 3
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss4 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 4
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss5 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 5
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss6 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 6
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss7 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 7
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss8 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 8
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss9 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 9
- 
-       )
-     });
- 
-     G2Filter2Plant4Truss0 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '4' &&
-         sampleItemTruss.trussNumber === 10
- 
-       )
-     });
- 
-     //END
- 
-     const scriptUrl369 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-     const url369 = `${scriptUrl369}?
+    //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
+    let G2Filter2Plant4Truss1 = []
+    let G2Filter2Plant4Truss2 = []
+    let G2Filter2Plant4Truss3 = []
+    let G2Filter2Plant4Truss4 = []
+    let G2Filter2Plant4Truss5 = []
+    let G2Filter2Plant4Truss6 = []
+    let G2Filter2Plant4Truss7 = []
+    let G2Filter2Plant4Truss8 = []
+    let G2Filter2Plant4Truss9 = []
+    let G2Filter2Plant4Truss0 = []
+    //END
+
+    //GER 2 Merlice/ Plant 3/ 114-115/ Truss Number 1-10
+
+    G2Filter2Plant4Truss1 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 1
+
+      )
+    });
+
+    G2Filter2Plant4Truss2 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 2
+
+      )
+    });
+
+    G2Filter2Plant4Truss3 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 3
+
+      )
+    });
+
+    G2Filter2Plant4Truss4 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 4
+
+      )
+    });
+
+    G2Filter2Plant4Truss5 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 5
+
+      )
+    });
+
+    G2Filter2Plant4Truss6 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 6
+
+      )
+    });
+
+    G2Filter2Plant4Truss7 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 7
+
+      )
+    });
+
+    G2Filter2Plant4Truss8 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 8
+
+      )
+    });
+
+    G2Filter2Plant4Truss9 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 9
+
+      )
+    });
+
+    G2Filter2Plant4Truss0 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '4' &&
+        sampleItemTruss.trussNumber === 10
+
+      )
+    });
+
+    //END
+
+    const scriptUrl369 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+    const url369 = `${scriptUrl369}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss1[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss1[0].trussNumber}&setFruits=${G2Filter2Plant4Truss1[0].setFruits}&setFlowers=${G2Filter2Plant4Truss1[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss1[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss1[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss1[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss1[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss1[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss1[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss1[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss1[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss1[0].harvestTruss}`;
- 
-     console.log("URL : " + url369);
- 
-     fetch(url369, { mode: 'no-cors' }).then((response) => {
- 
-       if (response.status === 200) {
- 
-         if (G2Filter2Plant4Truss2.length) {
- 
-           const scriptUrl370 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-           const url370 = `${scriptUrl370}?
+
+    console.log("URL : " + url369);
+
+    fetch(url369, { mode: 'no-cors' }).then((response) => {
+
+      if (response.status === 200) {
+
+        if (G2Filter2Plant4Truss2.length) {
+
+          const scriptUrl370 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+          const url370 = `${scriptUrl370}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss2[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss2[0].trussNumber}&setFruits=${G2Filter2Plant4Truss2[0].setFruits}&setFlowers=${G2Filter2Plant4Truss2[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss2[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss2[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss2[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss2[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss2[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss2[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss2[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss2[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss2[0].harvestTruss}`;
- 
-           console.log("URL : " + url370);
- 
-           fetch(url370, { mode: 'no-cors' }).then((response) => {
- 
-             if (response.status === 200) {
- 
-               if (G2Filter2Plant4Truss3.length) {
- 
-                 const scriptUrl371 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                 const url371 = `${scriptUrl371}?
+
+          console.log("URL : " + url370);
+
+          fetch(url370, { mode: 'no-cors' }).then((response) => {
+
+            if (response.status === 200) {
+
+              if (G2Filter2Plant4Truss3.length) {
+
+                const scriptUrl371 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                const url371 = `${scriptUrl371}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss3[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss3[0].trussNumber}&setFruits=${G2Filter2Plant4Truss3[0].setFruits}&setFlowers=${G2Filter2Plant4Truss3[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss3[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss3[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss3[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss3[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss3[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss3[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss3[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss3[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss3[0].harvestTruss}`;
- 
-                 console.log("URL : " + url371);
- 
-                 fetch(url371, { mode: 'no-cors' }).then((response) => {
- 
-                   if (response.status === 200) {
- 
-                     if (G2Filter2Plant4Truss4.length) {
- 
-                       const scriptUrl372 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                       const url372 = `${scriptUrl372}?
+
+                console.log("URL : " + url371);
+
+                fetch(url371, { mode: 'no-cors' }).then((response) => {
+
+                  if (response.status === 200) {
+
+                    if (G2Filter2Plant4Truss4.length) {
+
+                      const scriptUrl372 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                      const url372 = `${scriptUrl372}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss4[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss4[0].trussNumber}&setFruits=${G2Filter2Plant4Truss4[0].setFruits}&setFlowers=${G2Filter2Plant4Truss4[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss4[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss4[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss4[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss4[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss4[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss4[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss4[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss4[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss4[0].harvestTruss}`;
- 
-                       console.log("URL : " + url372);
- 
-                       fetch(url372, { mode: 'no-cors' }).then((response) => {
- 
-                         if (response.status === 200) {
- 
-                           if (G2Filter2Plant4Truss5.length) {
- 
-                             const scriptUrl373 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                             const url373 = `${scriptUrl373}?
+
+                      console.log("URL : " + url372);
+
+                      fetch(url372, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                          if (G2Filter2Plant4Truss5.length) {
+
+                            const scriptUrl373 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                            const url373 = `${scriptUrl373}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss5[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss5[0].trussNumber}&setFruits=${G2Filter2Plant4Truss5[0].setFruits}&setFlowers=${G2Filter2Plant4Truss5[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss5[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss5[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss5[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss5[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss5[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss5[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss5[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss5[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss5[0].harvestTruss}`;
- 
-                             console.log("URL : " + url373);
- 
-                             fetch(url373, { mode: 'no-cors' }).then((response) => {
- 
-                               if (response.status === 200) {
- 
-                                 if (G2Filter2Plant4Truss6.length) {
- 
-                                   const scriptUrl374 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                   const url374 = `${scriptUrl374}?
+
+                            console.log("URL : " + url373);
+
+                            fetch(url373, { mode: 'no-cors' }).then((response) => {
+
+                              if (response.status === 200) {
+
+                                if (G2Filter2Plant4Truss6.length) {
+
+                                  const scriptUrl374 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                  const url374 = `${scriptUrl374}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss6[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss6[0].trussNumber}&setFruits=${G2Filter2Plant4Truss6[0].setFruits}&setFlowers=${G2Filter2Plant4Truss6[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss6[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss6[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss6[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss6[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss6[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss6[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss6[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss6[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss6[0].harvestTruss}`;
- 
-                                   console.log("URL : " + url374);
- 
-                                   fetch(url374, { mode: 'no-cors' }).then((response) => {
- 
-                                     if (response.status === 200) {
- 
-                                       if (G2Filter2Plant4Truss7.length) {
- 
-                                         const scriptUrl375 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                         const url375 = `${scriptUrl375}?
+
+                                  console.log("URL : " + url374);
+
+                                  fetch(url374, { mode: 'no-cors' }).then((response) => {
+
+                                    if (response.status === 200) {
+
+                                      if (G2Filter2Plant4Truss7.length) {
+
+                                        const scriptUrl375 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                        const url375 = `${scriptUrl375}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss7[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss7[0].trussNumber}&setFruits=${G2Filter2Plant4Truss7[0].setFruits}&setFlowers=${G2Filter2Plant4Truss7[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss7[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss7[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss7[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss7[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss7[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss7[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss7[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss7[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss7[0].harvestTruss}`;
- 
-                                         console.log("URL : " + url375);
- 
-                                         fetch(url375, { mode: 'no-cors' }).then((response) => {
- 
-                                           if (response.status === 200) {
- 
-                                             if (G2Filter2Plant4Truss8.length) {
- 
-                                               const scriptUrl376 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                               const url376 = `${scriptUrl376}?
+
+                                        console.log("URL : " + url375);
+
+                                        fetch(url375, { mode: 'no-cors' }).then((response) => {
+
+                                          if (response.status === 200) {
+
+                                            if (G2Filter2Plant4Truss8.length) {
+
+                                              const scriptUrl376 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                              const url376 = `${scriptUrl376}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss8[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss8[0].trussNumber}&setFruits=${G2Filter2Plant4Truss8[0].setFruits}&setFlowers=${G2Filter2Plant4Truss8[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss8[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss8[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss8[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss8[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss8[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss8[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss8[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss8[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss8[0].harvestTruss}`;
- 
-                                               console.log("URL : " + url376);
- 
-                                               fetch(url376, { mode: 'no-cors' }).then((response) => {
- 
-                                                 if (response.status === 200) {
- 
-                                                   if (G2Filter2Plant4Truss9.length) {
- 
-                                                     const scriptUrl377 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                     const url377 = `${scriptUrl377}?
+
+                                              console.log("URL : " + url376);
+
+                                              fetch(url376, { mode: 'no-cors' }).then((response) => {
+
+                                                if (response.status === 200) {
+
+                                                  if (G2Filter2Plant4Truss9.length) {
+
+                                                    const scriptUrl377 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                    const url377 = `${scriptUrl377}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss9[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss9[0].trussNumber}&setFruits=${G2Filter2Plant4Truss9[0].setFruits}&setFlowers=${G2Filter2Plant4Truss9[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss9[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss9[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss9[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss9[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss9[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss9[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss9[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss9[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss9[0].harvestTruss}`;
- 
-                                                     console.log("URL : " + url377);
- 
-                                                     fetch(url377, { mode: 'no-cors' }).then((response) => {
- 
-                                                       if (response.status === 200) {
- 
-                                                         if (G2Filter2Plant4Truss0.length) {
- 
-                                                           const scriptUrl378 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                           const url378 = `${scriptUrl378}?
+
+                                                    console.log("URL : " + url377);
+
+                                                    fetch(url377, { mode: 'no-cors' }).then((response) => {
+
+                                                      if (response.status === 200) {
+
+                                                        if (G2Filter2Plant4Truss0.length) {
+
+                                                          const scriptUrl378 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                          const url378 = `${scriptUrl378}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant4Truss0[0].plantNumber}&trussNumber=${G2Filter2Plant4Truss0[0].trussNumber}&setFruits=${G2Filter2Plant4Truss0[0].setFruits}&setFlowers=${G2Filter2Plant4Truss0[0].setFlowers}&pruningNumber=${G2Filter2Plant4Truss0[0].pruningNumber}&fruitLoad=${G2Filter2Plant4Truss0[0].fruitLoad}&fruitDiameter=${G2Filter2Plant4Truss0[0].fruitDiameter}&pruningFlower=${G2Filter2Plant4Truss0[0].pruneFlowering}&floweringTruss=${G2Filter2Plant4Truss0[0].floweringTrussss}&pruningSet=${G2Filter2Plant4Truss0[0].prunSetting}&settingTruss=${G2Filter2Plant4Truss0[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant4Truss0[0].pruningHar}&harvestTruss=${G2Filter2Plant4Truss0[0].harvestTruss}`;
- 
-                                                           console.log("URL : " + url378);
- 
-                                                           fetch(url378, { mode: 'no-cors' }).then((response) => {
- 
-                                                             if (response.status === 200) {
- 
-                                                               this.sendRow4Plant5Trusses();
- 
- 
-                                                             } else {
- 
-                                                               this.setState({ isLoading: false })
-                                                               this.sendRow4Plant5Trusses()
- 
-                                                             }
- 
-                                                           });
- 
-                                                         } else {
-                                                           this.setState({ isLoading: false })
-                                                           this.sendRow4Plant5Trusses()
- 
-                                                         }
- 
-                                                       } else {
- 
-                                                         this.setState({ isLoading: false })
-                                                         this.sendRow4Plant5Trusses()
-                                                       }
- 
-                                                     });
- 
-                                                   } else {
-                                                     this.setState({ isLoading: false })
-                                                     this.sendRow4Plant5Trusses()
- 
-                                                   }
- 
-                                                 } else {
- 
-                                                   this.setState({ isLoading: false })
-                                                   this.sendRow4Plant5Trusses()
-                                                 }
-                                               });
- 
-                                             } else {
-                                               this.setState({ isLoading: false })
-                                               this.sendRow4Plant5Trusses()
- 
-                                             }
- 
-                                           } else {
- 
-                                             this.setState({ isLoading: false })
-                                             this.sendRow4Plant5Trusses()
-                                           }
- 
-                                         });
- 
-                                       } else {
-                                         this.setState({ isLoading: false })
-                                         this.sendRow4Plant5Trusses()
- 
-                                       }
- 
-                                     } else {
- 
-                                       this.setState({ isLoading: false })
-                                       this.sendRow4Plant5Trusses()
-                                     }
- 
-                                   });
- 
-                                 } else {
-                                   this.setState({ isLoading: false })
-                                   this.sendRow4Plant5Trusses()
- 
-                                 }
- 
-                               } else {
- 
-                                 this.setState({ isLoading: false })
-                                 this.sendRow4Plant5Trusses()
-                               }
- 
-                             });
- 
-                           } else {
-                             this.setState({ isLoading: false })
-                             this.sendRow4Plant5Trusses()
- 
-                           }
- 
-                         } else {
- 
-                           this.setState({ isLoading: false })
-                           this.sendRow4Plant5Trusses()
-                         }
- 
- 
-                       });
- 
-                     } else {
-                       this.setState({ isLoading: false })
-                       this.sendRow4Plant5Trusses()
- 
-                     }
- 
-                   } else {
- 
-                     this.setState({ isLoading: false })
-                     this.sendRow4Plant5Trusses()
-                   }
- 
-                 });
- 
-               } else {
-                 this.setState({ isLoading: false })
-                 this.sendRow4Plant5Trusses()
- 
-               }
- 
-             } else {
- 
-               this.setState({ isLoading: false })
-               this.sendRow4Plant5Trusses()
-             }
- 
-           });
- 
-         } else {
-           this.setState({ isLoading: false })
-           this.sendRow4Plant5Trusses()
- 
-         }
- 
-       } else {
- 
-         this.setState({ isLoading: false })
-         this.sendRow4Plant5Trusses()
-       }
-     });
+
+                                                          console.log("URL : " + url378);
+
+                                                          fetch(url378, { mode: 'no-cors' }).then((response) => {
+
+                                                            if (response.status === 200) {
+
+                                                              this.sendRow4Plant5Trusses();
+
+
+                                                            } else {
+
+                                                              this.setState({ isLoading: false })
+                                                              this.sendRow4Plant5Trusses()
+
+                                                            }
+
+                                                          });
+
+                                                        } else {
+                                                          this.setState({ isLoading: false })
+                                                          this.sendRow4Plant5Trusses()
+
+                                                        }
+
+                                                      } else {
+
+                                                        this.setState({ isLoading: false })
+                                                        this.sendRow4Plant5Trusses()
+                                                      }
+
+                                                    });
+
+                                                  } else {
+                                                    this.setState({ isLoading: false })
+                                                    this.sendRow4Plant5Trusses()
+
+                                                  }
+
+                                                } else {
+
+                                                  this.setState({ isLoading: false })
+                                                  this.sendRow4Plant5Trusses()
+                                                }
+                                              });
+
+                                            } else {
+                                              this.setState({ isLoading: false })
+                                              this.sendRow4Plant5Trusses()
+
+                                            }
+
+                                          } else {
+
+                                            this.setState({ isLoading: false })
+                                            this.sendRow4Plant5Trusses()
+                                          }
+
+                                        });
+
+                                      } else {
+                                        this.setState({ isLoading: false })
+                                        this.sendRow4Plant5Trusses()
+
+                                      }
+
+                                    } else {
+
+                                      this.setState({ isLoading: false })
+                                      this.sendRow4Plant5Trusses()
+                                    }
+
+                                  });
+
+                                } else {
+                                  this.setState({ isLoading: false })
+                                  this.sendRow4Plant5Trusses()
+
+                                }
+
+                              } else {
+
+                                this.setState({ isLoading: false })
+                                this.sendRow4Plant5Trusses()
+                              }
+
+                            });
+
+                          } else {
+                            this.setState({ isLoading: false })
+                            this.sendRow4Plant5Trusses()
+
+                          }
+
+                        } else {
+
+                          this.setState({ isLoading: false })
+                          this.sendRow4Plant5Trusses()
+                        }
+
+
+                      });
+
+                    } else {
+                      this.setState({ isLoading: false })
+                      this.sendRow4Plant5Trusses()
+
+                    }
+
+                  } else {
+
+                    this.setState({ isLoading: false })
+                    this.sendRow4Plant5Trusses()
+                  }
+
+                });
+
+              } else {
+                this.setState({ isLoading: false })
+                this.sendRow4Plant5Trusses()
+
+              }
+
+            } else {
+
+              this.setState({ isLoading: false })
+              this.sendRow4Plant5Trusses()
+            }
+
+          });
+
+        } else {
+          this.setState({ isLoading: false })
+          this.sendRow4Plant5Trusses()
+
+        }
+
+      } else {
+
+        this.setState({ isLoading: false })
+        this.sendRow4Plant5Trusses()
+      }
+    });
 
   }
 
@@ -13942,1192 +13951,1192 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-     //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
-     let G2Filter2Plant5Truss1 = []
-     let G2Filter2Plant5Truss2 = []
-     let G2Filter2Plant5Truss3 = []
-     let G2Filter2Plant5Truss4 = []
-     let G2Filter2Plant5Truss5 = []
-     let G2Filter2Plant5Truss6 = []
-     let G2Filter2Plant5Truss7 = []
-     let G2Filter2Plant5Truss8 = []
-     let G2Filter2Plant5Truss9 = []
-     let G2Filter2Plant5Truss0 = []
-     //END
- 
-     //GER 2 Merlice/ Plant 3/ 114-115/ Truss Number 1-10
- 
-     G2Filter2Plant5Truss1 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 1
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss2 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 2
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss3 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 3
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss4 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 4
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss5 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 5
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss6 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 6
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss7 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 7
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss8 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 8
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss9 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 9
- 
-       )
-     });
- 
-     G2Filter2Plant5Truss0 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '5' &&
-         sampleItemTruss.trussNumber === 10
- 
-       )
-     });
- 
-     //END
- 
-     const scriptUrl379 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-     const url379 = `${scriptUrl379}?
+    //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
+    let G2Filter2Plant5Truss1 = []
+    let G2Filter2Plant5Truss2 = []
+    let G2Filter2Plant5Truss3 = []
+    let G2Filter2Plant5Truss4 = []
+    let G2Filter2Plant5Truss5 = []
+    let G2Filter2Plant5Truss6 = []
+    let G2Filter2Plant5Truss7 = []
+    let G2Filter2Plant5Truss8 = []
+    let G2Filter2Plant5Truss9 = []
+    let G2Filter2Plant5Truss0 = []
+    //END
+
+    //GER 2 Merlice/ Plant 3/ 114-115/ Truss Number 1-10
+
+    G2Filter2Plant5Truss1 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 1
+
+      )
+    });
+
+    G2Filter2Plant5Truss2 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 2
+
+      )
+    });
+
+    G2Filter2Plant5Truss3 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 3
+
+      )
+    });
+
+    G2Filter2Plant5Truss4 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 4
+
+      )
+    });
+
+    G2Filter2Plant5Truss5 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 5
+
+      )
+    });
+
+    G2Filter2Plant5Truss6 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 6
+
+      )
+    });
+
+    G2Filter2Plant5Truss7 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 7
+
+      )
+    });
+
+    G2Filter2Plant5Truss8 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 8
+
+      )
+    });
+
+    G2Filter2Plant5Truss9 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 9
+
+      )
+    });
+
+    G2Filter2Plant5Truss0 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '5' &&
+        sampleItemTruss.trussNumber === 10
+
+      )
+    });
+
+    //END
+
+    const scriptUrl379 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+    const url379 = `${scriptUrl379}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss1[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss1[0].trussNumber}&setFruits=${G2Filter2Plant5Truss1[0].setFruits}&setFlowers=${G2Filter2Plant5Truss1[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss1[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss1[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss1[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss1[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss1[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss1[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss1[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss1[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss1[0].harvestTruss}`;
- 
-     console.log("URL : " + url379);
- 
-     fetch(url379, { mode: 'no-cors' }).then((response) => {
- 
-       if (response.status === 200) {
- 
-         if (G2Filter2Plant5Truss2.length) {
- 
-           const scriptUrl380 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-           const url380 = `${scriptUrl380}?
+
+    console.log("URL : " + url379);
+
+    fetch(url379, { mode: 'no-cors' }).then((response) => {
+
+      if (response.status === 200) {
+
+        if (G2Filter2Plant5Truss2.length) {
+
+          const scriptUrl380 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+          const url380 = `${scriptUrl380}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss2[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss2[0].trussNumber}&setFruits=${G2Filter2Plant5Truss2[0].setFruits}&setFlowers=${G2Filter2Plant5Truss2[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss2[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss2[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss2[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss2[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss2[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss2[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss2[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss2[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss2[0].harvestTruss}`;
- 
-           console.log("URL : " + url380);
- 
-           fetch(url380, { mode: 'no-cors' }).then((response) => {
- 
-             if (response.status === 200) {
- 
-               if (G2Filter2Plant5Truss3.length) {
- 
-                 const scriptUrl381 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                 const url381 = `${scriptUrl381}?
+
+          console.log("URL : " + url380);
+
+          fetch(url380, { mode: 'no-cors' }).then((response) => {
+
+            if (response.status === 200) {
+
+              if (G2Filter2Plant5Truss3.length) {
+
+                const scriptUrl381 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                const url381 = `${scriptUrl381}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss3[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss3[0].trussNumber}&setFruits=${G2Filter2Plant5Truss3[0].setFruits}&setFlowers=${G2Filter2Plant5Truss3[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss3[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss3[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss3[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss3[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss3[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss3[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss3[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss3[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss3[0].harvestTruss}`;
- 
-                 console.log("URL : " + url381);
- 
-                 fetch(url381, { mode: 'no-cors' }).then((response) => {
- 
-                   if (response.status === 200) {
- 
-                     if (G2Filter2Plant5Truss4.length) {
- 
-                       const scriptUrl382 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                       const url382 = `${scriptUrl382}?
+
+                console.log("URL : " + url381);
+
+                fetch(url381, { mode: 'no-cors' }).then((response) => {
+
+                  if (response.status === 200) {
+
+                    if (G2Filter2Plant5Truss4.length) {
+
+                      const scriptUrl382 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                      const url382 = `${scriptUrl382}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss4[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss4[0].trussNumber}&setFruits=${G2Filter2Plant5Truss4[0].setFruits}&setFlowers=${G2Filter2Plant5Truss4[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss4[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss4[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss4[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss4[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss4[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss4[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss4[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss4[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss4[0].harvestTruss}`;
- 
-                       console.log("URL : " + url382);
- 
-                       fetch(url382, { mode: 'no-cors' }).then((response) => {
- 
-                         if (response.status === 200) {
- 
-                           if (G2Filter2Plant5Truss5.length) {
- 
-                             const scriptUrl383 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                             const url383 = `${scriptUrl383}?
+
+                      console.log("URL : " + url382);
+
+                      fetch(url382, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                          if (G2Filter2Plant5Truss5.length) {
+
+                            const scriptUrl383 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                            const url383 = `${scriptUrl383}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss5[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss5[0].trussNumber}&setFruits=${G2Filter2Plant5Truss5[0].setFruits}&setFlowers=${G2Filter2Plant5Truss5[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss5[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss5[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss5[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss5[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss5[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss5[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss5[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss5[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss5[0].harvestTruss}`;
- 
-                             console.log("URL : " + url383);
- 
-                             fetch(url383, { mode: 'no-cors' }).then((response) => {
- 
-                               if (response.status === 200) {
- 
-                                 if (G2Filter2Plant5Truss6.length) {
- 
-                                   const scriptUrl384 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                   const url384 = `${scriptUrl384}?
+
+                            console.log("URL : " + url383);
+
+                            fetch(url383, { mode: 'no-cors' }).then((response) => {
+
+                              if (response.status === 200) {
+
+                                if (G2Filter2Plant5Truss6.length) {
+
+                                  const scriptUrl384 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                  const url384 = `${scriptUrl384}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss6[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss6[0].trussNumber}&setFruits=${G2Filter2Plant5Truss6[0].setFruits}&setFlowers=${G2Filter2Plant5Truss6[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss6[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss6[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss6[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss6[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss6[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss6[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss6[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss6[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss6[0].harvestTruss}`;
- 
-                                   console.log("URL : " + url384);
- 
-                                   fetch(url384, { mode: 'no-cors' }).then((response) => {
- 
-                                     if (response.status === 200) {
- 
-                                       if (G2Filter2Plant5Truss7.length) {
- 
-                                         const scriptUrl385 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                         const url385 = `${scriptUrl385}?
+
+                                  console.log("URL : " + url384);
+
+                                  fetch(url384, { mode: 'no-cors' }).then((response) => {
+
+                                    if (response.status === 200) {
+
+                                      if (G2Filter2Plant5Truss7.length) {
+
+                                        const scriptUrl385 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                        const url385 = `${scriptUrl385}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss7[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss7[0].trussNumber}&setFruits=${G2Filter2Plant5Truss7[0].setFruits}&setFlowers=${G2Filter2Plant5Truss7[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss7[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss7[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss7[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss7[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss7[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss7[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss7[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss7[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss7[0].harvestTruss}`;
- 
-                                         console.log("URL : " + url385);
- 
-                                         fetch(url385, { mode: 'no-cors' }).then((response) => {
- 
-                                           if (response.status === 200) {
- 
-                                             if (G2Filter2Plant5Truss8.length) {
- 
-                                               const scriptUrl386 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                               const url386 = `${scriptUrl386}?
+
+                                        console.log("URL : " + url385);
+
+                                        fetch(url385, { mode: 'no-cors' }).then((response) => {
+
+                                          if (response.status === 200) {
+
+                                            if (G2Filter2Plant5Truss8.length) {
+
+                                              const scriptUrl386 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                              const url386 = `${scriptUrl386}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss8[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss8[0].trussNumber}&setFruits=${G2Filter2Plant5Truss8[0].setFruits}&setFlowers=${G2Filter2Plant5Truss8[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss8[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss8[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss8[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss8[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss8[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss8[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss8[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss8[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss8[0].harvestTruss}`;
- 
-                                               console.log("URL : " + url386);
- 
-                                               fetch(url386, { mode: 'no-cors' }).then((response) => {
- 
-                                                 if (response.status === 200) {
- 
-                                                   if (G2Filter2Plant5Truss9.length) {
- 
-                                                     const scriptUrl387 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                     const url387 = `${scriptUrl387}?
+
+                                              console.log("URL : " + url386);
+
+                                              fetch(url386, { mode: 'no-cors' }).then((response) => {
+
+                                                if (response.status === 200) {
+
+                                                  if (G2Filter2Plant5Truss9.length) {
+
+                                                    const scriptUrl387 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                    const url387 = `${scriptUrl387}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss9[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss9[0].trussNumber}&setFruits=${G2Filter2Plant5Truss9[0].setFruits}&setFlowers=${G2Filter2Plant5Truss9[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss9[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss9[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss9[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss9[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss9[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss9[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss9[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss9[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss9[0].harvestTruss}`;
- 
-                                                     console.log("URL : " + url387);
- 
-                                                     fetch(url387, { mode: 'no-cors' }).then((response) => {
- 
-                                                       if (response.status === 200) {
- 
-                                                         if (G2Filter2Plant5Truss0.length) {
- 
-                                                           const scriptUrl388 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                           const url388 = `${scriptUrl388}?
+
+                                                    console.log("URL : " + url387);
+
+                                                    fetch(url387, { mode: 'no-cors' }).then((response) => {
+
+                                                      if (response.status === 200) {
+
+                                                        if (G2Filter2Plant5Truss0.length) {
+
+                                                          const scriptUrl388 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                          const url388 = `${scriptUrl388}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant5Truss0[0].plantNumber}&trussNumber=${G2Filter2Plant5Truss0[0].trussNumber}&setFruits=${G2Filter2Plant5Truss0[0].setFruits}&setFlowers=${G2Filter2Plant5Truss0[0].setFlowers}&pruningNumber=${G2Filter2Plant5Truss0[0].pruningNumber}&fruitLoad=${G2Filter2Plant5Truss0[0].fruitLoad}&fruitDiameter=${G2Filter2Plant5Truss0[0].fruitDiameter}&pruningFlower=${G2Filter2Plant5Truss0[0].pruneFlowering}&floweringTruss=${G2Filter2Plant5Truss0[0].floweringTrussss}&pruningSet=${G2Filter2Plant5Truss0[0].prunSetting}&settingTruss=${G2Filter2Plant5Truss0[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant5Truss0[0].pruningHar}&harvestTruss=${G2Filter2Plant5Truss0[0].harvestTruss}`;
- 
-                                                           console.log("URL : " + url388);
- 
-                                                           fetch(url388, { mode: 'no-cors' }).then((response) => {
- 
-                                                             if (response.status === 200) {
- 
-                                                               this.sendRow4Plant6Trusses();
- 
- 
-                                                             } else {
- 
-                                                               this.setState({ isLoading: false })
-                                                               this.sendRow4Plant6Trusses()
- 
-                                                             }
- 
-                                                           });
- 
-                                                         } else {
-                                                           this.setState({ isLoading: false })
-                                                           this.sendRow4Plant6Trusses()
- 
-                                                         }
- 
-                                                       } else {
- 
-                                                         this.setState({ isLoading: false })
-                                                         this.sendRow4Plant6Trusses()
-                                                       }
- 
-                                                     });
- 
-                                                   } else {
-                                                     this.setState({ isLoading: false })
-                                                     this.sendRow4Plant6Trusses()
- 
-                                                   }
- 
-                                                 } else {
- 
-                                                   this.setState({ isLoading: false })
-                                                   this.sendRow4Plant6Trusses()
-                                                 }
-                                               });
- 
-                                             } else {
-                                               this.setState({ isLoading: false })
-                                               this.sendRow4Plant6Trusses()
- 
-                                             }
- 
-                                           } else {
- 
-                                             this.setState({ isLoading: false })
-                                             this.sendRow4Plant6Trusses()
-                                           }
- 
-                                         });
- 
-                                       } else {
-                                         this.setState({ isLoading: false })
-                                         this.sendRow4Plant6Trusses()
- 
-                                       }
- 
-                                     } else {
- 
-                                       this.setState({ isLoading: false })
-                                       this.sendRow4Plant6Trusses()
-                                     }
- 
-                                   });
- 
-                                 } else {
-                                   this.setState({ isLoading: false })
-                                   this.sendRow4Plant6Trusses()
- 
-                                 }
- 
-                               } else {
- 
-                                 this.setState({ isLoading: false })
-                                 this.sendRow4Plant6Trusses()
-                               }
- 
-                             });
- 
-                           } else {
-                             this.setState({ isLoading: false })
-                             this.sendRow4Plant6Trusses()
- 
-                           }
- 
-                         } else {
- 
-                           this.setState({ isLoading: false })
-                           this.sendRow4Plant6Trusses()
-                         }
- 
- 
-                       });
- 
-                     } else {
-                       this.setState({ isLoading: false })
-                       this.sendRow4Plant6Trusses()
- 
-                     }
- 
-                   } else {
- 
-                     this.setState({ isLoading: false })
-                     this.sendRow4Plant6Trusses()
-                   }
- 
-                 });
- 
-               } else {
-                 this.setState({ isLoading: false })
-                 this.sendRow4Plant6Trusses()
- 
-               }
- 
-             } else {
- 
-               this.setState({ isLoading: false })
-               this.sendRow4Plant6Trusses()
-             }
- 
-           });
- 
-         } else {
-           this.setState({ isLoading: false })
-           this.sendRow4Plant6Trusses()
- 
-         }
- 
-       } else {
- 
-         this.setState({ isLoading: false })
-         this.sendRow4Plant6Trusses()
-       }
-     });
+
+                                                          console.log("URL : " + url388);
+
+                                                          fetch(url388, { mode: 'no-cors' }).then((response) => {
+
+                                                            if (response.status === 200) {
+
+                                                              this.sendRow4Plant6Trusses();
+
+
+                                                            } else {
+
+                                                              this.setState({ isLoading: false })
+                                                              this.sendRow4Plant6Trusses()
+
+                                                            }
+
+                                                          });
+
+                                                        } else {
+                                                          this.setState({ isLoading: false })
+                                                          this.sendRow4Plant6Trusses()
+
+                                                        }
+
+                                                      } else {
+
+                                                        this.setState({ isLoading: false })
+                                                        this.sendRow4Plant6Trusses()
+                                                      }
+
+                                                    });
+
+                                                  } else {
+                                                    this.setState({ isLoading: false })
+                                                    this.sendRow4Plant6Trusses()
+
+                                                  }
+
+                                                } else {
+
+                                                  this.setState({ isLoading: false })
+                                                  this.sendRow4Plant6Trusses()
+                                                }
+                                              });
+
+                                            } else {
+                                              this.setState({ isLoading: false })
+                                              this.sendRow4Plant6Trusses()
+
+                                            }
+
+                                          } else {
+
+                                            this.setState({ isLoading: false })
+                                            this.sendRow4Plant6Trusses()
+                                          }
+
+                                        });
+
+                                      } else {
+                                        this.setState({ isLoading: false })
+                                        this.sendRow4Plant6Trusses()
+
+                                      }
+
+                                    } else {
+
+                                      this.setState({ isLoading: false })
+                                      this.sendRow4Plant6Trusses()
+                                    }
+
+                                  });
+
+                                } else {
+                                  this.setState({ isLoading: false })
+                                  this.sendRow4Plant6Trusses()
+
+                                }
+
+                              } else {
+
+                                this.setState({ isLoading: false })
+                                this.sendRow4Plant6Trusses()
+                              }
+
+                            });
+
+                          } else {
+                            this.setState({ isLoading: false })
+                            this.sendRow4Plant6Trusses()
+
+                          }
+
+                        } else {
+
+                          this.setState({ isLoading: false })
+                          this.sendRow4Plant6Trusses()
+                        }
+
+
+                      });
+
+                    } else {
+                      this.setState({ isLoading: false })
+                      this.sendRow4Plant6Trusses()
+
+                    }
+
+                  } else {
+
+                    this.setState({ isLoading: false })
+                    this.sendRow4Plant6Trusses()
+                  }
+
+                });
+
+              } else {
+                this.setState({ isLoading: false })
+                this.sendRow4Plant6Trusses()
+
+              }
+
+            } else {
+
+              this.setState({ isLoading: false })
+              this.sendRow4Plant6Trusses()
+            }
+
+          });
+
+        } else {
+          this.setState({ isLoading: false })
+          this.sendRow4Plant6Trusses()
+
+        }
+
+      } else {
+
+        this.setState({ isLoading: false })
+        this.sendRow4Plant6Trusses()
+      }
+    });
 
   }
 
-  sendRow4Plant6Trusses =()=> {
+  sendRow4Plant6Trusses = () => {
 
     this.setState({ isLoading: true })
 
-     //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
-     let G2Filter2Plant6Truss1 = []
-     let G2Filter2Plant6Truss2 = []
-     let G2Filter2Plant6Truss3 = []
-     let G2Filter2Plant6Truss4 = []
-     let G2Filter2Plant6Truss5 = []
-     let G2Filter2Plant6Truss6 = []
-     let G2Filter2Plant6Truss7 = []
-     let G2Filter2Plant6Truss8 = []
-     let G2Filter2Plant6Truss9 = []
-     let G2Filter2Plant6Truss0 = []
-     //END
- 
-     //GER 2 Merlice/ Plant 6/ 114-115/ Truss Number 1-10
- 
-     G2Filter2Plant6Truss1 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 1
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss2 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 2
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss3 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 3
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss4 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 4
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss5 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 5
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss6 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 6
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss7 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 7
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss8 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 8
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss9 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 9
- 
-       )
-     });
- 
-     G2Filter2Plant6Truss0 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '6' &&
-         sampleItemTruss.trussNumber === 10
- 
-       )
-     });
- 
-     //END
- 
-     const scriptUrl389 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-     const url389 = `${scriptUrl389}?
+    //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
+    let G2Filter2Plant6Truss1 = []
+    let G2Filter2Plant6Truss2 = []
+    let G2Filter2Plant6Truss3 = []
+    let G2Filter2Plant6Truss4 = []
+    let G2Filter2Plant6Truss5 = []
+    let G2Filter2Plant6Truss6 = []
+    let G2Filter2Plant6Truss7 = []
+    let G2Filter2Plant6Truss8 = []
+    let G2Filter2Plant6Truss9 = []
+    let G2Filter2Plant6Truss0 = []
+    //END
+
+    //GER 2 Merlice/ Plant 6/ 114-115/ Truss Number 1-10
+
+    G2Filter2Plant6Truss1 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 1
+
+      )
+    });
+
+    G2Filter2Plant6Truss2 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 2
+
+      )
+    });
+
+    G2Filter2Plant6Truss3 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 3
+
+      )
+    });
+
+    G2Filter2Plant6Truss4 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 4
+
+      )
+    });
+
+    G2Filter2Plant6Truss5 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 5
+
+      )
+    });
+
+    G2Filter2Plant6Truss6 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 6
+
+      )
+    });
+
+    G2Filter2Plant6Truss7 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 7
+
+      )
+    });
+
+    G2Filter2Plant6Truss8 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 8
+
+      )
+    });
+
+    G2Filter2Plant6Truss9 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 9
+
+      )
+    });
+
+    G2Filter2Plant6Truss0 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '6' &&
+        sampleItemTruss.trussNumber === 10
+
+      )
+    });
+
+    //END
+
+    const scriptUrl389 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+    const url389 = `${scriptUrl389}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss1[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss1[0].trussNumber}&setFruits=${G2Filter2Plant6Truss1[0].setFruits}&setFlowers=${G2Filter2Plant6Truss1[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss1[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss1[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss1[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss1[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss1[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss1[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss1[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss1[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss1[0].harvestTruss}`;
- 
-     console.log("URL : " + url389);
- 
-     fetch(url389, { mode: 'no-cors' }).then((response) => {
- 
-       if (response.status === 200) {
- 
-         if (G2Filter2Plant6Truss2.length) {
- 
-           const scriptUrl390 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-           const url390 = `${scriptUrl390}?
+
+    console.log("URL : " + url389);
+
+    fetch(url389, { mode: 'no-cors' }).then((response) => {
+
+      if (response.status === 200) {
+
+        if (G2Filter2Plant6Truss2.length) {
+
+          const scriptUrl390 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+          const url390 = `${scriptUrl390}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss2[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss2[0].trussNumber}&setFruits=${G2Filter2Plant6Truss2[0].setFruits}&setFlowers=${G2Filter2Plant6Truss2[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss2[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss2[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss2[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss2[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss2[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss2[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss2[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss2[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss2[0].harvestTruss}`;
- 
-           console.log("URL : " + url390);
- 
-           fetch(url390, { mode: 'no-cors' }).then((response) => {
- 
-             if (response.status === 200) {
- 
-               if (G2Filter2Plant6Truss3.length) {
- 
-                 const scriptUrl391 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                 const url391 = `${scriptUrl391}?
+
+          console.log("URL : " + url390);
+
+          fetch(url390, { mode: 'no-cors' }).then((response) => {
+
+            if (response.status === 200) {
+
+              if (G2Filter2Plant6Truss3.length) {
+
+                const scriptUrl391 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                const url391 = `${scriptUrl391}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss3[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss3[0].trussNumber}&setFruits=${G2Filter2Plant6Truss3[0].setFruits}&setFlowers=${G2Filter2Plant6Truss3[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss3[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss3[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss3[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss3[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss3[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss3[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss3[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss3[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss3[0].harvestTruss}`;
- 
-                 console.log("URL : " + url391);
- 
-                 fetch(url391, { mode: 'no-cors' }).then((response) => {
- 
-                   if (response.status === 200) {
- 
-                     if (G2Filter2Plant6Truss4.length) {
- 
-                       const scriptUrl392 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                       const url392 = `${scriptUrl392}?
+
+                console.log("URL : " + url391);
+
+                fetch(url391, { mode: 'no-cors' }).then((response) => {
+
+                  if (response.status === 200) {
+
+                    if (G2Filter2Plant6Truss4.length) {
+
+                      const scriptUrl392 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                      const url392 = `${scriptUrl392}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss4[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss4[0].trussNumber}&setFruits=${G2Filter2Plant6Truss4[0].setFruits}&setFlowers=${G2Filter2Plant6Truss4[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss4[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss4[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss4[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss4[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss4[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss4[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss4[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss4[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss4[0].harvestTruss}`;
- 
-                       console.log("URL : " + url392);
- 
-                       fetch(url392, { mode: 'no-cors' }).then((response) => {
- 
-                         if (response.status === 200) {
- 
-                           if (G2Filter2Plant6Truss5.length) {
- 
-                             const scriptUrl393 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                             const url393 = `${scriptUrl393}?
+
+                      console.log("URL : " + url392);
+
+                      fetch(url392, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                          if (G2Filter2Plant6Truss5.length) {
+
+                            const scriptUrl393 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                            const url393 = `${scriptUrl393}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss5[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss5[0].trussNumber}&setFruits=${G2Filter2Plant6Truss5[0].setFruits}&setFlowers=${G2Filter2Plant6Truss5[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss5[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss5[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss5[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss5[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss5[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss5[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss5[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss5[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss5[0].harvestTruss}`;
- 
-                             console.log("URL : " + url393);
- 
-                             fetch(url393, { mode: 'no-cors' }).then((response) => {
- 
-                               if (response.status === 200) {
- 
-                                 if (G2Filter2Plant6Truss6.length) {
- 
-                                   const scriptUrl394 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                   const url394 = `${scriptUrl394}?
+
+                            console.log("URL : " + url393);
+
+                            fetch(url393, { mode: 'no-cors' }).then((response) => {
+
+                              if (response.status === 200) {
+
+                                if (G2Filter2Plant6Truss6.length) {
+
+                                  const scriptUrl394 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                  const url394 = `${scriptUrl394}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss6[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss6[0].trussNumber}&setFruits=${G2Filter2Plant6Truss6[0].setFruits}&setFlowers=${G2Filter2Plant6Truss6[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss6[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss6[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss6[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss6[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss6[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss6[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss6[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss6[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss6[0].harvestTruss}`;
- 
-                                   console.log("URL : " + url394);
- 
-                                   fetch(url394, { mode: 'no-cors' }).then((response) => {
- 
-                                     if (response.status === 200) {
- 
-                                       if (G2Filter2Plant6Truss7.length) {
- 
-                                         const scriptUrl395 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                         const url395 = `${scriptUrl395}?
+
+                                  console.log("URL : " + url394);
+
+                                  fetch(url394, { mode: 'no-cors' }).then((response) => {
+
+                                    if (response.status === 200) {
+
+                                      if (G2Filter2Plant6Truss7.length) {
+
+                                        const scriptUrl395 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                        const url395 = `${scriptUrl395}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss7[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss7[0].trussNumber}&setFruits=${G2Filter2Plant6Truss7[0].setFruits}&setFlowers=${G2Filter2Plant6Truss7[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss7[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss7[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss7[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss7[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss7[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss7[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss7[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss7[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss7[0].harvestTruss}`;
- 
-                                         console.log("URL : " + url395);
- 
-                                         fetch(url395, { mode: 'no-cors' }).then((response) => {
- 
-                                           if (response.status === 200) {
- 
-                                             if (G2Filter2Plant6Truss8.length) {
- 
-                                               const scriptUrl396 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                               const url396 = `${scriptUrl396}?
+
+                                        console.log("URL : " + url395);
+
+                                        fetch(url395, { mode: 'no-cors' }).then((response) => {
+
+                                          if (response.status === 200) {
+
+                                            if (G2Filter2Plant6Truss8.length) {
+
+                                              const scriptUrl396 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                              const url396 = `${scriptUrl396}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss8[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss8[0].trussNumber}&setFruits=${G2Filter2Plant6Truss8[0].setFruits}&setFlowers=${G2Filter2Plant6Truss8[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss8[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss8[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss8[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss8[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss8[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss8[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss8[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss8[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss8[0].harvestTruss}`;
- 
-                                               console.log("URL : " + url396);
- 
-                                               fetch(url396, { mode: 'no-cors' }).then((response) => {
- 
-                                                 if (response.status === 200) {
- 
-                                                   if (G2Filter2Plant6Truss9.length) {
- 
-                                                     const scriptUrl397 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                     const url397 = `${scriptUrl397}?
+
+                                              console.log("URL : " + url396);
+
+                                              fetch(url396, { mode: 'no-cors' }).then((response) => {
+
+                                                if (response.status === 200) {
+
+                                                  if (G2Filter2Plant6Truss9.length) {
+
+                                                    const scriptUrl397 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                    const url397 = `${scriptUrl397}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss9[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss9[0].trussNumber}&setFruits=${G2Filter2Plant6Truss9[0].setFruits}&setFlowers=${G2Filter2Plant6Truss9[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss9[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss9[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss9[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss9[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss9[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss9[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss9[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss9[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss9[0].harvestTruss}`;
- 
-                                                     console.log("URL : " + url397);
- 
-                                                     fetch(url397, { mode: 'no-cors' }).then((response) => {
- 
-                                                       if (response.status === 200) {
- 
-                                                         if (G2Filter2Plant6Truss0.length) {
- 
-                                                           const scriptUrl398 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                           const url398 = `${scriptUrl398}?
+
+                                                    console.log("URL : " + url397);
+
+                                                    fetch(url397, { mode: 'no-cors' }).then((response) => {
+
+                                                      if (response.status === 200) {
+
+                                                        if (G2Filter2Plant6Truss0.length) {
+
+                                                          const scriptUrl398 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                          const url398 = `${scriptUrl398}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant6Truss0[0].plantNumber}&trussNumber=${G2Filter2Plant6Truss0[0].trussNumber}&setFruits=${G2Filter2Plant6Truss0[0].setFruits}&setFlowers=${G2Filter2Plant6Truss0[0].setFlowers}&pruningNumber=${G2Filter2Plant6Truss0[0].pruningNumber}&fruitLoad=${G2Filter2Plant6Truss0[0].fruitLoad}&fruitDiameter=${G2Filter2Plant6Truss0[0].fruitDiameter}&pruningFlower=${G2Filter2Plant6Truss0[0].pruneFlowering}&floweringTruss=${G2Filter2Plant6Truss0[0].floweringTrussss}&pruningSet=${G2Filter2Plant6Truss0[0].prunSetting}&settingTruss=${G2Filter2Plant6Truss0[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant6Truss0[0].pruningHar}&harvestTruss=${G2Filter2Plant6Truss0[0].harvestTruss}`;
- 
-                                                           console.log("URL : " + url398);
- 
-                                                           fetch(url398, { mode: 'no-cors' }).then((response) => {
- 
-                                                             if (response.status === 200) {
- 
-                                                               this.sendRow4Plant7Trusses();
- 
- 
-                                                             } else {
- 
-                                                               this.setState({ isLoading: false })
-                                                               this.sendRow4Plant7Trusses()
- 
-                                                             }
- 
-                                                           });
- 
-                                                         } else {
-                                                           this.setState({ isLoading: false })
-                                                           this.sendRow4Plant7Trusses()
- 
-                                                         }
- 
-                                                       } else {
- 
-                                                         this.setState({ isLoading: false })
-                                                         this.sendRow4Plant7Trusses()
-                                                       }
- 
-                                                     });
- 
-                                                   } else {
-                                                     this.setState({ isLoading: false })
-                                                     this.sendRow4Plant7Trusses()
- 
-                                                   }
- 
-                                                 } else {
- 
-                                                   this.setState({ isLoading: false })
-                                                   this.sendRow4Plant7Trusses()
-                                                 }
-                                               });
- 
-                                             } else {
-                                               this.setState({ isLoading: false })
-                                               this.sendRow4Plant7Trusses()
- 
-                                             }
- 
-                                           } else {
- 
-                                             this.setState({ isLoading: false })
-                                             this.sendRow4Plant7Trusses()
-                                           }
- 
-                                         });
- 
-                                       } else {
-                                         this.setState({ isLoading: false })
-                                         this.sendRow4Plant7Trusses()
- 
-                                       }
- 
-                                     } else {
- 
-                                       this.setState({ isLoading: false })
-                                       this.sendRow4Plant7Trusses()
-                                     }
- 
-                                   });
- 
-                                 } else {
-                                   this.setState({ isLoading: false })
-                                   this.sendRow4Plant7Trusses()
- 
-                                 }
- 
-                               } else {
- 
-                                 this.setState({ isLoading: false })
-                                 this.sendRow4Plant7Trusses()
-                               }
- 
-                             });
- 
-                           } else {
-                             this.setState({ isLoading: false })
-                             this.sendRow4Plant7Trusses()
- 
-                           }
- 
-                         } else {
- 
-                           this.setState({ isLoading: false })
-                           this.sendRow4Plant7Trusses()
-                         }
- 
- 
-                       });
- 
-                     } else {
-                       this.setState({ isLoading: false })
-                       this.sendRow4Plant7Trusses()
- 
-                     }
- 
-                   } else {
- 
-                     this.setState({ isLoading: false })
-                     this.sendRow4Plant7Trusses()
-                   }
- 
-                 });
- 
-               } else {
-                 this.setState({ isLoading: false })
-                 this.sendRow4Plant7Trusses()
- 
-               }
- 
-             } else {
- 
-               this.setState({ isLoading: false })
-               this.sendRow4Plant7Trusses()
-             }
- 
-           });
- 
-         } else {
-           this.setState({ isLoading: false })
-           this.sendRow4Plant7Trusses()
- 
-         }
- 
-       } else {
- 
-         this.setState({ isLoading: false })
-         this.sendRow4Plant7Trusses()
-       }
-     });
+
+                                                          console.log("URL : " + url398);
+
+                                                          fetch(url398, { mode: 'no-cors' }).then((response) => {
+
+                                                            if (response.status === 200) {
+
+                                                              this.sendRow4Plant7Trusses();
+
+
+                                                            } else {
+
+                                                              this.setState({ isLoading: false })
+                                                              this.sendRow4Plant7Trusses()
+
+                                                            }
+
+                                                          });
+
+                                                        } else {
+                                                          this.setState({ isLoading: false })
+                                                          this.sendRow4Plant7Trusses()
+
+                                                        }
+
+                                                      } else {
+
+                                                        this.setState({ isLoading: false })
+                                                        this.sendRow4Plant7Trusses()
+                                                      }
+
+                                                    });
+
+                                                  } else {
+                                                    this.setState({ isLoading: false })
+                                                    this.sendRow4Plant7Trusses()
+
+                                                  }
+
+                                                } else {
+
+                                                  this.setState({ isLoading: false })
+                                                  this.sendRow4Plant7Trusses()
+                                                }
+                                              });
+
+                                            } else {
+                                              this.setState({ isLoading: false })
+                                              this.sendRow4Plant7Trusses()
+
+                                            }
+
+                                          } else {
+
+                                            this.setState({ isLoading: false })
+                                            this.sendRow4Plant7Trusses()
+                                          }
+
+                                        });
+
+                                      } else {
+                                        this.setState({ isLoading: false })
+                                        this.sendRow4Plant7Trusses()
+
+                                      }
+
+                                    } else {
+
+                                      this.setState({ isLoading: false })
+                                      this.sendRow4Plant7Trusses()
+                                    }
+
+                                  });
+
+                                } else {
+                                  this.setState({ isLoading: false })
+                                  this.sendRow4Plant7Trusses()
+
+                                }
+
+                              } else {
+
+                                this.setState({ isLoading: false })
+                                this.sendRow4Plant7Trusses()
+                              }
+
+                            });
+
+                          } else {
+                            this.setState({ isLoading: false })
+                            this.sendRow4Plant7Trusses()
+
+                          }
+
+                        } else {
+
+                          this.setState({ isLoading: false })
+                          this.sendRow4Plant7Trusses()
+                        }
+
+
+                      });
+
+                    } else {
+                      this.setState({ isLoading: false })
+                      this.sendRow4Plant7Trusses()
+
+                    }
+
+                  } else {
+
+                    this.setState({ isLoading: false })
+                    this.sendRow4Plant7Trusses()
+                  }
+
+                });
+
+              } else {
+                this.setState({ isLoading: false })
+                this.sendRow4Plant7Trusses()
+
+              }
+
+            } else {
+
+              this.setState({ isLoading: false })
+              this.sendRow4Plant7Trusses()
+            }
+
+          });
+
+        } else {
+          this.setState({ isLoading: false })
+          this.sendRow4Plant7Trusses()
+
+        }
+
+      } else {
+
+        this.setState({ isLoading: false })
+        this.sendRow4Plant7Trusses()
+      }
+    });
   }
 
   sendRow4Plant7Trusses = () => {
 
     this.setState({ isLoading: true })
 
-     //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
-     let G2Filter2Plant7Truss1 = []
-     let G2Filter2Plant7Truss2 = []
-     let G2Filter2Plant7Truss3 = []
-     let G2Filter2Plant7Truss4 = []
-     let G2Filter2Plant7Truss5 = []
-     let G2Filter2Plant7Truss6 = []
-     let G2Filter2Plant7Truss7 = []
-     let G2Filter2Plant7Truss8 = []
-     let G2Filter2Plant7Truss9 = []
-     let G2Filter2Plant7Truss0 = []
-     //END
- 
-     //GER 2 Merlice/ Plant 7/ 114-115/ Truss Number 1-10
- 
-     G2Filter2Plant7Truss1 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 1
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss2 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 2
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss3 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 3
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss4 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 4
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss5 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 5
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss6 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 6
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss7 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 7
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss8 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 8
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss9 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 9
- 
-       )
-     });
- 
-     G2Filter2Plant7Truss0 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '7' &&
-         sampleItemTruss.trussNumber === 10
- 
-       )
-     });
- 
-     //END
- 
-     const scriptUrl399 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-     const url399 = `${scriptUrl399}?
+    //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
+    let G2Filter2Plant7Truss1 = []
+    let G2Filter2Plant7Truss2 = []
+    let G2Filter2Plant7Truss3 = []
+    let G2Filter2Plant7Truss4 = []
+    let G2Filter2Plant7Truss5 = []
+    let G2Filter2Plant7Truss6 = []
+    let G2Filter2Plant7Truss7 = []
+    let G2Filter2Plant7Truss8 = []
+    let G2Filter2Plant7Truss9 = []
+    let G2Filter2Plant7Truss0 = []
+    //END
+
+    //GER 2 Merlice/ Plant 7/ 114-115/ Truss Number 1-10
+
+    G2Filter2Plant7Truss1 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 1
+
+      )
+    });
+
+    G2Filter2Plant7Truss2 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 2
+
+      )
+    });
+
+    G2Filter2Plant7Truss3 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 3
+
+      )
+    });
+
+    G2Filter2Plant7Truss4 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 4
+
+      )
+    });
+
+    G2Filter2Plant7Truss5 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 5
+
+      )
+    });
+
+    G2Filter2Plant7Truss6 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 6
+
+      )
+    });
+
+    G2Filter2Plant7Truss7 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 7
+
+      )
+    });
+
+    G2Filter2Plant7Truss8 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 8
+
+      )
+    });
+
+    G2Filter2Plant7Truss9 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 9
+
+      )
+    });
+
+    G2Filter2Plant7Truss0 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '7' &&
+        sampleItemTruss.trussNumber === 10
+
+      )
+    });
+
+    //END
+
+    const scriptUrl399 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+    const url399 = `${scriptUrl399}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss1[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss1[0].trussNumber}&setFruits=${G2Filter2Plant7Truss1[0].setFruits}&setFlowers=${G2Filter2Plant7Truss1[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss1[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss1[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss1[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss1[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss1[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss1[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss1[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss1[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss1[0].harvestTruss}`;
- 
-     console.log("URL : " + url399);
- 
-     fetch(url399, { mode: 'no-cors' }).then((response) => {
- 
-       if (response.status === 200) {
- 
-         if (G2Filter2Plant7Truss2.length) {
- 
-           const scriptUrl400 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-           const url400 = `${scriptUrl400}?
+
+    console.log("URL : " + url399);
+
+    fetch(url399, { mode: 'no-cors' }).then((response) => {
+
+      if (response.status === 200) {
+
+        if (G2Filter2Plant7Truss2.length) {
+
+          const scriptUrl400 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+          const url400 = `${scriptUrl400}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss2[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss2[0].trussNumber}&setFruits=${G2Filter2Plant7Truss2[0].setFruits}&setFlowers=${G2Filter2Plant7Truss2[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss2[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss2[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss2[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss2[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss2[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss2[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss2[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss2[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss2[0].harvestTruss}`;
- 
-           console.log("URL : " + url400);
- 
-           fetch(url400, { mode: 'no-cors' }).then((response) => {
- 
-             if (response.status === 200) {
- 
-               if (G2Filter2Plant7Truss3.length) {
- 
-                 const scriptUrl401 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                 const url401 = `${scriptUrl401}?
+
+          console.log("URL : " + url400);
+
+          fetch(url400, { mode: 'no-cors' }).then((response) => {
+
+            if (response.status === 200) {
+
+              if (G2Filter2Plant7Truss3.length) {
+
+                const scriptUrl401 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                const url401 = `${scriptUrl401}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss3[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss3[0].trussNumber}&setFruits=${G2Filter2Plant7Truss3[0].setFruits}&setFlowers=${G2Filter2Plant7Truss3[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss3[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss3[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss3[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss3[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss3[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss3[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss3[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss3[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss3[0].harvestTruss}`;
- 
-                 console.log("URL : " + url401);
- 
-                 fetch(url401, { mode: 'no-cors' }).then((response) => {
- 
-                   if (response.status === 200) {
- 
-                     if (G2Filter2Plant7Truss4.length) {
- 
-                       const scriptUrl402 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                       const url402 = `${scriptUrl402}?
+
+                console.log("URL : " + url401);
+
+                fetch(url401, { mode: 'no-cors' }).then((response) => {
+
+                  if (response.status === 200) {
+
+                    if (G2Filter2Plant7Truss4.length) {
+
+                      const scriptUrl402 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                      const url402 = `${scriptUrl402}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss4[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss4[0].trussNumber}&setFruits=${G2Filter2Plant7Truss4[0].setFruits}&setFlowers=${G2Filter2Plant7Truss4[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss4[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss4[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss4[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss4[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss4[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss4[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss4[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss4[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss4[0].harvestTruss}`;
- 
-                       console.log("URL : " + url402);
- 
-                       fetch(url402, { mode: 'no-cors' }).then((response) => {
- 
-                         if (response.status === 200) {
- 
-                           if (G2Filter2Plant7Truss5.length) {
- 
-                             const scriptUrl403 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                             const url403 = `${scriptUrl403}?
+
+                      console.log("URL : " + url402);
+
+                      fetch(url402, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                          if (G2Filter2Plant7Truss5.length) {
+
+                            const scriptUrl403 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                            const url403 = `${scriptUrl403}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss5[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss5[0].trussNumber}&setFruits=${G2Filter2Plant7Truss5[0].setFruits}&setFlowers=${G2Filter2Plant7Truss5[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss5[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss5[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss5[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss5[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss5[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss5[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss5[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss5[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss5[0].harvestTruss}`;
- 
-                             console.log("URL : " + url403);
- 
-                             fetch(url403, { mode: 'no-cors' }).then((response) => {
- 
-                               if (response.status === 200) {
- 
-                                 if (G2Filter2Plant7Truss6.length) {
- 
-                                   const scriptUrl404 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                   const url404 = `${scriptUrl404}?
+
+                            console.log("URL : " + url403);
+
+                            fetch(url403, { mode: 'no-cors' }).then((response) => {
+
+                              if (response.status === 200) {
+
+                                if (G2Filter2Plant7Truss6.length) {
+
+                                  const scriptUrl404 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                  const url404 = `${scriptUrl404}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss6[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss6[0].trussNumber}&setFruits=${G2Filter2Plant7Truss6[0].setFruits}&setFlowers=${G2Filter2Plant7Truss6[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss6[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss6[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss6[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss6[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss6[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss6[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss6[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss6[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss6[0].harvestTruss}`;
- 
-                                   console.log("URL : " + url404);
- 
-                                   fetch(url404, { mode: 'no-cors' }).then((response) => {
- 
-                                     if (response.status === 200) {
- 
-                                       if (G2Filter2Plant7Truss7.length) {
- 
-                                         const scriptUrl405 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                         const url405 = `${scriptUrl405}?
+
+                                  console.log("URL : " + url404);
+
+                                  fetch(url404, { mode: 'no-cors' }).then((response) => {
+
+                                    if (response.status === 200) {
+
+                                      if (G2Filter2Plant7Truss7.length) {
+
+                                        const scriptUrl405 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                        const url405 = `${scriptUrl405}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss7[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss7[0].trussNumber}&setFruits=${G2Filter2Plant7Truss7[0].setFruits}&setFlowers=${G2Filter2Plant7Truss7[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss7[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss7[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss7[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss7[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss7[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss7[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss7[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss7[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss7[0].harvestTruss}`;
- 
-                                         console.log("URL : " + url405);
- 
-                                         fetch(url405, { mode: 'no-cors' }).then((response) => {
- 
-                                           if (response.status === 200) {
- 
-                                             if (G2Filter2Plant7Truss8.length) {
- 
-                                               const scriptUrl406 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                               const url406 = `${scriptUrl406}?
+
+                                        console.log("URL : " + url405);
+
+                                        fetch(url405, { mode: 'no-cors' }).then((response) => {
+
+                                          if (response.status === 200) {
+
+                                            if (G2Filter2Plant7Truss8.length) {
+
+                                              const scriptUrl406 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                              const url406 = `${scriptUrl406}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss8[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss8[0].trussNumber}&setFruits=${G2Filter2Plant7Truss8[0].setFruits}&setFlowers=${G2Filter2Plant7Truss8[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss8[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss8[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss8[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss8[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss8[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss8[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss8[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss8[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss8[0].harvestTruss}`;
- 
-                                               console.log("URL : " + url406);
- 
-                                               fetch(url406, { mode: 'no-cors' }).then((response) => {
- 
-                                                 if (response.status === 200) {
- 
-                                                   if (G2Filter2Plant7Truss9.length) {
- 
-                                                     const scriptUrl407 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                     const url407 = `${scriptUrl407}?
+
+                                              console.log("URL : " + url406);
+
+                                              fetch(url406, { mode: 'no-cors' }).then((response) => {
+
+                                                if (response.status === 200) {
+
+                                                  if (G2Filter2Plant7Truss9.length) {
+
+                                                    const scriptUrl407 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                    const url407 = `${scriptUrl407}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss9[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss9[0].trussNumber}&setFruits=${G2Filter2Plant7Truss9[0].setFruits}&setFlowers=${G2Filter2Plant7Truss9[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss9[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss9[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss9[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss9[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss9[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss9[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss9[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss9[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss9[0].harvestTruss}`;
- 
-                                                     console.log("URL : " + url407);
- 
-                                                     fetch(url407, { mode: 'no-cors' }).then((response) => {
- 
-                                                       if (response.status === 200) {
- 
-                                                         if (G2Filter2Plant7Truss0.length) {
- 
-                                                           const scriptUrl408 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                           const url408 = `${scriptUrl408}?
+
+                                                    console.log("URL : " + url407);
+
+                                                    fetch(url407, { mode: 'no-cors' }).then((response) => {
+
+                                                      if (response.status === 200) {
+
+                                                        if (G2Filter2Plant7Truss0.length) {
+
+                                                          const scriptUrl408 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                          const url408 = `${scriptUrl408}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant7Truss0[0].plantNumber}&trussNumber=${G2Filter2Plant7Truss0[0].trussNumber}&setFruits=${G2Filter2Plant7Truss0[0].setFruits}&setFlowers=${G2Filter2Plant7Truss0[0].setFlowers}&pruningNumber=${G2Filter2Plant7Truss0[0].pruningNumber}&fruitLoad=${G2Filter2Plant7Truss0[0].fruitLoad}&fruitDiameter=${G2Filter2Plant7Truss0[0].fruitDiameter}&pruningFlower=${G2Filter2Plant7Truss0[0].pruneFlowering}&floweringTruss=${G2Filter2Plant7Truss0[0].floweringTrussss}&pruningSet=${G2Filter2Plant7Truss0[0].prunSetting}&settingTruss=${G2Filter2Plant7Truss0[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant7Truss0[0].pruningHar}&harvestTruss=${G2Filter2Plant7Truss0[0].harvestTruss}`;
- 
-                                                           console.log("URL : " + url408);
- 
-                                                           fetch(url408, { mode: 'no-cors' }).then((response) => {
- 
-                                                             if (response.status === 200) {
- 
-                                                               this.sendRow4Plant8Trusses();
- 
- 
-                                                             } else {
- 
-                                                               this.setState({ isLoading: false })
-                                                               this.sendRow4Plant8Trusses()
- 
-                                                             }
- 
-                                                           });
- 
-                                                         } else {
-                                                           this.setState({ isLoading: false })
-                                                           this.sendRow4Plant8Trusses()
- 
-                                                         }
- 
-                                                       } else {
- 
-                                                         this.setState({ isLoading: false })
-                                                         this.sendRow4Plant8Trusses()
-                                                       }
- 
-                                                     });
- 
-                                                   } else {
-                                                     this.setState({ isLoading: false })
-                                                     this.sendRow4Plant8Trusses()
- 
-                                                   }
- 
-                                                 } else {
- 
-                                                   this.setState({ isLoading: false })
-                                                   this.sendRow4Plant8Trusses()
-                                                 }
-                                               });
- 
-                                             } else {
-                                               this.setState({ isLoading: false })
-                                               this.sendRow4Plant8Trusses()
- 
-                                             }
- 
-                                           } else {
- 
-                                             this.setState({ isLoading: false })
-                                             this.sendRow4Plant8Trusses()
-                                           }
- 
-                                         });
- 
-                                       } else {
-                                         this.setState({ isLoading: false })
-                                         this.sendRow4Plant8Trusses()
- 
-                                       }
- 
-                                     } else {
- 
-                                       this.setState({ isLoading: false })
-                                       this.sendRow4Plant8Trusses()
-                                     }
- 
-                                   });
- 
-                                 } else {
-                                   this.setState({ isLoading: false })
-                                   this.sendRow4Plant8Trusses()
- 
-                                 }
- 
-                               } else {
- 
-                                 this.setState({ isLoading: false })
-                                 this.sendRow4Plant8Trusses()
-                               }
- 
-                             });
- 
-                           } else {
-                             this.setState({ isLoading: false })
-                             this.sendRow4Plant8Trusses()
- 
-                           }
- 
-                         } else {
- 
-                           this.setState({ isLoading: false })
-                           this.sendRow4Plant8Trusses()
-                         }
- 
- 
-                       });
- 
-                     } else {
-                       this.setState({ isLoading: false })
-                       this.sendRow4Plant8Trusses()
- 
-                     }
- 
-                   } else {
- 
-                     this.setState({ isLoading: false })
-                     this.sendRow4Plant8Trusses()
-                   }
- 
-                 });
- 
-               } else {
-                 this.setState({ isLoading: false })
-                 this.sendRow4Plant8Trusses()
- 
-               }
- 
-             } else {
- 
-               this.setState({ isLoading: false })
-               this.sendRow4Plant8Trusses()
-             }
- 
-           });
- 
-         } else {
-           this.setState({ isLoading: false })
-           this.sendRow4Plant8Trusses()
- 
-         }
- 
-       } else {
- 
-         this.setState({ isLoading: false })
-         this.sendRow4Plant8Trusses()
-       }
-     });
+
+                                                          console.log("URL : " + url408);
+
+                                                          fetch(url408, { mode: 'no-cors' }).then((response) => {
+
+                                                            if (response.status === 200) {
+
+                                                              this.sendRow4Plant8Trusses();
+
+
+                                                            } else {
+
+                                                              this.setState({ isLoading: false })
+                                                              this.sendRow4Plant8Trusses()
+
+                                                            }
+
+                                                          });
+
+                                                        } else {
+                                                          this.setState({ isLoading: false })
+                                                          this.sendRow4Plant8Trusses()
+
+                                                        }
+
+                                                      } else {
+
+                                                        this.setState({ isLoading: false })
+                                                        this.sendRow4Plant8Trusses()
+                                                      }
+
+                                                    });
+
+                                                  } else {
+                                                    this.setState({ isLoading: false })
+                                                    this.sendRow4Plant8Trusses()
+
+                                                  }
+
+                                                } else {
+
+                                                  this.setState({ isLoading: false })
+                                                  this.sendRow4Plant8Trusses()
+                                                }
+                                              });
+
+                                            } else {
+                                              this.setState({ isLoading: false })
+                                              this.sendRow4Plant8Trusses()
+
+                                            }
+
+                                          } else {
+
+                                            this.setState({ isLoading: false })
+                                            this.sendRow4Plant8Trusses()
+                                          }
+
+                                        });
+
+                                      } else {
+                                        this.setState({ isLoading: false })
+                                        this.sendRow4Plant8Trusses()
+
+                                      }
+
+                                    } else {
+
+                                      this.setState({ isLoading: false })
+                                      this.sendRow4Plant8Trusses()
+                                    }
+
+                                  });
+
+                                } else {
+                                  this.setState({ isLoading: false })
+                                  this.sendRow4Plant8Trusses()
+
+                                }
+
+                              } else {
+
+                                this.setState({ isLoading: false })
+                                this.sendRow4Plant8Trusses()
+                              }
+
+                            });
+
+                          } else {
+                            this.setState({ isLoading: false })
+                            this.sendRow4Plant8Trusses()
+
+                          }
+
+                        } else {
+
+                          this.setState({ isLoading: false })
+                          this.sendRow4Plant8Trusses()
+                        }
+
+
+                      });
+
+                    } else {
+                      this.setState({ isLoading: false })
+                      this.sendRow4Plant8Trusses()
+
+                    }
+
+                  } else {
+
+                    this.setState({ isLoading: false })
+                    this.sendRow4Plant8Trusses()
+                  }
+
+                });
+
+              } else {
+                this.setState({ isLoading: false })
+                this.sendRow4Plant8Trusses()
+
+              }
+
+            } else {
+
+              this.setState({ isLoading: false })
+              this.sendRow4Plant8Trusses()
+            }
+
+          });
+
+        } else {
+          this.setState({ isLoading: false })
+          this.sendRow4Plant8Trusses()
+
+        }
+
+      } else {
+
+        this.setState({ isLoading: false })
+        this.sendRow4Plant8Trusses()
+      }
+    });
 
   }
 
@@ -15135,397 +15144,397 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
     this.setState({ isLoading: true })
 
-     //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
-     let G2Filter2Plant8Truss1 = []
-     let G2Filter2Plant8Truss2 = []
-     let G2Filter2Plant8Truss3 = []
-     let G2Filter2Plant8Truss4 = []
-     let G2Filter2Plant8Truss5 = []
-     let G2Filter2Plant8Truss6 = []
-     let G2Filter2Plant8Truss7 = []
-     let G2Filter2Plant8Truss8 = []
-     let G2Filter2Plant8Truss9 = []
-     let G2Filter2Plant8Truss0 = []
-     //END
- 
-     //GER 2 Merlice/ Plant 8/ 114-115/ Truss Number 1-10
- 
-     G2Filter2Plant8Truss1 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 1
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss2 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 2
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss3 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 3
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss4 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 4
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss5 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 5
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss6 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 6
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss7 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 7
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss8 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 8
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss9 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 9
- 
-       )
-     });
- 
-     G2Filter2Plant8Truss0 = this.state.truss.filter(sampleItemTruss => {
- 
-       return (
- 
-         sampleItemTruss.plantName === 'GER 2 - Merlice' &&
-         sampleItemTruss.plantRow === '114/115' &&
-         sampleItemTruss.plantNumber === '8' &&
-         sampleItemTruss.trussNumber === 10
- 
-       )
-     });
- 
-     //END
- 
-     const scriptUrl409 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-     const url409 = `${scriptUrl409}?
+    //INITIALIZATION G2 MERLICE ROW 114/115 PLANT 10
+    let G2Filter2Plant8Truss1 = []
+    let G2Filter2Plant8Truss2 = []
+    let G2Filter2Plant8Truss3 = []
+    let G2Filter2Plant8Truss4 = []
+    let G2Filter2Plant8Truss5 = []
+    let G2Filter2Plant8Truss6 = []
+    let G2Filter2Plant8Truss7 = []
+    let G2Filter2Plant8Truss8 = []
+    let G2Filter2Plant8Truss9 = []
+    let G2Filter2Plant8Truss0 = []
+    //END
+
+    //GER 2 Merlice/ Plant 8/ 114-115/ Truss Number 1-10
+
+    G2Filter2Plant8Truss1 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 1
+
+      )
+    });
+
+    G2Filter2Plant8Truss2 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 2
+
+      )
+    });
+
+    G2Filter2Plant8Truss3 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 3
+
+      )
+    });
+
+    G2Filter2Plant8Truss4 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 4
+
+      )
+    });
+
+    G2Filter2Plant8Truss5 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 5
+
+      )
+    });
+
+    G2Filter2Plant8Truss6 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 6
+
+      )
+    });
+
+    G2Filter2Plant8Truss7 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 7
+
+      )
+    });
+
+    G2Filter2Plant8Truss8 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 8
+
+      )
+    });
+
+    G2Filter2Plant8Truss9 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 9
+
+      )
+    });
+
+    G2Filter2Plant8Truss0 = this.state.truss.filter(sampleItemTruss => {
+
+      return (
+
+        sampleItemTruss.plantName === 'GER 2 - Merlice' &&
+        sampleItemTruss.plantRow === '114/115' &&
+        sampleItemTruss.plantNumber === '8' &&
+        sampleItemTruss.trussNumber === 10
+
+      )
+    });
+
+    //END
+
+    const scriptUrl409 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+    const url409 = `${scriptUrl409}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss1[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss1[0].trussNumber}&setFruits=${G2Filter2Plant8Truss1[0].setFruits}&setFlowers=${G2Filter2Plant8Truss1[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss1[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss1[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss1[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss1[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss1[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss1[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss1[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss1[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss1[0].harvestTruss}`;
- 
-     console.log("URL : " + url409);
- 
-     fetch(url409, { mode: 'no-cors' }).then((response) => {
- 
-       if (response.status === 200) {
- 
-         if (G2Filter2Plant8Truss2.length) {
- 
-           const scriptUrl410 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-           const url410 = `${scriptUrl410}?
+
+    console.log("URL : " + url409);
+
+    fetch(url409, { mode: 'no-cors' }).then((response) => {
+
+      if (response.status === 200) {
+
+        if (G2Filter2Plant8Truss2.length) {
+
+          const scriptUrl410 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+          const url410 = `${scriptUrl410}?
    callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss2[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss2[0].trussNumber}&setFruits=${G2Filter2Plant8Truss2[0].setFruits}&setFlowers=${G2Filter2Plant8Truss2[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss2[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss2[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss2[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss2[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss2[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss2[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss2[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss2[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss2[0].harvestTruss}`;
- 
-           console.log("URL : " + url410);
- 
-           fetch(url410, { mode: 'no-cors' }).then((response) => {
- 
-             if (response.status === 200) {
- 
-               if (G2Filter2Plant8Truss3.length) {
- 
-                 const scriptUrl411 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                 const url411 = `${scriptUrl411}?
+
+          console.log("URL : " + url410);
+
+          fetch(url410, { mode: 'no-cors' }).then((response) => {
+
+            if (response.status === 200) {
+
+              if (G2Filter2Plant8Truss3.length) {
+
+                const scriptUrl411 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                const url411 = `${scriptUrl411}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss3[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss3[0].trussNumber}&setFruits=${G2Filter2Plant8Truss3[0].setFruits}&setFlowers=${G2Filter2Plant8Truss3[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss3[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss3[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss3[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss3[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss3[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss3[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss3[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss3[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss3[0].harvestTruss}`;
- 
-                 console.log("URL : " + url411);
- 
-                 fetch(url411, { mode: 'no-cors' }).then((response) => {
- 
-                   if (response.status === 200) {
- 
-                     if (G2Filter2Plant8Truss4.length) {
- 
-                       const scriptUrl412 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                       const url412 = `${scriptUrl412}?
+
+                console.log("URL : " + url411);
+
+                fetch(url411, { mode: 'no-cors' }).then((response) => {
+
+                  if (response.status === 200) {
+
+                    if (G2Filter2Plant8Truss4.length) {
+
+                      const scriptUrl412 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                      const url412 = `${scriptUrl412}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss4[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss4[0].trussNumber}&setFruits=${G2Filter2Plant8Truss4[0].setFruits}&setFlowers=${G2Filter2Plant8Truss4[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss4[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss4[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss4[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss4[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss4[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss4[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss4[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss4[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss4[0].harvestTruss}`;
- 
-                       console.log("URL : " + url412);
- 
-                       fetch(url412, { mode: 'no-cors' }).then((response) => {
- 
-                         if (response.status === 200) {
- 
-                           if (G2Filter2Plant8Truss5.length) {
- 
-                             const scriptUrl413 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                             const url413 = `${scriptUrl413}?
+
+                      console.log("URL : " + url412);
+
+                      fetch(url412, { mode: 'no-cors' }).then((response) => {
+
+                        if (response.status === 200) {
+
+                          if (G2Filter2Plant8Truss5.length) {
+
+                            const scriptUrl413 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                            const url413 = `${scriptUrl413}?
          callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss5[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss5[0].trussNumber}&setFruits=${G2Filter2Plant8Truss5[0].setFruits}&setFlowers=${G2Filter2Plant8Truss5[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss5[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss5[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss5[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss5[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss5[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss5[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss5[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss5[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss5[0].harvestTruss}`;
- 
-                             console.log("URL : " + url413);
- 
-                             fetch(url413, { mode: 'no-cors' }).then((response) => {
- 
-                               if (response.status === 200) {
- 
-                                 if (G2Filter2Plant8Truss6.length) {
- 
-                                   const scriptUrl414 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                   const url414 = `${scriptUrl414}?
+
+                            console.log("URL : " + url413);
+
+                            fetch(url413, { mode: 'no-cors' }).then((response) => {
+
+                              if (response.status === 200) {
+
+                                if (G2Filter2Plant8Truss6.length) {
+
+                                  const scriptUrl414 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                  const url414 = `${scriptUrl414}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss6[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss6[0].trussNumber}&setFruits=${G2Filter2Plant8Truss6[0].setFruits}&setFlowers=${G2Filter2Plant8Truss6[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss6[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss6[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss6[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss6[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss6[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss6[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss6[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss6[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss6[0].harvestTruss}`;
- 
-                                   console.log("URL : " + url414);
- 
-                                   fetch(url414, { mode: 'no-cors' }).then((response) => {
- 
-                                     if (response.status === 200) {
- 
-                                       if (G2Filter2Plant8Truss7.length) {
- 
-                                         const scriptUrl415 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                         const url415 = `${scriptUrl415}?
+
+                                  console.log("URL : " + url414);
+
+                                  fetch(url414, { mode: 'no-cors' }).then((response) => {
+
+                                    if (response.status === 200) {
+
+                                      if (G2Filter2Plant8Truss7.length) {
+
+                                        const scriptUrl415 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                        const url415 = `${scriptUrl415}?
                callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss7[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss7[0].trussNumber}&setFruits=${G2Filter2Plant8Truss7[0].setFruits}&setFlowers=${G2Filter2Plant8Truss7[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss7[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss7[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss7[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss7[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss7[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss7[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss7[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss7[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss7[0].harvestTruss}`;
- 
-                                         console.log("URL : " + url415);
- 
-                                         fetch(url415, { mode: 'no-cors' }).then((response) => {
- 
-                                           if (response.status === 200) {
- 
-                                             if (G2Filter2Plant8Truss8.length) {
- 
-                                               const scriptUrl416 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                               const url416 = `${scriptUrl416}?
+
+                                        console.log("URL : " + url415);
+
+                                        fetch(url415, { mode: 'no-cors' }).then((response) => {
+
+                                          if (response.status === 200) {
+
+                                            if (G2Filter2Plant8Truss8.length) {
+
+                                              const scriptUrl416 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                              const url416 = `${scriptUrl416}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss8[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss8[0].trussNumber}&setFruits=${G2Filter2Plant8Truss8[0].setFruits}&setFlowers=${G2Filter2Plant8Truss8[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss8[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss8[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss8[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss8[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss8[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss8[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss8[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss8[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss8[0].harvestTruss}`;
- 
-                                               console.log("URL : " + url416);
- 
-                                               fetch(url416, { mode: 'no-cors' }).then((response) => {
- 
-                                                 if (response.status === 200) {
- 
-                                                   if (G2Filter2Plant8Truss9.length) {
- 
-                                                     const scriptUrl417 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                     const url417 = `${scriptUrl417}?
+
+                                              console.log("URL : " + url416);
+
+                                              fetch(url416, { mode: 'no-cors' }).then((response) => {
+
+                                                if (response.status === 200) {
+
+                                                  if (G2Filter2Plant8Truss9.length) {
+
+                                                    const scriptUrl417 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                    const url417 = `${scriptUrl417}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss9[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss9[0].trussNumber}&setFruits=${G2Filter2Plant8Truss9[0].setFruits}&setFlowers=${G2Filter2Plant8Truss9[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss9[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss9[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss9[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss9[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss9[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss9[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss9[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss9[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss9[0].harvestTruss}`;
- 
-                                                     console.log("URL : " + url417);
- 
-                                                     fetch(url417, { mode: 'no-cors' }).then((response) => {
- 
-                                                       if (response.status === 200) {
- 
-                                                         if (G2Filter2Plant8Truss0.length) {
- 
-                                                           const scriptUrl418 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
-                                                           const url418 = `${scriptUrl418}?
+
+                                                    console.log("URL : " + url417);
+
+                                                    fetch(url417, { mode: 'no-cors' }).then((response) => {
+
+                                                      if (response.status === 200) {
+
+                                                        if (G2Filter2Plant8Truss0.length) {
+
+                                                          const scriptUrl418 = 'https://script.google.com/macros/s/AKfycbyrhjbdlQyOSiORQG6ATubxi7PM6vZL8oP27EJFewR5LFgTn6fD/exec';
+                                                          const url418 = `${scriptUrl418}?
                      callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${numberWeek}&plantNumber=${G2Filter2Plant8Truss0[0].plantNumber}&trussNumber=${G2Filter2Plant8Truss0[0].trussNumber}&setFruits=${G2Filter2Plant8Truss0[0].setFruits}&setFlowers=${G2Filter2Plant8Truss0[0].setFlowers}&pruningNumber=${G2Filter2Plant8Truss0[0].pruningNumber}&fruitLoad=${G2Filter2Plant8Truss0[0].fruitLoad}&fruitDiameter=${G2Filter2Plant8Truss0[0].fruitDiameter}&pruningFlower=${G2Filter2Plant8Truss0[0].pruneFlowering}&floweringTruss=${G2Filter2Plant8Truss0[0].floweringTrussss}&pruningSet=${G2Filter2Plant8Truss0[0].prunSetting}&settingTruss=${G2Filter2Plant8Truss0[0].settingTrussNumber}&pruningHarvest=${G2Filter2Plant8Truss0[0].pruningHar}&harvestTruss=${G2Filter2Plant8Truss0[0].harvestTruss}`;
- 
-                                                           console.log("URL : " + url418);
- 
-                                                           fetch(url418, { mode: 'no-cors' }).then((response) => {
- 
-                                                             if (response.status === 200) {
- 
-                                                               this.sendRow4Plant9Trusses();
- 
- 
-                                                             } else {
- 
-                                                               this.setState({ isLoading: false })
-                                                               this.sendRow4Plant9Trusses()
- 
-                                                             }
- 
-                                                           });
- 
-                                                         } else {
-                                                           this.setState({ isLoading: false })
-                                                           this.sendRow4Plant9Trusses()
- 
-                                                         }
- 
-                                                       } else {
- 
-                                                         this.setState({ isLoading: false })
-                                                         this.sendRow4Plant9Trusses()
-                                                       }
- 
-                                                     });
- 
-                                                   } else {
-                                                     this.setState({ isLoading: false })
-                                                     this.sendRow4Plant9Trusses()
- 
-                                                   }
- 
-                                                 } else {
- 
-                                                   this.setState({ isLoading: false })
-                                                   this.sendRow4Plant9Trusses()
-                                                 }
-                                               });
- 
-                                             } else {
-                                               this.setState({ isLoading: false })
-                                               this.sendRow4Plant9Trusses()
- 
-                                             }
- 
-                                           } else {
- 
-                                             this.setState({ isLoading: false })
-                                             this.sendRow4Plant9Trusses()
-                                           }
- 
-                                         });
- 
-                                       } else {
-                                         this.setState({ isLoading: false })
-                                         this.sendRow4Plant9Trusses()
- 
-                                       }
- 
-                                     } else {
- 
-                                       this.setState({ isLoading: false })
-                                       this.sendRow4Plant9Trusses()
-                                     }
- 
-                                   });
- 
-                                 } else {
-                                   this.setState({ isLoading: false })
-                                   this.sendRow4Plant9Trusses()
- 
-                                 }
- 
-                               } else {
- 
-                                 this.setState({ isLoading: false })
-                                 this.sendRow4Plant9Trusses()
-                               }
- 
-                             });
- 
-                           } else {
-                             this.setState({ isLoading: false })
-                             this.sendRow4Plant9Trusses()
- 
-                           }
- 
-                         } else {
- 
-                           this.setState({ isLoading: false })
-                           this.sendRow4Plant9Trusses()
-                         }
- 
- 
-                       });
- 
-                     } else {
-                       this.setState({ isLoading: false })
-                       this.sendRow4Plant9Trusses()
- 
-                     }
- 
-                   } else {
- 
-                     this.setState({ isLoading: false })
-                     this.sendRow4Plant9Trusses()
-                   }
- 
-                 });
- 
-               } else {
-                 this.setState({ isLoading: false })
-                 this.sendRow4Plant9Trusses()
- 
-               }
- 
-             } else {
- 
-               this.setState({ isLoading: false })
-               this.sendRow4Plant9Trusses()
-             }
- 
-           });
- 
-         } else {
-           this.setState({ isLoading: false })
-           this.sendRow4Plant9Trusses()
- 
-         }
- 
-       } else {
- 
-         this.setState({ isLoading: false })
-         this.sendRow4Plant9Trusses()
-       }
-     });
+
+                                                          console.log("URL : " + url418);
+
+                                                          fetch(url418, { mode: 'no-cors' }).then((response) => {
+
+                                                            if (response.status === 200) {
+
+                                                              this.sendRow4Plant9Trusses();
+
+
+                                                            } else {
+
+                                                              this.setState({ isLoading: false })
+                                                              this.sendRow4Plant9Trusses()
+
+                                                            }
+
+                                                          });
+
+                                                        } else {
+                                                          this.setState({ isLoading: false })
+                                                          this.sendRow4Plant9Trusses()
+
+                                                        }
+
+                                                      } else {
+
+                                                        this.setState({ isLoading: false })
+                                                        this.sendRow4Plant9Trusses()
+                                                      }
+
+                                                    });
+
+                                                  } else {
+                                                    this.setState({ isLoading: false })
+                                                    this.sendRow4Plant9Trusses()
+
+                                                  }
+
+                                                } else {
+
+                                                  this.setState({ isLoading: false })
+                                                  this.sendRow4Plant9Trusses()
+                                                }
+                                              });
+
+                                            } else {
+                                              this.setState({ isLoading: false })
+                                              this.sendRow4Plant9Trusses()
+
+                                            }
+
+                                          } else {
+
+                                            this.setState({ isLoading: false })
+                                            this.sendRow4Plant9Trusses()
+                                          }
+
+                                        });
+
+                                      } else {
+                                        this.setState({ isLoading: false })
+                                        this.sendRow4Plant9Trusses()
+
+                                      }
+
+                                    } else {
+
+                                      this.setState({ isLoading: false })
+                                      this.sendRow4Plant9Trusses()
+                                    }
+
+                                  });
+
+                                } else {
+                                  this.setState({ isLoading: false })
+                                  this.sendRow4Plant9Trusses()
+
+                                }
+
+                              } else {
+
+                                this.setState({ isLoading: false })
+                                this.sendRow4Plant9Trusses()
+                              }
+
+                            });
+
+                          } else {
+                            this.setState({ isLoading: false })
+                            this.sendRow4Plant9Trusses()
+
+                          }
+
+                        } else {
+
+                          this.setState({ isLoading: false })
+                          this.sendRow4Plant9Trusses()
+                        }
+
+
+                      });
+
+                    } else {
+                      this.setState({ isLoading: false })
+                      this.sendRow4Plant9Trusses()
+
+                    }
+
+                  } else {
+
+                    this.setState({ isLoading: false })
+                    this.sendRow4Plant9Trusses()
+                  }
+
+                });
+
+              } else {
+                this.setState({ isLoading: false })
+                this.sendRow4Plant9Trusses()
+
+              }
+
+            } else {
+
+              this.setState({ isLoading: false })
+              this.sendRow4Plant9Trusses()
+            }
+
+          });
+
+        } else {
+          this.setState({ isLoading: false })
+          this.sendRow4Plant9Trusses()
+
+        }
+
+      } else {
+
+        this.setState({ isLoading: false })
+        this.sendRow4Plant9Trusses()
+      }
+    });
 
   }
 
@@ -15927,7 +15936,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
   }
 
-  sendRow4Plant10Trusses= () => {
+  sendRow4Plant10Trusses = () => {
 
     this.setState({ isLoading: true })
 
@@ -16186,9 +16195,9 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
 
                                                             if (response.status === 200) {
 
-                                                              this.setState({ isLoading: false })
+                                                              this.setState({ isLoading: false, lastValue: '100' })
                                                               //ADD FURTHER VARIETIES HERE
-                                                          
+
 
 
                                                             } else {
@@ -16469,7 +16478,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
           console.log("URL : " + url2);
           fetch(url2, { mode: 'no-cors' }).then((response) => {
 
-            this.setState({ isLoading: true })
+            this.setState({ isLoading: true, macValue: '1' })
 
             if (response.status === 200) {
 
@@ -16504,7 +16513,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
                       console.log("URL : " + url5);
                       fetch(url5, { mode: 'no-cors' }).then((response) => {
 
-                        this.setState({ isLoading: true })
+                        this.setState({ isLoading: true, minValue: '2' })
 
                         if (response.status === 200) {
 
@@ -16562,7 +16571,7 @@ callback=ctrlq&plantRow=${'45/46'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
                                           console.log("URL : " + url0);
                                           fetch(url0, { mode: 'no-cors' }).then((response) => {
 
-                                            this.setState({ isLoading: true })
+                                            this.setState({ isLoading: true, minValue: '3' })
 
                                             if (response.status === 200) {
 
@@ -16795,7 +16804,7 @@ callback=ctrlq&plantRow=${'81/86'}&plantName=${'GER 1 - Merlice'}&plantWeek=${nu
                         console.log("URL : " + url16);
                         fetch(url16, { mode: 'no-cors' }).then((response) => {
 
-                          this.setState({ isLoading: true })
+                          this.setState({ isLoading: true, minValue: '4' })
 
                           if (response.status === 200) {
 
@@ -17021,7 +17030,7 @@ callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${nu
         console.log("URL : " + url40);
         fetch(url40, { mode: 'no-cors' }).then((response) => {
 
-          this.setState({ isLoading: true })
+          this.setState({ isLoading: true, minValue: '5' })
 
           if (response.status === 200) {
 
@@ -17098,7 +17107,7 @@ callback=ctrlq&plantRow=${'70/71'}&plantName=${'GER 2 - Merlice'}&plantWeek=${nu
                                     console.log("URL : " + url47);
                                     fetch(url47, { mode: 'no-cors' }).then((response) => {
 
-                                      this.setState({ isLoading: true })
+                                      this.setState({ isLoading: true, minValue: '6' })
 
                                       if (response.status === 200) {
 
@@ -17357,7 +17366,7 @@ callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${
                                 console.log("URL : " + url56);
                                 fetch(url56, { mode: 'no-cors' }).then((response) => {
 
-                                  this.setState({ isLoading: true })
+                                  this.setState({ isLoading: true, minValue: '7' })
 
                                   if (response.status === 200) {
 
@@ -17384,6 +17393,8 @@ callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${
                                           if (response.status === 200) {
 
                                             this.setState({ isLoading: false })
+
+
 
                                           }
                                         });
@@ -17448,14 +17459,37 @@ callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${
     );
   }
 
+  calculatePercentage = () => {
+
+
+    if (lastValue !== '') {
+
+      this.setInterval(
+        () => { console.log('I do not leak!'); },
+        500
+      );
+
+    } else {
+
+
+    }
+
+
+  }
 
   render() {
 
     if (this.state.isLoading) {
       return (
+
         <View style={styles.activity}>
-          <ActivityIndicator size="large" color="#2C903D" />
+          <ActivityIndicator
+            color='#2C903D'
+            size="large"/>
+
+            <Text style={styles.spinnerTextStyle}>Uploading Data...{'\n'}Please do not turn off the screen</Text>
         </View>
+
       )
     }
     return (
@@ -17577,13 +17611,26 @@ const styles = StyleSheet.create({
     alignItems: 'center'
 
   },
+  activityIndicator: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 80
+  },
 
   activity: {
+    flexDirection: 'column',
     position: 'absolute',
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  activity2: {
+    position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -17609,5 +17656,14 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'cover'
+  },
+
+  spinnerTextStyle: {
+
+    color: '#000000',
+    fontWeight: 'bold',
+    fontSize: 20,
+    textAlign: 'center'
+
   }
 })

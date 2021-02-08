@@ -27,26 +27,32 @@ function Har456(props) {
 
      <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har4RedDelightRow')}>
-       <Text style={styles.buttonText}>HAR 4 - Red Delight </Text>
+       onPress={() => navigation.navigate('Har4AnnasunRow')}>
+       <Text style={styles.buttonText}>HAR 4 - Annasun </Text>
      </TouchableOpacity>
 
      <TouchableOpacity
        style={styles.buttonContainer}
-       onPress={() => navigation.navigate('Har4YeloRow')}>
-       <Text style={styles.buttonText}>HAR 4 - Yelo </Text>
+       onPress={() => navigation.navigate('Har4SunsetDelightRow')}>
+       <Text style={styles.buttonText}>HAR 4 - Sunset Delight </Text>
+     </TouchableOpacity>
+
+     <TouchableOpacity
+       style={styles.buttonContainer}
+       onPress={() => navigation.navigate('Har4AvalantinoRow')}>
+       <Text style={styles.buttonText}>HAR 4 - Avalantino </Text>
      </TouchableOpacity>
 
      <TouchableOpacity
        style={styles.buttonContainer}
        onPress={() => navigation.navigate('Har5ProvineRow')}>
-       <Text style={styles.buttonText}>HAR 5 - Provine </Text>
+       <Text style={styles.buttonText}>HAR 5 - Angelle </Text>
      </TouchableOpacity>
 
      <TouchableOpacity
        style={styles.buttonContainer}
        onPress={() => navigation.navigate('Har6ProvineRow')}>
-       <Text style={styles.buttonText}>HAR 6 - Provine </Text>
+       <Text style={styles.buttonText}>HAR 6 - Angelle </Text>
      </TouchableOpacity>
 
         </ScrollView>

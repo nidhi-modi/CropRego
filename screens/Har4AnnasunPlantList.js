@@ -12,7 +12,7 @@ const db = new Database();
 
 
 
-export default class Har4YeloPlantList1 extends Component {
+export default class Har4AnnasunPlantList extends Component {
 
 
     constructor(props) {
@@ -68,7 +68,7 @@ export default class Har4YeloPlantList1 extends Component {
             isLoading: true,
         });
         let plants = [];
-        db.plantByWeekInList('HAR 4 - Yelo').then((data) => {
+        db.plantByWeekInList('HAR 4 - Annasun').then((data) => {
             console.log("Calling database")
             plants = data;
             this.setState({
@@ -99,7 +99,7 @@ export default class Har4YeloPlantList1 extends Component {
             onPress={() => {
                 this.props.navigation.navigate('PlantDetails', {
                     plantId: `${item.plantId}`,
-                    plantName: 'HAR 4 - Yelo',
+                    plantName: 'HAR 4 - Annasun',
 
 
                 });

@@ -44,6 +44,7 @@ import Har3KmTrussDetails1 from '../screens/Har3KmTrussDetails1'
 import Har3KmTrussDetails2 from '../screens/Har3KmTrussDetails2'
 import Har3KmDataChecker1 from '../screens/Har3KmDataChecker1'
 import Har3KmDataChecker2 from '../screens/Har3KmDataChecker2'
+import Har4AvalantinoRow from '../screens/Har4AvalantinoRow'
 import Har3Bambello from '../screens/Har3Bambello'
 import Har3Bambello2 from '../screens/Har3Bambello2'
 import Har3BambelloRow from '../screens/Har3BambelloRow'
@@ -56,6 +57,7 @@ import Har3BambelloDataChecker2 from '../screens/Har3BambelloDataChecker2'
 import Ger1Row from '../screens/Ger1Row'
 import Ger1Merlice from '../screens/Ger1Merlice'
 import Ger1Merlice2 from '../screens/Ger1Merlice2'
+import Har5Angelle from '../screens/Har5Angelle'
 import Ger1MerlicePlant1 from '../screens/Ger1MerlicePlant1'
 import Ger1Merlice2Plant1 from '../screens/Ger1Merlice2Plant1'
 import Ger1MerliceTrussDetails from '../screens/Ger1MerliceTrussDetails'
@@ -112,22 +114,23 @@ import Har4KmPlant1 from '../screens/Har4KmPlant1'
 import Har4KmDataChecker1 from '../screens/Har4KmDataChecker1'
 import Har4KmTrussDetails1 from '../screens/Har4KmTrussDetails1'
 import Har4KmPlantList from '../screens/Har4KmPlantList'
-import Har4RedDelightRow from '../screens/Har4RedDelightRow'
-import Har4RedDelight from '../screens/Har4RedDelight'
-import Har4RedDelight2 from '../screens/Har4RedDelight2'
-import Har4RedDelightPlantList from '../screens/Har4RedDelightPlantList'
-import Har4RedDelightDataChecker1 from '../screens/Har4RedDelightDataChecker1'
-import Har4RedDelightDataChecker2 from '../screens/Har4RedDelightDataChecker2'
-import Har4RedDelightPlant1 from '../screens/Har4RedDelightPlant1'
-import Har4RedDelightPlant2 from '../screens/Har4RedDelightPlant2'
-import Har4RedDelightTrussDetails1 from '../screens/Har4RedDelightTrussDetails1'
-import Har4RedDelightTrussDetails2 from '../screens/Har4RedDelightTrussDetails2'
-import Har4YeloRow from '../screens/Har4YeloRow'
-import Har4Yelo from '../screens/Har4Yelo'
-import Har4YeloPlant1 from '../screens/Har4YeloPlant1'
-import Har4YeloDataChecker1 from '../screens/Har4YeloDataChecker1'
-import Har4YeloPlantList1 from '../screens/Har4YeloPlantList1'
-import Har4YeloTrussDetails1 from '../screens/Har4YeloTrussDetails1'
+import Har4AnnasunRow from '../screens/Har4AnnasunRow'
+import Har4Annasun from '../screens/Har4Annasun'
+import Har4Avalantino from '../screens/Har4Avalantino'
+import Har4AnnasunPlantList from '../screens/Har4AnnasunPlantList'
+import Har4AnnasunDataChecker1 from '../screens/Har4AnnasunDataChecker1'
+import Har4AvalantinoDataChecker from '../screens/Har4AvalantinoDataChecker'
+import Har4AnnasunPlant1 from '../screens/Har4AnnasunPlant1'
+import Har4AvalantinoPlant from '../screens/Har4AvalantinoPlant'
+import Har4AnnasunTrussDetails1 from '../screens/Har4AnnasunTrussDetails1'
+import Har4AvalantinoTrussDetails from '../screens/Har4AvalantinoTrussDetails'
+import Har5AngelleRow from '../screens/Har5AngelleRow'
+import Har4SunsetDelightRow from '../screens/Har4SunsetDelightRow'
+import Har4SunsetDelight from '../screens/Har4SunsetDelight'
+import Har4SunsetDelightPlant1 from '../screens/Har4SunsetDelightPlant1'
+import Har4SunsetDelightDataChecker1 from '../screens/Har4SunsetDelightDataChecker1'
+import Har4SunsetDelightPlantList1 from '../screens/Har4SunsetDelightPlantList1'
+import Har4SunsetDelightTrussDetails1 from '../screens/Har4SunsetDelightTrussDetails1'
 import Har5ProvineRow from '../screens/Har5ProvineRow'
 import Har5Provine from '../screens/Har5Provine'
 import Har5Provine2 from '../screens/Har5Provine2'
@@ -138,6 +141,7 @@ import Har5ProvinePlant1 from '../screens/Har5ProvinePlant1'
 import Har5ProvinePlant2 from '../screens/Har5ProvinePlant2'
 import Har5ProvineTrussDetails1 from '../screens/Har5ProvineTrussDetails1'
 import Har5ProvineTrussDetails2 from '../screens/Har5ProvineTrussDetails2'
+import Har4AvalantinoPlantList from '../screens/Har4AvalantinoPlantList'
 import Har6ProvineRow from '../screens/Har6ProvineRow'
 import Har6Provine from '../screens/Har6Provine'
 import Har6Provine2 from '../screens/Har6Provine2'
@@ -311,7 +315,7 @@ function MainStackNavigator() {
         })} />
 
         <Stack.Screen name='GerHome' component={GerHome} options={({ navigation }) => ({
-          headerLeft: () => null, 
+          headerLeft: () => null,
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -1371,6 +1375,38 @@ function MainStackNavigator() {
           , title: 'HAR 3 Bambello'
         })} />
 
+<Stack.Screen name='Har5Angelle' component={Har5Angelle} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Har5AngellePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 5 Angelle'
+        })} />
+
         <Stack.Screen name='Har3Bambello2' component={Har3Bambello2} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
@@ -1615,6 +1651,26 @@ function MainStackNavigator() {
           , title: 'HAR 4 Bambello'
         })} />
 
+        <Stack.Screen name='Har5AngelleRow' component={Har5AngelleRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 5 Angelle'
+        })} />
+
         <Stack.Screen name='Har4BambelloPlant1' component={Har4BambelloPlant1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
@@ -1808,7 +1864,7 @@ function MainStackNavigator() {
         })} />
 
 
-        <Stack.Screen name='Har4RedDelightRow' component={Har4RedDelightRow} options={({ navigation }) => ({
+        <Stack.Screen name='Har4AnnasunRow' component={Har4AnnasunRow} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -1825,16 +1881,16 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Annasun'
         })} />
 
-        <Stack.Screen name='Har4RedDelight' component={Har4RedDelight} options={({ navigation }) => ({
+        <Stack.Screen name='Har4Annasun' component={Har4Annasun} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('Har4RedDelightPlantList')}>
+                onPress={() => navigation.navigate('Har4AnnasunPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -1857,16 +1913,38 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Annasun'
         })} />
 
-        <Stack.Screen name='Har4RedDelight2' component={Har4RedDelight2} options={({ navigation }) => ({
+        <Stack.Screen name='Har4AvalantinoRow' component={Har4AvalantinoRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 4 Avalantino'
+        })} />
+
+
+
+        <Stack.Screen name='Har4Avalantino' component={Har4Avalantino} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('Har4RedDelightPlantList')}>
+                onPress={() => navigation.navigate('Har4AvalantinoPlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -1889,10 +1967,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Avalantino'
         })} />
 
-        <Stack.Screen name='Har4RedDelightPlantList' component={Har4RedDelightPlantList} options={({ navigation }) => ({
+        <Stack.Screen name='Har4AvalantinoPlantList' component={Har4AvalantinoPlantList} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -1909,11 +1987,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Avalantino'
         })} />
 
-
-        <Stack.Screen name='Har4RedDelightDataChecker1' component={Har4RedDelightDataChecker1} options={({ navigation }) => ({
+        <Stack.Screen name='Har4AnnasunPlantList' component={Har4AnnasunPlantList} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -1930,11 +2007,11 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Annasun'
         })} />
 
 
-        <Stack.Screen name='Har4RedDelightDataChecker2' component={Har4RedDelightDataChecker2} options={({ navigation }) => ({
+        <Stack.Screen name='Har4AnnasunDataChecker1' component={Har4AnnasunDataChecker1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -1951,10 +2028,11 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Annasun'
         })} />
 
-        <Stack.Screen name='Har4RedDelightPlant1' component={Har4RedDelightPlant1} options={({ navigation }) => ({
+
+        <Stack.Screen name='Har4AvalantinoDataChecker' component={Har4AvalantinoDataChecker} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -1971,10 +2049,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Avalantino'
         })} />
 
-        <Stack.Screen name='Har4RedDelightPlant2' component={Har4RedDelightPlant2} options={({ navigation }) => ({
+        <Stack.Screen name='Har4AnnasunPlant1' component={Har4AnnasunPlant1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -1991,10 +2069,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Annasun'
         })} />
 
-        <Stack.Screen name='Har4RedDelightTrussDetails1' component={Har4RedDelightTrussDetails1} options={({ navigation }) => ({
+        <Stack.Screen name='Har4AvalantinoPlant' component={Har4AvalantinoPlant} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2011,11 +2089,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Avalantino'
         })} />
 
-
-        <Stack.Screen name='Har4RedDelightTrussDetails2' component={Har4RedDelightTrussDetails2} options={({ navigation }) => ({
+        <Stack.Screen name='Har4AnnasunTrussDetails1' component={Har4AnnasunTrussDetails1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2032,7 +2109,28 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Red Delight'
+          , title: 'HAR 4 Annasun'
+        })} />
+
+
+        <Stack.Screen name='Har4AvalantinoTrussDetails' component={Har4AvalantinoTrussDetails} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'HAR 4 Avalantino'
         })} />
 
         <Stack.Screen name='Ger1Row' component={Ger1Row} options={({ navigation }) => ({
@@ -2754,7 +2852,7 @@ function MainStackNavigator() {
         })} />
 
 
-        <Stack.Screen name='Har4YeloRow' component={Har4YeloRow} options={({ navigation }) => ({
+        <Stack.Screen name='Har4SunsetDelightRow' component={Har4SunsetDelightRow} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2771,10 +2869,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Yelo'
+          , title: 'HAR 4 Sunset Delight'
         })} />
 
-        <Stack.Screen name='Har4YeloDataChecker1' component={Har4YeloDataChecker1} options={({ navigation }) => ({
+        <Stack.Screen name='Har4SunsetDelightDataChecker1' component={Har4SunsetDelightDataChecker1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2791,10 +2889,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Yelo'
+          , title: 'HAR 4 Sunset Delight'
         })} />
 
-        <Stack.Screen name='Har4YeloTrussDetails1' component={Har4YeloTrussDetails1} options={({ navigation }) => ({
+        <Stack.Screen name='Har4SunsetDelightTrussDetails1' component={Har4SunsetDelightTrussDetails1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2811,10 +2909,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Yelo'
+          , title: 'HAR 4 Sunset Delight'
         })} />
 
-        <Stack.Screen name='Har4YeloPlant1' component={Har4YeloPlant1} options={({ navigation }) => ({
+        <Stack.Screen name='Har4SunsetDelightPlant1' component={Har4SunsetDelightPlant1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2831,10 +2929,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Yelo'
+          , title: 'HAR 4 Sunset Delight'
         })} />
 
-        <Stack.Screen name='Har4YeloPlantList1' component={Har4YeloPlantList1} options={({ navigation }) => ({
+        <Stack.Screen name='Har4SunsetDelightPlantList1' component={Har4SunsetDelightPlantList1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -2851,16 +2949,16 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Yelo'
+          , title: 'HAR 4 Sunset Delight'
         })} />
 
-        <Stack.Screen name='Har4Yelo' component={Har4Yelo} options={({ navigation }) => ({
+        <Stack.Screen name='Har4SunsetDelight' component={Har4SunsetDelight} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('Har4YeloPlantList1')}>
+                onPress={() => navigation.navigate('Har4SunsetDelightPlantList1')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -2883,7 +2981,7 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'HAR 4 Yelo'
+          , title: 'HAR 4 Sunset Delight'
         })} />
 
         <Stack.Screen name='Har5Provine' component={Har5Provine} options={({ navigation }) => ({
