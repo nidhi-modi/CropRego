@@ -4,7 +4,7 @@ import AwesomeButton from 'react-native-really-awesome-button';
 import AwesomeButtonRick from 'react-native-really-awesome-button/src/themes/rick';
 
 
-function Ger1Row(props) {
+function Har5AngelleRow(props) {
   const { navigation } = props
   return (
     <View style={styles.container}>
@@ -15,16 +15,9 @@ function Ger1Row(props) {
 
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Ger1Merlice')}>
-            <Text style={styles.buttonText}>Row 45/46</Text>
+            onPress={() => navigation.navigate('Har5Angelle')}>
+            <Text style={styles.buttonText}>Row 533/534</Text>
           </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Ger1Merlice2')}>
-            <Text style={styles.buttonText}>Row 81/86</Text>
-          </TouchableOpacity>
-
 
         </ScrollView>
 
@@ -97,4 +90,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Ger1Row
+export default Har5AngelleRow
