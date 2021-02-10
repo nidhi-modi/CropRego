@@ -15,7 +15,7 @@ function Har6AngelleRow(props) {
 
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Ger1Merlice')}>
+            onPress={() => navigation.navigate('Har6Angelle')}>
             <Text style={styles.buttonText}>Row 633/647</Text>
           </TouchableOpacity>
 
