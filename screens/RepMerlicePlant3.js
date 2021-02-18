@@ -66,7 +66,7 @@ var currentWeekNumber = require('current-week-number');
 
 
 
-export default class RepMerlice3Plant3 extends React.Component {
+export default class RepMerlicePlant3 extends React.Component {
 
 
 
@@ -176,6 +176,7 @@ export default class RepMerlice3Plant3 extends React.Component {
 
             checkWeeksData: '',
             checkWeeksTrussData: '',
+
 
         };
 
@@ -573,7 +574,7 @@ export default class RepMerlice3Plant3 extends React.Component {
 
     componentDidMount() {
 
-        numberWeek = 2100 + currentWeekNumber() - 2;
+        numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
         console.log("Current Week Number: ", numberWeek);
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
@@ -628,6 +629,7 @@ export default class RepMerlice3Plant3 extends React.Component {
         } else {
 
         }
+
         if (this.props.route.params.plant6 !== undefined) {
             no6 = this.props.route.params.plant6;
             console.log("Plant " + JSON.stringify(no6));
@@ -639,6 +641,7 @@ export default class RepMerlice3Plant3 extends React.Component {
             no7 = this.props.route.params.plant7;
             console.log("Plant " + JSON.stringify(no7));
         } else {
+
         }
 
         if (this.props.route.params.plant8 !== undefined) {
@@ -663,6 +666,8 @@ export default class RepMerlice3Plant3 extends React.Component {
         }
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
+
+           
 
             setTimeout(() => {
                 db.plantsByWeekRowNumberAndName(no, numberWeek, 'REP - Merlice', '707').then((data) => {
@@ -740,7 +745,7 @@ export default class RepMerlice3Plant3 extends React.Component {
 
         });
 
-        console.log("Check DATAAAAAAAAAAAAAAAAAAAA : " + presentWeekData);
+
 
 
 
@@ -915,11 +920,11 @@ export default class RepMerlice3Plant3 extends React.Component {
                             no5 = null;
 
 
-                        }else{
+                        }else {
 
                             if (no6 !== undefined && no6 !== null) {
 
-                                console.log("No5 Value:", no6);
+                                console.log("No6 Value:", no6);
     
                                 no = '6';
     
@@ -941,8 +946,8 @@ export default class RepMerlice3Plant3 extends React.Component {
                                 no6 = null;
     
     
-                            }else{
-
+                            }else {
+    
                                 if (no7 !== undefined && no7 !== null) {
 
                                     console.log("No5 Value:", no7);
@@ -967,11 +972,11 @@ export default class RepMerlice3Plant3 extends React.Component {
                                     no7 = null;
         
         
-                                }else{
+                                }else {
 
                                     if (no8 !== undefined && no8 !== null) {
 
-                                        console.log("No5 Value:", no8);
+                                        console.log("No8 Value:", no8);
             
                                         no = '8';
             
@@ -993,11 +998,11 @@ export default class RepMerlice3Plant3 extends React.Component {
                                         no8 = null;
             
             
-                                    }else{
+                                    }else {
 
                                         if (no9 !== undefined && no9 !== null) {
 
-                                            console.log("No5 Value:", no9);
+                                            console.log("No9 Value:", no9);
                 
                                             no = '9';
                 
@@ -1019,11 +1024,12 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             no9 = null;
                 
                 
-                                        }else{
-
+                                        }else {
+                
+                
                                             if (no10 !== undefined && no10 !== null) {
 
-                                                console.log("No5 Value:", no10);
+                                                console.log("No10 Value:", no10);
                     
                                                 no = '10';
                     
@@ -1043,13 +1049,23 @@ export default class RepMerlice3Plant3 extends React.Component {
                                                 })
                     
                                                 no10 = null;
-                    
-                    
                                             }
+                                            
                                         }
+            
+            
+                                        
                                     }
+        
+        
+                                    
                                 }
+    
+                                
                             }
+
+
+
                         }
                     }
                 }
@@ -1339,7 +1355,7 @@ export default class RepMerlice3Plant3 extends React.Component {
                 'Data Validation',
                 'There are some errors in the data validation tab, Are you sure you want to skip the validation error ?',
                 [
-                    { text: 'No', onPress: () => this.props.navigation.navigate('RepMerlice3DataChecker3', { plantNo: no }), style: 'cancel' },
+                    { text: 'No', onPress: () => this.props.navigation.navigate('RepMerliceDataChecker3', { plantNo: no }), style: 'cancel' },
                     { text: 'Yes', onPress: () => this.savePlantsToDb() },
                 ],
                 {
@@ -1491,18 +1507,7 @@ export default class RepMerlice3Plant3 extends React.Component {
         }
 
 
-        if (leavesPerPlant) {
-            if (fullySetTruss) {
-                if (setTrussLength) {
-                    if (weeklyGrowth) {
-                        if (floweringTrussHeight) {
-                            if (leafLength) {
-                                if (leafWidth) {
-                                    if (stmDiameter) {
-                                        if (lastWeekStmDiameter) {
-
-
-
+    
 
                                             if (this.state.isItConnected === 'Online') {
 
@@ -1527,12 +1532,15 @@ export default class RepMerlice3Plant3 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
+                                                    AsyncStorage.clear()
                                                     this.props.navigation.navigate('RepMerlice3')
                                                     this.setState({
 
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
+                                                    this.setItem('RepMerlicePlant3', 1)
+
 
                                                 }).catch((err) => {
                                                     console.log(err);
@@ -1541,6 +1549,8 @@ export default class RepMerlice3Plant3 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
+                                                    this.setItem('RepMerlicePlant3', 0)
+
                                                 })
 
                                             } else {
@@ -1556,12 +1566,15 @@ export default class RepMerlice3Plant3 extends React.Component {
                                                     abc = '1';
 
                                                     Alert.alert('Completed!')
+                                                    AsyncStorage.clear()
                                                     this.props.navigation.navigate('RepMerlice3')
                                                     this.setState({
 
                                                         isDataSend: true,
                                                     });
                                                     abc = '1';
+                                                    this.setItem('RepMerlicePlant3', 1)
+
 
                                                 }).catch((err) => {
                                                     console.log(err);
@@ -1570,87 +1583,15 @@ export default class RepMerlice3Plant3 extends React.Component {
                                                         isDataSend: false,
                                                     });
                                                     abc = '0';
+                                                    this.setItem('RepMerlicePlant3', 0)
+
                                                 })
 
                                             }
 
 
 
-                                        } else {
-                                            alert('Please fill Last Week Stem Diameter');
-                                            this.setState({
-                                                isLoading: false,
-                                                isDataSend: false,
-
-                                            });
-                                            abc = '0';
-
-                                        }
-                                    } else {
-                                        alert('Please fill Steam Diamater');
-                                        this.setState({
-                                            isLoading: false,
-                                            isDataSend: false,
-                                        });
-                                        abc = '0';
-                                    }
-                                } else {
-                                    alert('Please fill Leaf Width');
-                                    this.setState({
-                                        isLoading: false,
-                                        isDataSend: false,
-                                    });
-                                    abc = '0';
-                                }
-                            } else {
-                                alert('Please fill Leaf Length');
-                                this.setState({
-                                    isLoading: false,
-                                    isDataSend: false,
-                                });
-                                abc = '0';
-                            }
-                        } else {
-                            alert('Please fill Flower Truss Height');
-                            this.setState({
-                                isLoading: false,
-                                isDataSend: false,
-                            });
-                            abc = '0';
-                        }
-                    } else {
-                        alert('Please fill Weekly Growth');
-                        this.setState({
-                            isLoading: false,
-                            isDataSend: false,
-                        });
-                        abc = '0';
-                    }
-                } else {
-                    alert('Please fill Fully Set Truss Length');
-                    this.setState({
-                        isLoading: false,
-                        isDataSend: false,
-                    });
-                    abc = '0';
-                }
-            } else {
-                alert('Please fill Fully Set Truss');
-                this.setState({
-                    isLoading: false,
-                    isDataSend: false,
-                });
-                abc = '0';
-            }
-        } else {
-
-            alert('Please fill Leaves Per Plant');
-            this.setState({
-                isLoading: false,
-                isDataSend: false,
-            });
-            abc = '0';
-        }
+                                       
 
 
     }
@@ -1968,7 +1909,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                             />
 
 
-                            <View pointerEvents={this.state.checkWeeksData === 1 ? 'none' : 'auto'}>
                                 <View style={styles.backgroundColor}>
 
                                     <View style={styles.row}>
@@ -1982,7 +1922,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholder="Enter Leaves Per Plant"
                                             placeholderTextColor="transparent"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2023,7 +1962,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2064,7 +2002,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2108,7 +2045,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2148,7 +2084,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2188,7 +2123,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2231,7 +2165,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2273,7 +2206,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2314,7 +2246,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                             placeholderTextColor="transparent"
                                             autoCapitalize="none"
                                             multiline={false}
-                                            maxLength={5}
                                             autoCorrect={false}
                                             enablesReturnKeyAutomatically={true}
                                             onChangeText={this.onChangeText}
@@ -2353,7 +2284,6 @@ export default class RepMerlice3Plant3 extends React.Component {
                                         <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                     </TouchableOpacity>}
 
-                            </View>
 
                             <Text style={styles.text}
                                 value={this.state.plantRow}> Enter Truss Details</Text>
@@ -2644,3 +2574,4 @@ const styles = StyleSheet.create({
     }
 
 })
+
