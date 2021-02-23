@@ -18,16 +18,11 @@ export default class Ger4Provine extends Component {
         this.state = {
 
             dataSet1: 0,
-            dataSet2: 0,
-            dataSet3: 0,
-            dataSet4: 0,
-            dataSet5: 0,
-            dataSet6: 0,
-            dataSet7: 0,
-            dataSet8: 0,
-            dataSet9: 0,
-            dataSet10: 0,
-            week: ''
+            dataSet2: false,
+            dataSet3: false,
+            dataSet4: false,
+            dataSet5: false,
+            week:''
 
 
         }
@@ -38,17 +33,28 @@ export default class Ger4Provine extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2100 + currentWeekNumber() - 2;
+        numberWeek = 2100 + currentWeekNumber(new Date())-1;
 
-        this.setState({ week: numberWeek });
+        console.log("New Week number : "+numberWeek);
+
+        this.setState({ week : numberWeek});
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
-
+            
             //this.callQuery()
         });
 
         //this.callQuery()
     }
+
+
+    async setItem(myKey, value) {
+        try {
+            return await AsyncStorage.setItem(myKey, JSON.stringify(value));
+        } catch (error) {
+        }
+    }
+    
 
     callQuery = () => {
 

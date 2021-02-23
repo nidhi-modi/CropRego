@@ -172,7 +172,7 @@ export default class Har4Avalantino extends Component {
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Har4Avalantino', { plant1: 1 })}>
+                                onPress={() => this.props.navigation.navigate('Har4AvalantinoPlant', { plant1: 1 })}>
                                 <Text style={styles.buttonText}>Plant 1 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 

@@ -116,10 +116,10 @@ export default class Ger4ProvineDataChecker2 extends React.Component {
 
   componentDidMount() {
 
-    numberWeek = 2100 + currentWeekNumber() - 1;
-    numberWeek1 = 2100 + currentWeekNumber() - 2;
-    numberWeek2 = 2100 + currentWeekNumber() - 3;
-    numberWeek3 = 2100 + currentWeekNumber() - 4;
+    numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
+    numberWeek1 = 2100 + currentWeekNumber(new Date()) - 2;
+    numberWeek2 = 2100 + currentWeekNumber(new Date()) - 3;
+    numberWeek3 = 2100 + currentWeekNumber(new Date()) - 4;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 
@@ -750,7 +750,7 @@ export default class Ger4ProvineDataChecker2 extends React.Component {
 
       })
 
-    }, 2000);*/
+    }, 2100);*/
 
 
 
@@ -1191,7 +1191,7 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    backgroundColor: 'rgba(0,128,0,0.65)',
+    backgroundColor: 'rgba(0,116,0,0.65)',
     borderRadius: 5,
     padding: 10,
     margin: 20,
@@ -1286,3 +1286,4 @@ const styles = StyleSheet.create({
   },
 
 })
+

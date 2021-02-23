@@ -152,6 +152,8 @@ export default class App extends Component {
 
   async componentDidMount() {
 
+    SplashScreen.hide();
+
     console.disableYellowBox = true;
 
     console.ignoredYellowBox = ['react-native BugReporting extraData:'];
@@ -164,7 +166,7 @@ export default class App extends Component {
 
 
 
-    SplashScreen.hide();
+    
 
 
 
