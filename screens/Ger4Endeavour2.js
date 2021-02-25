@@ -10,7 +10,7 @@ const db = new Database();
 var currentWeekNumber = require('current-week-number');
 var numberWeek;
 var myBoolen;
-export default class Ger4Provine extends Component {
+export default class Ger4Endeavour2 extends Component {
     constructor(props) {
         super(props)
 
@@ -59,7 +59,7 @@ export default class Ger4Provine extends Component {
     callQuery = () => {
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("1", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("1", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -79,7 +79,7 @@ export default class Ger4Provine extends Component {
         }, 1000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("2", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("2", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -99,7 +99,7 @@ export default class Ger4Provine extends Component {
         }, 3000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("3", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("3", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -119,7 +119,7 @@ export default class Ger4Provine extends Component {
         }, 4000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("4", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("4", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -139,7 +139,7 @@ export default class Ger4Provine extends Component {
         }, 5000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("5", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("5", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -159,7 +159,7 @@ export default class Ger4Provine extends Component {
         }, 6000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("6", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("6", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -179,7 +179,7 @@ export default class Ger4Provine extends Component {
         }, 7000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("7", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("7", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -199,7 +199,7 @@ export default class Ger4Provine extends Component {
         }, 8000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("8", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("8", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -219,7 +219,7 @@ export default class Ger4Provine extends Component {
         }, 9000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("9", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("9", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -239,7 +239,7 @@ export default class Ger4Provine extends Component {
         }, 10000);
 
         setTimeout(() => {
-            db.plantsByWeekRowNumberAndName("10", numberWeek, 'GER 4 - Provine', '70/71').then((data) => {
+            db.plantsByWeekRowNumberAndName("10", numberWeek, 'GER 4 - Endeavour', '140/141').then((data) => {
                 console.log(data);
                 console.log("Calling database")
                 this.setState({
@@ -277,13 +277,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant1: 1 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant1: 1 })}>
                                 <Text style={styles.buttonText}>Plant 1 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant1: 1 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant1: 1 })}>
                                 <Text style={styles.buttonText}>Plant 1 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -293,13 +293,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant2: 2 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant2: 2 })}>
                                 <Text style={styles.buttonText}>Plant 2 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant2: 2 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant2: 2 })}>
                                 <Text style={styles.buttonText}>Plant 2 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -308,13 +308,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -323,13 +323,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant4: 4 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant4: 4 })}>
                                 <Text style={styles.buttonText}>Plant 4 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant4: 4 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant4: 4 })}>
                                 <Text style={styles.buttonText}>Plant 4 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -338,13 +338,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant5: 5 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant5: 5 })}>
                                 <Text style={styles.buttonText}>Plant 5 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant5: 5 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant5: 5 })}>
                                 <Text style={styles.buttonText}>Plant 5 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -353,13 +353,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant6: 6 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant6: 6 })}>
                                 <Text style={styles.buttonText}>Plant 6 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant6: 6 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant6: 6 })}>
                                 <Text style={styles.buttonText}>Plant 6 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -369,13 +369,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant7: 7 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant7: 7 })}>
                                 <Text style={styles.buttonText}>Plant 7 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant7: 7 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant7: 7 })}>
                                 <Text style={styles.buttonText}>Plant 7 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -384,13 +384,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant8: 8 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant8: 8 })}>
                                 <Text style={styles.buttonText}>Plant 8 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant8: 8 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant8: 8 })}>
                                 <Text style={styles.buttonText}>Plant 8 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -399,13 +399,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant9: 9 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant9: 9 })}>
                                 <Text style={styles.buttonText}>Plant 9 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant9: 9 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant9: 9 })}>
                                 <Text style={styles.buttonText}>Plant 9 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
@@ -414,13 +414,13 @@ export default class Ger4Provine extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant10: 10 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant10: 10 })}>
                                 <Text style={styles.buttonText}>Plant 10 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('Ger4ProvinePlant1', { plant10: 10 })}>
+                                onPress={() => this.props.navigation.navigate('Ger4Endeavour2Plant1', { plant10: 10 })}>
                                 <Text style={styles.buttonText}>Plant 10 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 

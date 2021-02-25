@@ -10644,6 +10644,11 @@ react-native-screens@^2.0.0-beta.13:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.16.1.tgz#b105a127378d90018a46daf0c2f6518fca60c06f"
   integrity sha512-WZ7m0sBDVaHbBnlHxwQnUlI6KNfQKHq+Unfw+VBuAlnSXvT+aw6Bb/K2bUlHzBgvrPjwY3Spc7ZERFuTwRLLwg==
 
+react-native-socketio@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-socketio/-/react-native-socketio-0.3.0.tgz#3993716f579fdeb0043323c4e57fa23bc7b66807"
+  integrity sha1-OZNxb1ef3rAEMyPE5X+iO8e2aAc=
+
 react-native-splash-screen@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.2.0.tgz#d47ec8557b1ba988ee3ea98d01463081b60fff45"
