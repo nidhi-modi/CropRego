@@ -12,7 +12,7 @@ const db = new Database();
 
 
 
-export default class Ger5MerlicePlantList extends Component {
+export default class Ger5AngellePlantList extends Component {
 
 
     constructor(props) {
@@ -68,7 +68,7 @@ export default class Ger5MerlicePlantList extends Component {
             isLoading: true,
         });
         let plants = [];
-        db.plantByWeekInList('GER 5 - Merlice').then((data) => {
+        db.plantByWeekInList('GER 5 - Angelle').then((data) => {
             console.log("Calling database")
             plants = data;
             this.setState({
@@ -99,7 +99,7 @@ export default class Ger5MerlicePlantList extends Component {
             onPress={() => {
                 this.props.navigation.navigate('PlantDetails', {
                     plantId: `${item.plantId}`,
-                    plantName: 'GER 5 - Merlice',
+                    plantName: 'GER 5 - Angelle',
 
 
                 });

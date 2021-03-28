@@ -15,14 +15,26 @@ function Ger5Row(props) {
 
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Ger5Merlice')}>
-            <Text style={styles.buttonText}>Row 98/73</Text>
+            onPress={() => navigation.navigate('Ger5Angelle')}>
+            <Text style={styles.buttonText}>Row 98</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Ger5Merlice2')}>
-            <Text style={styles.buttonText}>Row 48/23</Text>
+            onPress={() => navigation.navigate('Ger5Angelle2')}>
+            <Text style={styles.buttonText}>Row 73</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => navigation.navigate('Ger5Angelle3')}>
+            <Text style={styles.buttonText}>Row 48</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => navigation.navigate('Ger5Angelle4')}>
+            <Text style={styles.buttonText}>Row 23</Text>
           </TouchableOpacity>
 
 

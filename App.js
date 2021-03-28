@@ -22,14 +22,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import MainStackNavigator from './navigation/MainStackNavigator'
 import Home from './screens/Home'
 import Database from '../rego/screens/Database'
-import { fbDB } from '../rego/screens/config'
-import { Firebase } from 'react-native-firebase';
 import BackgroundTask from 'react-native-background-task'
 import { listTodos } from './graphql/queries'
 
 
 const db = new Database();
-var firebase = require("firebase");
 
 var currentWeekNumber = require('current-week-number');
 var numberWeek;
@@ -228,67 +225,7 @@ export default class App extends Component {
       plants = data;
       console.log('details from App:', data)
 
-      firebase.database().ref('croprego/').push(objify("PlantDetails", data)
-
-      ).then((data) => {
-        //success callback
-        console.log('data ', data)
-      }).catch((error) => {
-        //error callback
-        console.log('error ', error)
-      })
-
-      /*fetch('http://192.168.110.2:80/Insert_Plant.php',
-            {
-                method: 'POST',
-                headers: 
-                {
-                    'Accept': 'application/json', 
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(
-                {
-
-                 
-                  plantNumber : this.state.plants.plantNumber,
  
-                  plantRow : this.state.plants.plantRow,
- 
-                  plantName : this.state.plants.plantName,
-
-                  plantWeek : this.state.plants.plantWeek,
- 
-                  leavesPerPlant : this.state.plants.leavesPerPlant,
- 
-                  setTrussLength : this.state.plants.setTrussLength,
-
-                  weeklyGrowth : this.state.plants.weeklyGrowth,
- 
-                  floweringTrussHeight : this.state.plants.floweringTrussHeight,
- 
-                  leafLength : this.state.plants.leafLength,
-
-                  leafWidth : this.state.plants.leafWidth,
- 
-                  stmDiameter : this.state.plants.stmDiameter,
- 
-                  lastWeekStmDiameter : this.state.plants.lastWeekStmDiameter,
-
-                  dataSend : this.state.plants.dataSend
- 
-                })
- 
-            }).then((response) => response.text()).then((responseJsonFromServer) =>
-            {
-                console.log("Response : ",responseJsonFromServer)
- 
- 
-            }).catch((error) =>
-            {
-                console.error(error);
- 
-            });*/
-
 
 
       this.setState({
@@ -320,18 +257,6 @@ export default class App extends Component {
 
       this.setState({ sample: sampleData })
 
-
-      firebase.database().ref('croprego/').push(objify("TrussDetails", data)
-
-
-      ).then((data) => {
-        //success callback
-        console.log('data ', data)
-      }).catch((error) => {
-        //error callback
-        console.log('error ', error)
-      })
-
       this.setState({
         listTrusss,
       });
@@ -344,52 +269,6 @@ export default class App extends Component {
 
   }
 
-  /*getPlants = () => {
-    let plants = [];
-    db.listPlants().then((data) => {
-      console.log("Calling database")
-      plants = data;
-      console.log('details from App:', plants)
-
-
-
-      firebase.database().ref('croprego/').push(objify("PlantDetails", plants)
-
-      ).then((data) => {
-        //success callback
-        console.log('data ', data)
-      }).catch((error) => {
-        //error callback
-        console.log('error ', error)
-      })
-      this.setState({
-        plants,
-      });
-
-    }).catch((err) => {
-      console.log(err);
-
-    })
-  }
-
-  getTruss = () => {
-    let truss = [];
-    db.listTruss().then((data) => {
-      console.log("Calling database")
-      truss = data;
-      console.log('details from App:', truss)
-
-
-     
-      this.setState({
-        truss,
-      });
-
-    }).catch((err) => {
-      console.log(err);
-
-    })
-  }*/
 
 
   keyExtractor = (item, index) => index.toString()

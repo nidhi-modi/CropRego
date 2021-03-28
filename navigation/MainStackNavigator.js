@@ -167,15 +167,23 @@ import Har6ProvineTrussDetails1 from '../screens/Har6ProvineTrussDetails1'
 import Har6ProvineTrussDetails2 from '../screens/Har6ProvineTrussDetails2'
 import Har6ProvineTrussDetails3 from '../screens/Har6ProvineTrussDetails3'
 import Ger5Row from '../screens/Ger5Row'
-import Ger5Merlice from '../screens/Ger5Merlice'
-import Ger5Merlice2 from '../screens/Ger5Merlice2'
-import Ger5Merlice2Plant1 from '../screens/Ger5Merlice2Plant1'
-import Ger5MerlicePlant1 from '../screens/Ger5MerlicePlant1'
-import Ger5MerliceTrussDetails from '../screens/Ger5MerliceTrussDetails'
-import Ger5Merlice2TrussDetails from '../screens/Ger5Merlice2TrussDetails'
-import Ger5MerlicePlantList from '../screens/Ger5MerlicePlantList'
-import Ger5MerliceDataChecker1 from '../screens/Ger5MerliceDataChecker1'
-import Ger5MerliceDataChecker2 from '../screens/Ger5MerliceDataChecker2'
+import Ger5Angelle from '../screens/Ger5Angelle'
+import Ger5Angelle2 from '../screens/Ger5Angelle2'
+import Ger5Angelle3 from '../screens/Ger5Angelle3'
+import Ger5Angelle4 from '../screens/Ger5Angelle4'
+import Ger5AngellePlant1 from '../screens/Ger5AngellePlant1'
+import Ger5AngellePlant2 from '../screens/Ger5AngellePlant2'
+import Ger5AngellePlant3 from '../screens/Ger5AngellePlant3'
+import Ger5AngellePlant4 from '../screens/Ger5AngellePlant4'
+import Ger5AngelleTrussDetails1 from '../screens/Ger5AngelleTrussDetails1'
+import Ger5AngelleTrussDetails2 from '../screens/Ger5AngelleTrussDetails2'
+import Ger5AngelleTrussDetails3 from '../screens/Ger5AngelleTrussDetails3'
+import Ger5AngelleTrussDetails4 from '../screens/Ger5AngelleTrussDetails4'
+import Ger5AngellePlantList from '../screens/Ger5AngellePlantList'
+import Ger5AngelleDataChecker1 from '../screens/Ger5AngelleDataChecker1'
+import Ger5AngelleDataChecker2 from '../screens/Ger5AngelleDataChecker2'
+import Ger5AngelleDataChecker3 from '../screens/Ger5AngelleDataChecker3'
+import Ger5AngelleDataChecker4 from '../screens/Ger5AngelleDataChecker4'
 import Ger3Row from '../screens/Ger3Row'
 import Ger3Endeavour from '../screens/Ger3Endeavour'
 import Ger3Endeavour2 from '../screens/Ger3Endeavour2'
@@ -3748,13 +3756,13 @@ function MainStackNavigator() {
           , title: 'HAR 6 Provine'
         })} />
 
-        <Stack.Screen name='Ger5Merlice' component={Ger5Merlice} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5Angelle' component={Ger5Angelle} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('Ger5MerlicePlantList')}>
+                onPress={() => navigation.navigate('Ger5AngellePlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -3777,16 +3785,16 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
         })} />
 
-        <Stack.Screen name='Ger5Merlice2' component={Ger5Merlice2} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5Angelle2' component={Ger5Angelle2} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('Ger5MerlicePlantList')}>
+                onPress={() => navigation.navigate('Ger5AngellePlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -3809,10 +3817,77 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
         })} />
 
-        <Stack.Screen name='Ger5MerlicePlantList' component={Ger5MerlicePlantList} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5Angelle3' component={Ger5Angelle3} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Ger5AngellePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 5 Angelle'
+        })} />
+
+        <Stack.Screen name='Ger5Angelle4' component={Ger5Angelle4} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('Ger5AngellePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 5 Angelle'
+        })} />
+
+
+
+
+        <Stack.Screen name='Ger5AngellePlantList' component={Ger5AngellePlantList} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -3829,10 +3904,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
         })} />
 
-        <Stack.Screen name='Ger5Merlice2Plant1' component={Ger5Merlice2Plant1} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5AngellePlant2' component={Ger5AngellePlant2} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -3849,10 +3924,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
         })} />
 
-        <Stack.Screen name='Ger5MerlicePlant1' component={Ger5MerlicePlant1} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5AngellePlant3' component={Ger5AngellePlant3} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -3869,7 +3944,47 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
+        })} />
+
+        <Stack.Screen name='Ger5AngellePlant4' component={Ger5AngellePlant4} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 5 Angelle'
+        })} />
+
+        <Stack.Screen name='Ger5AngellePlant1' component={Ger5AngellePlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 5 Angelle'
         })} />
 
         <Stack.Screen name='Ger5Row' component={Ger5Row} options={({ navigation }) => ({
@@ -3889,10 +4004,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
         })} />
 
-        <Stack.Screen name='Ger5MerliceDataChecker1' component={Ger5MerliceDataChecker1} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5AngelleDataChecker1' component={Ger5AngelleDataChecker1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -3909,10 +4024,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
         })} />
 
-        <Stack.Screen name='Ger5MerliceDataChecker2' component={Ger5MerliceDataChecker2} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5AngelleDataChecker2' component={Ger5AngelleDataChecker2} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -3929,10 +4044,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
         })} />
 
-        <Stack.Screen name='Ger5MerliceTrussDetails' component={Ger5MerliceTrussDetails} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5AngelleDataChecker3' component={Ger5AngelleDataChecker3} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -3949,10 +4064,10 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
         })} />
 
-        <Stack.Screen name='Ger5Merlice2TrussDetails' component={Ger5Merlice2TrussDetails} options={({ navigation }) => ({
+        <Stack.Screen name='Ger5AngelleDataChecker4' component={Ger5AngelleDataChecker4} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -3969,7 +4084,87 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'GER 5 Merlice'
+          , title: 'GER 5 Angelle'
+        })} />
+
+        <Stack.Screen name='Ger5AngelleTrussDetails1' component={Ger5AngelleTrussDetails1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 5 Angelle'
+        })} />
+
+        <Stack.Screen name='Ger5AngelleTrussDetails2' component={Ger5AngelleTrussDetails2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 5 Angelle'
+        })} />
+
+        <Stack.Screen name='Ger5AngelleTrussDetails3' component={Ger5AngelleTrussDetails3} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 5 Angelle'
+        })} />
+
+        <Stack.Screen name='Ger5AngelleTrussDetails4' component={Ger5AngelleTrussDetails4} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'GER 5 Angelle'
         })} />
 
         <Stack.Screen name='Ger3Endeavour' component={Ger3Endeavour} options={({ navigation }) => ({
