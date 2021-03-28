@@ -2147,14 +2147,14 @@ export default class Ger5AngellePlant1 extends React.Component {
                                 <TouchableOpacity
                                     style={styles.buttonContainer}
                                     disabled={false}
-                                    onPress={() => this.props.navigation.navigate('Ger5AngelleTrussDetails', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Ger5AngelleTrussDetails1', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                 </TouchableOpacity>) :
 
                                 <TouchableOpacity
                                     style={styles.buttonContainer1}
                                     disabled={true}
-                                    onPress={() => this.props.navigation.navigate('Ger5AngelleTrussDetails', { plantNum: no })}>
+                                    onPress={() => this.props.navigation.navigate('Ger5AngelleTrussDetails1', { plantNum: no })}>
                                     <Text style={styles.buttonText}>Truss Details</Text>
                                     <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
                                 </TouchableOpacity>}
