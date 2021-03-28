@@ -920,7 +920,7 @@ export default class Ger5AngellePlant3 extends React.Component {
                             no5 = null;
 
 
-                        } 
+                        }
                     }
                 }
             }
