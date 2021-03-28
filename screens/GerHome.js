@@ -17526,7 +17526,7 @@ callback=ctrlq&plantRow=${'114/115'}&plantName=${'GER 2 - Merlice'}&plantWeek=${
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Ger5Row')}>
-              <Text style={styles.buttonText}>GER 5 - Merlice </Text>
+              <Text style={styles.buttonText}>GER 5 - Angelle </Text>
             </TouchableOpacity>
 
 
