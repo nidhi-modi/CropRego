@@ -116,10 +116,10 @@ export default class RepMerliceDataChecker1 extends React.Component {
 
   componentDidMount() {
 
-    numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
     numberWeek = 2100 + currentWeekNumber(new Date()) - 2;
     numberWeek = 2100 + currentWeekNumber(new Date()) - 3;
     numberWeek = 2100 + currentWeekNumber(new Date()) - 4;
+    numberWeek = 2100 + currentWeekNumber(new Date()) - 5;
 
     this.focusListener = this.props.navigation.addListener('focus', () => {
 

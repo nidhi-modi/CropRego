@@ -21,7 +21,7 @@ var avgLeavesPlant2, avgFullyTruss2, avgFullyTrussLength2, avgWeeklyGrowth2, avg
 var avgLeavesPlant3, avgFullyTruss3, avgFullyTrussLength3, avgWeeklyGrowth3, avgFlweTrussHt3, avgLeafLength3, avgLeafWdt3, avgStmDm3, avgLastWkStmDm3;
 var number, data;
 
-export default class RepMerliceDataChecker2 extends React.Component {
+export default class RepBambelloDataChecker2 extends React.Component {
 
 
 
@@ -150,7 +150,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek, 'REP - Merlice', '424').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek, 'REP - Bambello', '807').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss1 = data;
@@ -170,7 +170,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'REP - Merlice', '424').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'REP - Bambello', '807').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss2 = data;
@@ -191,7 +191,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'REP - Merlice', '424').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'REP - Bambello', '807').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss3 = data;
@@ -216,7 +216,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
       });
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'REP - Merlice', '424').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'REP - Bambello', '807').then((data) => {
         console.log(data);
         console.log("Calling database")
         truss4 = data;
@@ -242,7 +242,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
         isLoading: true
 
       });
-      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'REP - Merlice', '424').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek1, 'REP - Bambello', '807').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo1 = data;
@@ -260,7 +260,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'REP - Merlice', '424').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek2, 'REP - Bambello', '807').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo2 = data;
@@ -280,7 +280,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'REP - Merlice', '424').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek3, 'REP - Bambello', '807').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo3 = data;
@@ -300,7 +300,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
     setTimeout(() => {
 
-      db.trussByWeekNumberRowAndName2(number, numberWeek, 'REP - Merlice', '424').then((data) => {
+      db.trussByWeekNumberRowAndName2(number, numberWeek, 'REP - Bambello', '807').then((data) => {
         console.log(data);
         console.log("Calling database")
         plantNo4 = data;
@@ -795,13 +795,13 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
               <View style={styles.borderEdit}>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
-                  <Text style={styles.text424}>Measures</Text>
-                  <Text style={styles.text424}>{this.state.weekNo3}</Text>
-                  <Text style={styles.text424}>{this.state.weekNo2}</Text>
-                  <Text style={styles.text424}>{this.state.weekNo1}</Text>
-                  <Text style={styles.text424}>{this.state.weekNo}</Text>
+                  <Text style={styles.text707}>Measures</Text>
+                  <Text style={styles.text707}>{this.state.weekNo3}</Text>
+                  <Text style={styles.text707}>{this.state.weekNo2}</Text>
+                  <Text style={styles.text707}>{this.state.weekNo1}</Text>
+                  <Text style={styles.text707}>{this.state.weekNo}</Text>
 
                 </View>
 
@@ -813,7 +813,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                 />
 
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Leaves Per Plant <Text style={styles.textColorRed}>{"\n"} Min:8 Max:16</Text></Text>
                   {this.state.plantNo2.leavesPerPlant ? (<Text style={styles.text242}>{this.state.plantNo2.leavesPerPlant}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -824,7 +824,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                   </View>
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Fully Set Truss     <Text style={styles.textColorRed}>{"\n"} Min:1 Max:45</Text></Text>
                   {this.state.plantNo2.fullySetTruss ? (<Text style={styles.text242}>{this.state.plantNo2.fullySetTruss}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -835,7 +835,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                   </View>
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Fully Set Trs Lgth<Text style={styles.textColorRed}>{"\n"} Min:2 Max:6</Text></Text>
                   {this.state.plantNo2.setTrussLength ? (<Text style={styles.text242}>{this.state.plantNo2.setTrussLength}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -846,7 +846,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                   </View>
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Weekly Growth    <Text style={styles.textColorRed}>{"\n"} Min:16 Max:32</Text></Text>
                   {this.state.plantNo2.weeklyGrowth ? (<Text style={styles.text242}>{this.state.plantNo2.weeklyGrowth}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -857,7 +857,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                   </View>
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Flwer Trus Hht    <Text style={styles.textColorRed}>{"\n"} Min:10 Max:25</Text></Text>
                   {this.state.plantNo2.floweringTrussHeight ? (<Text style={styles.text242}>{this.state.plantNo2.floweringTrussHeight}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -869,7 +869,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Leaf Length        <Text style={styles.textColorRed}>{"\n"} Min:35 Max:45</Text></Text>
                   {this.state.plantNo2.leafLength ? (<Text style={styles.text242}>{this.state.plantNo2.leafLength}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -881,7 +881,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                   </View>
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Leaf Width          <Text style={styles.textColorRed}>{"\n"} Min:35 Max:45</Text></Text>
                   {this.state.plantNo2.leafWidth ? (<Text style={styles.text242}>{this.state.plantNo2.leafWidth}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -892,7 +892,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                   </View>
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Stem Diameter    <Text style={styles.textColorRed}>{"\n"} Min:9 Max:12</Text></Text>
                   {this.state.plantNo2.stmDiameter ? (<Text style={styles.text242}>{this.state.plantNo2.stmDiameter}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -903,7 +903,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                   </View>
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Lt Wk Stm Diamt<Text style={styles.textColorRed}>{"\n"} Min:10 Max:13</Text></Text>
                   {this.state.plantNo2.lastWeekStmDiameter ? (<Text style={styles.text242}>{this.state.plantNo2.lastWeekStmDiameter}</Text>) : <Text style={styles.text242}>---</Text>}
@@ -925,7 +925,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
               <View style={styles.borderEdit}>
 
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Fruit Load           </Text>
                   {this.state.truss4.fruitLoad ? (<Text style={styles.text24}>{this.state.truss4.fruitLoad} </Text>) : <Text style={styles.text24}>---</Text>}
@@ -944,7 +944,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
 
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Pruning Flower  </Text>
                   {this.state.truss4.pruningFlower ? (<Text style={styles.text24}>{this.state.truss4.pruningFlower} </Text>) : <Text style={styles.text24}>---</Text>}
@@ -954,7 +954,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Flowering Truss </Text>
                   {this.state.truss4.floweringTruss ? (<Text style={styles.text24}>{this.state.truss4.floweringTruss} </Text>) : <Text style={styles.text24}>---</Text>}
@@ -964,7 +964,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Flowering Speed</Text>
                   <Text style={styles.text24}>---</Text>
@@ -981,7 +981,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                   }}
                 />
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Pruning Set        </Text>
                   {this.state.truss4.pruningSet ? (<Text style={styles.text24}>{this.state.truss4.pruningSet} </Text>) : <Text style={styles.text24}>---</Text>}
@@ -991,7 +991,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Setting Truss      </Text>
                   {this.state.truss4.settingTruss ? (<Text style={styles.text24}>{this.state.truss4.settingTruss} </Text>) : <Text style={styles.text24}>---</Text>}
@@ -1001,7 +1001,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Setting Speed     </Text>
                   <Text style={styles.text24}>---</Text>
@@ -1019,7 +1019,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
                 />
 
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Pruning Harvest </Text>
                   {this.state.truss4.pruningHarvest ? (<Text style={styles.text24}>{this.state.truss4.pruningHarvest} </Text>) : <Text style={styles.text24}>---</Text>}
@@ -1029,7 +1029,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Harvest Truss     </Text>
                   {this.state.truss4.harvestTruss ? (<Text style={styles.text24}>{this.state.truss4.harvestTruss} </Text>) : <Text style={styles.text24}>---</Text>}
@@ -1039,7 +1039,7 @@ export default class RepMerliceDataChecker2 extends React.Component {
 
                 </View>
 
-                <View style={styles.rowContainer424}>
+                <View style={styles.rowContainer707}>
 
                   <Text style={styles.text242}> Harvest Speed    </Text>
                   <Text style={styles.text24}>---</Text>
@@ -1101,17 +1101,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     borderWidth: 1
   },
-  container424: {
+  container707: {
     padding: 8,
     alignItems: "stretch"
   },
-  rowContainer424: {
+  rowContainer707: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
 
-  text424: {
+  text707: {
     margin: 10,
     color: '#2C903D',
     fontSize: 15,

@@ -4,7 +4,7 @@ import AwesomeButton from 'react-native-really-awesome-button';
 import AwesomeButtonRick from 'react-native-really-awesome-button/src/themes/rick';
 
 
-function RepRow(props) {
+function RepKMRow(props) {
   const { navigation } = props
   return (
     <View style={styles.container}>
@@ -15,22 +15,11 @@ function RepRow(props) {
 
           <TouchableOpacity
             style={styles.buttonContainer}
-            onPress={() => navigation.navigate('RepMerlice')}>
-            <Text style={styles.buttonText}>Row 222</Text>
+            onPress={() => navigation.navigate('RepKM')}>
+            <Text style={styles.buttonText}>Row 232</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => navigation.navigate('RepMerlice2')}>
-            <Text style={styles.buttonText}>Row 424</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => navigation.navigate('RepMerlice3')}>
-            <Text style={styles.buttonText}>Row 707</Text>
-          </TouchableOpacity>
-
+       
 
         </ScrollView>
 
@@ -103,4 +92,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default RepRow
+export default RepKMRow

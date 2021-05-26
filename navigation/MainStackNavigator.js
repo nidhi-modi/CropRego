@@ -193,20 +193,47 @@ import Ger3EndeavourPlantList from '../screens/Ger3EndeavourPlantList'
 import Ger3EndeavourDataChecker1 from '../screens/Ger3EndeavourDataChecker1'
 import Ger3EndeavourDataChecker2 from '../screens/Ger3EndeavourDataChecker2'
 import RepHome from '../screens/RepHome'
-import RepRow from '../screens/RepRow'
+import RepMerliceRow from '../screens/RepMerliceRow'
+import RepAngelleRow from '../screens/RepAngelleRow'
+import RepDuelleRow from '../screens/RepDuelleRow'
+import RepKMRow from '../screens/RepKMRow'
+import RepBambelloRow from '../screens/RepBambelloRow'
 import RepMerlice from '../screens/RepMerlice'
 import RepMerlice2 from '../screens/RepMerlice2'
-import RepMerlice3 from '../screens/RepMerlice3'
+import RepAngelle from '../screens/RepAngelle'
+import RepAngelle2 from '../screens/RepAngelle2'
+import RepDuelle from '../screens/RepDuelle'
+import RepKM from '../screens/RepKM'
+import RepBambello from '../screens/RepBambello'
 import RepMerliceDataChecker1 from '../screens/RepMerliceDataChecker1'
 import RepMerliceDataChecker2 from '../screens/RepMerliceDataChecker2'
-import RepMerliceDataChecker3 from '../screens/RepMerliceDataChecker3'
+import RepDuelleDataChecker1 from '../screens/RepDuelleDataChecker1'
+import RepBambelloDataChecker1 from '../screens/RepBambelloDataChecker1'
+import RepKMDataChecker1 from '../screens/RepKMDataChecker1'
+import RepAngelleDataChecker1 from '../screens/RepAngelleDataChecker1'
+import RepAngelleDataChecker2 from '../screens/RepAngelleDataChecker2'
+
 import RepMerlicePlantList from '../screens/RepMerlicePlantList'
+import RepAngellePlantList from '../screens/RepAngellePlantList'
+import RepDuellePlantList from '../screens/RepDuellePlantList'
+import RepKMPlantList from '../screens/RepKMPlantList'
+import RepBambelloPlantList from '../screens/RepBambelloPlantList'
+import RepBambelloPlant1 from '../screens/RepBambelloPlant1'
+import RepAngellePlant1 from '../screens/RepAngellePlant1'
+import RepAngellePlant2 from '../screens/RepAngellePlant2'
+import RepKMPlant1 from '../screens/RepKMPlant1'
 import RepMerliceTrussDetails1 from '../screens/RepMerliceTrussDetails1'
 import RepMerliceTrussDetails2 from '../screens/RepMerliceTrussDetails2'
-import RepMerliceTrussDetails3 from '../screens/RepMerliceTrussDetails3'
+import RepDuelleTrussDetails1 from '../screens/RepDuelleTrussDetails1'
+import RepKMTrussDetails1 from '../screens/RepKMTrussDetails1'
+import RepBambelloTrussDetails1 from '../screens/RepBambelloTrussDetails1'
+import RepAngelleTrussDetails1 from '../screens/RepAngelleTrussDetails1'
+import RepAngelleTrussDetails2 from '../screens/RepAngelleTrussDetails2'
+
+
 import RepMerlicePlant1 from '../screens/RepMerlicePlant1'
 import RepMerlicePlant2 from '../screens/RepMerlicePlant2'
-import RepMerlicePlant3 from '../screens/RepMerlicePlant3'
+import RepDuellePlant1 from '../screens/RepDuellePlant1'
 import Har1Annasum from '../screens/Har1Annasum'
 import Har1AnnasumDataChecker from '../screens/Har1AnnasumDataChecker'
 import Har1AnnasumPlant1 from '../screens/Har1AnnasumPlant1'
@@ -4403,7 +4430,7 @@ function MainStackNavigator() {
           , title: 'T&G Global'
         })} />
 
-        <Stack.Screen name='RepRow' component={RepRow} options={({ navigation }) => ({
+        <Stack.Screen name='RepMerliceRow' component={RepMerliceRow} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -4421,6 +4448,86 @@ function MainStackNavigator() {
               }}></View>
             </View>
           , title: 'REP Merlice'
+        })} />
+
+        <Stack.Screen name='RepAngelleRow' component={RepAngelleRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
+        <Stack.Screen name='RepDuelleRow' component={RepDuelleRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Duelle'
+        })} />
+
+        <Stack.Screen name='RepKMRow' component={RepKMRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP KM5512'
+        })} />
+
+        <Stack.Screen name='RepBambelloRow' component={RepBambelloRow} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Bambello'
         })} />
 
         <Stack.Screen name='RepMerlice' component={RepMerlice} options={({ navigation }) => ({
@@ -4487,13 +4594,13 @@ function MainStackNavigator() {
           , title: 'REP Merlice'
         })} />
 
-        <Stack.Screen name='RepMerlice3' component={RepMerlice3} options={({ navigation }) => ({
+        <Stack.Screen name='RepAngelle' component={RepAngelle} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
               <TouchableOpacity
                 activeOpacity={0.5}
                 style={styles.TouchableOpacityStyle2}
-                onPress={() => navigation.navigate('RepMerlicePlantList')}>
+                onPress={() => navigation.navigate('RepAngellePlantList')}>
 
                 <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
 
@@ -4516,7 +4623,135 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'REP Merlice'
+          , title: 'REP Angelle'
+        })} />
+
+        <Stack.Screen name='RepAngelle2' component={RepAngelle2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('RepAngellePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
+        <Stack.Screen name='RepDuelle' component={RepDuelle} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('RepDuellePlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Duelle'
+        })} />
+
+        <Stack.Screen name='RepKM' component={RepKM} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('RepKMPlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP KM5512'
+        })} />
+
+        <Stack.Screen name='RepBambello' component={RepBambello} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.TouchableOpacityStyle2}
+                onPress={() => navigation.navigate('RepBambelloPlantList')}>
+
+                <Image source={require('../assets/22.png')} style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginLeft: 15
+              }}></View>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Bambello'
         })} />
 
         <Stack.Screen name='RepMerliceDataChecker1' component={RepMerliceDataChecker1} options={({ navigation }) => ({
@@ -4560,7 +4795,7 @@ function MainStackNavigator() {
         })} />
 
 
-        <Stack.Screen name='RepMerliceDataChecker3' component={RepMerliceDataChecker3} options={({ navigation }) => ({
+        <Stack.Screen name='RepDuelleDataChecker1' component={RepDuelleDataChecker1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -4577,8 +4812,90 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'REP Merlice'
+          , title: 'REP Duelle'
         })} />
+
+<Stack.Screen name='RepAngelleDataChecker1' component={RepAngelleDataChecker1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
+<Stack.Screen name='RepAngelleDataChecker2' component={RepAngelleDataChecker2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
+<Stack.Screen name='RepBambelloDataChecker1' component={RepBambelloDataChecker1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Bambello'
+        })} />
+
+<Stack.Screen name='RepKMDataChecker1' component={RepKMDataChecker1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP KM5512'
+        })} />
+
+
 
         <Stack.Screen name='RepMerlicePlant1' component={RepMerlicePlant1} options={({ navigation }) => ({
           headerRight: () =>
@@ -4598,6 +4915,27 @@ function MainStackNavigator() {
               }}></View>
             </View>
           , title: 'REP Merlice'
+        })} />
+
+
+        <Stack.Screen name='RepKMPlant1' component={RepKMPlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP KM5512'
         })} />
 
         <Stack.Screen name='RepMerlicePlant2' component={RepMerlicePlant2} options={({ navigation }) => ({
@@ -4620,7 +4958,7 @@ function MainStackNavigator() {
           , title: 'REP Merlice'
         })} />
 
-        <Stack.Screen name='RepMerlicePlant3' component={RepMerlicePlant3} options={({ navigation }) => ({
+        <Stack.Screen name='RepDuellePlant1' component={RepDuellePlant1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -4637,7 +4975,67 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'REP Merlice'
+          , title: 'REP Duelle'
+        })} />
+
+        <Stack.Screen name='RepAngellePlant1' component={RepAngellePlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
+        <Stack.Screen name='RepAngellePlant2' component={RepAngellePlant2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
+        <Stack.Screen name='RepBambelloPlant1' component={RepBambelloPlant1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Bambello'
         })} />
 
         <Stack.Screen name='RepMerlicePlantList' component={RepMerlicePlantList} options={({ navigation }) => ({
@@ -4658,6 +5056,86 @@ function MainStackNavigator() {
               }}></View>
             </View>
           , title: 'REP Merlice'
+        })} />
+
+        <Stack.Screen name='RepAngellePlantList' component={RepAngellePlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
+        <Stack.Screen name='RepDuellePlantList' component={RepDuellePlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Duelle'
+        })} />
+
+        <Stack.Screen name='RepKMPlantList' component={RepKMPlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP KM5512'
+        })} />
+
+        <Stack.Screen name='RepBambelloPlantList' component={RepBambelloPlantList} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Bambello'
         })} />
 
         <Stack.Screen name='RepMerliceTrussDetails1' component={RepMerliceTrussDetails1} options={({ navigation }) => ({
@@ -4700,7 +5178,7 @@ function MainStackNavigator() {
           , title: 'REP Merlice'
         })} />
 
-        <Stack.Screen name='RepMerliceTrussDetails3' component={RepMerliceTrussDetails3} options={({ navigation }) => ({
+        <Stack.Screen name='RepDuelleTrussDetails1' component={RepDuelleTrussDetails1} options={({ navigation }) => ({
           headerRight: () =>
             <View style={{ flexDirection: "row" }}>
 
@@ -4717,8 +5195,89 @@ function MainStackNavigator() {
                 marginRight: 3
               }}></View>
             </View>
-          , title: 'REP Merlice'
+          , title: 'REP Duelle'
         })} />
+
+<Stack.Screen name='RepBambelloTrussDetails1' component={RepBambelloTrussDetails1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Bambello'
+        })} />
+
+<Stack.Screen name='RepKMTrussDetails1' component={RepKMTrussDetails1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP KM5512'
+        })} />
+
+<Stack.Screen name='RepAngelleTrussDetails1' component={RepAngelleTrussDetails1} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
+<Stack.Screen name='RepAngelleTrussDetails2' component={RepAngelleTrussDetails2} options={({ navigation }) => ({
+          headerRight: () =>
+            <View style={{ flexDirection: "row" }}>
+
+              <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                onPress={() => { Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSdOTsC0nlLB0nzw9ELYSBkqKo0QFM6z_v6vs2dQPbd-tENjkQ/viewform') }} >
+
+                <Image source={require('../assets/comments32.png')}
+
+                  style={styles.FloatingButtonStyle2} />
+
+              </TouchableOpacity>
+
+              <View style={{
+                marginRight: 3
+              }}></View>
+            </View>
+          , title: 'REP Angelle'
+        })} />
+
 
 
         <Stack.Screen name='Har1AnnasumRow' component={Har1AnnasumRow} options={({ navigation }) => ({
