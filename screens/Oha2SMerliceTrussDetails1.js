@@ -3,12 +3,8 @@ import { StyleSheet, View, Text, TouchableOpacity, TextInput, Keyboard ,Activity
 import { ListItem, Button } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputLayout } from 'rn-textinputlayout';
-import {
-    TextField,
-    FilledTextField,
-    OutlinedTextField,
-} from 'react-native-material-textfield';
-import { RaisedTextButton } from 'react-native-material-buttons';
+
+
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { Table, TableWrapper, Row, Cell } from 'react-native-table-component';
 import AsyncStorage from '@react-native-community/async-storage';

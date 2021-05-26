@@ -9,11 +9,9 @@ import Home from '../screens/Home'
 import HarHome from '../screens/HarHome'
 import GerHome from '../screens/GerHome'
 import OhaHome from '../screens/OhaHome'
-import FavHome from '../screens/FavHome'
 import Har123 from '../screens/Har123'
 import Har456 from '../screens/Har456'
-import Har3Flamentyno from '../screens/Har3Flamentyno'
-import FlamentynoPlant1 from '../screens/FlamentynoPlant1'
+
 import PlantList from '../screens/PlantList'
 import TrussDetails from '../screens/TrussDetails'
 import PlantDetails from '../screens/PlantDetails'
@@ -353,7 +351,6 @@ function MainStackNavigator() {
           , title: 'T&G Global'
         })} />
 
-        <Stack.Screen name='FavHome' component={FavHome} options={{ headerLeft: () => null, title: 'T&G Global' }} />
 
         <Stack.Screen name='OhaHome' component={OhaHome} options={({ navigation }) => ({
           headerLeft: () => null, headerRight: () =>
@@ -540,8 +537,6 @@ function MainStackNavigator() {
         })}
         />
 
-        <Stack.Screen name='Har3Flamentyno' component={Har3Flamentyno} options={{ title: 'T&G Global' }} />
-
         <Stack.Screen name='PlantList' component={PlantList} options={{ title: 'T&G Global' }} />
 
         <Stack.Screen name='PlantDetails' component={PlantDetails} options={{ title: 'T&G Global' }} />
@@ -621,9 +616,6 @@ function MainStackNavigator() {
             </View>
           , title: 'HAR 1 Yelo'
         })} />
-
-
-        <Stack.Screen name='FlamentynoPlant1' component={FlamentynoPlant1} options={{ title: 'T&G Global' }} />
 
         <Stack.Screen name='Har1YeloTrussDetails' component={Har1YeloTrussDetails} options={({ navigation }) => ({
           headerRight: () =>

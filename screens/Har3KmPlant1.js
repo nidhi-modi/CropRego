@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, ActivityIndicator, TextInput, Image, ImageBackground, SafeAreaView, Alert, ToastAndroid, AlertIOS, Platform } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 import { TextInputLayout } from 'rn-textinputlayout';
-import {
-    TextField,
-    FilledTextField,
-    OutlinedTextField,
-} from 'react-native-material-textfield';
-import { RaisedTextButton } from 'react-native-material-buttons';
+
+
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import Database from './Database'
 import { Divider } from 'react-native-elements';
