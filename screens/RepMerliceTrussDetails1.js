@@ -408,7 +408,7 @@ export default class RepMerliceTrussDetails1 extends React.Component {
         }
 
 
-        numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
+        numberWeek = 2100 + currentWeekNumber(new Date()) - 2;
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 
