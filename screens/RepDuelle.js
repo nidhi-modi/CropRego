@@ -18,16 +18,11 @@ export default class RepDuelle extends Component {
         this.state = {
 
             dataSet1: 0,
-            dataSet2: 0,
-            dataSet3: 0,
-            dataSet4: 0,
-            dataSet5: 0,
-            dataSet6: 0,
-            dataSet7: 0,
-            dataSet8: 0,
-            dataSet9: 0,
-            dataSet10: 0,
-            week: ''
+            dataSet2: false,
+            dataSet3: false,
+            dataSet4: false,
+            dataSet5: false,
+            week:''
 
 
         }
@@ -38,17 +33,28 @@ export default class RepDuelle extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2100 + currentWeekNumber(new Date()) - 2;
+        numberWeek = 2100 + currentWeekNumber(new Date())-2;
 
-        this.setState({ week: numberWeek });
+        console.log("New Week number : "+numberWeek);
+
+        this.setState({ week : numberWeek});
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
-
+            
             //this.callQuery()
         });
 
         //this.callQuery()
     }
+
+
+    async setItem(myKey, value) {
+        try {
+            return await AsyncStorage.setItem(myKey, JSON.stringify(value));
+        } catch (error) {
+        }
+    }
+    
 
     callQuery = () => {
 
@@ -302,13 +308,13 @@ export default class RepDuelle extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('RepDuellePlant1', { Plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('RepDuellePlant1', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('RepDuellePlant1', { Plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('RepDuellePlant1', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 

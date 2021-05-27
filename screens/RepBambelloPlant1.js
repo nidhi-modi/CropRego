@@ -570,7 +570,7 @@ export default class RepBambelloPlant1 extends React.Component {
 
     componentDidMount() {
 
-        numberWeek = 2100 + currentWeekNumber(new Date()) - 2
+        numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
         console.log("Current Week Number: ", numberWeek);
 
         console.ignoredYellowBox = ['react-native BugReporting extraData'];
@@ -663,7 +663,7 @@ export default class RepBambelloPlant1 extends React.Component {
 
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
-           
+
 
             setTimeout(() => {
                 db.plantsByWeekRowNumberAndName(no, numberWeek, 'REP - Bambello', '807').then((data) => {
@@ -916,15 +916,15 @@ export default class RepBambelloPlant1 extends React.Component {
                             no5 = null;
 
 
-                        }else {
+                        } else {
 
                             if (no6 !== undefined && no6 !== null) {
 
                                 console.log("No6 Value:", no6);
-    
+
                                 no = '6';
-    
-    
+
+
                                 db.plantsByWeekRowNumberAndName(no6, numberWeek - 1, 'REP - Bambello', '807').then((data) => {
                                     console.log(data);
                                     console.log("Calling database")
@@ -932,25 +932,25 @@ export default class RepBambelloPlant1 extends React.Component {
                                     this.setState({
                                         plant,
                                         dataPresent: true,
-    
+
                                     });
                                 }).catch((err) => {
                                     console.log(err);
-    
+
                                 })
-    
+
                                 no6 = null;
-    
-    
-                            }else {
-    
+
+
+                            } else {
+
                                 if (no7 !== undefined && no7 !== null) {
 
                                     console.log("No5 Value:", no7);
-        
+
                                     no = '7';
-        
-        
+
+
                                     db.plantsByWeekRowNumberAndName(no7, numberWeek - 1, 'REP - Bambello', '807').then((data) => {
                                         console.log(data);
                                         console.log("Calling database")
@@ -958,25 +958,25 @@ export default class RepBambelloPlant1 extends React.Component {
                                         this.setState({
                                             plant,
                                             dataPresent: true,
-        
+
                                         });
                                     }).catch((err) => {
                                         console.log(err);
-        
+
                                     })
-        
+
                                     no7 = null;
-        
-        
-                                }else {
+
+
+                                } else {
 
                                     if (no8 !== undefined && no8 !== null) {
 
                                         console.log("No8 Value:", no8);
-            
+
                                         no = '8';
-            
-            
+
+
                                         db.plantsByWeekRowNumberAndName(no8, numberWeek - 1, 'REP - Bambello', '807').then((data) => {
                                             console.log(data);
                                             console.log("Calling database")
@@ -984,25 +984,25 @@ export default class RepBambelloPlant1 extends React.Component {
                                             this.setState({
                                                 plant,
                                                 dataPresent: true,
-            
+
                                             });
                                         }).catch((err) => {
                                             console.log(err);
-            
+
                                         })
-            
+
                                         no8 = null;
-            
-            
-                                    }else {
+
+
+                                    } else {
 
                                         if (no9 !== undefined && no9 !== null) {
 
                                             console.log("No9 Value:", no9);
-                
+
                                             no = '9';
-                
-                
+
+
                                             db.plantsByWeekRowNumberAndName(no9, numberWeek - 1, 'REP - Bambello', '807').then((data) => {
                                                 console.log(data);
                                                 console.log("Calling database")
@@ -1010,26 +1010,26 @@ export default class RepBambelloPlant1 extends React.Component {
                                                 this.setState({
                                                     plant,
                                                     dataPresent: true,
-                
+
                                                 });
                                             }).catch((err) => {
                                                 console.log(err);
-                
+
                                             })
-                
+
                                             no9 = null;
-                
-                
-                                        }else {
-                
-                
+
+
+                                        } else {
+
+
                                             if (no10 !== undefined && no10 !== null) {
 
                                                 console.log("No10 Value:", no10);
-                    
+
                                                 no = '10';
-                    
-                    
+
+
                                                 db.plantsByWeekRowNumberAndName(no10, numberWeek - 1, 'REP - Bambello', '807').then((data) => {
                                                     console.log(data);
                                                     console.log("Calling database")
@@ -1037,27 +1037,27 @@ export default class RepBambelloPlant1 extends React.Component {
                                                     this.setState({
                                                         plant,
                                                         dataPresent: true,
-                    
+
                                                     });
                                                 }).catch((err) => {
                                                     console.log(err);
-                    
+
                                                 })
-                    
+
                                                 no10 = null;
                                             }
-                                            
+
                                         }
-            
-            
-                                        
+
+
+
                                     }
-        
-        
-                                    
+
+
+
                                 }
-    
-                                
+
+
                             }
 
 
@@ -1503,91 +1503,91 @@ export default class RepBambelloPlant1 extends React.Component {
         }
 
 
-    
 
-                                            if (this.state.isItConnected === 'Online') {
 
-                                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
-                                                const url = `${scriptUrl}?
+        if (this.state.isItConnected === 'Online') {
+
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbzCC8_LN6cdRJnB_EqaNG_FeU1RjiKoM3r2Xw4VjZ3YO2o39ryM/exec';
+            const url = `${scriptUrl}?
                                                 callback=ctrlq&plantRow=${'807'}&plantName=${'REP - Bambello'}&plantWeek=${numberWeek}&plantNumber=${no}&leaves=${leavesPerPlant}&fullySetTruss=${fullySetTruss}&setTrussLength=${setTrussLength}&weeklyGrowth=${weeklyGrowth}&flowerHeight=${floweringTrussHeight}&leafLength=${leafLength}&leafWidth=${leafWidth}&stmDia=${stmDiameter}&lastWkStmDia=${lastWeekStmDiameter}`;
 
-                                                console.log("URL : " + url);
-                                                fetch(url, { mode: 'no-cors' }).then(
-                                                    () => { this.setState({ sent: true }); },
-                                                    () => { this.setState({ error: true }); }
-                                                );
+            console.log("URL : " + url);
+            fetch(url, { mode: 'no-cors' }).then(
+                () => { this.setState({ sent: true }); },
+                () => { this.setState({ error: true }); }
+            );
 
-                                                db.addPlants(data1).then((result) => {
-                                                    console.log(result);
-
-
-                                                    this.setState({
-                                                        isLoading: false,
-                                                        isDataSend: true,
-                                                    });
-                                                    abc = '1';
-
-                                                    Alert.alert('Completed!')
-                                                    AsyncStorage.clear()
-                                                    this.props.navigation.navigate('RepBambello3')
-                                                    this.setState({
-
-                                                        isDataSend: true,
-                                                    });
-                                                    abc = '1';
-                                                    this.setItem('RepBambelloPlant3', 1)
+            db.addPlants(data1).then((result) => {
+                console.log(result);
 
 
-                                                }).catch((err) => {
-                                                    console.log(err);
-                                                    this.setState({
-                                                        isLoading: false,
-                                                        isDataSend: false,
-                                                    });
-                                                    abc = '0';
-                                                    this.setItem('RepBambelloPlant3', 0)
+                this.setState({
+                    isLoading: false,
+                    isDataSend: true,
+                });
+                abc = '1';
 
-                                                })
+                Alert.alert('Completed!')
+                AsyncStorage.clear()
+                this.props.navigation.navigate('RepBambello')
+                this.setState({
 
-                                            } else {
-
-                                                db.addPlants(data).then((result) => {
-                                                    console.log(result);
-
-
-                                                    this.setState({
-                                                        isLoading: false,
-                                                        isDataSend: true,
-                                                    });
-                                                    abc = '1';
-
-                                                    Alert.alert('Completed!')
-                                                    AsyncStorage.clear()
-                                                    this.props.navigation.navigate('RepBambello3')
-                                                    this.setState({
-
-                                                        isDataSend: true,
-                                                    });
-                                                    abc = '1';
-                                                    this.setItem('RepBambelloPlant3', 1)
+                    isDataSend: true,
+                });
+                abc = '1';
+                this.setItem('RepBambelloPlant1', 1)
 
 
-                                                }).catch((err) => {
-                                                    console.log(err);
-                                                    this.setState({
-                                                        isLoading: false,
-                                                        isDataSend: false,
-                                                    });
-                                                    abc = '0';
-                                                    this.setItem('RepBambelloPlant3', 0)
+            }).catch((err) => {
+                console.log(err);
+                this.setState({
+                    isLoading: false,
+                    isDataSend: false,
+                });
+                abc = '0';
+                this.setItem('RepBambelloPlant1', 0)
 
-                                                })
+            })
 
-                                            }
+        } else {
+
+            db.addPlants(data).then((result) => {
+                console.log(result);
+
+
+                this.setState({
+                    isLoading: false,
+                    isDataSend: true,
+                });
+                abc = '1';
+
+                Alert.alert('Completed!')
+                AsyncStorage.clear()
+                this.props.navigation.navigate('RepBambello')
+                this.setState({
+
+                    isDataSend: true,
+                });
+                abc = '1';
+                this.setItem('RepBambelloPlant1', 1)
+
+
+            }).catch((err) => {
+                console.log(err);
+                this.setState({
+                    isLoading: false,
+                    isDataSend: false,
+                });
+                abc = '0';
+                this.setItem('RepBambelloPlant1', 0)
+
+            })
+
+        }
 
 
 
-                                       
+
 
 
     }
@@ -1655,7 +1655,7 @@ export default class RepBambelloPlant1 extends React.Component {
                                 });
                                 Alert.alert('Completed!')
 
-                                this.props.navigation.navigate('RepBambello3')
+                                this.props.navigation.navigate('RepBambello')
 
                             }).catch((err) => {
                                 console.log(err);
@@ -1905,380 +1905,381 @@ export default class RepBambelloPlant1 extends React.Component {
                             />
 
 
-                                <View style={styles.backgroundColor}>
+                            <View style={styles.backgroundColor}>
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Leaves Per Plant</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leavesPerPlant}</Text>) : null}
-                                    </View>
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Leaves Per Plant</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leavesPerPlant}</Text>) : null}
+                                </View>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            //underlineColorAndroid="#000000"
-                                            placeholder="Enter Leaves Per Plant"
-                                            placeholderTextColor="transparent"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            onChangeText={(text) => this.updateTextInput(text, 'leavesPerPlant')}
-                                            value={this.state.leavesPerPlant}
-                                            editable={true}
-                                            returnKeyType={"next"}
-                                            error={errors.LeavesPerPlant}
-                                            keyboardType={'numeric'}
-                                            onFocus={this.onFocus}
-                                            onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
-                                            blurOnSubmit={false}
-                                        />
-
-                                    </View>
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        //underlineColorAndroid="#000000"
+                                        placeholder="Enter Leaves Per Plant"
+                                        placeholderTextColor="transparent"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        onChangeText={(text) => this.updateTextInput(text, 'leavesPerPlant')}
+                                        value={this.state.leavesPerPlant}
+                                        editable={true}
+                                        returnKeyType={"next"}
+                                        error={errors.LeavesPerPlant}
+                                        keyboardType={'numeric'}
+                                        onFocus={this.onFocus}
+                                        onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
+                                        blurOnSubmit={false}
+                                    />
 
                                 </View>
 
-
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
+                            </View>
 
 
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
 
-                                <View style={styles.backgroundColor}>
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Fully Set Truss</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.fullySetTruss}</Text>) : null}
-                                    </View>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            placeholder="Enter Fully Set Truss"
-                                            placeholderTextColor="transparent"
-                                            autoCapitalize="none"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            returnKeyType={"next"}
-                                            error={errors.FullysetTruss}
-                                            keyboardType={'numeric'}
-                                            editable={true}
-                                            onChangeText={(text) => this.updateTextInput(text, 'fullySetTruss')}
-                                            value={this.state.fullySetTruss}
-                                            ref={(input) => { this.fullySetTrussTextInput = input; }}
-                                            onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
-                                            blurOnSubmit={false}
-                                        />
+                            <View style={styles.backgroundColor}>
 
-                                    </View>
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Fully Set Truss</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.fullySetTruss}</Text>) : null}
                                 </View>
 
-
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
-
-
-
-
-                                <View style={styles.backgroundColor}>
-
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Fully Set Truss Length</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.setTrussLength}</Text>) : null}
-                                    </View>
-
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            placeholder="Enter Fully Set Truss Length"
-                                            placeholderTextColor="transparent"
-                                            autoCapitalize="none"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            returnKeyType={"next"}
-                                            error={errors.TrussLength}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'setTrussLength')}
-                                            value={this.state.setTrussLength}
-                                            ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
-                                            onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
-                                            blurOnSubmit={false}
-
-                                        />
-
-                                    </View>
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Fully Set Truss"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.FullysetTruss}
+                                        keyboardType={'numeric'}
+                                        editable={true}
+                                        onChangeText={(text) => this.updateTextInput(text, 'fullySetTruss')}
+                                        value={this.state.fullySetTruss}
+                                        ref={(input) => { this.fullySetTrussTextInput = input; }}
+                                        onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
+                                        blurOnSubmit={false}
+                                    />
 
                                 </View>
+                            </View>
 
 
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
 
 
 
 
+                            <View style={styles.backgroundColor}>
 
-
-                                <View style={styles.backgroundColor}>
-
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Weekly Growth</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.weeklyGrowth}</Text>) : null}
-                                    </View>
-
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            placeholder="Enter Weekly Growth"
-                                            placeholderTextColor="transparent"
-                                            autoCapitalize="none"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            returnKeyType={"next"}
-                                            error={errors.WeeklyGrowth}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'weeklyGrowth')}
-                                            value={this.state.weeklyGrowth}
-                                            ref={(input) => { this.weeklyGrowthTextInput = input; }}
-                                            onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
-                                            blurOnSubmit={false}
-
-                                        />
-
-                                    </View>
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Fully Set Truss Length</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.setTrussLength}</Text>) : null}
                                 </View>
 
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Fully Set Truss Length"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.TrussLength}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'setTrussLength')}
+                                        value={this.state.setTrussLength}
+                                        ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
+                                        onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
+                                        blurOnSubmit={false}
 
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
-
-
-
-
-                                <View style={styles.backgroundColor}>
-
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Flower Truss Height</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.floweringTrussHeight}</Text>) : null}
-                                    </View>
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            placeholder="Enter Weekly Growth"
-                                            placeholderTextColor="transparent"
-                                            autoCapitalize="none"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            returnKeyType={"next"}
-                                            error={errors.FlowerTrussHeight}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'floweringTrussHeight')}
-                                            value={this.state.floweringTrussHeight}
-                                            ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
-                                            onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
-                                            blurOnSubmit={false}
-
-                                        />
-                                    </View>
+                                    />
 
                                 </View>
 
-
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
+                            </View>
 
 
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
 
-                                <View style={styles.backgroundColor}>
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Leaf Length</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leafLength}</Text>) : null}
-                                    </View>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            placeholder="Enter Leaf Length"
-                                            placeholderTextColor="transparent"
-                                            autoCapitalize="none"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            returnKeyType={"next"}
-                                            label='Leaf Length'
-                                            error={errors.LeafLength}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'leafLength')}
-                                            value={this.state.leafLength}
-                                            ref={(input) => { this.leafLengthTextInput = input; }}
-                                            onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
-                                            blurOnSubmit={false}
 
-                                        />
 
-                                    </View>
+
+                            <View style={styles.backgroundColor}>
+
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Weekly Growth</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.weeklyGrowth}</Text>) : null}
+                                </View>
+
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Weekly Growth"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.WeeklyGrowth}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'weeklyGrowth')}
+                                        value={this.state.weeklyGrowth}
+                                        ref={(input) => { this.weeklyGrowthTextInput = input; }}
+                                        onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+
+                                </View>
+                            </View>
+
+
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
+
+
+
+
+                            <View style={styles.backgroundColor}>
+
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Flower Truss Height</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.floweringTrussHeight}</Text>) : null}
+                                </View>
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Weekly Growth"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.FlowerTrussHeight}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'floweringTrussHeight')}
+                                        value={this.state.floweringTrussHeight}
+                                        ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
+                                        onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+                                </View>
+
+                            </View>
+
+
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
+
+
+
+                            <View style={styles.backgroundColor}>
+
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Leaf Length</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leafLength}</Text>) : null}
+                                </View>
+
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Leaf Length"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        label='Leaf Length'
+                                        error={errors.LeafLength}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'leafLength')}
+                                        value={this.state.leafLength}
+                                        ref={(input) => { this.leafLengthTextInput = input; }}
+                                        onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
 
                                 </View>
 
-
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
+                            </View>
 
 
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
 
 
-                                <View style={styles.backgroundColor}>
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Leaf Width</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leafWidth}</Text>) : null}
-                                    </View>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            placeholder="Enter Leaf Width"
-                                            placeholderTextColor="transparent"
-                                            autoCapitalize="none"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            returnKeyType={"next"}
-                                            error={errors.LeafWidth}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'leafWidth')}
-                                            value={this.state.leafWidth}
-                                            ref={(input) => { this.leafWidthTextInput = input; }}
-                                            onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
-                                            blurOnSubmit={false}
+                            <View style={styles.backgroundColor}>
 
-                                        />
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Leaf Width</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.leafWidth}</Text>) : null}
+                                </View>
 
-                                    </View>
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Leaf Width"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.LeafWidth}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'leafWidth')}
+                                        value={this.state.leafWidth}
+                                        ref={(input) => { this.leafWidthTextInput = input; }}
+                                        onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
 
                                 </View>
 
-
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
+                            </View>
 
 
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
 
 
-                                <View style={styles.backgroundColor}>
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Stem Diameter</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.stmDiameter}</Text>) : null}
-                                    </View>
 
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            placeholder="Enter Stem Diameter"
-                                            placeholderTextColor="transparent"
-                                            autoCapitalize="none"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            returnKeyType={"next"}
-                                            error={errors.StmDiameter}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'stmDiameter')}
-                                            value={this.state.stmDiameter}
-                                            ref={(input) => { this.stmDiameterTextInput = input; }}
-                                            onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
-                                            blurOnSubmit={false}
+                            <View style={styles.backgroundColor}>
 
-                                        />
-                                    </View>
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Stem Diameter</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.stmDiameter}</Text>) : null}
+                                </View>
+
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Stem Diameter"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"next"}
+                                        error={errors.StmDiameter}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'stmDiameter')}
+                                        value={this.state.stmDiameter}
+                                        ref={(input) => { this.stmDiameterTextInput = input; }}
+                                        onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
+                                        blurOnSubmit={false}
+
+                                    />
+                                </View>
+
+                            </View>
+
+
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
+
+
+
+
+                            <View style={styles.backgroundColor}>
+
+                                <View style={styles.row}>
+                                    <Text style={styles.text4}>Last Week Stem Diameter</Text>
+                                    {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.lastWeekStmDiameter}</Text>) : null}
+                                </View>
+
+                                <View style={styles.borderEdit}>
+                                    <TextInput style={styles.textInputStyle}
+                                        placeholder="Enter Last Week Stem Diameter"
+                                        placeholderTextColor="transparent"
+                                        autoCapitalize="none"
+                                        multiline={false}
+                                        autoCorrect={false}
+                                        enablesReturnKeyAutomatically={true}
+                                        onChangeText={this.onChangeText}
+                                        returnKeyType={"done"}
+                                        error={errors.LastWeekStmDiameter}
+                                        keyboardType={'numeric'}
+                                        onChangeText={(text) => this.updateTextInput(text, 'lastWeekStmDiameter')}
+                                        value={this.state.lastWeekStmDiameter}
+                                        ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
+
+                                    />
 
                                 </View>
 
-
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
+                            </View>
 
 
+                            <View
+                                style={{
+                                    marginBottom: 20
+                                }}
+                            />
 
 
-                                <View style={styles.backgroundColor}>
+                            {this.state.checkWeeksData !== 1 ? (
+                                <TouchableOpacity
+                                    disabled={false}
+                                    style={styles.buttonContainer}
+                                    onPress={this.savePlantsToDbAlert}>
+                                    <Text style={styles.buttonText}>Submit</Text>
+                                </TouchableOpacity>) :
 
-                                    <View style={styles.row}>
-                                        <Text style={styles.text4}>Last Week Stem Diameter</Text>
-                                        {this.state.dataPresent ? (<Text style={styles.text5}>Last Week {this.state.plant.lastWeekStmDiameter}</Text>) : null}
-                                    </View>
-
-                                    <View style={styles.borderEdit}>
-                                        <TextInput style={styles.textInputStyle}
-                                            placeholder="Enter Last Week Stem Diameter"
-                                            placeholderTextColor="transparent"
-                                            autoCapitalize="none"
-                                            multiline={false}
-                                            autoCorrect={false}
-                                            enablesReturnKeyAutomatically={true}
-                                            onChangeText={this.onChangeText}
-                                            returnKeyType={"done"}
-                                            error={errors.LastWeekStmDiameter}
-                                            keyboardType={'numeric'}
-                                            onChangeText={(text) => this.updateTextInput(text, 'lastWeekStmDiameter')}
-                                            value={this.state.lastWeekStmDiameter}
-                                            ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
-
-                                        />
-
-                                    </View>
-
-                                </View>
-
-
-                                <View
-                                    style={{
-                                        marginBottom: 20
-                                    }}
-                                />
-
-
-                                {this.state.checkWeeksData !== 1 ? (
-                                    <TouchableOpacity
-                                        style={styles.buttonContainer}
-                                        onPress={this.savePlantsToDbAlert}>
-                                        <Text style={styles.buttonText}>Submit</Text>
-                                    </TouchableOpacity>) :
-
-                                    <TouchableOpacity
-                                        style={styles.buttonContainer1}
-                                        onPress={this.savePlantsToDbAlert}>
-                                        <Text style={styles.buttonText}>Submit</Text>
-                                        <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
-                                    </TouchableOpacity>}
+                                <TouchableOpacity
+                                    disabled={true}
+                                    style={styles.buttonContainer1}>
+                                    <Text style={styles.buttonText}>Submit</Text>
+                                    <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
+                                </TouchableOpacity>}
 
 
                             <Text style={styles.text}
