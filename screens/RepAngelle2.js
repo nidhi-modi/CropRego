@@ -302,13 +302,13 @@ export default class RepAngelle2 extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('RepAngellePlant2', { Plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('RepAngellePlant2', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('RepAngellePlant2', { Plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('RepAngellePlant2', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 

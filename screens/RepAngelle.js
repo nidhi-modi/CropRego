@@ -42,6 +42,8 @@ export default class RepAngelle extends Component {
 
         this.setState({ week: numberWeek });
 
+        console.log("Week number : "+numberWeek);
+
         this.focusListener = this.props.navigation.addListener('focus', () => {
 
             //this.callQuery()
@@ -302,13 +304,13 @@ export default class RepAngelle extends Component {
                         {this.state.dataSet1 !== 1 ? (
                             <TouchableOpacity
                                 style={styles.buttonContainer}
-                                onPress={() => this.props.navigation.navigate('RepAngellePlant1', { Plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('RepAngellePlant1', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                             </TouchableOpacity>) :
 
                             <TouchableOpacity
                                 style={styles.buttonContainer1}
-                                onPress={() => this.props.navigation.navigate('RepAngellePlant1', { Plant3: 3 })}>
+                                onPress={() => this.props.navigation.navigate('RepAngellePlant1', { plant3: 3 })}>
                                 <Text style={styles.buttonText}>Plant 3 - week {this.state.week}</Text>
                                 <Image source={require('../assets/check.png')} style={styles.FloatingButtonStyle2} />
 
