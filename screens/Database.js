@@ -1,6 +1,6 @@
 import SQLite from "react-native-sqlite-storage";
 import _ from 'lodash';
-import { database } from "firebase";
+
 SQLite.DEBUG(true);
 SQLite.enablePromise(true);
 

@@ -7,7 +7,6 @@ import { TextInputLayout } from 'rn-textinputlayout';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import Database from '../screens/Database'
 import { Divider } from 'react-native-elements';
-import { fbDB } from '../screens/config';
 import AsyncStorage from '@react-native-community/async-storage';
 import axios from 'axios';
 import NetInfo from "@react-native-community/netinfo";
