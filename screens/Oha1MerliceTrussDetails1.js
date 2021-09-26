@@ -403,7 +403,7 @@ export default class Oha1MerliceTrussDetails1 extends React.Component {
         }
 
 
-        numberWeek = 2100 + currentWeekNumber(new Date()) - 1;
+        numberWeek = 2100 + currentWeekNumber(new Date());
         console.log("Current Week Number:  ", numberWeek);
         this.setState({ weekNumber: numberWeek.toString() });
 

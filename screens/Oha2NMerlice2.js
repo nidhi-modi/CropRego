@@ -31,7 +31,7 @@ export default class Oha2NMerlice2 extends Component {
     componentDidMount() {
 
 
-        numberWeek = 2100 + currentWeekNumber(new Date())-1;
+        numberWeek = 2100 + currentWeekNumber(new Date());
 
         this.setState({ week : numberWeek});
 
